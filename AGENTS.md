@@ -2,6 +2,10 @@
 
 Next.js 16 (App Router) + TypeScript + Tailwind v4. Deploy a Vercel.
 
+## Git
+
+**Se trabaja directo sobre `main` — no crear ramas nuevas por sesión.** Vercel builda de `main`; es la rama de producción. Diego también sube archivos directo por la web de GitHub a veces: antes de asumir que `main` está al día, `git fetch origin main` y revisar si hay algo nuevo sin organizar (assets sueltos en la raíz sin pasar por `public/images/` o `context/crudo/referencias-visuales/`).
+
 ## Antes de tocar copy o diseño
 
 Leé `context/` — es la fuente de verdad del proyecto y se mantiene actualizada:

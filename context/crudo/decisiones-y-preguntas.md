@@ -2,6 +2,14 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-08 — Quinta ronda: fix de diseño + flujo de git a producción
+
+1. **"El material" (Nosotros) rediseñada como díptico.** El layout de texto+una foto quedaba desalineado. Ahora dos fotos lado a lado —detalle de muro (`muro-detalle.png`, "Afuera") y el interior cálido de CRUDO 02 (`crudo-02-interior.jpg`, "Adentro")— con etiqueta superpuesta y degradado para legibilidad, y el texto pasa a una columna completa debajo.
+2. **Flujo de git cambia: se deja de trabajar en ramas por sesión.** Diego pidió pushear todo a `main` porque Vercel builda de ahí. Se hizo `git merge origin/main` (Diego había subido archivos directo a GitHub mientras tanto) y se pusheó a `main`. **De acá en adelante, el trabajo en este proyecto se hace directo sobre `main`**, no en `claude/*`.
+3. **Diego subió 6 archivos nuevos directo a `main` vía la web de GitHub**, sin avisar en el chat — se detectaron al mergear:
+   - **Reales, organizados y disponibles para usar** (`public/images/taller/paver-muestra.jpg`, `public/images/taller/moldes-celosia.jpg`, `public/images/proceso/celosia-instalada-dia.jpg`, `public/images/proceso/celosia-instalada-noche.jpg`): un pavimento de concreto, moldes de celosía en el taller, y —lo más valioso— dos fotos de una **celosía de concreto ya instalada** (día y noche). Es el primer material real de celosías que tenemos; hasta ahora esa categoría de producto no tenía ninguna foto propia en el sitio. Todavía no están usadas en ninguna página — quedan disponibles para cuando se pida.
+   - **Cuarentena, no publicar** (`context/crudo/referencias-visuales/`): `IMG_4467.jpg` (foto de una cocina con azulejo celeste, parece inspiración/Pinterest, no un espacio de CRUDO) y `mudd-sink-bowl-bol-rove-pumice-cream-white-grey-natural.jpg.webp` (por el nombre del archivo, es un producto de la marca **Mudd**, no de CRUDO — no publicar bajo ninguna circunstancia).
+
 ## 2026-09-08 — Cuarta ronda de ajustes
 
 1. **Bajada del hero:** "Arquitectura contemporánea con materiales sólidos. Hormigón armado y Concreto de Alto Performance."
