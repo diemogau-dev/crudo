@@ -6,12 +6,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-[92svh] w-full overflow-hidden text-alabaster md:min-h-screen">
       <Image
-        src="/images/modelos/crudo-02-hero.png"
-        alt="Vivienda CRUDO 02: galería con pérgola de madera, celosía de concreto y pileta, sobre deck de madera"
+        src="/images/modelos/crudo-02-exterior.jpg"
+        alt="Vivienda CRUDO 02: fachada de paneles de hormigón, jardín, deck de madera y pileta"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[62%_center] md:object-center"
+        className="object-cover object-[68%_center] md:object-center"
       />
       <div aria-hidden className="absolute inset-0 bg-iron/45" />
 
@@ -20,14 +20,13 @@ export default function Hero() {
           Arquitectura &amp; Concreto · Paraguay
         </p>
         <h1 className="display-xl mt-5 max-w-5xl">
-          Lofts y viviendas
+          Módulos y viviendas
           <br />
-          de concreto.
+          industriales.
         </h1>
-        <p className="lede mt-8 max-w-xl text-alabaster/90">
+        <p className="lede mt-8 max-w-lg text-alabaster/90">
           Arquitectura contemporánea, materiales duraderos y un sistema propio
-          de diseño, fabricación y construcción. Diseñamos y construimos
-          espacios listos para vivirlos.
+          de diseño, fabricación y construcción.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Cta href={whatsappLink("general")} external variant="solid-inverse">

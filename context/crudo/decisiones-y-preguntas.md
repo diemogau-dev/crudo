@@ -2,6 +2,16 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-08 — Segunda ronda de ajustes sobre la web ya desarrollada
+
+1. **Titular del hero:** "Módulos y viviendas industriales." Imagen de portada: `Crudo 2 - A` (`crudo-02-exterior.jpg`).
+2. **Fotos del proceso:** se reemplazaron las de bachas por fotos de producción con más carga de marca y relato (oficio, mezcla, pigmento, acabado). Diego confirmó que **todas las imágenes del repositorio se pueden usar**.
+3. **Home más corta:** se eliminaron de la Home las secciones "Nuestro sistema" y "Por qué CRUDO" por repetitivas. Se unificaron en una sola sección llamada **"Nuestro Proceso"** que vive únicamente en la página **El Sistema**, con las cuatro etapas: diseño, fabricación, curación y construcción. La lista de cinco principios (Diseño/Control/Precisión/Eficiencia/Solidez) se eliminó: su contenido ya estaba dicho en las etapas del proceso.
+4. **Páginas individuales por modelo:** `/modelos/crudo-01` y `/modelos/crudo-02`, cada una con todos los renders del proyecto. `/modelos` queda como índice. Estructura preparada para CRUDO 03, 04, etc. — alcanza con agregar el modelo en `lib/content.ts`.
+5. **Copys acortados** en todas las páginas.
+
+**Home final:** Hero → Qué es CRUDO → Modelos → Versatilidad → Proyectos a medida → CTA final.
+
 ## 2026-09-08 — Revisión estratégica inicial
 
 **Decisiones tomadas / asumidas (a confirmar con Diego si no coincide):**

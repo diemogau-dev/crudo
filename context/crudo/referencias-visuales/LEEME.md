@@ -1,19 +1,21 @@
-# Referencias visuales — NO publicar
+# Referencias visuales
 
-Estas imágenes estaban en la raíz del repositorio junto con los renders y las fotos de taller, pero **su origen no está confirmado**.
+Estas imágenes estaban en la raíz del repositorio junto con los renders. En un primer momento quedaron acá porque su origen no estaba confirmado y tenían estilo de fotografía de catálogo profesional.
 
-Varias tienen calidad y estilo de fotografía de catálogo profesional, con locaciones e instalaciones que no parecen ser el taller de CRUDO (planta industrial europea, baños de producción fotográfica, primeros planos de estudio). Es probable que sean capturas de referencia tomadas de sitios de otras marcas del rubro durante la etapa de investigación visual.
+**2026-09-08 — Diego confirmó que todas las imágenes del repositorio se pueden usar en la web.** Con eso, las mejores se movieron a `public/images/proceso/` y hoy están publicadas:
 
-Por eso quedan fuera de `public/` y no se usan en el sitio:
+- `oficio.png` — trabajo manual sobre molde (Nosotros → "Las manos", y El Sistema → taller).
+- `pigmento.png` — dosificación de pigmento (El Sistema → taller).
+- `mezcla.png` — mezcla de hormigón (El Sistema → "Fabricamos").
+- `acabado.png` — terminación de paneles (El Sistema → "Curamos").
+- `muro-detalle.png` — detalle de muro visto (Nosotros → "El material").
+- `muro-interior.png` — muro de concreto en interior doméstico (A Medida).
+- `pigmentos-taller.png` — pigmentos en el taller (sin usar por ahora).
 
-- Publicar fotos de otra marca contradice la regla del brief de no usar stock ni imágenes ajenas.
-- Además de la cuestión de marca, sería un problema de derechos de autor.
+## Lo que queda en esta carpeta
 
-## Qué hacer con ellas
+Tres fotos de producto de bachas terminadas, en ambientaciones de baño. No se usan hoy porque el sitio no tiene una sección de producto, pero son buen material si más adelante se agrega una.
 
-- **Si son propias:** confirmarlo y moverlas a `public/images/taller/` con nombres descriptivos. Son buenas imágenes y suman mucho a "El Sistema" y "Nosotros".
-- **Si son de referencia:** dejarlas acá como dirección visual para producir fotos propias equivalentes (pigmentos, mezcla, curado, manos trabajando, detalle de muro terminado).
+## Nota pendiente
 
-## Fotos confirmadas como propias, ya en uso
-
-Están en `public/images/taller/`: panel de hormigón sobre pallet, bachas en el taller, bachas en producción y muestras de concreto.
+Si alguna de estas imágenes no fuera de producción propia de CRUDO, avisar para reemplazarla: publicar fotografía de otra marca contradice la regla del brief de no usar imágenes ajenas y sería además un problema de derechos.

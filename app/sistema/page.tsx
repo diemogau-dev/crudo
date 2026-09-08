@@ -8,7 +8,7 @@ import { processSteps } from "@/lib/content";
 export const metadata: Metadata = {
   title: "El Sistema",
   description:
-    "Cómo trabaja CRUDO: diseño, fabricación, curación y construcción bajo un mismo equipo, con taller propio de hormigón, concreto y carpintería metálica.",
+    "Nuestro proceso: diseño, fabricación, curación y construcción bajo un mismo equipo, con taller propio de hormigón, concreto y carpintería metálica.",
 };
 
 const workshopCapabilities = [
@@ -43,7 +43,7 @@ export default function SistemaPage() {
       <PageHeader
         kicker="El Sistema"
         title={"Diseño, taller y obra\nen las mismas manos."}
-        lede="No trabajamos con un solo material ni con un solo proveedor. Trabajamos con un sistema: un proceso completo que va del proyecto a la entrega, y que controlamos de punta a punta."
+        lede="Un proceso completo que va del proyecto a la entrega, y que controlamos de punta a punta."
         image={{
           src: "/images/modelos/crudo-01-volumen.jpg",
           alt: "Volumen exterior de CRUDO 01 mostrando la grilla de paneles de hormigón",
@@ -51,27 +51,51 @@ export default function SistemaPage() {
         }}
       />
 
-      {/* Proceso */}
+      {/* Nuestro proceso */}
       <section className="shell py-24 md:py-36">
         <Reveal className="max-w-3xl">
-          <p className="kicker text-muted">El proceso</p>
-          <h2 className="display-lg mt-6">Cómo trabajamos.</h2>
+          <p className="kicker text-muted">Nuestro proceso</p>
+          <h2 className="display-lg mt-6">Cuatro etapas, un solo equipo.</h2>
+          <p className="lede mt-8 max-w-xl text-muted">
+            Diseño, fabricación, curación y construcción no están repartidos
+            entre distintos actores. Son etapas del mismo trabajo.
+          </p>
         </Reveal>
 
-        <div className="mt-16 md:mt-24">
+        <div className="mt-20 flex flex-col gap-20 md:mt-28 md:gap-28">
           {processSteps.map((step, index) => (
-            <Reveal
+            <div
               key={step.number}
-              delay={index * 70}
-              className="grid gap-6 border-t border-hairline py-10 md:grid-cols-12 md:gap-10 md:py-14"
+              className="grid gap-8 md:grid-cols-12 md:items-center md:gap-16"
             >
-              <p className="kicker text-muted md:col-span-1">{step.number}</p>
-              <h3 className="display-md md:col-span-4">{step.title}</h3>
-              <div className="md:col-span-7">
-                <p className="lede">{step.short}</p>
+              <Reveal
+                className={`relative aspect-[4/3] w-full overflow-hidden bg-cement md:col-span-6 ${
+                  index % 2 === 1 ? "md:order-2 md:col-start-7" : ""
+                }`}
+              >
+                <Image
+                  src={step.image.src}
+                  alt={step.image.alt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </Reveal>
+
+              <Reveal
+                delay={120}
+                className={`md:col-span-5 ${
+                  index % 2 === 1
+                    ? "md:order-1 md:col-start-1"
+                    : "md:col-start-8"
+                }`}
+              >
+                <p className="kicker text-muted">{step.number}</p>
+                <h3 className="display-lg mt-5">{step.title}</h3>
+                <p className="lede mt-8">{step.short}</p>
                 <p className="body-text mt-5 text-muted">{step.long}</p>
-              </div>
-            </Reveal>
+              </Reveal>
+            </div>
           ))}
         </div>
       </section>
@@ -88,15 +112,13 @@ export default function SistemaPage() {
                 propia.
               </h2>
               <p className="body-text mt-8 text-muted">
-                CRUDO cuenta con su propia fábrica y producción. Ahí
+                Tenemos fábrica y taller de carpintería metálica propios. Ahí
                 desarrollamos los elementos que forman parte de nuestra
-                arquitectura, y también contamos con taller de carpintería
-                metálica.
+                arquitectura.
               </p>
               <p className="body-text mt-5 text-muted">
-                Fabricar lo nuestro no es un detalle operativo: es lo que nos
-                permite decidir cómo se ve, cómo se comporta y cuánto dura cada
-                pieza que llega a tu obra.
+                Eso es lo que nos permite decidir cómo se ve, cómo se comporta y
+                cuánto dura cada pieza que llega a tu obra.
               </p>
             </Reveal>
 
@@ -115,7 +137,7 @@ export default function SistemaPage() {
               <p className="kicker mt-12 text-muted">
                 Nuestra herrería nos permite controlar
               </p>
-              <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-3">
+              <ul className="mt-5 flex flex-wrap gap-3">
                 {metalwork.map((item) => (
                   <li
                     key={item}
@@ -131,16 +153,16 @@ export default function SistemaPage() {
           <div className="mt-16 grid gap-4 md:mt-24 md:grid-cols-3">
             {[
               {
+                src: "/images/proceso/oficio.png",
+                alt: "Trabajo manual sobre un molde de concreto en el taller",
+              },
+              {
+                src: "/images/proceso/pigmento.png",
+                alt: "Pigmento siendo dosificado para una mezcla de concreto",
+              },
+              {
                 src: "/images/taller/panel-hormigon.png",
-                alt: "Panel de hormigón terminado en el taller de CRUDO",
-              },
-              {
-                src: "/images/taller/bachas-produccion.png",
-                alt: "Bachas y tinas de concreto en producción en el taller",
-              },
-              {
-                src: "/images/taller/muestras-concreto.png",
-                alt: "Muestras de concreto en distintas tonalidades y texturas",
+                alt: "Panel de hormigón terminado en el taller",
               },
             ].map((image, index) => (
               <Reveal
@@ -178,9 +200,8 @@ export default function SistemaPage() {
           <Reveal className="md:col-span-6 md:col-start-7 md:pt-4" delay={120}>
             <p className="lede">
               Elegimos sistemas y materiales según lo que cada proyecto
-              necesita. No todos los proyectos utilizan las mismas tecnologías:
-              la decisión se toma en el diseño, según el uso, el terreno y el
-              resultado que buscamos.
+              necesita. No todos usan las mismas tecnologías: la decisión se
+              toma en el diseño.
             </p>
             <ul className="mt-10 border-t border-hairline">
               {technologies.map((item) => (
@@ -193,9 +214,9 @@ export default function SistemaPage() {
               ))}
             </ul>
             <p className="body-text mt-8 text-muted">
-              Detrás de esas decisiones hay un equipo con experiencia real en
-              obra y en el desarrollo de piezas de concreto. Es conocimiento
-              aplicado, no un catálogo.
+              Detrás hay un equipo con experiencia real en obra y en el
+              desarrollo de piezas de concreto. Conocimiento aplicado, no un
+              catálogo.
             </p>
           </Reveal>
         </div>
@@ -203,7 +224,7 @@ export default function SistemaPage() {
 
       <FinalCta
         title={"¿Querés entrar\nen los detalles técnicos?"}
-        text="Si sos arquitecto, ingeniero o simplemente querés entender cómo se construye un CRUDO, escribinos y lo conversamos."
+        text="Si sos arquitecto, ingeniero o cliente técnico, escribinos y lo conversamos."
       />
     </>
   );

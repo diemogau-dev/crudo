@@ -6,13 +6,12 @@ import { useEffect, useState } from "react";
 import { navLinks } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
 
-const DARK_HERO_ROUTES = [
-  "/",
-  "/modelos",
-  "/sistema",
-  "/a-medida",
-  "/nosotros",
-];
+// Rutas cuyo encabezado es una imagen a sangre: el navbar arranca transparente.
+const DARK_HERO_PREFIXES = ["/modelos", "/sistema", "/a-medida", "/nosotros"];
+
+const hasDarkHero = (pathname: string) =>
+  pathname === "/" ||
+  DARK_HERO_PREFIXES.some((prefix) => pathname.startsWith(prefix));
 
 export default function Nav() {
   const pathname = usePathname();
@@ -33,7 +32,7 @@ export default function Nav() {
     };
   }, [open]);
 
-  const overDarkHero = DARK_HERO_ROUTES.includes(pathname) && !scrolled;
+  const overDarkHero = hasDarkHero(pathname) && !scrolled;
   const light = overDarkHero && !open;
 
   return (

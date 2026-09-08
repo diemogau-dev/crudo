@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 const startingPoints = [
   {
     title: "Tenés un terreno",
-    text: "Analizamos el lugar, la orientación y el acceso, y definimos qué tiene sentido construir ahí.",
+    text: "Analizamos el lugar, la orientación y el acceso para definir qué tiene sentido construir ahí.",
   },
   {
     title: "Tenés un plano",
-    text: "Podemos tomar un proyecto existente y llevarlo a nuestro sistema constructivo.",
+    text: "Tomamos un proyecto existente y lo llevamos a nuestro sistema constructivo.",
   },
   {
     title: "Tenés una idea",
-    text: "Empezamos por una conversación y la convertimos en un proyecto listo para construir.",
+    text: "Empezamos por una conversación y la convertimos en un proyecto.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function AMedidaPage() {
       <PageHeader
         kicker="Proyectos a medida"
         title={"Tu idea.\nNuestro sistema."}
-        lede="No necesitás entrar en un molde para trabajar con CRUDO. Podemos partir de una conversación, un plano o una necesidad concreta y transformar eso en un proyecto listo para construir."
+        lede="No necesitás entrar en un molde para trabajar con CRUDO. Partimos de una conversación, un plano o una necesidad concreta y lo transformamos en un proyecto listo para construir."
         image={{
           src: "/images/modelos/crudo-02-pileta.jpg",
           alt: "CRUDO 02 con pileta, pérgola de madera y celosía de concreto",
@@ -80,8 +80,8 @@ export default function AMedidaPage() {
             <Reveal className="md:col-span-6">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
                 <Image
-                  src="/images/modelos/crudo-01-interior.jpg"
-                  alt="Interior del loft CRUDO 01, con muro de hormigón y salida al deck"
+                  src="/images/proceso/muro-interior.png"
+                  alt="Muro de concreto terminado en un interior doméstico"
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
@@ -97,9 +97,8 @@ export default function AMedidaPage() {
                 muchos programas.
               </h2>
               <p className="body-text mt-8 text-muted">
-                Desde una ampliación hasta una vivienda completa, incluyendo lo
-                que hace falta alrededor para que el proyecto funcione de
-                verdad.
+                Desde una ampliación hasta una vivienda completa, con todo lo
+                que hace falta alrededor.
               </p>
               <ul className="mt-10 flex flex-wrap gap-3">
                 {possibilities.map((item) => (
@@ -126,11 +125,11 @@ export default function AMedidaPage() {
           {[
             {
               title: "Hablamos de lo que querés construir",
-              text: "Una conversación por WhatsApp para entender el terreno, el uso y lo que tenés en mente.",
+              text: "Una conversación por WhatsApp para entender el terreno y el uso.",
             },
             {
               title: "Definimos el proyecto",
-              text: "Diseño, alcance y materiales quedan definidos antes de empezar la obra.",
+              text: "Diseño, alcance y materiales quedan cerrados antes de empezar la obra.",
             },
             {
               title: "Producimos y construimos nosotros",

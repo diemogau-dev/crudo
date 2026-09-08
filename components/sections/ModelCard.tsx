@@ -5,7 +5,7 @@ import type { Model } from "@/lib/content";
 export default function ModelCard({ model }: { model: Model }) {
   return (
     <Link
-      href={`/modelos#${model.slug}`}
+      href={`/modelos/${model.slug}`}
       className="group block"
       aria-label={`Conocer ${model.name}`}
     >
