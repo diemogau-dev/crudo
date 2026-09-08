@@ -17,9 +17,9 @@ export default function NosotrosPage() {
       <PageHeader
         kicker="Nosotros"
         title={"Creemos en los materiales\nque no mienten."}
-        lede="El concreto no se disfraza. No imita madera, ni piedra, ni mármol. Es lo que es: mezcla, agua, tiempo y oficio."
+        lede="El concreto no se disfraza. No imita madera, ni piedra, ni mármol. Muestra de qué está hecho y envejece sin pedir permiso."
         image={{
-          src: "/images/modelos/crudo-01-interior.jpg",
+          src: "/images/tipologias/crudo-01-interior.jpg",
           alt: "Interior de un loft CRUDO: muro de hormigón, madera cálida y luz natural",
           priority: true,
         }}

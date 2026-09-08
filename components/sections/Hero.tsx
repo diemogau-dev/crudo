@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[92svh] w-full overflow-hidden text-alabaster md:min-h-screen">
       <Image
-        src="/images/modelos/crudo-02-exterior.jpg"
+        src="/images/tipologias/crudo-02-exterior.jpg"
         alt="Vivienda CRUDO 02: fachada de paneles de hormigón, jardín, deck de madera y pileta"
         fill
         priority
@@ -25,15 +25,15 @@ export default function Hero() {
           industriales.
         </h1>
         <p className="lede mt-8 max-w-lg text-alabaster/90">
-          Arquitectura contemporánea, materiales duraderos y un sistema propio
-          de diseño, fabricación y construcción.
+          Arquitectura contemporánea con materiales sólidos. Hormigón armado y
+          concreto de alta performance.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Cta href={whatsappLink("general")} external variant="solid-inverse">
             Hablemos
           </Cta>
-          <Cta href="/modelos" variant="outline-inverse">
-            Conocer los modelos
+          <Cta href="/tipologias" variant="outline-inverse">
+            Conocer las tipologías
           </Cta>
         </div>
       </div>

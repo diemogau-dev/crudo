@@ -23,7 +23,7 @@ export default function Versatility() {
   return (
     <section className="relative overflow-hidden bg-iron text-alabaster">
       <Image
-        src="/images/modelos/crudo-01-frente.jpg"
+        src="/images/tipologias/crudo-01-frente.jpg"
         alt="Frente vidriado del loft CRUDO 01 abierto al jardín"
         fill
         sizes="100vw"

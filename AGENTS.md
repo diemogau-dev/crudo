@@ -17,7 +17,7 @@ Leé `context/` — es la fuente de verdad del proyecto y se mantiene actualizad
 - No usar afirmaciones absolutas de velocidad ("siempre", "récord", "garantizado").
 - No inventar certificaciones, testimonios, clientes ni proyectos construidos.
 - No mencionar a la constructora madre, a Concrit ni a proveedores externos.
-- No usar la palabra "Serie" para agrupar modelos: son CRUDO 01, CRUDO 02, y a futuro 03, 04.
+- Los proyectos se llaman **tipologías**, nunca "modelos" ni "Serie": son CRUDO 01, CRUDO 02, y a futuro 03, 04.
 - Las specs de los modelos vienen del manual de marca; no se inventan ni se estiman de los renders.
 - Nada de stock photography: solo renders propios y fotos reales de taller.
 
@@ -26,7 +26,7 @@ Leé `context/` — es la fuente de verdad del proyecto y se mantiene actualizad
 - Colores y tipografía como tokens en `app/globals.css` (`@theme`): `iron`, `cement`, `alabaster`, `muted`, `hairline`.
 - Clases tipográficas propias: `display-xl`, `display-lg`, `display-md`, `kicker`, `lede`, `body-text`, `shell`.
 - Todos los links de WhatsApp salen de `lib/whatsapp.ts` — no hardcodear el número.
-- Contenido estructurado (modelos, FAQ, proceso, principios) vive en `lib/content.ts`.
+- Contenido estructurado (tipologías, FAQ, proceso) vive en `lib/content.ts`.
 - Sin sombras, gradientes ni bordes redondeados: composición editorial, hairlines y grid.
 
 ## Comandos

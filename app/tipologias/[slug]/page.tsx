@@ -126,11 +126,11 @@ export default async function ModelPage({ params }: Props) {
           {other ? (
             <Reveal className="mt-14" delay={90}>
               <Link
-                href={`/modelos/${other.slug}`}
+                href={`/tipologias/${other.slug}`}
                 className="group flex items-baseline justify-between gap-6 border-t border-hairline pt-8"
               >
                 <span>
-                  <span className="kicker text-muted">Siguiente modelo</span>
+                  <span className="kicker text-muted">Siguiente tipología</span>
                   <span className="display-md mt-3 block">{other.name}</span>
                 </span>
                 <span

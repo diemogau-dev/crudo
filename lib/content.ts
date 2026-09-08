@@ -1,7 +1,7 @@
 import type { WhatsappTopic } from "./whatsapp";
 
 export const navLinks = [
-  { href: "/modelos", label: "Modelos" },
+  { href: "/tipologias", label: "Tipologías" },
   { href: "/sistema", label: "El Sistema" },
   { href: "/a-medida", label: "A Medida" },
   { href: "/nosotros", label: "Nosotros" },
@@ -46,20 +46,20 @@ export const models: Model[] = [
       "Bacha, tina y pisos de concreto propios",
     ],
     whatsapp: "crudo01",
-    cover: "/images/modelos/crudo-01-exterior-aereo.jpg",
+    cover: "/images/tipologias/crudo-01-exterior-aereo.jpg",
     coverAlt:
       "Vista aérea del loft CRUDO 01: volumen de paneles de hormigón, frente vidriado y deck de madera",
     gallery: [
       {
-        src: "/images/modelos/crudo-01-frente.jpg",
+        src: "/images/tipologias/crudo-01-frente.jpg",
         alt: "Frente vidriado del loft CRUDO 01 con deck de madera y estructura metálica negra",
       },
       {
-        src: "/images/modelos/crudo-01-volumen.jpg",
+        src: "/images/tipologias/crudo-01-volumen.jpg",
         alt: "Volumen exterior de CRUDO 01: grilla de paneles de hormigón y techo de pendiente única",
       },
       {
-        src: "/images/modelos/crudo-01-interior.jpg",
+        src: "/images/tipologias/crudo-01-interior.jpg",
         alt: "Interior de CRUDO 01: muro de hormigón, cabecera de madera y salida al deck",
         wide: true,
       },
@@ -87,22 +87,22 @@ export const models: Model[] = [
       "Deck exterior integrado al estar",
     ],
     whatsapp: "crudo02",
-    cover: "/images/modelos/crudo-02-hero.png",
+    cover: "/images/tipologias/crudo-02-hero.png",
     coverAlt:
       "CRUDO 02: galería con pérgola de madera, celosía de concreto y pileta sobre deck",
     gallery: [
       {
-        src: "/images/modelos/crudo-02-exterior.jpg",
+        src: "/images/tipologias/crudo-02-exterior.jpg",
         alt: "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck y pileta",
         wide: true,
       },
       {
-        src: "/images/modelos/crudo-02-pileta.jpg",
+        src: "/images/tipologias/crudo-02-pileta.jpg",
         alt: "CRUDO 02 desde la pileta, con pérgola de madera y galería vidriada",
         wide: true,
       },
       {
-        src: "/images/modelos/crudo-02-interior.jpg",
+        src: "/images/tipologias/crudo-02-interior.jpg",
         alt: "Interior de CRUDO 02: muro de paneles de hormigón, cocina integrada al estar y revestimiento de madera",
         wide: true,
       },
@@ -116,6 +116,9 @@ export const processSteps = [
     title: "Diseñamos",
     short: "Pensamos cada proyecto antes de llegar a obra.",
     long: "Arquitectura, materiales y terminaciones quedan definidos antes de mover un metro cúbico de tierra. Lo que se decide en el proyecto es lo que se construye.",
+    // PENDIENTE: reemplazar por un close-up de dos personas trabajando sobre un
+    // plano en mesa de arquitecto. Dejar el archivo en public/images/proceso/
+    // y actualizar src y alt acá.
     image: {
       src: "/images/taller/muestras-concreto.png",
       alt: "Muestras de concreto en distintas tonalidades y texturas",
@@ -147,7 +150,7 @@ export const processSteps = [
     short: "El mismo equipo ejecuta la obra y la entrega terminada.",
     long: "Un solo responsable de principio a fin: no tenés que coordinar entre estudio, fábrica y constructor.",
     image: {
-      src: "/images/modelos/crudo-01-exterior-aereo.jpg",
+      src: "/images/tipologias/crudo-01-exterior-aereo.jpg",
       alt: "Volumen de hormigón terminado y montado en el terreno",
     },
   },
@@ -169,12 +172,12 @@ export const faqs = [
       "Un estudio de arquitectura y construcción que diseña y ejecuta espacios en hormigón y concreto, con un sistema propio de producción y construcción.",
   },
   {
-    question: "¿CRUDO solo construye los modelos CRUDO 01 y CRUDO 02?",
+    question: "¿CRUDO solo construye las tipologías CRUDO 01 y CRUDO 02?",
     answer:
       "No. Son nuestro punto de partida y vamos a ir lanzando nuevas tipologías. También desarrollamos proyectos personalizados según el terreno y las ideas de cada cliente.",
   },
   {
-    question: "¿Puedo adaptar un modelo CRUDO a mi terreno?",
+    question: "¿Puedo adaptar una tipología CRUDO a mi terreno?",
     answer:
       "Sí. Cada terreno tiene sus particularidades. Analizamos tu caso y definimos la mejor forma de llevar el proyecto a tu propiedad.",
   },

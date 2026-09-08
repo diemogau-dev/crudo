@@ -46,7 +46,7 @@ export default function Home() {
 
         <Reveal className="relative mt-20 aspect-[16/10] w-full overflow-hidden bg-cement md:mt-28 md:aspect-[21/9]">
           <Image
-            src="/images/modelos/crudo-02-interior.jpg"
+            src="/images/tipologias/crudo-02-interior.jpg"
             alt="Interior de CRUDO 02: muro de paneles de hormigón, cocina integrada al estar y revestimiento de madera"
             fill
             sizes="100vw"
@@ -55,11 +55,11 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* Modelos */}
+      {/* Tipologías */}
       <section className="border-t border-hairline py-24 md:py-36">
         <div className="shell">
           <Reveal className="max-w-3xl">
-            <p className="kicker text-muted">Modelos</p>
+            <p className="kicker text-muted">Tipologías</p>
             <h2 className="display-lg mt-6">
               Dos proyectos.
               <br />
@@ -89,7 +89,7 @@ export default function Home() {
           <Reveal className="md:col-span-6">
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
               <Image
-                src="/images/modelos/crudo-02-pileta.jpg"
+                src="/images/tipologias/crudo-02-pileta.jpg"
                 alt="CRUDO 02 con pileta, pérgola de madera y celosía de concreto"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"

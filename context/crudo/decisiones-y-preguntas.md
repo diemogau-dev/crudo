@@ -2,6 +2,15 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-08 — Tercera ronda de ajustes
+
+1. **Subtítulo del hero:** "Arquitectura contemporánea con materiales sólidos. Hormigón armado y concreto de alta performance."
+2. **"Modelos" pasa a llamarse "Tipologías"** en toda la web: navegación, títulos de sección, FAQ, metadatos y la ruta, que ahora es `/tipologias` (y `/tipologias/crudo-01`, `/tipologias/crudo-02`). La carpeta de imágenes también pasó a `public/images/tipologias/`.
+3. **Titular del hero más chico:** `display-xl` bajó de `clamp(2.6rem, 8.4vw, 7.5rem)` a `clamp(2.25rem, 6.4vw, 5.75rem)`.
+4. **Foto de "Diseñamos" (pendiente):** se pidió un close-up de dos personas trabajando sobre un plano en mesa de arquitecto, buscándola en Unsplash. **No se pudo descargar: la política de red del entorno bloquea unsplash.com, images.unsplash.com y equivalentes (403 en el gateway).** Quedó el placeholder de muestras de concreto y un comentario en `lib/content.ts` marcando el reemplazo. Para resolverlo: dejar el archivo en `public/images/proceso/` y actualizar `src` y `alt` del primer paso de `processSteps`.
+5. **Rediseño de El Sistema** para cortar la repetición de listas: el taller pasó a bloque Iron Black con grilla numerada de dos columnas (también en mobile) y las fotos sobre fondo negro; la lista de herrería se reemplazó por una frase corrida; y tecnología y materiales quedó en bloque claro con tratamiento tipográfico (apilado en mobile, corrido con separadores en desktop) en vez de lista con bordes.
+6. **Bajada de Nosotros reescrita:** se eliminó "Es lo que es: mezcla, agua, tiempo y oficio" → ahora "Muestra de qué está hecho y envejece sin pedir permiso".
+
 ## 2026-09-08 — Segunda ronda de ajustes sobre la web ya desarrollada
 
 1. **Titular del hero:** "Módulos y viviendas industriales." Imagen de portada: `Crudo 2 - A` (`crudo-02-exterior.jpg`).

@@ -38,7 +38,7 @@ body {
 @layer components {
   /* Editorial type scale — Archivo, jerarquías del manual de marca */
   .display-xl {
-    font-size: clamp(2.6rem, 8.4vw, 7.5rem);
+    font-size: clamp(2.25rem, 6.4vw, 5.75rem);
     font-weight: 800;
     line-height: 0.92;
     letter-spacing: -0.035em;

@@ -7,7 +7,12 @@ import { navLinks } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
 
 // Rutas cuyo encabezado es una imagen a sangre: el navbar arranca transparente.
-const DARK_HERO_PREFIXES = ["/modelos", "/sistema", "/a-medida", "/nosotros"];
+const DARK_HERO_PREFIXES = [
+  "/tipologias",
+  "/sistema",
+  "/a-medida",
+  "/nosotros",
+];
 
 const hasDarkHero = (pathname: string) =>
   pathname === "/" ||

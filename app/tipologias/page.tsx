@@ -6,20 +6,20 @@ import FinalCta from "@/components/sections/FinalCta";
 import { models } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Modelos",
+  title: "Tipologías",
   description:
     "CRUDO 01, loft de 28 m², y CRUDO 02, vivienda industrial de 60 m². Diseñados y construidos con nuestro sistema de hormigón y concreto.",
 };
 
-export default function ModelosPage() {
+export default function TipologiasPage() {
   return (
     <>
       <PageHeader
-        kicker="Modelos"
+        kicker="Tipologías"
         title={"Dos proyectos.\nMuchas formas de vivirlos."}
         lede="Diseñados para adaptarse a distintos terrenos y formas de usar la arquitectura. Una lista que va a seguir creciendo."
         image={{
-          src: "/images/modelos/crudo-01-exterior-aereo.jpg",
+          src: "/images/tipologias/crudo-01-exterior-aereo.jpg",
           alt: "Vista aérea del loft CRUDO 01 con deck de madera y frente vidriado",
           priority: true,
         }}

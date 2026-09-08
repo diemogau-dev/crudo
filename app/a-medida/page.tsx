@@ -47,7 +47,7 @@ export default function AMedidaPage() {
         title={"Tu idea.\nNuestro sistema."}
         lede="No necesitás entrar en un molde para trabajar con CRUDO. Partimos de una conversación, un plano o una necesidad concreta y lo transformamos en un proyecto listo para construir."
         image={{
-          src: "/images/modelos/crudo-02-pileta.jpg",
+          src: "/images/tipologias/crudo-02-pileta.jpg",
           alt: "CRUDO 02 con pileta, pérgola de madera y celosía de concreto",
           priority: true,
         }}
