@@ -70,37 +70,60 @@ export default function NosotrosPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-14 grid gap-14 md:mt-20 md:grid-cols-12 md:items-center md:gap-16">
-            <Reveal className="md:col-span-6">
-              <p className="lede">
-                Elegimos el concreto porque es honesto y porque dura. En un país
-                de calor, humedad y sol fuerte, hay pocas cosas que se comporten
-                mejor con el paso del tiempo.
-              </p>
-              <p className="body-text mt-6 text-muted">
-                Tiene una cualidad rara: es firme y silencioso a la vez. Un muro
-                bien hecho no necesita adornos. Ya tiene textura, sombra y
-                carácter.
-              </p>
-              <p className="body-text mt-6 text-muted">
-                Pero un espacio no se vive desde afuera. Por eso trabajamos el
-                concreto junto a la madera, el metal, la luz y el verde.
-              </p>
-            </Reveal>
-
-            <Reveal
-              className="relative aspect-[4/5] w-full overflow-hidden bg-cement md:col-span-5 md:col-start-8"
-              delay={120}
-            >
+          {/* Díptico: el mismo contraste del titular, en imagen. */}
+          <div className="mt-14 grid grid-cols-2 gap-4 md:mt-20">
+            <Reveal className="relative aspect-[3/4] w-full overflow-hidden bg-cement md:aspect-[4/5]">
               <Image
                 src="/images/proceso/muro-detalle.png"
                 alt="Detalle de un muro de concreto visto, con sus juntas y perforaciones de anclaje"
                 fill
-                sizes="(min-width: 768px) 40vw, 100vw"
+                sizes="(min-width: 768px) 50vw, 50vw"
                 className="object-cover"
               />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-iron/70 to-transparent"
+              />
+              <p className="kicker absolute bottom-5 left-5 text-alabaster">
+                Afuera
+              </p>
+            </Reveal>
+
+            <Reveal
+              className="relative aspect-[3/4] w-full overflow-hidden bg-cement md:aspect-[4/5]"
+              delay={120}
+            >
+              <Image
+                src="/images/tipologias/crudo-02-interior.jpg"
+                alt="Interior cálido de CRUDO 02: revestimiento de madera, luz natural y cocina integrada"
+                fill
+                sizes="(min-width: 768px) 50vw, 50vw"
+                className="object-cover"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-iron/70 to-transparent"
+              />
+              <p className="kicker absolute bottom-5 left-5 text-alabaster">
+                Adentro
+              </p>
             </Reveal>
           </div>
+
+          <Reveal className="mt-14 max-w-2xl md:mt-20" delay={90}>
+            <p className="lede">
+              Elegimos el concreto porque es honesto y porque dura. En un país
+              de calor, humedad y sol fuerte, hay pocas cosas que se comporten
+              mejor con el paso del tiempo.
+            </p>
+            <p className="body-text mt-6 text-muted">
+              Tiene una cualidad rara: es firme y silencioso a la vez. Un muro
+              bien hecho no necesita adornos. Ya tiene textura, sombra y
+              carácter. Pero un espacio no se vive desde afuera. Por eso
+              trabajamos el concreto junto a la madera, el metal, la luz y el
+              verde.
+            </p>
+          </Reveal>
         </div>
       </section>
 
