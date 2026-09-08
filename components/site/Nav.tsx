@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
+import Logo from "./Logo";
 
 // Rutas cuyo encabezado es una imagen a sangre: el navbar arranca transparente.
 const DARK_HERO_PREFIXES = [
@@ -50,14 +51,8 @@ export default function Nav() {
         }`}
       >
         <div className="shell flex h-16 items-center justify-between md:h-20">
-          <Link
-            href="/"
-            aria-label="CRUDO — inicio"
-            className={`relative z-10 text-xl font-extrabold uppercase tracking-[-0.04em] md:text-2xl ${
-              open ? "text-alabaster" : ""
-            }`}
-          >
-            Crudo
+          <Link href="/" aria-label="CRUDO — inicio" className="relative z-10">
+            <Logo variant={light || open ? "alabaster" : "iron"} priority />
           </Link>
 
           <nav className="hidden items-center gap-9 md:flex">

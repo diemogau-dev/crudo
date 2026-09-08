@@ -29,7 +29,7 @@ export default function ModelCard({ model }: { model: Model }) {
       <p className="body-text mt-5 max-w-sm text-muted">{model.summary}</p>
 
       <span className="kicker mt-7 inline-flex items-center gap-3 border-b border-hairline pb-1 transition-colors duration-300 group-hover:border-iron">
-        Conocer el proyecto
+        Conocer tipología
         <span
           aria-hidden
           className="transition-transform duration-300 group-hover:translate-x-1"

@@ -2,6 +2,20 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-08 — Cuarta ronda de ajustes
+
+1. **Bajada del hero:** "Arquitectura contemporánea con materiales sólidos. Hormigón armado y Concreto de Alto Performance."
+2. **CTA de tipología:** "Conocer el proyecto" → "Conocer tipología" en `ModelCard`.
+3. **Fotos reales para "Diseñamos" y "Fabricamos"** en El Sistema: Diego pasó dos fotos (dos personas sobre un plano en mesa de arquitecto; terminación de un panel recién vertido) — quedaron en `public/images/proceso/disenamos-plano.jpg` y `fabricamos-acabado.jpg`. Reemplazan el placeholder pendiente de la ronda anterior.
+4. **Logo real de marca:** Diego pasó el wordmark de CRUDO en dos versiones (fondo Iron Black y fondo Alabaster). Como venían con fondo sólido, no transparente, se generaron versiones con el fondo recortado por chroma-key exacto (`public/logo/crudo-wordmark-iron.png` y `crudo-wordmark-alabaster.png`) para poder usarlo sobre cualquier fondo. Nuevo componente `components/site/Logo.tsx`, usado en `Nav` (cambia de versión según el estado del header) y `Footer`.
+5. **Foto de gimnasio** (pasada por Diego) reemplaza la imagen de "Qué podemos construir" en A Medida — encaja directo con la lista de posibilidades que incluye "Gimnasios".
+6. **Título de Nosotros:** "Creemos en los materiales que no mienten" → **"Creemos en los materiales en su estado puro."**
+7. **Párrafo reescrito en "Por qué existimos"** (Nosotros): "No somos una fábrica que además construye, ni un estudio que terceriza todo. Somos las dos cosas a la vez" no cerraba la idea → ahora "Por eso diseñamos, fabricamos y construimos bajo el mismo techo, en vez de repartir tu proyecto entre un estudio, una fábrica y un constructor que no se hablan entre sí."
+8. **"El material" (Nosotros):** se agregó `md:items-center` para que el bloque de texto y la imagen queden centrados verticalmente entre sí, en vez de que el texto arrancara arriba y la imagen quedara más abajo.
+9. **"Hecho acá, para acá" reorganizada:** pasó de dos columnas con texto repartido de forma dispareja a una sola columna centrada (kicker, título y los tres párrafos en secuencia, `max-w-2xl` centrado).
+10. **Se eliminó la sección "Cómo trabajamos"** de Nosotros — quedaba redundante después de reescribir "Por qué existimos" y ya la página cierra con el CTA final.
+11–16. **Todas las secciones de CTA final (`FinalCta`) ahora centran texto y botón** — afecta por igual a Home, Tipologías, El Sistema, A Medida, Nosotros y FAQ porque comparten el mismo componente.
+
 ## 2026-09-08 — Tercera ronda de ajustes
 
 1. **Subtítulo del hero:** "Arquitectura contemporánea con materiales sólidos. Hormigón armado y concreto de alta performance."

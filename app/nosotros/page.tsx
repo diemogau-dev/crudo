@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Cta from "@/components/ui/Cta";
 import Reveal from "@/components/ui/Reveal";
 import PageHeader from "@/components/sections/PageHeader";
 import FinalCta from "@/components/sections/FinalCta";
@@ -16,7 +15,7 @@ export default function NosotrosPage() {
     <>
       <PageHeader
         kicker="Nosotros"
-        title={"Creemos en los materiales\nque no mienten."}
+        title={"Creemos en los materiales\nen su estado puro."}
         lede="El concreto no se disfraza. No imita madera, ni piedra, ni mármol. Muestra de qué está hecho y envejece sin pedir permiso."
         image={{
           src: "/images/tipologias/crudo-01-interior.jpg",
@@ -51,8 +50,9 @@ export default function NosotrosPage() {
               resultado deja de ser una sorpresa y empieza a ser una decisión.
             </p>
             <p className="body-text mt-6 text-muted">
-              No somos una fábrica que además construye, ni un estudio que
-              terceriza todo. Somos las dos cosas a la vez.
+              Por eso diseñamos, fabricamos y construimos bajo el mismo techo,
+              en vez de repartir tu proyecto entre un estudio, una fábrica y un
+              constructor que no se hablan entre sí.
             </p>
           </Reveal>
         </div>
@@ -70,7 +70,7 @@ export default function NosotrosPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-14 grid gap-14 md:mt-20 md:grid-cols-12 md:gap-16">
+          <div className="mt-14 grid gap-14 md:mt-20 md:grid-cols-12 md:items-center md:gap-16">
             <Reveal className="md:col-span-6">
               <p className="lede">
                 Elegimos el concreto porque es honesto y porque dura. En un país
@@ -146,60 +146,31 @@ export default function NosotrosPage() {
       {/* Desde Paraguay */}
       <section className="bg-iron text-alabaster">
         <div className="shell py-24 md:py-40">
-          <Reveal className="max-w-4xl">
+          <Reveal className="mx-auto max-w-2xl text-center">
             <p className="kicker text-alabaster/60">Desde Paraguay</p>
             <h2 className="display-lg mt-6">
               Hecho acá,
               <br />
               para acá.
             </h2>
+            <p className="lede mt-8 text-cement/90">
+              Todo lo que hacemos se piensa, se fabrica y se construye en
+              Paraguay, con materiales de esta tierra y con la gente que sabe
+              trabajarlos.
+            </p>
+            <p className="body-text mt-6 text-alabaster/70">
+              No importamos una fórmula de afuera para aplicarla sin pensar.
+              Adaptamos cada proyecto al clima y a la luz de este lugar: sombra
+              donde hace falta, ventilación cruzada, materiales que aguantan el
+              verano y espacios que se abren al afuera, porque acá se vive
+              afuera.
+            </p>
+            <p className="body-text mt-6 text-alabaster/70">
+              Arquitectura de autor, producida con el control de una fábrica y
+              el cuidado de un taller.
+            </p>
           </Reveal>
-
-          <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-12 md:gap-16">
-            <Reveal className="md:col-span-6">
-              <p className="lede text-cement/90">
-                Todo lo que hacemos se piensa, se fabrica y se construye en
-                Paraguay. Con materiales de esta tierra y con la gente que sabe
-                trabajarlos.
-              </p>
-            </Reveal>
-            <Reveal className="md:col-span-5 md:col-start-8" delay={120}>
-              <p className="body-text text-alabaster/70">
-                No importamos una fórmula de afuera para aplicarla sin pensar.
-                Adaptamos cada proyecto al clima y a la luz de este lugar:
-                sombra donde hace falta, ventilación cruzada, materiales que
-                aguantan el verano y espacios que se abren al afuera, porque acá
-                se vive afuera.
-              </p>
-              <p className="body-text mt-6 text-alabaster/70">
-                Arquitectura de autor, producida con el control de una fábrica y
-                el cuidado de un taller.
-              </p>
-            </Reveal>
-          </div>
         </div>
-      </section>
-
-      {/* Cómo trabajamos */}
-      <section className="shell py-24 md:py-36">
-        <Reveal className="max-w-4xl">
-          <p className="kicker text-muted">Cómo trabajamos</p>
-          <h2 className="display-lg mt-6">
-            No vendemos casas.
-            <br />
-            Construimos espacios completos.
-          </h2>
-          <p className="lede mt-10 max-w-xl text-muted">
-            Diseñamos el proyecto, fabricamos las piezas, controlamos la calidad
-            y ejecutamos la obra hasta la entrega. Un solo equipo, un solo
-            responsable.
-          </p>
-          <div className="mt-12">
-            <Cta href="/sistema" variant="outline">
-              Conocer el sistema
-            </Cta>
-          </div>
-        </Reveal>
       </section>
 
       <FinalCta

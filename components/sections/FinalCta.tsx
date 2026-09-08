@@ -17,11 +17,11 @@ export default function FinalCta({
 }: Props) {
   return (
     <section className="bg-iron text-alabaster">
-      <div className="shell py-24 md:py-40">
-        <Reveal className="max-w-4xl">
+      <div className="shell py-24 text-center md:py-40">
+        <Reveal className="mx-auto max-w-4xl">
           <h2 className="display-lg whitespace-pre-line">{title}</h2>
-          <p className="lede mt-8 max-w-xl text-cement/80">{text}</p>
-          <div className="mt-12">
+          <p className="lede mx-auto mt-8 max-w-xl text-cement/80">{text}</p>
+          <div className="mt-12 flex justify-center">
             <Cta href={whatsappLink(topic)} external variant="solid-inverse">
               {label}
             </Cta>

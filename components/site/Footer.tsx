@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navLinks } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -8,10 +9,8 @@ export default function Footer() {
       <div className="shell border-t border-hairline-inverse py-14 md:py-20">
         <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="text-3xl font-extrabold uppercase tracking-[-0.04em] md:text-4xl">
-              Crudo
-            </p>
-            <p className="kicker mt-3 text-cement/70">
+            <Logo variant="alabaster" className="h-8 md:h-9" />
+            <p className="kicker mt-4 text-cement/70">
               Arquitectura &amp; Concreto
             </p>
           </div>

@@ -116,12 +116,9 @@ export const processSteps = [
     title: "Diseñamos",
     short: "Pensamos cada proyecto antes de llegar a obra.",
     long: "Arquitectura, materiales y terminaciones quedan definidos antes de mover un metro cúbico de tierra. Lo que se decide en el proyecto es lo que se construye.",
-    // PENDIENTE: reemplazar por un close-up de dos personas trabajando sobre un
-    // plano en mesa de arquitecto. Dejar el archivo en public/images/proceso/
-    // y actualizar src y alt acá.
     image: {
-      src: "/images/taller/muestras-concreto.png",
-      alt: "Muestras de concreto en distintas tonalidades y texturas",
+      src: "/images/proceso/disenamos-plano.jpg",
+      alt: "Dos personas trabajando sobre un plano y muestras de material en una mesa de arquitecto",
     },
   },
   {
@@ -130,8 +127,8 @@ export const processSteps = [
     short: "Producimos en nuestro taller lo que forma la arquitectura.",
     long: "Muros, revestimientos, celosías, piezas de concreto y carpintería metálica salen de nuestra propia producción. Fabricar lo nuestro nos deja decidir cómo se ve y cómo se comporta cada pieza.",
     image: {
-      src: "/images/proceso/mezcla.png",
-      alt: "Mezcla de hormigón en producción en el taller",
+      src: "/images/proceso/fabricamos-acabado.jpg",
+      alt: "Terminación de un panel de concreto recién vertido en el taller",
     },
   },
   {

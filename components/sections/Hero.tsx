@@ -26,7 +26,7 @@ export default function Hero() {
         </h1>
         <p className="lede mt-8 max-w-lg text-alabaster/90">
           Arquitectura contemporánea con materiales sólidos. Hormigón armado y
-          concreto de alta performance.
+          Concreto de Alto Performance.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Cta href={whatsappLink("general")} external variant="solid-inverse">

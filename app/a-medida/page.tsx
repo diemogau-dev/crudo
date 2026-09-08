@@ -80,8 +80,8 @@ export default function AMedidaPage() {
             <Reveal className="md:col-span-6">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
                 <Image
-                  src="/images/proceso/muro-interior.png"
-                  alt="Muro de concreto terminado en un interior doméstico"
+                  src="/images/proceso/gimnasio.jpg"
+                  alt="Gimnasio propio construido en concreto visto, con equipamiento de entrenamiento"
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
