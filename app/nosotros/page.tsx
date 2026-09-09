@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Cta from "@/components/ui/Cta";
 import Reveal from "@/components/ui/Reveal";
 import PageHeader from "@/components/sections/PageHeader";
-import FinalCta from "@/components/sections/FinalCta";
+import { whatsappLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -70,47 +71,7 @@ export default function NosotrosPage() {
             </h2>
           </Reveal>
 
-          {/* Díptico: el mismo contraste del titular, en imagen. */}
-          <div className="mt-14 grid grid-cols-2 gap-4 md:mt-20">
-            <Reveal className="relative aspect-[3/4] w-full overflow-hidden bg-cement md:aspect-[4/5]">
-              <Image
-                src="/images/proceso/muro-detalle.png"
-                alt="Detalle de un muro de concreto visto, con sus juntas y perforaciones de anclaje"
-                fill
-                sizes="(min-width: 768px) 50vw, 50vw"
-                className="object-cover"
-              />
-              <div
-                aria-hidden
-                className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-iron/70 to-transparent"
-              />
-              <p className="kicker absolute bottom-5 left-5 text-alabaster">
-                Afuera
-              </p>
-            </Reveal>
-
-            <Reveal
-              className="relative aspect-[3/4] w-full overflow-hidden bg-cement md:aspect-[4/5]"
-              delay={120}
-            >
-              <Image
-                src="/images/tipologias/crudo-02-interior.jpg"
-                alt="Interior cálido de CRUDO 02: revestimiento de madera, luz natural y cocina integrada"
-                fill
-                sizes="(min-width: 768px) 50vw, 50vw"
-                className="object-cover"
-              />
-              <div
-                aria-hidden
-                className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-iron/70 to-transparent"
-              />
-              <p className="kicker absolute bottom-5 left-5 text-alabaster">
-                Adentro
-              </p>
-            </Reveal>
-          </div>
-
-          <Reveal className="mt-14 max-w-2xl md:mt-20" delay={90}>
+          <Reveal className="mt-10 max-w-2xl md:mt-14" delay={90}>
             <p className="lede">
               Elegimos el concreto porque es honesto y porque dura. En un país
               de calor, humedad y sol fuerte, hay pocas cosas que se comporten
@@ -124,6 +85,46 @@ export default function NosotrosPage() {
               verde.
             </p>
           </Reveal>
+
+          {/* Díptico: el mismo contraste del titular, en imagen. */}
+          <div className="mx-auto mt-14 grid max-w-2xl grid-cols-2 gap-3 md:mt-20">
+            <Reveal className="relative aspect-[3/4] w-full overflow-hidden bg-cement">
+              <Image
+                src="/images/proceso/muro-detalle.png"
+                alt="Detalle de un muro de concreto visto, con sus juntas y perforaciones de anclaje"
+                fill
+                sizes="(min-width: 768px) 25vw, 45vw"
+                className="object-cover"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-iron/70 to-transparent"
+              />
+              <p className="kicker absolute bottom-4 left-4 text-alabaster">
+                Afuera
+              </p>
+            </Reveal>
+
+            <Reveal
+              className="relative aspect-[3/4] w-full overflow-hidden bg-cement"
+              delay={120}
+            >
+              <Image
+                src="/images/tipologias/crudo-02-interior.jpg"
+                alt="Interior cálido de CRUDO 02: revestimiento de madera, luz natural y cocina integrada"
+                fill
+                sizes="(min-width: 768px) 25vw, 45vw"
+                className="object-cover"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-iron/70 to-transparent"
+              />
+              <p className="kicker absolute bottom-4 left-4 text-alabaster">
+                Adentro
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -192,14 +193,18 @@ export default function NosotrosPage() {
               Arquitectura de autor, producida con el control de una fábrica y
               el cuidado de un taller.
             </p>
+            <div className="mt-10 flex justify-center">
+              <Cta
+                href={whatsappLink("general")}
+                external
+                variant="solid-inverse"
+              >
+                Hablemos
+              </Cta>
+            </div>
           </Reveal>
         </div>
       </section>
-
-      <FinalCta
-        title={"¿Empezamos\npor tu lugar?"}
-        text="Contanos dónde querés construir y qué tenés en mente."
-      />
     </>
   );
 }

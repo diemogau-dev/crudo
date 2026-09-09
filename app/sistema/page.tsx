@@ -44,6 +44,21 @@ const workshopImages = [
   },
 ];
 
+const workshopImagesSecondRow = [
+  {
+    src: "/images/proceso/celosia-instalada-dia.jpg",
+    alt: "Celosía de concreto instalada como muro divisor, de día",
+  },
+  {
+    src: "/images/proceso/celosia-instalada-noche.jpg",
+    alt: "Celosía de concreto instalada, de noche con iluminación de jardín",
+  },
+  {
+    src: "/images/taller/paver-muestra.jpg",
+    alt: "Pieza de pavimento de concreto en mano, sobre un piso ya instalado del mismo material",
+  },
+];
+
 export default function SistemaPage() {
   return (
     <>
@@ -147,6 +162,25 @@ export default function SistemaPage() {
 
           <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-3">
             {workshopImages.map((image, index) => (
+              <Reveal
+                key={image.src}
+                delay={index * 90}
+                className="relative aspect-[4/5] w-full overflow-hidden bg-iron"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Celosías y pisos: prueba visual de dos ítems de la lista de arriba. */}
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            {workshopImagesSecondRow.map((image, index) => (
               <Reveal
                 key={image.src}
                 delay={index * 90}

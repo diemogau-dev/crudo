@@ -2,6 +2,12 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-09 — Sexta ronda: fix de bloque negro doble + reorden El material + fotos de celosía en El Sistema
+
+1. **Nosotros: "Desde Paraguay" pegado al CTA final se veía como un solo bloque negro gigante, sobre todo en mobile.** Se elimina el `FinalCta` de la página y se agrega un botón "Hablemos" dentro de la propia sección "Desde Paraguay", debajo de "Arquitectura de autor, producida con el control de una fábrica y el cuidado de un taller." La página ahora termina en esa sección y pasa directo al footer, sin dos negros consecutivos.
+2. **"El material" reordenada:** el texto ("Elegimos el concreto porque es honesto...") ahora va debajo del titular "Sólido afuera. Cálido adentro." y antes del díptico de fotos. Las fotos se achicaron (`max-w-2xl` centrado en vez de ancho completo) y bajaron de `aspect-[4/5]` a un grid más compacto.
+3. **El Sistema usa las fotos de celosía y piso** que habías subido directo a `main`: se agregó una segunda fila de 3 imágenes en "El taller" con `celosia-instalada-dia.jpg`, `celosia-instalada-noche.jpg` y `paver-muestra.jpg` — quedan como prueba visual directa de los ítems "Celosías y piezas arquitectónicas" y "Pisos de concreto" de la lista de arriba.
+
 ## 2026-09-08 — Quinta ronda: fix de diseño + flujo de git a producción
 
 1. **"El material" (Nosotros) rediseñada como díptico.** El layout de texto+una foto quedaba desalineado. Ahora dos fotos lado a lado —detalle de muro (`muro-detalle.png`, "Afuera") y el interior cálido de CRUDO 02 (`crudo-02-interior.jpg`, "Adentro")— con etiqueta superpuesta y degradado para legibilidad, y el texto pasa a una columna completa debajo.
