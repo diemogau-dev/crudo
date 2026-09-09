@@ -32,7 +32,7 @@ export default function Home() {
               Meses de obra. Decisiones improvisadas sobre la marcha. Un
               estudio, una fábrica y un constructor que no se hablan entre sí.
               En CRUDO el diseño, la fabricación y la construcción están en las
-              mismas manos — por eso el resultado deja de ser una sorpresa, y el
+              mismas manos. Por eso el resultado deja de ser una sorpresa, y el
               plazo es más corto que el de una obra tradicional.
             </p>
             <div className="mt-10">

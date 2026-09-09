@@ -2,6 +2,15 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-09 — Novena ronda: título del hero, sin em-dashes, fotos de El Sistema, créditos
+
+1. **Título del hero achicado de nuevo.** `display-xl` bajó de `clamp(2.25rem, 6.4vw, 5.75rem)` a `clamp(1.875rem, 4.8vw, 4.25rem)`.
+2. **Subtítulo del hero reemplazado por el texto exacto de Diego:** "Arquitectura en hormigón y concreto. Un mismo equipo, desde el diseño a la entrega llave en mano. Más control y menos tiempo que una obra tradicional."
+3. **Se eliminaron los guiones em-dash ("—") de toda la prosa visible del sitio** (home, nosotros, FAQ, y los bloques de copy pendientes comentados en `/tipologias`), reemplazados por comas o punto seguido. Quedan sin tocar los `—` que son bullets decorativos de lista (`<span>—</span>` antes de cada ítem de "Sistema" en las tipologías) y los que están en `aria-label` (no son copy visible) o en comentarios de código — no son la construcción que se pidió eliminar.
+4. **Fotos nuevas en "El Sistema" → "El taller":** Diego pasó una foto de un soldador trabajando en la herrería y una foto de bachas de producción propia. Se sacaron `celosia-instalada-dia.jpg` (celosía con la silla) y `taller/paver-muestra.jpg` (la plaqueta chica en la mano) de la segunda fila de fotos, y entraron `proceso/soldadura-herreria.jpg` (nueva) y `taller/bachas-taller.png` (ya existía en el repo sin usar en ninguna página). La fila queda: celosía de noche, soldadura, bachas. Los dos archivos sacados (`celosia-instalada-dia.jpg`, `paver-muestra.jpg`) no se borraron del repo, quedan como assets disponibles sin usar.
+5. **"Las manos" (Nosotros):** se agregó "MBA" después de "Diego Morales".
+6. **Mención de equipo propio y cuadrillas de construcción:** se agregó en "Las manos" (Nosotros: "equipo propio en el taller, cuadrillas propias de construcción"), en "El taller" (Sistema: "con equipo propio de producción") y en el paso "Construimos" del proceso (usado en Home y Sistema: "Nuestras propias cuadrillas de construcción montan y ejecutan la obra").
+
 ## 2026-09-09 — Octava ronda: ajustes de copy y conversión (prompt de ajustes de Diego)
 
 1. **Hero:** H1 nuevo "Diseñamos, fabricamos y construimos tu próximo espacio." (sube al lugar de más peso la idea que antes solo estaba en el FAQ #1). Subhead nueva menciona audiencia (quintas, casas de descanso, ampliaciones), el diferencial de un solo equipo y "más control y menos tiempo que una obra tradicional". CTA primario pasa de "Hablemos" a "Hablemos de tu terreno" (mismo link).

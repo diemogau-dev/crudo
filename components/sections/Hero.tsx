@@ -27,9 +27,9 @@ export default function Hero() {
           próximo espacio.
         </h1>
         <p className="lede mt-8 max-w-lg text-alabaster/90">
-          Arquitectura en hormigón para quintas, casas de descanso y
-          ampliaciones. Un mismo equipo, del proyecto a la entrega — con más
-          control y menos tiempo que una obra tradicional.
+          Arquitectura en hormigón y concreto. Un mismo equipo, desde el diseño
+          a la entrega llave en mano. Más control y menos tiempo que una obra
+          tradicional.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Cta href={whatsappLink("general")} external variant="solid-inverse">

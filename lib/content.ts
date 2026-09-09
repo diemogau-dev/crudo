@@ -154,8 +154,8 @@ export const processSteps = [
   {
     number: "04",
     title: "Construimos",
-    short: "El mismo equipo ejecuta la obra y la entrega terminada.",
-    long: "Un solo responsable de principio a fin: no tenés que coordinar entre estudio, fábrica y constructor.",
+    short: "Nuestras cuadrillas ejecutan la obra y la entrega terminada.",
+    long: "Un solo responsable de principio a fin. Nuestras propias cuadrillas de construcción montan y ejecutan la obra, así que no tenés que coordinar entre estudio, fábrica y constructor.",
     image: {
       src: "/images/tipologias/crudo-01-exterior-aereo.jpg",
       alt: "Volumen de hormigón terminado y montado en el terreno",
@@ -205,7 +205,7 @@ export const faqs = [
     // por:
     // "CRUDO 01 y CRUDO 02 parten de una inversión de referencia desde Gs
     // [PLACEHOLDER_INVERSION_CRUDO01]. El número final depende del terreno, la
-    // ubicación y los trabajos necesarios para prepararlo — te preparamos una
+    // ubicación y los trabajos necesarios para prepararlo. Te preparamos una
     // propuesta clara con el alcance exacto apenas conversemos."
     answer:
       "Depende del proyecto, el terreno, la ubicación y los trabajos necesarios para preparar y ejecutar la obra. Preferimos conocer tu caso y después preparar una propuesta clara con el alcance correspondiente.",
@@ -213,7 +213,7 @@ export const faqs = [
   {
     question: "¿Cuánto tiempo demora la construcción?",
     answer:
-      "Depende del proyecto y del terreno, pero es una de las razones por las que existimos: al fabricar nosotros mismos buena parte de las piezas, no dependemos del ritmo de terceros — eso recorta semanas frente a una obra tradicional de mampostería. Te damos un plazo concreto apenas revisamos tu caso.",
+      "Depende del proyecto y del terreno, pero es una de las razones por las que existimos. Al fabricar nosotros mismos buena parte de las piezas, no dependemos del ritmo de terceros. Eso recorta semanas frente a una obra tradicional de mampostería. Te damos un plazo concreto apenas revisamos tu caso.",
   },
   {
     question: "¿Qué necesito tener para empezar?",

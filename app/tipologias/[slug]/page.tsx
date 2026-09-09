@@ -121,8 +121,8 @@ export default async function ModelPage({ params }: Props) {
               PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md).
               Cuando Calde confirme costo real, reemplazar el <p> de abajo por:
               "Desde Gs [PLACEHOLDER_INVERSION_CRUDO01]. Depende del terreno,
-              la ubicación y los trabajos necesarios para prepararlo —
-              preferimos conocer tu caso antes de confirmar el número final."
+              la ubicación y los trabajos necesarios para prepararlo.
+              Preferimos conocer tu caso antes de confirmar el número final."
               (mismo texto para CRUDO 02, con [PLACEHOLDER_INVERSION_CRUDO02])
             */}
             <p className="body-text mt-5 text-muted">

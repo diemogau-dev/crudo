@@ -46,16 +46,16 @@ const workshopImages = [
 
 const workshopImagesSecondRow = [
   {
-    src: "/images/proceso/celosia-instalada-dia.jpg",
-    alt: "Celosía de concreto instalada como muro divisor, de día",
-  },
-  {
     src: "/images/proceso/celosia-instalada-noche.jpg",
     alt: "Celosía de concreto instalada, de noche con iluminación de jardín",
   },
   {
-    src: "/images/taller/paver-muestra.jpg",
-    alt: "Pieza de pavimento de concreto en mano, sobre un piso ya instalado del mismo material",
+    src: "/images/proceso/soldadura-herreria.jpg",
+    alt: "Soldadura de estructura metálica en nuestra herrería",
+  },
+  {
+    src: "/images/taller/bachas-taller.png",
+    alt: "Bachas de concreto de producción propia en distintos colores, en el taller",
   },
 ];
 
@@ -129,9 +129,9 @@ export default function SistemaPage() {
             <p className="kicker text-alabaster/60">El taller</p>
             <h2 className="display-lg mt-6">Producción propia.</h2>
             <p className="lede mt-8 max-w-xl text-cement/85">
-              Tenemos fábrica y taller de carpintería metálica propios. Eso nos
-              permite decidir cómo se ve, cómo se comporta y cuánto dura cada
-              pieza que llega a tu obra.
+              Tenemos fábrica y taller de carpintería metálica propios, con
+              equipo propio de producción. Eso nos permite decidir cómo se ve,
+              cómo se comporta y cuánto dura cada pieza que llega a tu obra.
             </p>
           </Reveal>
 
