@@ -51,6 +51,11 @@ export const models: Model[] = [
       "Vista aérea del loft CRUDO 01: volumen de paneles de hormigón, frente vidriado y deck de madera",
     gallery: [
       {
+        src: "/images/tipologias/crudo-01-exterior-aereo.jpg",
+        alt: "Vista aérea del loft CRUDO 01: volumen de paneles de hormigón, frente vidriado y deck de madera",
+        wide: true,
+      },
+      {
         src: "/images/tipologias/crudo-01-frente.jpg",
         alt: "Frente vidriado del loft CRUDO 01 con deck de madera y estructura metálica negra",
       },
@@ -91,6 +96,11 @@ export const models: Model[] = [
     coverAlt:
       "CRUDO 02: galería con pérgola de madera, celosía de concreto y pileta sobre deck",
     gallery: [
+      {
+        src: "/images/tipologias/crudo-02-hero.png",
+        alt: "CRUDO 02: galería con pérgola de madera, celosía de concreto y pileta sobre deck",
+        wide: true,
+      },
       {
         src: "/images/tipologias/crudo-02-exterior.jpg",
         alt: "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck y pileta",

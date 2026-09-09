@@ -2,6 +2,11 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-09 — Séptima ronda: corregir el layout de "El material" y completar galerías
+
+1. **"El material" (Nosotros) vuelto a corregir.** El díptico quedaba centrado en un contenedor angosto con un vacío enorme al costado. Ahora usa el mismo patrón que "Las manos" / "El oficio no se improvisa": grid de 12 columnas, díptico ocupando `md:col-span-6` de un lado y el texto (título + copy) del otro `md:col-span-5`, centrados verticalmente.
+2. **Las 4 fotos completas por tipología:** la foto de portada de cada `/tipologias/<slug>` (la que se usa en el header) ahora se repite también como primera imagen de la galería más abajo, además de las 3 que ya tenía. CRUDO 01 y CRUDO 02 muestran 4 renders completos cada una.
+
 ## 2026-09-09 — Sexta ronda: fix de bloque negro doble + reorden El material + fotos de celosía en El Sistema
 
 1. **Nosotros: "Desde Paraguay" pegado al CTA final se veía como un solo bloque negro gigante, sobre todo en mobile.** Se elimina el `FinalCta` de la página y se agrega un botón "Hablemos" dentro de la propia sección "Desde Paraguay", debajo de "Arquitectura de autor, producida con el control de una fábrica y el cuidado de un taller." La página ahora termina en esa sección y pasa directo al footer, sin dos negros consecutivos.
