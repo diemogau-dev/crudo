@@ -70,6 +70,10 @@ export const models: Model[] = [
         alt: "Interior de CRUDO 01: muro de hormigón, cabecera de madera y salida al deck",
         wide: true,
       },
+      {
+        src: "/images/tipologias/crudo-01-deck.jpg",
+        alt: "Deck de CRUDO 01 con mesa y sillones de mimbre, vista al dormitorio a través del frente vidriado",
+      },
     ],
   },
   {
