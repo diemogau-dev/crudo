@@ -133,7 +133,7 @@ export default function NosotrosPage() {
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
               <Image
                 src="/images/proceso/oficio.png"
-                alt="Trabajo manual sobre un molde de concreto en el taller"
+                alt="Trabajo manual sobre un molde de concreto en la fábrica"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
@@ -159,8 +159,8 @@ export default function NosotrosPage() {
               obsesivo: Juan Calderoli, arquitecto con quince años dirigiendo
               obras y desarrollando piezas de concreto, al frente del diseño y
               la dirección técnica; Diego Morales, MBA, a cargo de la estrategia
-              y de que cada proyecto llegue a buen puerto; equipo propio en el
-              taller, cuadrillas propias de construcción, y artesanos paraguayos
+              y de que cada proyecto llegue a buen puerto; equipo propio en la
+              fábrica, cuadrillas propias de construcción, y artesanos paraguayos
               que hacen las cosas bien porque no saben hacerlas de otra manera.
             </p>
           </Reveal>
@@ -191,7 +191,7 @@ export default function NosotrosPage() {
             </p>
             <p className="body-text mt-6 text-alabaster/70">
               Arquitectura de autor, producida con el control de una fábrica y
-              el cuidado de un taller.
+              el cuidado del oficio.
             </p>
             <div className="mt-10 flex justify-center">
               <Cta

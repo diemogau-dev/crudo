@@ -16,8 +16,8 @@ export default function TipologiasPage() {
     <>
       <PageHeader
         kicker="Tipologías"
-        title={"Dos proyectos.\nMuchas formas de vivirlos."}
-        lede="Diseñados para adaptarse a distintos terrenos y formas de usar la arquitectura. Una lista que va a seguir creciendo."
+        title={"Tipologías CRUDO.\nMuchas formas de vivirlas."}
+        lede="Diseñadas para adaptarse a distintos terrenos y formas de usar la arquitectura. Un catálogo que va a seguir creciendo."
         image={{
           src: "/images/tipologias/crudo-01-exterior-aereo.jpg",
           alt: "Vista aérea del loft CRUDO 01 con deck de madera y frente vidriado",
@@ -39,21 +39,11 @@ export default function TipologiasPage() {
         <div className="shell">
           <Reveal className="max-w-2xl">
             <p className="kicker text-muted">Sobre el presupuesto</p>
-            {/*
-              PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md).
-              Cuando Calde confirme costo real de ambas tipologías, reemplazar
-              el <p> de abajo por:
-              "CRUDO 01 desde Gs [PLACEHOLDER_INVERSION_CRUDO01] y CRUDO 02
-              desde Gs [PLACEHOLDER_INVERSION_CRUDO02], según terreno y
-              trabajos de preparación. Preferimos conocer tu caso antes de
-              confirmar el número final, y después preparar una propuesta
-              clara con el alcance correspondiente."
-            */}
             <p className="lede mt-6">
-              Depende del proyecto, el terreno y los trabajos necesarios para
-              prepararlo. Preferimos conocer tu caso antes de dar un número, y
-              después preparar una propuesta clara con el alcance
-              correspondiente.
+              CRUDO 01 desde Gs. 95.000.000 y CRUDO 02 desde Gs. 240.000.000,
+              según terreno y trabajos de preparación. Preferimos conocer tu
+              caso antes de confirmar el número final, y después preparar una
+              propuesta clara con el alcance correspondiente.
             </p>
           </Reveal>
         </div>

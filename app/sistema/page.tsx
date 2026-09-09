@@ -8,7 +8,7 @@ import { processSteps } from "@/lib/content";
 export const metadata: Metadata = {
   title: "El Sistema",
   description:
-    "Nuestro proceso: diseño, fabricación, curación y construcción bajo un mismo equipo, con taller propio de hormigón, concreto y carpintería metálica.",
+    "Nuestro proceso: diseño, fabricación, curación y construcción bajo un mismo equipo, con fábrica propia de hormigón, concreto y carpintería metálica.",
 };
 
 const workshopCapabilities = [
@@ -32,7 +32,7 @@ const technologies = [
 const workshopImages = [
   {
     src: "/images/proceso/oficio.png",
-    alt: "Trabajo manual sobre un molde de concreto en el taller",
+    alt: "Trabajo manual sobre un molde de concreto en la fábrica",
   },
   {
     src: "/images/proceso/pigmento.png",
@@ -40,7 +40,7 @@ const workshopImages = [
   },
   {
     src: "/images/taller/panel-hormigon.png",
-    alt: "Panel de hormigón terminado en el taller",
+    alt: "Panel de hormigón terminado en la fábrica",
   },
 ];
 
@@ -55,7 +55,7 @@ const workshopImagesSecondRow = [
   },
   {
     src: "/images/taller/bachas-taller.png",
-    alt: "Bachas de concreto de producción propia en distintos colores, en el taller",
+    alt: "Bachas de concreto de producción propia en distintos colores, en la fábrica",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function SistemaPage() {
     <>
       <PageHeader
         kicker="El Sistema"
-        title={"Diseño, taller y obra\nen las mismas manos."}
+        title={"Diseño, fábrica y obra\nen las mismas manos."}
         lede="Un proceso completo que va del proyecto a la entrega, y que controlamos de punta a punta."
         image={{
           src: "/images/tipologias/crudo-01-volumen.jpg",
@@ -122,16 +122,17 @@ export default function SistemaPage() {
         </div>
       </section>
 
-      {/* El taller — bloque oscuro, grilla numerada */}
+      {/* La fábrica — bloque oscuro, grilla numerada */}
       <section className="bg-iron text-alabaster">
         <div className="shell py-24 md:py-36">
           <Reveal className="max-w-4xl">
-            <p className="kicker text-alabaster/60">El taller</p>
+            <p className="kicker text-alabaster/60">La fábrica</p>
             <h2 className="display-lg mt-6">Producción propia.</h2>
             <p className="lede mt-8 max-w-xl text-cement/85">
-              Tenemos fábrica y taller de carpintería metálica propios, con
-              equipo propio de producción. Eso nos permite decidir cómo se ve,
-              cómo se comporta y cuánto dura cada pieza que llega a tu obra.
+              Tenemos fábrica propia de muros y placas de hormigón armado,
+              revestimientos, pisos y piezas de concreto de alto performance, y
+              una herrería propia. Eso nos permite decidir cómo se ve, cómo se
+              comporta y cuánto dura cada pieza que llega a tu obra.
             </p>
           </Reveal>
 

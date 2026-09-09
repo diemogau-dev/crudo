@@ -60,24 +60,14 @@ export default function Home() {
           <Reveal className="max-w-3xl">
             <p className="kicker text-muted">Tipologías</p>
             <h2 className="display-lg mt-6">
-              Dos proyectos.
+              Tipologías CRUDO.
               <br />
-              Muchas formas de vivirlos.
+              Muchas formas de vivirlas.
             </h2>
             <p className="lede mt-8 max-w-lg text-muted">
-              Diseñados para adaptarse a distintos terrenos y formas de usar la
-              arquitectura.
+              Diseñadas para adaptarse a distintos terrenos y formas de usar la
+              arquitectura. Un catálogo que va a seguir creciendo.
             </p>
-            {/*
-              PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md).
-              No descomentar hasta que Calde confirme costo real: no publicar
-              con el placeholder a la vista.
-
-              <p className="body-text mt-3 text-muted">
-                Desde Gs [PLACEHOLDER_INVERSION_CRUDO01] y en [PLACEHOLDER_PLAZO]
-                desde la firma del proyecto.
-              </p>
-            */}
           </Reveal>
 
           <div className="mt-16 grid gap-16 md:mt-24 md:grid-cols-2 md:gap-10">

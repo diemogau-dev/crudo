@@ -133,7 +133,7 @@ export default function AMedidaPage() {
             },
             {
               title: "Producimos y construimos nosotros",
-              text: "Nuestro taller fabrica y nuestro equipo ejecuta, hasta la entrega.",
+              text: "Nuestra fábrica produce y nuestro equipo ejecuta, hasta la entrega.",
             },
           ].map((step, index) => (
             <Reveal

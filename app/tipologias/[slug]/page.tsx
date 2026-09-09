@@ -117,17 +117,11 @@ export default async function ModelPage({ params }: Props) {
         <div className="shell">
           <Reveal className="max-w-2xl">
             <p className="kicker text-muted">Sobre el presupuesto</p>
-            {/*
-              PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md).
-              Cuando Calde confirme costo real, reemplazar el <p> de abajo por:
-              "Desde Gs [PLACEHOLDER_INVERSION_CRUDO01]. Depende del terreno,
-              la ubicación y los trabajos necesarios para prepararlo.
-              Preferimos conocer tu caso antes de confirmar el número final."
-              (mismo texto para CRUDO 02, con [PLACEHOLDER_INVERSION_CRUDO02])
-            */}
+            <p className="display-md mt-4">{model.startingPrice}</p>
             <p className="body-text mt-5 text-muted">
-              Depende del terreno, la ubicación y los trabajos necesarios para
-              prepararlo. Preferimos conocer tu caso antes de dar un número.
+              El número final depende del terreno, la ubicación y los trabajos
+              necesarios para prepararlo. Preferimos conocer tu caso antes de
+              confirmar la inversión definitiva.
             </p>
           </Reveal>
 

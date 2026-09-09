@@ -13,6 +13,7 @@ export type Model = {
   name: string;
   tipology: string;
   area: string;
+  startingPrice: string;
   summary: string;
   description: string[];
   specs: { label: string; value: string }[];
@@ -29,6 +30,7 @@ export const models: Model[] = [
     name: "CRUDO 01",
     tipology: "Loft",
     area: "28 m²",
+    startingPrice: "Desde Gs. 95.000.000",
     summary: "Un ambiente, baño y deck exterior.",
     description: [
       "Un loft de un solo ambiente pensado para vivirse entero: un volumen limpio de hormigón, frente vidriado y un deck que extiende el espacio hacia el terreno.",
@@ -41,7 +43,7 @@ export const models: Model[] = [
       { label: "Deck exterior", value: "Incluido" },
     ],
     system: [
-      "Hormigón armado con paneles de nuestro taller",
+      "Hormigón armado con paneles de nuestra fábrica",
       "Techo metálico con pendiente única",
       "Bacha, tina y pisos de concreto propios",
     ],
@@ -75,6 +77,7 @@ export const models: Model[] = [
     name: "CRUDO 02",
     tipology: "Vivienda industrial",
     area: "60 m²",
+    startingPrice: "Desde Gs. 240.000.000",
     summary: "Dos habitaciones, cocina y comedor integrados al estar.",
     description: [
       "Una vivienda de estilo industrial en un solo nivel. La cocina y el comedor se integran al estar, y el deck exterior se suma al espacio principal en lugar de quedar afuera.",
@@ -87,7 +90,7 @@ export const models: Model[] = [
       { label: "Cocina · comedor", value: "Integrado" },
     ],
     system: [
-      "Hormigón armado con paneles de nuestro taller",
+      "Hormigón armado con paneles de nuestra fábrica",
       "Celosía de concreto y pérgola de madera",
       "Deck exterior integrado al estar",
     ],
@@ -134,21 +137,21 @@ export const processSteps = [
   {
     number: "02",
     title: "Fabricamos",
-    short: "Producimos en nuestro taller lo que forma la arquitectura.",
+    short: "Producimos en nuestra fábrica lo que forma la arquitectura.",
     long: "Muros, revestimientos, celosías, piezas de concreto y carpintería metálica salen de nuestra propia producción. Fabricar lo nuestro nos deja decidir cómo se ve y cómo se comporta cada pieza.",
     image: {
       src: "/images/proceso/fabricamos-acabado.jpg",
-      alt: "Terminación de un panel de concreto recién vertido en el taller",
+      alt: "Terminación de un panel de concreto recién vertido en la fábrica",
     },
   },
   {
     number: "03",
     title: "Curamos",
-    short: "Controlamos cada pieza antes de que salga del taller.",
+    short: "Controlamos cada pieza antes de que salga de la fábrica.",
     long: "El concreto necesita tiempo y control para llegar a su mejor versión. Revisamos color, textura y terminación pieza por pieza. Lo que no está a la altura vuelve atrás.",
     image: {
       src: "/images/proceso/acabado.png",
-      alt: "Terminación de paneles de concreto en el taller",
+      alt: "Terminación de paneles de concreto en la fábrica",
     },
   },
   {
@@ -200,15 +203,8 @@ export const faqs = [
   },
   {
     question: "¿Cuánto cuesta un CRUDO?",
-    // PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md). Cuando
-    // Calde confirme el costo real de CRUDO 01, reemplazar el answer de abajo
-    // por:
-    // "CRUDO 01 y CRUDO 02 parten de una inversión de referencia desde Gs
-    // [PLACEHOLDER_INVERSION_CRUDO01]. El número final depende del terreno, la
-    // ubicación y los trabajos necesarios para prepararlo. Te preparamos una
-    // propuesta clara con el alcance exacto apenas conversemos."
     answer:
-      "Depende del proyecto, el terreno, la ubicación y los trabajos necesarios para preparar y ejecutar la obra. Preferimos conocer tu caso y después preparar una propuesta clara con el alcance correspondiente.",
+      "CRUDO 01 parte de una inversión de referencia desde Gs. 95.000.000 y CRUDO 02 desde Gs. 240.000.000. El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.",
   },
   {
     question: "¿Cuánto tiempo demora la construcción?",
