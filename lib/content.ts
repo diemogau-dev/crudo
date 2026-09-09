@@ -200,13 +200,20 @@ export const faqs = [
   },
   {
     question: "¿Cuánto cuesta un CRUDO?",
+    // PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md). Cuando
+    // Calde confirme el costo real de CRUDO 01, reemplazar el answer de abajo
+    // por:
+    // "CRUDO 01 y CRUDO 02 parten de una inversión de referencia desde Gs
+    // [PLACEHOLDER_INVERSION_CRUDO01]. El número final depende del terreno, la
+    // ubicación y los trabajos necesarios para prepararlo — te preparamos una
+    // propuesta clara con el alcance exacto apenas conversemos."
     answer:
       "Depende del proyecto, el terreno, la ubicación y los trabajos necesarios para preparar y ejecutar la obra. Preferimos conocer tu caso y después preparar una propuesta clara con el alcance correspondiente.",
   },
   {
     question: "¿Cuánto tiempo demora la construcción?",
     answer:
-      "El plazo depende del proyecto y de las condiciones de cada obra. Al fabricar buena parte de los elementos en nuestro taller, generalmente los tiempos son más cortos que en una obra tradicional de mampostería.",
+      "Depende del proyecto y del terreno, pero es una de las razones por las que existimos: al fabricar nosotros mismos buena parte de las piezas, no dependemos del ritmo de terceros — eso recorta semanas frente a una obra tradicional de mampostería. Te damos un plazo concreto apenas revisamos tu caso.",
   },
   {
     question: "¿Qué necesito tener para empezar?",

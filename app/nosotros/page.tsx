@@ -156,10 +156,12 @@ export default function NosotrosPage() {
             </p>
             <p className="body-text mt-6 text-muted">
               Ese conocimiento no se compra hecho. Somos un equipo chico y
-              obsesivo: un arquitecto con quince años dirigiendo obras y
-              desarrollando piezas de concreto, un taller propio, y artesanos
-              paraguayos que hacen las cosas bien porque no saben hacerlas de
-              otra manera.
+              obsesivo: Juan Calderoli — arquitecto, quince años dirigiendo
+              obras y desarrollando piezas de concreto — al frente del diseño y
+              la dirección técnica; Diego Morales, a cargo de la estrategia y de
+              que cada proyecto llegue a buen puerto; un taller propio, y
+              artesanos paraguayos que hacen las cosas bien porque no saben
+              hacerlas de otra manera.
             </p>
           </Reveal>
         </div>

@@ -20,17 +20,20 @@ export default function Hero() {
           Arquitectura &amp; Concreto · Paraguay
         </p>
         <h1 className="display-xl mt-5 max-w-5xl">
-          Módulos y viviendas
+          Diseñamos, fabricamos
           <br />
-          industriales.
+          y construimos tu
+          <br />
+          próximo espacio.
         </h1>
         <p className="lede mt-8 max-w-lg text-alabaster/90">
-          Arquitectura contemporánea con materiales sólidos. Hormigón armado y
-          Concreto de Alto Performance.
+          Arquitectura en hormigón para quintas, casas de descanso y
+          ampliaciones. Un mismo equipo, del proyecto a la entrega — con más
+          control y menos tiempo que una obra tradicional.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Cta href={whatsappLink("general")} external variant="solid-inverse">
-            Hablemos
+            Hablemos de tu terreno
           </Cta>
           <Cta href="/tipologias" variant="outline-inverse">
             Conocer las tipologías

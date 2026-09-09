@@ -2,6 +2,16 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-09 — Octava ronda: ajustes de copy y conversión (prompt de ajustes de Diego)
+
+1. **Hero:** H1 nuevo "Diseñamos, fabricamos y construimos tu próximo espacio." (sube al lugar de más peso la idea que antes solo estaba en el FAQ #1). Subhead nueva menciona audiencia (quintas, casas de descanso, ampliaciones), el diferencial de un solo equipo y "más control y menos tiempo que una obra tradicional". CTA primario pasa de "Hablemos" a "Hablemos de tu terreno" (mismo link).
+2. **Sección "Una forma diferente de construir" reemplazada por "Por qué CRUDO":** nombra el problema explícitamente ("Construir no debería ser un caos" — mismo titular que ya existía en `/nosotros`, reutilizado a propósito), reafirma "un solo equipo" y mete la velocidad como consecuencia. CTA pasa a "Conocer cómo trabajamos" (mismo link a `/sistema`).
+3. **Línea de inversión/plazo en la home (teaser de tipologías): agregada pero comentada, no publicada.** Usa `[PLACEHOLDER_INVERSION_CRUDO01]` y `[PLACEHOLDER_PLAZO]` — depende de que Calde cierre costo real (Gate 0). Mismo criterio aplicado a: FAQ #6 (`[PLACEHOLDER_INVERSION_CRUDO01]`), "Sobre el presupuesto" en `/tipologias` (ambos placeholders) y en `/tipologias/[slug]` (placeholder por modelo). **Ninguno de estos cuatro bloques se publicó** — quedan como comentarios JSX/código con el texto final ya redactado, listos para activar reemplazando el placeholder por la cifra real. Verificado que no aparecen en el HTML generado por el build.
+4. **FAQ #7 (plazo) sí se publicó ya** — es una afirmación direccional/comparativa, no un número, coherente con cómo funciona el proceso.
+5. **`/nosotros` → "Las manos":** se nombra a los fundadores — Juan Calderoli (diseño y dirección técnica) y Diego Morales (estrategia) — sin cambiar sus roles reales, solo haciéndolos visibles en el único lugar del sitio donde corresponde.
+
+**Pendiente real para Diego/Calde:** completar `[PLACEHOLDER_INVERSION_CRUDO01]`, `[PLACEHOLDER_INVERSION_CRUDO02]` y `[PLACEHOLDER_PLAZO]` con cifras reales (Gate 0) y avisar para descomentar los cuatro bloques listados en el punto 3.
+
 ## 2026-09-09 — Séptima ronda: corregir el layout de "El material" y completar galerías
 
 1. **"El material" (Nosotros) vuelto a corregir.** El díptico quedaba centrado en un contenedor angosto con un vacío enorme al costado. Ahora usa el mismo patrón que "Las manos" / "El oficio no se improvisa": grid de 12 columnas, díptico ocupando `md:col-span-6` de un lado y el texto (título + copy) del otro `md:col-span-5`, centrados verticalmente.

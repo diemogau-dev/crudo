@@ -39,6 +39,16 @@ export default function TipologiasPage() {
         <div className="shell">
           <Reveal className="max-w-2xl">
             <p className="kicker text-muted">Sobre el presupuesto</p>
+            {/*
+              PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md).
+              Cuando Calde confirme costo real de ambas tipologías, reemplazar
+              el <p> de abajo por:
+              "CRUDO 01 desde Gs [PLACEHOLDER_INVERSION_CRUDO01] y CRUDO 02
+              desde Gs [PLACEHOLDER_INVERSION_CRUDO02], según terreno y
+              trabajos de preparación. Preferimos conocer tu caso antes de
+              confirmar el número final, y después preparar una propuesta
+              clara con el alcance correspondiente."
+            */}
             <p className="lede mt-6">
               Depende del proyecto, el terreno y los trabajos necesarios para
               prepararlo. Preferimos conocer tu caso antes de dar un número, y

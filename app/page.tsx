@@ -13,32 +13,31 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* Qué es CRUDO */}
+      {/* Por qué CRUDO */}
       <section className="shell py-24 md:py-36">
         <div className="grid gap-14 md:grid-cols-12 md:gap-16">
           <Reveal className="md:col-span-5">
-            <p className="kicker text-muted">Arquitectura &amp; Concreto</p>
+            <p className="kicker text-muted">Por qué CRUDO</p>
             <h2 className="display-lg mt-6">
-              Una forma
+              Construir
               <br />
-              diferente
+              no debería
               <br />
-              de&nbsp;construir.
+              ser un caos.
             </h2>
           </Reveal>
 
           <Reveal className="md:col-span-6 md:col-start-7 md:pt-4" delay={120}>
             <p className="lede">
-              Unimos arquitectura, fabricación y construcción bajo un mismo
-              sistema. Diseñamos espacios pensados para durar y los llevamos
-              desde la idea hasta la obra terminada.
-            </p>
-            <p className="display-md mt-10 normal-case tracking-[-0.02em]">
-              Más control. Más precisión. Menos improvisación.
+              Meses de obra. Decisiones improvisadas sobre la marcha. Un
+              estudio, una fábrica y un constructor que no se hablan entre sí.
+              En CRUDO el diseño, la fabricación y la construcción están en las
+              mismas manos — por eso el resultado deja de ser una sorpresa, y el
+              plazo es más corto que el de una obra tradicional.
             </p>
             <div className="mt-10">
               <Cta href="/sistema" variant="inline">
-                Conocer el sistema
+                Conocer cómo trabajamos
               </Cta>
             </div>
           </Reveal>
@@ -69,6 +68,16 @@ export default function Home() {
               Diseñados para adaptarse a distintos terrenos y formas de usar la
               arquitectura.
             </p>
+            {/*
+              PENDIENTE — Gate 0 (ver context/crudo/decisiones-y-preguntas.md).
+              No descomentar hasta que Calde confirme costo real: no publicar
+              con el placeholder a la vista.
+
+              <p className="body-text mt-3 text-muted">
+                Desde Gs [PLACEHOLDER_INVERSION_CRUDO01] y en [PLACEHOLDER_PLAZO]
+                desde la firma del proyecto.
+              </p>
+            */}
           </Reveal>
 
           <div className="mt-16 grid gap-16 md:mt-24 md:grid-cols-2 md:gap-10">
