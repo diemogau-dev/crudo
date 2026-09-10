@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import StickyCta from "@/components/site/StickyCta";
+import WhatsappButton from "@/components/site/WhatsappButton";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -43,7 +43,7 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <StickyCta />
+        <WhatsappButton />
       </body>
     </html>
   );
