@@ -158,8 +158,8 @@ export default function NosotrosPage() {
               Ese conocimiento no se compra hecho. Somos un equipo chico y
               obsesivo: Juan Calderoli, arquitecto con quince años dirigiendo
               obras y desarrollando piezas de concreto, al frente del diseño y
-              la dirección técnica; Diego Morales, MBA, a cargo de la estrategia
-              y de que cada proyecto llegue a buen puerto; equipo propio en la
+              la dirección técnica; Diego Morales, a cargo de la estrategia y
+              de que cada proyecto llegue a buen puerto; equipo propio en la
               fábrica, cuadrillas propias de construcción, y artesanos paraguayos
               que hacen las cosas bien porque no saben hacerlas de otra manera.
             </p>

@@ -25,18 +25,24 @@ const startingPoints = [
   },
 ];
 
-const possibilities = [
-  "Viviendas",
-  "Casas de fin de semana",
-  "Espacios de huéspedes",
-  "Quinchos",
-  "Oficinas",
-  "Gimnasios",
-  "Salas de entretenimiento",
-  "Ampliaciones",
-  "Piletas",
-  "Espacios exteriores",
-  "Paisajismo",
+const possibilityGroups = [
+  {
+    title: "Espacios para vivir",
+    items: [
+      "Viviendas",
+      "Casas de fin de semana",
+      "Espacios de huéspedes",
+      "Ampliaciones",
+    ],
+  },
+  {
+    title: "Espacios para disfrutar",
+    items: ["Quinchos", "Oficinas", "Gimnasios", "Salas de entretenimiento"],
+  },
+  {
+    title: "Lo que completa el proyecto",
+    items: ["Piletas", "Espacios exteriores", "Paisajismo"],
+  },
 ];
 
 export default function AMedidaPage() {
@@ -97,19 +103,26 @@ export default function AMedidaPage() {
                 muchos programas.
               </h2>
               <p className="body-text mt-8 text-muted">
-                Desde una ampliación hasta una vivienda completa, con todo lo
-                que hace falta alrededor.
+                Un sistema que se adapta a diferentes formas de vivir y de
+                usar un terreno.
               </p>
-              <ul className="mt-10 flex flex-wrap gap-3">
-                {possibilities.map((item) => (
-                  <li
-                    key={item}
-                    className="kicker border border-hairline px-4 py-3 text-muted"
-                  >
-                    {item}
-                  </li>
+              <div className="mt-10 space-y-8">
+                {possibilityGroups.map((group) => (
+                  <div key={group.title}>
+                    <p className="kicker text-muted">{group.title}</p>
+                    <ul className="mt-3 flex flex-wrap gap-3">
+                      {group.items.map((item) => (
+                        <li
+                          key={item}
+                          className="kicker border border-hairline px-4 py-3 text-muted"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </Reveal>
           </div>
         </div>

@@ -85,6 +85,11 @@ export default async function ModelPage({ params }: Props) {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-10 border-t border-hairline pt-8">
+              <p className="kicker text-muted">Diseñado dentro de un mismo sistema</p>
+              <p className="body-text mt-4 text-muted">{model.systemNote}</p>
+            </div>
           </Reveal>
         </div>
       </section>

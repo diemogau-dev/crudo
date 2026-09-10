@@ -18,6 +18,7 @@ export type Model = {
   description: string[];
   specs: { label: string; value: string }[];
   system: string[];
+  systemNote: string;
   whatsapp: WhatsappTopic;
   cover: string;
   coverAlt: string;
@@ -47,6 +48,8 @@ export const models: Model[] = [
       "Techo metálico con pendiente única",
       "Bacha, tina y pisos de concreto propios",
     ],
+    systemNote:
+      "CRUDO 01 se piensa desde el inicio para fabricar y construir cada parte de forma coordinada. Diseño, producción y obra trabajan conectados para reducir improvisaciones y tener mayor control sobre el proceso.",
     whatsapp: "crudo01",
     cover: "/images/tipologias/crudo-01-exterior-aereo.jpg",
     coverAlt:
@@ -98,6 +101,8 @@ export const models: Model[] = [
       "Celosía de concreto y pérgola de madera",
       "Deck exterior integrado al estar",
     ],
+    systemNote:
+      "Definimos el proyecto pensando desde el inicio en cómo se fabrica y construye. Eso permite trabajar con mayor precisión y reducir improvisaciones durante la ejecución.",
     whatsapp: "crudo02",
     cover: "/images/tipologias/crudo-02-hero.png",
     coverAlt:
@@ -186,6 +191,11 @@ export const faqs = [
       "Un estudio de arquitectura y construcción que diseña y ejecuta espacios en hormigón y concreto, con un sistema propio de producción y construcción.",
   },
   {
+    question: "¿Qué diferencia a CRUDO de una construcción tradicional?",
+    answer:
+      "En una obra tradicional, el diseño, la fabricación de materiales y la construcción suelen depender de distintos equipos y proveedores. En CRUDO conectamos esas etapas desde el principio: diseñamos pensando en cómo se va a producir y construir cada proyecto, fabricamos elementos clave en nuestra propia fábrica y ejecutamos la obra con nuestro equipo, dentro del mismo sistema. El resultado es más control sobre el proceso y menos improvisación entre etapas.",
+  },
+  {
     question: "¿CRUDO solo construye las tipologías CRUDO 01 y CRUDO 02?",
     answer:
       "No. Son nuestro punto de partida y vamos a ir lanzando nuevas tipologías. También desarrollamos proyectos personalizados según el terreno y las ideas de cada cliente.",
@@ -213,7 +223,7 @@ export const faqs = [
   {
     question: "¿Cuánto tiempo demora la construcción?",
     answer:
-      "Depende del proyecto y del terreno, pero es una de las razones por las que existimos. Al fabricar nosotros mismos buena parte de las piezas, no dependemos del ritmo de terceros. Eso recorta semanas frente a una obra tradicional de mampostería. Te damos un plazo concreto apenas revisamos tu caso.",
+      "Depende del proyecto y del terreno, pero buena parte del trabajo se resuelve antes de llegar al terreno: al diseñar y fabricar elementos dentro del mismo sistema, reducimos coordinaciones innecesarias y tiempos muertos durante la ejecución. Cada proyecto tiene sus propios plazos; te damos uno concreto apenas revisamos tu caso.",
   },
   {
     question: "¿Qué necesito tener para empezar?",
@@ -224,6 +234,11 @@ export const faqs = [
     question: "¿Los materiales los fabrican ustedes?",
     answer:
       "Trabajamos con producción y desarrollo propio de los elementos arquitectónicos y materiales que forman parte de nuestros proyectos, manteniendo el control sobre la calidad y el proceso.",
+  },
+  {
+    question: "¿Cómo se comporta el hormigón con el calor?",
+    answer:
+      "El hormigón tiene alta masa térmica: absorbe calor durante el día y lo libera lentamente, por lo que una superficie muy expuesta al sol directo puede calentarse. Por eso el diseño se ocupa de lo que rodea al material: sombra, aleros, ventilación cruzada y orientación pensada para el clima paraguayo. Bien resuelto, un muro de hormigón mantiene el interior más estable que otros sistemas constructivos frente al calor y la humedad.",
   },
   {
     question: "¿Puedo construir un proyecto completamente personalizado?",

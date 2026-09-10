@@ -23,11 +23,11 @@ const workshopCapabilities = [
 const technologies = [
   "Hormigón armado de alta resistencia",
   "Concretos especiales",
-  "GRC / GFRC",
-  "UHPC",
   "Estructuras metálicas",
   "Carpintería metálica",
 ];
+
+const technicalSpecs = ["GRC / GFRC", "UHPC"];
 
 const workshopImages = [
   {
@@ -243,6 +243,26 @@ export default function SistemaPage() {
               desarrollo de piezas de concreto. Conocimiento aplicado, no un
               catálogo.
             </p>
+          </Reveal>
+
+          <Reveal className="mt-14 max-w-2xl md:mt-16" delay={120}>
+            <details className="group border-t border-hairline pt-6">
+              <summary className="kicker flex cursor-pointer list-none items-baseline justify-between gap-4 text-muted [&::-webkit-details-marker]:hidden">
+                <span>Materiales y especificaciones</span>
+                <span
+                  aria-hidden
+                  className="text-lg leading-none transition-transform duration-300 group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+              <div className="mt-5">
+                <p className="body-text text-muted">
+                  Para proyectos que lo requieren, trabajamos también con
+                  sistemas y concretos especiales: {technicalSpecs.join(", ")}.
+                </p>
+              </div>
+            </details>
           </Reveal>
         </div>
       </section>
