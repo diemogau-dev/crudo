@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "Arquitectura y espacios en concreto diseñados y construidos bajo un mismo sistema. Tipologías definidas y proyectos a medida en Paraguay.",
     locale: "es_PY",
     type: "website",
-    images: ["/images/tipologias/crudo-02-hero.png"],
+    images: ["/images/tipologias/crudo-01-exterior-aereo.jpg"],
   },
 };
 
