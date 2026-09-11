@@ -3,7 +3,7 @@ import Reveal from "@/components/ui/Reveal";
 import PageHeader from "@/components/sections/PageHeader";
 import ModelCard from "@/components/sections/ModelCard";
 import FinalCta from "@/components/sections/FinalCta";
-import { models } from "@/lib/content";
+import { SHOW_PRICES, models } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Tipologías",
@@ -40,10 +40,9 @@ export default function TipologiasPage() {
           <Reveal className="max-w-2xl">
             <p className="kicker text-muted">Sobre el presupuesto</p>
             <p className="lede mt-6">
-              CRUDO 01 desde Gs. 95.000.000 y CRUDO 02 desde Gs. 240.000.000,
-              según terreno y trabajos de preparación. Preferimos conocer tu
-              caso antes de confirmar el número final, y después preparar una
-              propuesta clara con el alcance correspondiente.
+              {SHOW_PRICES
+                ? "CRUDO 01 desde Gs. 95.000.000 y CRUDO 02 desde Gs. 240.000.000, según terreno y trabajos de preparación. Preferimos conocer tu caso antes de confirmar el número final, y después preparar una propuesta clara con el alcance correspondiente."
+                : "El número final depende del terreno, la ubicación y los trabajos de preparación de cada proyecto. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente."}
             </p>
           </Reveal>
         </div>

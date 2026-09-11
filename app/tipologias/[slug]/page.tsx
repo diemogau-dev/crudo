@@ -6,7 +6,7 @@ import Cta from "@/components/ui/Cta";
 import Reveal from "@/components/ui/Reveal";
 import PageHeader from "@/components/sections/PageHeader";
 import FinalCta from "@/components/sections/FinalCta";
-import { models } from "@/lib/content";
+import { SHOW_PRICES, models } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -126,11 +126,13 @@ export default async function ModelPage({ params }: Props) {
         <div className="shell">
           <Reveal className="max-w-2xl">
             <p className="kicker text-muted">Sobre el presupuesto</p>
-            <p className="display-md mt-4">{model.startingPrice}</p>
+            {SHOW_PRICES ? (
+              <p className="display-md mt-4">{model.startingPrice}</p>
+            ) : null}
             <p className="body-text mt-5 text-muted">
-              El número final depende del terreno, la ubicación y los trabajos
-              necesarios para prepararlo. Preferimos conocer tu caso antes de
-              confirmar la inversión definitiva.
+              {SHOW_PRICES
+                ? "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Preferimos conocer tu caso antes de confirmar la inversión definitiva."
+                : "El precio depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta con el alcance y la inversión correspondiente."}
             </p>
           </Reveal>
 

@@ -1,5 +1,10 @@
 import type { WhatsappTopic } from "./whatsapp";
 
+// Precios ocultos a pedido de Diego hasta tener el número definitivo.
+// Los valores siguen guardados en `models` (startingPrice) y en la FAQ de
+// precio; para volver a publicarlos, cambiar esto a `true`.
+export const SHOW_PRICES = false;
+
 export const navLinks = [
   { href: "/tipologias", label: "Tipologías" },
   { href: "/sistema", label: "El Sistema" },
@@ -221,8 +226,9 @@ export const faqs = [
   },
   {
     question: "¿Cuánto cuesta un CRUDO?",
-    answer:
-      "CRUDO 01 parte de una inversión de referencia desde Gs. 95.000.000 y CRUDO 02 desde Gs. 240.000.000. El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.",
+    answer: SHOW_PRICES
+      ? "CRUDO 01 parte de una inversión de referencia desde Gs. 95.000.000 y CRUDO 02 desde Gs. 240.000.000. El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos."
+      : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {
     question: "¿Cuánto tiempo demora la construcción?",

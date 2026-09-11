@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Model } from "@/lib/content";
+import { SHOW_PRICES, type Model } from "@/lib/content";
 
 export default function ModelCard({ model }: { model: Model }) {
   return (
@@ -27,7 +27,9 @@ export default function ModelCard({ model }: { model: Model }) {
       </div>
 
       <p className="body-text mt-5 max-w-sm text-muted">{model.summary}</p>
-      <p className="kicker mt-4 text-muted">{model.startingPrice}</p>
+      {SHOW_PRICES ? (
+        <p className="kicker mt-4 text-muted">{model.startingPrice}</p>
+      ) : null}
 
       <span className="kicker mt-7 inline-flex items-center gap-3 border-b border-hairline pb-1 transition-colors duration-300 group-hover:border-iron">
         Conocer tipología
