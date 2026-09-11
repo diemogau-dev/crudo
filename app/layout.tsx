@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     template: "%s | CRUDO",
   },
   description:
-    "Arquitectura y espacios en concreto diseñados y construidos bajo un mismo sistema. Tipologías definidas y proyectos a medida en Paraguay.",
+    "Diseñamos, fabricamos y construimos tu espacio. Tipologías definidas y proyectos a medida en Paraguay.",
   openGraph: {
     title: "CRUDO | Arquitectura & Concreto",
     description:
-      "Arquitectura y espacios en concreto diseñados y construidos bajo un mismo sistema. Tipologías definidas y proyectos a medida en Paraguay.",
+      "Diseñamos, fabricamos y construimos tu espacio. Tipologías definidas y proyectos a medida en Paraguay.",
     locale: "es_PY",
     type: "website",
     images: ["/images/tipologias/crudo-01-exterior-aereo.jpg"],

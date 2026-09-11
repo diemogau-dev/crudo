@@ -19,6 +19,7 @@ export type Model = {
   specs: { label: string; value: string }[];
   system: string[];
   systemNote: string;
+  shareDescription: string;
   whatsapp: WhatsappTopic;
   cover: string;
   coverAlt: string;
@@ -50,6 +51,7 @@ export const models: Model[] = [
     ],
     systemNote:
       "CRUDO 01 se piensa desde el inicio para fabricar y construir cada parte de forma coordinada. Diseño, producción y obra trabajan conectados para reducir improvisaciones y tener mayor control sobre el proceso.",
+    shareDescription: "CRUDO 01 - 28 m². Una habitación, baño y deck exterior.",
     whatsapp: "crudo01",
     cover: "/images/tipologias/crudo-01-exterior-aereo.jpg",
     coverAlt:
@@ -103,6 +105,8 @@ export const models: Model[] = [
     ],
     systemNote:
       "Definimos el proyecto pensando desde el inicio en cómo se fabrica y construye. Eso permite trabajar con mayor precisión y reducir improvisaciones durante la ejecución.",
+    shareDescription:
+      "CRUDO 02 - Vivienda industrial, 60 m². Dos habitaciones, un baño, cocina y comedor integrados al estar.",
     whatsapp: "crudo02",
     cover: "/images/tipologias/crudo-02-hero.png",
     coverAlt:

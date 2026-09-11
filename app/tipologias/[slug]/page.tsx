@@ -23,7 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: model.name,
     description: `${model.name}: ${model.tipology.toLowerCase()} de ${model.area}. ${model.summary}`,
-    openGraph: { images: [model.cover] },
+    openGraph: {
+      title: "Arquitectura & Concreto",
+      description: model.shareDescription,
+      images: [model.cover],
+    },
   };
 }
 
