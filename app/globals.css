@@ -63,6 +63,15 @@ body {
     text-transform: uppercase;
   }
 
+  /* Para subtítulos y énfasis medio: más grande que el texto de cuerpo,
+     pero sin competir con los títulos de sección (display-md/lg/xl). */
+  .display-sm {
+    font-size: clamp(1.0625rem, 1.6vw, 1.3125rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
   .kicker {
     font-size: 0.6875rem;
     font-weight: 600;

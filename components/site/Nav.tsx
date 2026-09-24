@@ -8,16 +8,12 @@ import { whatsappLink } from "@/lib/whatsapp";
 import Logo from "./Logo";
 
 // Rutas cuyo encabezado es una imagen a sangre: el navbar arranca transparente.
-const DARK_HERO_PREFIXES = [
-  "/tipologias",
-  "/sistema",
-  "/a-medida",
-  "/nosotros",
-];
+// El detalle de cada tipología (/tipologias/[slug]) ya no tiene imagen de
+// fondo, así que queda afuera aunque comparta el prefijo con el listado.
+const DARK_HERO_PATHS = ["/tipologias", "/sistema", "/a-medida", "/nosotros"];
 
 const hasDarkHero = (pathname: string) =>
-  pathname === "/" ||
-  DARK_HERO_PREFIXES.some((prefix) => pathname.startsWith(prefix));
+  pathname === "/" || DARK_HERO_PATHS.includes(pathname);
 
 export default function Nav() {
   const pathname = usePathname();
