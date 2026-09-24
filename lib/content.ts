@@ -1,9 +1,18 @@
 import type { WhatsappTopic } from "./whatsapp";
 
-// Precios ocultos a pedido de Diego hasta tener el número definitivo.
-// Los valores siguen guardados en `models` (startingPrice) y en la FAQ de
-// precio; para volver a publicarlos, cambiar esto a `true`.
-export const SHOW_PRICES = false;
+// Precio de referencia mientras no está cerrado el presupuesto definitivo.
+// Valor provisorio a pedido de Diego: se reemplaza por el número real antes
+// del lanzamiento.
+export const SHOW_PRICES = true;
+export const PRICE_PER_M2_GS = 4_500_000;
+
+export function formatGs(value: number) {
+  return `Gs. ${Math.round(value).toLocaleString("es-PY")}`;
+}
+
+export function estimatedPrice(areaM2: number) {
+  return formatGs(areaM2 * PRICE_PER_M2_GS);
+}
 
 export const navLinks = [
   { href: "/tipologias", label: "Tipologías" },
@@ -18,18 +27,90 @@ export type Model = {
   name: string;
   tipology: string;
   area: string;
+  areaM2: number;
   startingPrice: string;
   summary: string;
   description: string[];
   specs: { label: string; value: string }[];
-  system: string[];
-  systemNote: string;
+  amenities: string[];
   shareDescription: string;
   whatsapp: WhatsappTopic;
   cover: string;
   coverAlt: string;
-  gallery: { src: string; alt: string; wide?: boolean }[];
+  gallery: { src: string; alt: string }[];
+  plan?: { src: string; alt: string; width: number; height: number };
 };
+
+// Especificaciones generales del sistema constructivo CRUDO, compartidas
+// por todas las tipologías. Descripciones simplificadas para el cliente a
+// partir de la planilla de rubros de presupuesto (sin montos ni cantidades,
+// que todavía no están cerrados).
+export const constructionSpecs: { label: string; items: string[] }[] = [
+  {
+    label: "Estructura",
+    items: [
+      "Hormigón armado: dados y vigas de fundación calculados para cada proyecto.",
+      "Paneles de hormigón de nuestra propia fábrica como cerramiento, sin revoque.",
+    ],
+  },
+  {
+    label: "Terminación exterior",
+    items: [
+      "Paneles de hormigón visto de producción propia, con junta tomada.",
+      "Pintura sintética en estructura metálica, canaletas y bajadas.",
+    ],
+  },
+  {
+    label: "Terminación interior",
+    items: [
+      "Contrapiso, carpeta niveladora y piso según proyecto.",
+      "Tabiquería interior con aislación en dormitorios y baños.",
+      "Pintura interior en paredes de mampostería.",
+    ],
+  },
+  {
+    label: "Techo",
+    items: [
+      "Estructura metálica con pendiente y cubierta de termopanel.",
+      "Canaletas, bajadas y desagüe pluvial integrados al diseño.",
+    ],
+  },
+  {
+    label: "Aislación termoacústica",
+    items: [
+      "Termopanel en cubierta para aislar calor y ruido de lluvia.",
+      "Lana de vidrio y banda acústica en tabiques interiores.",
+    ],
+  },
+  {
+    label: "Instalación sanitaria",
+    items: [
+      "Cañerías de termofusión para agua y PVC para desagües.",
+      "Artefactos y griferías: inodoro, bacha, ducha y termotanque.",
+    ],
+  },
+  {
+    label: "Instalación eléctrica",
+    items: [
+      "Tablero principal, tomas, puntos de luz y salida para aire acondicionado tipo split.",
+      "Iluminación con artefactos LED y ductos para TV y datos.",
+    ],
+  },
+  {
+    label: "Carpintería",
+    items: [
+      "Aberturas de vidrio templado con perfilería de aluminio negra.",
+      "Puertas interiores, mamparas de baño y espejos con estructura flotante.",
+    ],
+  },
+  {
+    label: "Muebles",
+    items: [
+      "Mesada de mármol o granito en cocina y baño según proyecto.",
+      "Mobiliario fijo de cocina y placares de producción propia.",
+    ],
+  },
+];
 
 export const models: Model[] = [
   {
@@ -37,7 +118,8 @@ export const models: Model[] = [
     name: "CRUDO 01",
     tipology: "Loft",
     area: "28 m²",
-    startingPrice: "Desde Gs. 95.000.000",
+    areaM2: 28,
+    startingPrice: `Desde ${estimatedPrice(28)} + IVA`,
     summary: "Un ambiente, baño y deck exterior.",
     description: [
       "Un loft de un solo ambiente pensado para vivirse entero: un volumen limpio de hormigón, frente vidriado y un deck que extiende el espacio hacia el terreno.",
@@ -49,40 +131,59 @@ export const models: Model[] = [
       { label: "Baño", value: "1" },
       { label: "Deck exterior", value: "Incluido" },
     ],
-    system: [
-      "Hormigón armado con paneles de nuestra fábrica",
-      "Techo metálico con pendiente única",
-      "Bacha, tina y pisos de concreto propios",
+    amenities: [
+      "Deck exterior integrado al frente vidriado",
+      "Frente vidriado de piso a techo",
+      "Baño con bacha de concreto y mesada de mármol",
+      "Escritorio y espacio de guardado incorporados",
     ],
-    systemNote:
-      "CRUDO 01 se piensa desde el inicio para fabricar y construir cada parte de forma coordinada. Diseño, producción y obra trabajan conectados para reducir improvisaciones y tener mayor control sobre el proceso.",
     shareDescription: "CRUDO 01 - 28 m². Una habitación, baño y deck exterior.",
     whatsapp: "crudo01",
-    cover: "/images/tipologias/crudo-01-exterior-aereo.jpg",
+    cover: "/images/renders/crudo-1/crudo-1-a.jpg",
     coverAlt:
-      "Vista aérea del loft CRUDO 01: volumen de paneles de hormigón, frente vidriado y deck de madera",
+      "Vista aérea de CRUDO 01: volumen de vidrio y hormigón sobre el campo, con deck de madera",
+    plan: {
+      src: "/images/renders/crudo-1/crudo-1-f.jpg",
+      alt: "Planta de CRUDO 01: dormitorio, estar, baño con ducha y galería exterior",
+      width: 1438,
+      height: 736,
+    },
     gallery: [
       {
-        src: "/images/tipologias/crudo-01-exterior-aereo.jpg",
-        alt: "Vista aérea del loft CRUDO 01: volumen de paneles de hormigón, frente vidriado y deck de madera",
-        wide: true,
+        src: "/images/renders/crudo-1/crudo-1-a.jpg",
+        alt: "Vista aérea de CRUDO 01: volumen de vidrio y hormigón sobre el campo, con deck de madera",
       },
       {
-        src: "/images/tipologias/crudo-01-frente.jpg",
-        alt: "Frente vidriado del loft CRUDO 01 con deck de madera y estructura metálica negra",
+        src: "/images/renders/crudo-1/crudo-1-c.jpg",
+        alt: "Frente vidriado de CRUDO 01 con estructura negra, deck de madera y sillones exteriores",
       },
       {
-        src: "/images/tipologias/crudo-01-volumen.jpg",
-        alt: "Volumen exterior de CRUDO 01: grilla de paneles de hormigón y techo de pendiente única",
+        src: "/images/renders/crudo-1/crudo-1-b.jpg",
+        alt: "Volumen cerrado de CRUDO 01 en paneles de hormigón, con techo metálico de pendiente única",
       },
       {
-        src: "/images/tipologias/crudo-01-interior.jpg",
-        alt: "Interior de CRUDO 01: muro de hormigón, cabecera de madera y salida al deck",
-        wide: true,
+        src: "/images/renders/crudo-1/crudo-1-e.jpg",
+        alt: "Galería exterior de CRUDO 01 con mesa y sillones de fibra, vista al dormitorio a través del frente vidriado",
       },
       {
-        src: "/images/tipologias/crudo-01-deck.jpg",
-        alt: "Deck de CRUDO 01 con mesa y sillones de mimbre, vista al dormitorio a través del frente vidriado",
+        src: "/images/renders/crudo-1/crudo-1-d.jpg",
+        alt: "Dormitorio de CRUDO 01 con cabecera de madera, escritorio y frente vidriado con vista al horizonte",
+      },
+      {
+        src: "/images/renders/crudo-1/crudo-1-i.jpg",
+        alt: "Dormitorio de CRUDO 01 con ventanales de piso a techo y vista abierta al entorno",
+      },
+      {
+        src: "/images/renders/crudo-1/crudo-1-j.jpg",
+        alt: "Detalle del escritorio de CRUDO 01, con mueble de madera y heladera compacta roja",
+      },
+      {
+        src: "/images/renders/crudo-1/crudo-1-k.jpg",
+        alt: "Galería exterior de CRUDO 01 con mesa de comedor, sillas y vista al jardín",
+      },
+      {
+        src: "/images/renders/crudo-1/crudo-1-l.jpg",
+        alt: "Baño de CRUDO 01 con bacha de concreto, mesada de mármol y espejo iluminado",
       },
     ],
   },
@@ -91,7 +192,8 @@ export const models: Model[] = [
     name: "CRUDO 02",
     tipology: "Vivienda industrial",
     area: "60 m²",
-    startingPrice: "Desde Gs. 240.000.000",
+    areaM2: 60,
+    startingPrice: `Desde ${estimatedPrice(60)} + IVA`,
     summary: "Dos habitaciones, cocina y comedor integrados al estar.",
     description: [
       "Una vivienda de estilo industrial en un solo nivel. La cocina y el comedor se integran al estar, y el deck exterior se suma al espacio principal en lugar de quedar afuera.",
@@ -103,39 +205,68 @@ export const models: Model[] = [
       { label: "Baño", value: "1" },
       { label: "Cocina · comedor", value: "Integrado" },
     ],
-    system: [
-      "Hormigón armado con paneles de nuestra fábrica",
-      "Celosía de concreto y pérgola de madera",
-      "Deck exterior integrado al estar",
+    amenities: [
+      "Pileta integrada al deck exterior",
+      "Pérgola de madera y celosía de concreto",
+      "Cocina exterior bajo galería, con parrilla",
+      "Living con muro de hormigón visto y panel de madera para TV",
     ],
-    systemNote:
-      "Definimos el proyecto pensando desde el inicio en cómo se fabrica y construye. Eso permite trabajar con mayor precisión y reducir improvisaciones durante la ejecución.",
     shareDescription:
       "CRUDO 02 - Vivienda industrial, 60 m². Dos habitaciones, un baño, cocina y comedor integrados al estar.",
     whatsapp: "crudo02",
-    cover: "/images/tipologias/crudo-02-hero.png",
+    cover: "/images/renders/crudo-2/crudo-2-a.jpg",
     coverAlt:
-      "CRUDO 02: galería con pérgola de madera, celosía de concreto y pileta sobre deck",
+      "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
+    plan: {
+      src: "/images/renders/crudo-2/crudo-2-m.png",
+      alt: "Planta de CRUDO 02: dos dormitorios, baño, cocina-comedor-estar integrados y deck con pileta",
+      width: 4581,
+      height: 2250,
+    },
     gallery: [
       {
-        src: "/images/tipologias/crudo-02-hero.png",
-        alt: "CRUDO 02: galería con pérgola de madera, celosía de concreto y pileta sobre deck",
-        wide: true,
+        src: "/images/renders/crudo-2/crudo-2-a.jpg",
+        alt: "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
       },
       {
-        src: "/images/tipologias/crudo-02-exterior.jpg",
-        alt: "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck y pileta",
-        wide: true,
+        src: "/images/renders/crudo-2/crudo-2-b.jpg",
+        alt: "Pileta de CRUDO 02 junto a la galería, con pérgola de madera y living exterior",
       },
       {
-        src: "/images/tipologias/crudo-02-pileta.jpg",
-        alt: "CRUDO 02 desde la pileta, con pérgola de madera y galería vidriada",
-        wide: true,
+        src: "/images/renders/crudo-2/crudo-2-d.png",
+        alt: "Galería de CRUDO 02 bajo pérgola de madera, con celosía de concreto, mesa exterior y pileta",
       },
       {
-        src: "/images/tipologias/crudo-02-interior.jpg",
-        alt: "Interior de CRUDO 02: muro de paneles de hormigón, cocina integrada al estar y revestimiento de madera",
-        wide: true,
+        src: "/images/renders/crudo-2/crudo-2-c.jpg",
+        alt: "Interior de CRUDO 02: cocina integrada al estar, con muro de paneles de hormigón y revestimiento de madera",
+      },
+      {
+        src: "/images/renders/crudo-2/crudo-2-e.jpg",
+        alt: "Living de CRUDO 02 con muro de hormigón visto y panel de madera para TV",
+      },
+      {
+        src: "/images/renders/crudo-2/crudo-2-f.jpg",
+        alt: "Cocina de CRUDO 02 con mesada de mármol, horno y anafe integrados",
+      },
+      {
+        src: "/images/renders/crudo-2/crudo-2-g.jpg",
+        alt: "Cocina exterior de CRUDO 02 bajo pérgola, con parrilla y celosía de concreto",
+      },
+      {
+        src: "/images/renders/crudo-2/crudo-2-l.jpg",
+        alt: "Cocina y estar integrados de CRUDO 02, con isla de mármol y muro de hormigón visto",
+      },
+      {
+        src: "/images/renders/crudo-2/crudo-2-h.jpg",
+        alt: "Dormitorio de CRUDO 02 con paneles de hormigón y cabecera de madera",
+      },
+      {
+        src: "/images/renders/crudo-2/crudo-2-i.jpg",
+        alt: "Dormitorio secundario de CRUDO 02 con dos camas y vista al exterior",
+      },
+      {
+        src: "/images/renders/crudo-2/crudo-2-j.jpg",
+        alt: "Detalle del mueble de TV en madera del living de CRUDO 02",
       },
     ],
   },
@@ -227,7 +358,7 @@ export const faqs = [
   {
     question: "¿Cuánto cuesta un CRUDO?",
     answer: SHOW_PRICES
-      ? "CRUDO 01 parte de una inversión de referencia desde Gs. 95.000.000 y CRUDO 02 desde Gs. 240.000.000. El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos."
+      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(28)} + IVA para CRUDO 01 y ${estimatedPrice(60)} + IVA para CRUDO 02. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
       : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {
