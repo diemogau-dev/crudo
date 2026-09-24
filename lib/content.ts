@@ -37,7 +37,7 @@ export type Model = {
   whatsapp: WhatsappTopic;
   cover: string;
   coverAlt: string;
-  gallery: { src: string; alt: string }[];
+  gallery: { src: string; alt: string; width: number; height: number }[];
   plan?: { src: string; alt: string; width: number; height: number };
 };
 
@@ -152,38 +152,56 @@ export const models: Model[] = [
       {
         src: "/images/renders/crudo-1/crudo-1-a.jpg",
         alt: "Vista aérea de CRUDO 01: volumen de vidrio y hormigón sobre el campo, con deck de madera",
+        width: 1220,
+        height: 864,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-c.jpg",
         alt: "Frente vidriado de CRUDO 01 con estructura negra, deck de madera y sillones exteriores",
+        width: 1287,
+        height: 832,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-b.jpg",
         alt: "Volumen cerrado de CRUDO 01 en paneles de hormigón, con techo metálico de pendiente única",
+        width: 1195,
+        height: 880,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-e.jpg",
         alt: "Galería exterior de CRUDO 01 con mesa y sillones de fibra, vista al dormitorio a través del frente vidriado",
+        width: 1331,
+        height: 784,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-d.jpg",
         alt: "Dormitorio de CRUDO 01 con cabecera de madera, escritorio y frente vidriado con vista al horizonte",
+        width: 1600,
+        height: 645,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-i.jpg",
         alt: "Dormitorio de CRUDO 01 con ventanales de piso a techo y vista abierta al entorno",
+        width: 1527,
+        height: 688,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-j.jpg",
         alt: "Detalle del escritorio de CRUDO 01, con mueble de madera y heladera compacta roja",
+        width: 1279,
+        height: 832,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-k.jpg",
         alt: "Galería exterior de CRUDO 01 con mesa de comedor, sillas y vista al jardín",
+        width: 1304,
+        height: 816,
       },
       {
         src: "/images/renders/crudo-1/crudo-1-l.jpg",
         alt: "Baño de CRUDO 01 con bacha de concreto, mesada de mármol y espejo iluminado",
+        width: 768,
+        height: 1376,
       },
     ],
   },
@@ -227,46 +245,68 @@ export const models: Model[] = [
       {
         src: "/images/renders/crudo-2/crudo-2-a.jpg",
         alt: "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
+        width: 1568,
+        height: 688,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-b.jpg",
         alt: "Pileta de CRUDO 02 junto a la galería, con pérgola de madera y living exterior",
+        width: 1486,
+        height: 704,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-d.png",
         alt: "Galería de CRUDO 02 bajo pérgola de madera, con celosía de concreto, mesa exterior y pileta",
+        width: 1727,
+        height: 910,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-c.jpg",
         alt: "Interior de CRUDO 02: cocina integrada al estar, con muro de paneles de hormigón y revestimiento de madera",
+        width: 1500,
+        height: 704,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-e.jpg",
         alt: "Living de CRUDO 02 con muro de hormigón visto y panel de madera para TV",
+        width: 1405,
+        height: 679,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-f.jpg",
         alt: "Cocina de CRUDO 02 con mesada de mármol, horno y anafe integrados",
+        width: 1282,
+        height: 816,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-g.jpg",
         alt: "Cocina exterior de CRUDO 02 bajo pérgola, con parrilla y celosía de concreto",
+        width: 1338,
+        height: 784,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-l.jpg",
         alt: "Cocina y estar integrados de CRUDO 02, con isla de mármol y muro de hormigón visto",
+        width: 1600,
+        height: 670,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-h.jpg",
         alt: "Dormitorio de CRUDO 02 con paneles de hormigón y cabecera de madera",
+        width: 1375,
+        height: 768,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-i.jpg",
         alt: "Dormitorio secundario de CRUDO 02 con dos camas y vista al exterior",
+        width: 1322,
+        height: 731,
       },
       {
         src: "/images/renders/crudo-2/crudo-2-j.jpg",
         alt: "Detalle del mueble de TV en madera del living de CRUDO 02",
+        width: 1287,
+        height: 832,
       },
     ],
   },
