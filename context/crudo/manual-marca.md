@@ -44,7 +44,7 @@ CTA de conversación principal: **"HABLEMOS →"**. Variantes contextuales: "HAB
 ## WhatsApp
 
 Número: **+595 981 625 546** — formato técnico para links `wa.me`: `595981625546`.
-Mensajes predefinidos por contexto: general / CRUDO 01 / CRUDO 02 / proyecto a medida (texto exacto en el brief, sección 29).
+Mensajes predefinidos por contexto: general / CRUDO 01 / CRUDO 02 / CRUDO 03 / proyecto a medida (texto exacto en el brief, sección 29).
 
 ## Reglas de comunicación no negociables
 

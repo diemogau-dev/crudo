@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Tipologías",
   description:
-    "CRUDO 01, loft de 28 m², y CRUDO 02, vivienda industrial de 60 m². Diseñados y construidos con nuestro sistema de hormigón y concreto.",
+    "CRUDO 01, loft de 28 m²; CRUDO 02, vivienda industrial de 60 m², y CRUDO 03, loft de 28 m² con kitchenette. Diseñados y construidos con nuestro sistema de hormigón y concreto.",
 };
 
 export default function TipologiasPage() {
@@ -32,7 +32,7 @@ export default function TipologiasPage() {
       />
 
       <section className="shell py-20 md:py-32">
-        <div className="grid gap-16 md:grid-cols-2 md:gap-10">
+        <div className="grid gap-16 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
           {models.map((model, index) => (
             <Reveal key={model.slug} delay={index * 120}>
               <ModelCard model={model} />
@@ -47,7 +47,7 @@ export default function TipologiasPage() {
             <p className="kicker text-muted">Sobre el presupuesto</p>
             <p className="lede mt-6">
               {SHOW_PRICES
-                ? `Referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: CRUDO 01 desde ${estimatedPrice(28)} y CRUDO 02 desde ${estimatedPrice(60)}, según terreno y trabajos de preparación. Preferimos conocer tu caso antes de confirmar el número final, y después preparar una propuesta clara con el alcance correspondiente.`
+                ? `Referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: CRUDO 01 y CRUDO 03 desde ${estimatedPrice(28)} y CRUDO 02 desde ${estimatedPrice(60)}, según terreno y trabajos de preparación. Preferimos conocer tu caso antes de confirmar el número final, y después preparar una propuesta clara con el alcance correspondiente.`
                 : "El número final depende del terreno, la ubicación y los trabajos de preparación de cada proyecto. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente."}
             </p>
           </Reveal>

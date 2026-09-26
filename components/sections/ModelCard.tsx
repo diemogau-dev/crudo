@@ -14,12 +14,12 @@ export default function ModelCard({ model }: { model: Model }) {
           src={model.cover}
           alt={model.coverAlt}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
         />
       </div>
 
-      <div className="mt-7 flex flex-col gap-2 border-b border-hairline pb-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+      <div className="mt-7 flex flex-col gap-2 border-b border-hairline pb-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 lg:flex-col lg:items-start lg:gap-2">
         <h3 className="display-md">{model.name}</h3>
         <p className="kicker whitespace-nowrap text-muted">
           {model.tipology} · {model.area}

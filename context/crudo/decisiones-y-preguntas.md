@@ -2,6 +2,15 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-09-26 — Nueva tipología: CRUDO 03
+
+1. **Renders de CRUDO 03** subidos desde Drive a `public/images/renders/crudo-3/` (`crudo-3-a` a `crudo-3-g`; `crudo-3-d` es la planta).
+2. **CRUDO 03 = CRUDO 01 + kitchenette.** Mismo volumen y superficie (28 m², se copió de CRUDO 01 porque la planta tiene la misma huella), con kitchenette equipada: anafe eléctrico, bacha, microondas, heladera compacta y barra con banquetas. Tipología: "Loft con kitchenette". Descripción, amenities y alts se armaron a partir de los renders. **A confirmar con Diego:** m² exactos, nombre de tipología y copy.
+3. Nuevo mensaje de WhatsApp `crudo03` en `lib/whatsapp.ts`.
+4. **Índice de tipologías (Home y `/tipologias`) pasa a 3 columnas en desktop** (`lg:grid-cols-3`); en ese ancho el nombre y la tipología de la tarjeta se apilan. En tablet sigue en 2 columnas.
+5. "Siguiente tipología" en el detalle ahora recorre en orden (01 → 02 → 03 → 01) en vez de saltar siempre al primero distinto.
+6. Copys que nombraban solo CRUDO 01 y 02 (FAQ, "Sobre el presupuesto", metadata de `/tipologias`, Home "Proyectos a medida") actualizados para incluir CRUDO 03. El precio de referencia de CRUDO 03 es el mismo que CRUDO 01 (28 m²).
+
 ## 2026-09-09 — Novena ronda: título del hero, sin em-dashes, fotos de El Sistema, créditos
 
 1. **Título del hero achicado de nuevo.** `display-xl` bajó de `clamp(2.25rem, 6.4vw, 5.75rem)` a `clamp(1.875rem, 4.8vw, 4.25rem)`.

@@ -70,7 +70,7 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="mt-16 grid gap-16 md:mt-24 md:grid-cols-2 md:gap-10">
+          <div className="mt-16 grid gap-16 md:mt-24 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
             {models.map((model, index) => (
               <Reveal key={model.slug} delay={index * 120}>
                 <ModelCard model={model} />
@@ -101,7 +101,7 @@ export default function Home() {
             <p className="kicker text-muted">Proyectos a medida</p>
             <h2 className="display-lg mt-6">Empezá con una idea.</h2>
             <p className="body-text mt-8 text-muted">
-              CRUDO 01 y CRUDO 02 son el punto de partida. Si tenés un terreno,
+              CRUDO 01, 02 y 03 son el punto de partida. Si tenés un terreno,
               un plano o una idea distinta, desarrollamos un proyecto a medida
               con el mismo sistema y el mismo cuidado.
             </p>

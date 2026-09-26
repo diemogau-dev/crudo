@@ -310,6 +310,83 @@ export const models: Model[] = [
       },
     ],
   },
+  {
+    slug: "crudo-03",
+    name: "CRUDO 03",
+    tipology: "Loft con kitchenette",
+    area: "28 m²",
+    areaM2: 28,
+    startingPrice: `Desde ${estimatedPrice(28)} + IVA`,
+    summary: "Un ambiente, kitchenette, baño y deck exterior.",
+    description: [
+      "El loft de CRUDO 01 con cocina propia: el mismo volumen de hormigón y frente vidriado, con una kitchenette equipada y una barra para comer sin salir del ambiente.",
+      "Pensado para quedarse más de un fin de semana: casa de huéspedes, alquiler temporario, estudio con vivienda o un primer espacio independiente en el fondo de una propiedad que ya existe.",
+    ],
+    specs: [
+      { label: "Superficie", value: "28 m²" },
+      { label: "Habitación", value: "1" },
+      { label: "Baño", value: "1" },
+      { label: "Kitchenette", value: "Incluida" },
+      { label: "Deck exterior", value: "Incluido" },
+    ],
+    amenities: [
+      "Kitchenette con anafe eléctrico, bacha, microondas y heladera compacta",
+      "Barra de comedor con banquetas",
+      "Deck exterior con celosía de concreto",
+      "Frente vidriado de piso a techo",
+      "Baño con bacha de apoyo, mesada de mármol y espejo iluminado",
+    ],
+    shareDescription:
+      "CRUDO 03 - 28 m². Una habitación, kitchenette, baño y deck exterior.",
+    whatsapp: "crudo03",
+    cover: "/images/renders/crudo-3/crudo-3-a.jpg",
+    coverAlt:
+      "Deck de CRUDO 03 con celosía de concreto y sillones, frente al dormitorio vidriado",
+    plan: {
+      src: "/images/renders/crudo-3/crudo-3-d.jpg",
+      alt: "Planta de CRUDO 03: deck exterior, dormitorio, kitchenette con barra y baño con ducha",
+      width: 1630,
+      height: 656,
+    },
+    gallery: [
+      {
+        src: "/images/renders/crudo-3/crudo-3-a.jpg",
+        alt: "Deck de CRUDO 03 con celosía de concreto y sillones, frente al dormitorio vidriado",
+        width: 1313,
+        height: 800,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-g.jpg",
+        alt: "Volumen de CRUDO 03 en paneles de hormigón y estructura negra, sobre el campo",
+        width: 1455,
+        height: 736,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-b.jpg",
+        alt: "Interior de CRUDO 03: dormitorio con muros de hormigón visto y kitchenette al fondo",
+        width: 1312,
+        height: 673,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-c.jpg",
+        alt: "Kitchenette de CRUDO 03 con bacha, microondas, heladera compacta roja y barra con banquetas",
+        width: 1352,
+        height: 784,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-e.jpg",
+        alt: "Detalle del dormitorio de CRUDO 03 con muro de paneles de hormigón y mesa de luz negra",
+        width: 1231,
+        height: 864,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-f.jpg",
+        alt: "Baño de CRUDO 03 con bacha de apoyo, mesada de mármol y espejo iluminado",
+        width: 1027,
+        height: 1024,
+      },
+    ],
+  },
 ];
 
 export const processSteps = [
@@ -376,7 +453,7 @@ export const faqs = [
       "En una obra tradicional, el diseño, la fabricación de materiales y la construcción suelen depender de distintos equipos y proveedores. En CRUDO conectamos esas etapas desde el principio: diseñamos pensando en cómo se va a producir y construir cada proyecto, fabricamos elementos clave en nuestra propia fábrica y ejecutamos la obra con nuestro equipo, dentro del mismo sistema. El resultado es más control sobre el proceso y menos improvisación entre etapas.",
   },
   {
-    question: "¿CRUDO solo construye las tipologías CRUDO 01 y CRUDO 02?",
+    question: "¿CRUDO solo construye las tipologías CRUDO 01, 02 y 03?",
     answer:
       "No. Son nuestro punto de partida y vamos a ir lanzando nuevas tipologías. También desarrollamos proyectos personalizados según el terreno y las ideas de cada cliente.",
   },
@@ -398,7 +475,7 @@ export const faqs = [
   {
     question: "¿Cuánto cuesta un CRUDO?",
     answer: SHOW_PRICES
-      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(28)} + IVA para CRUDO 01 y ${estimatedPrice(60)} + IVA para CRUDO 02. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
+      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(28)} + IVA para CRUDO 01 y CRUDO 03, y ${estimatedPrice(60)} + IVA para CRUDO 02. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
       : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {

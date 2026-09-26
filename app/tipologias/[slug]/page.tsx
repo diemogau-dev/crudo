@@ -28,10 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ModelPage({ params }: Props) {
   const { slug } = await params;
-  const model = models.find((item) => item.slug === slug);
-  if (!model) notFound();
+  const index = models.findIndex((item) => item.slug === slug);
+  if (index === -1) notFound();
 
-  const other = models.find((item) => item.slug !== model.slug);
+  const model = models[index];
+  const other =
+    models.length > 1 ? models[(index + 1) % models.length] : undefined;
 
   return (
     <>
