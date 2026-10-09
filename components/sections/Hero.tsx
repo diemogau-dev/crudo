@@ -6,12 +6,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-[92svh] w-full overflow-hidden text-alabaster md:min-h-screen">
       <Image
-        src="/images/tipologias/crudo-02-exterior.jpg"
-        alt="Vivienda CRUDO 02: fachada de paneles de hormigón, jardín, deck de madera y pileta"
+        src="/images/hero/hero-paisaje.webp"
+        alt="Vivienda CRUDO de paneles de hormigón y frente vidriado, con deck de madera, en un claro rodeado de monte y sierras"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[68%_center] md:object-center"
+        className="object-cover object-[62%_center] md:object-center"
       />
       <div aria-hidden className="absolute inset-0 bg-iron/45" />
 
