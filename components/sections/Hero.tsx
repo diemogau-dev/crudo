@@ -13,7 +13,7 @@ export default function Hero() {
         sizes="100vw"
         className="object-cover object-[62%_center] md:object-center"
       />
-      <div aria-hidden className="absolute inset-0 bg-iron/45" />
+      <div aria-hidden className="absolute inset-0 bg-iron/30" />
 
       <div className="shell relative flex min-h-[92svh] flex-col justify-end pt-28 pb-16 md:min-h-screen md:pb-24">
         <p className="kicker text-alabaster/75">
