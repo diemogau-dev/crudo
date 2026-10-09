@@ -6,14 +6,15 @@ export default function Hero() {
   return (
     <section className="relative min-h-[92svh] w-full overflow-hidden text-alabaster md:min-h-screen">
       <Image
-        src="/images/hero/hero-paisaje.webp"
+        src="/images/hero/hero-paisaje-hd.webp"
         alt="Vivienda CRUDO de paneles de hormigón y frente vidriado, con deck de madera, en un claro rodeado de monte y sierras"
         fill
         priority
+        quality={90}
         sizes="100vw"
         className="object-cover object-[62%_center] md:object-center"
       />
-      <div aria-hidden className="absolute inset-0 bg-iron/30" />
+      <div aria-hidden className="absolute inset-0 bg-iron/20" />
 
       <div className="shell relative flex min-h-[92svh] flex-col justify-end pt-28 pb-16 md:min-h-screen md:pb-24">
         <p className="kicker text-alabaster/75">
