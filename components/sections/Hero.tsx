@@ -16,7 +16,7 @@ export default function Hero() {
       />
       <div aria-hidden className="absolute inset-0 bg-iron/20" />
 
-      <div className="shell relative flex min-h-[92svh] flex-col justify-end pt-28 pb-16 md:min-h-screen md:pb-24">
+      <div className="shell relative flex min-h-[92svh] flex-col justify-center pt-24 pb-16 md:min-h-screen md:pt-28 md:pb-20">
         <p className="kicker text-alabaster/75">
           Arquitectura &amp; Concreto · Paraguay
         </p>
