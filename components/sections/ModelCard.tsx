@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { SHOW_PRICES, type Model } from "@/lib/content";
 
-export default function ModelCard({ model }: { model: Model }) {
+export default function ModelCard({
+  model,
+  showPrice = true,
+}: {
+  model: Model;
+  showPrice?: boolean;
+}) {
   return (
     <Link
       href={`/tipologias/${model.slug}`}
@@ -27,7 +33,7 @@ export default function ModelCard({ model }: { model: Model }) {
       </div>
 
       <p className="body-text mt-5 max-w-sm text-muted">{model.summary}</p>
-      {SHOW_PRICES ? (
+      {SHOW_PRICES && showPrice ? (
         <p className="kicker mt-4 text-muted">{model.startingPrice}</p>
       ) : null}
 

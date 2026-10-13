@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks } from "@/lib/content";
+import { contact, navLinks } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
 import Logo from "./Logo";
 
@@ -36,22 +36,26 @@ export default function Footer() {
             >
               WhatsApp · +595 981 625 546
             </a>
-            <p className="kicker text-alabaster/50">Asunción · Paraguay</p>
+            <a
+              href={`mailto:${contact.email}`}
+              className="kicker normal-case tracking-[0.12em] text-alabaster transition-opacity duration-300 hover:opacity-70"
+            >
+              {contact.email}
+            </a>
+            <address className="kicker mt-3 not-italic leading-relaxed text-alabaster/50">
+              {contact.address}
+              <br />
+              {contact.city}
+            </address>
             <div className="mt-3 flex items-center gap-4">
-              <span
-                aria-label="Instagram — próximamente"
-                title="Próximamente"
-                className="kicker cursor-default text-alabaster/35"
+              <a
+                href={contact.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="kicker text-alabaster/70 transition-colors duration-300 hover:text-alabaster"
               >
-                Instagram
-              </span>
-              <span
-                aria-label="Facebook — próximamente"
-                title="Próximamente"
-                className="kicker cursor-default text-alabaster/35"
-              >
-                Facebook
-              </span>
+                Instagram · @{contact.instagram.handle}
+              </a>
             </div>
           </div>
         </div>

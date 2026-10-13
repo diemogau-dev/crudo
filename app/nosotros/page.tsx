@@ -85,8 +85,8 @@ export default function NosotrosPage() {
 
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
                   <Image
-                    src="/images/tipologias/crudo-02-interior.jpg"
-                    alt="Interior cálido de CRUDO 02: revestimiento de madera, luz natural y cocina integrada"
+                    src="/images/tipologias/crudo-03-interior.jpg"
+                    alt="Interior cálido de CRUDO 03: revestimiento de madera, luz natural y cocina integrada"
                     fill
                     sizes="(min-width: 768px) 25vw, 50vw"
                     className="object-cover"

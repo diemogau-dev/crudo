@@ -2,6 +2,17 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-13 — Cambios de home, numeración y contacto (pedido de Diego)
+
+1. **CRUDO 02 ↔ CRUDO 03.** El loft con kitchenette (28 m²) pasa a ser **CRUDO 02** y la vivienda industrial (60 m²) pasa a ser **CRUDO 03**. Se renombraron slugs, mensajes de WhatsApp, alts y carpetas de imágenes (`renders/crudo-2` ↔ `renders/crudo-3`, `tipologias/crudo-02-*` → `tipologias/crudo-03-*`). Las entradas anteriores de este registro hablan de la numeración vieja.
+2. **Home — "Por qué CRUDO y hormigón":** kicker nuevo y texto reescrito a partir del borrador de Diego (obra tradicional = meses o años, improvisación, sobrecosto y equipos que no sincronizan; CRUDO = proceso definido, menos tiempo de obra, costo fijo desde el primer día).
+3. **Home — sin precios en las tarjetas de tipologías.** `ModelCard` recibe `showPrice={false}` en la home; `/tipologias`, el detalle y el FAQ siguen mostrando la referencia provisoria mientras `SHOW_PRICES` sea `true`.
+4. **Home — Proyectos a medida:** título "Empezá por el terreno." y texto nuevo (terreno + idea → diseño a medida, plazo y costo final conocidos antes de empezar).
+5. **CTA final por defecto:** "¿Tenés una idea en mente? Contanos. Nosotros la hacemos realidad."
+6. **Banner de proceso en la home** (`ProcessBanner`), entre el render interior y Tipologías: "Construir con materiales duraderos nunca fue tan fácil." con 4 pasos (Diseñamos, Fabricamos, Construimos, Entregamos) e íconos de línea fina propios. Referencia visual: banner de pasos estilo ViBert.
+7. **Nav:** El Sistema, Tipologías, A Medida, Nosotros, FAQ, Hablemos.
+8. **Footer:** correo crudohomes@gmail.com, oficina en Sucre 1862 casi José Campos Lanzoni (Asunción), Instagram @crudohomes con link. Facebook eliminado (no hay cuenta). WhatsApp confirmado: 0981 625 546.
+
 ## 2026-09-26 — Nueva tipología: CRUDO 03
 
 1. **Renders de CRUDO 03** subidos desde Drive a `public/images/renders/crudo-3/` (`crudo-3-a` a `crudo-3-g`; `crudo-3-d` es la planta).

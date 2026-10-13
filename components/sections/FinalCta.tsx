@@ -10,8 +10,8 @@ type Props = {
 };
 
 export default function FinalCta({
-  title = "Tenés el lugar.\nNosotros podemos construirte el espacio.",
-  text = "Contanos qué tenés en mente. Hablemos de tu terreno, tu idea o el espacio que querés crear.",
+  title = "¿Tenés una idea en mente?\nContanos. Nosotros la hacemos realidad.",
+  text = "Hablemos de tu terreno, tu idea o el espacio que querés crear, y la llevamos a CRUDO.",
   topic = "general",
   label = "Hablemos",
 }: Props) {

@@ -14,9 +14,16 @@ export function estimatedPrice(areaM2: number) {
   return formatGs(areaM2 * PRICE_PER_M2_GS);
 }
 
+export const contact = {
+  email: "crudohomes@gmail.com",
+  instagram: { handle: "crudohomes", url: "https://www.instagram.com/crudohomes/" },
+  address: "Sucre 1862 casi José Campos Lanzoni",
+  city: "Asunción · Paraguay",
+} as const;
+
 export const navLinks = [
-  { href: "/tipologias", label: "Tipologías" },
   { href: "/sistema", label: "El Sistema" },
+  { href: "/tipologias", label: "Tipologías" },
   { href: "/a-medida", label: "A Medida" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/faq", label: "FAQ" },
@@ -208,111 +215,6 @@ export const models: Model[] = [
   {
     slug: "crudo-02",
     name: "CRUDO 02",
-    tipology: "Vivienda industrial",
-    area: "60 m²",
-    areaM2: 60,
-    startingPrice: `Desde ${estimatedPrice(60)} + IVA`,
-    summary: "Dos habitaciones, cocina y comedor integrados al estar.",
-    description: [
-      "Una vivienda de estilo industrial en un solo nivel. La cocina y el comedor se integran al estar, y el deck exterior se suma al espacio principal en lugar de quedar afuera.",
-      "La celosía de concreto y la pérgola de madera ordenan el patio y crean un afuera que se usa todo el año.",
-    ],
-    specs: [
-      { label: "Superficie", value: "60 m²" },
-      { label: "Habitaciones", value: "2" },
-      { label: "Baño", value: "1" },
-      { label: "Cocina · comedor", value: "Integrado" },
-    ],
-    amenities: [
-      "Pileta integrada al deck exterior",
-      "Pérgola de madera y celosía de concreto",
-      "Cocina exterior bajo galería, con parrilla",
-      "Living con muro de hormigón visto y panel de madera para TV",
-    ],
-    shareDescription:
-      "CRUDO 02 - Vivienda industrial, 60 m². Dos habitaciones, un baño, cocina y comedor integrados al estar.",
-    whatsapp: "crudo02",
-    cover: "/images/renders/crudo-2/crudo-2-a.jpg",
-    coverAlt:
-      "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
-    plan: {
-      src: "/images/renders/crudo-2/crudo-2-m.png",
-      alt: "Planta de CRUDO 02: dos dormitorios, baño, cocina-comedor-estar integrados y deck con pileta",
-      width: 4581,
-      height: 2250,
-    },
-    gallery: [
-      {
-        src: "/images/renders/crudo-2/crudo-2-a.jpg",
-        alt: "Fachada de CRUDO 02 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
-        width: 1568,
-        height: 688,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-b.jpg",
-        alt: "Pileta de CRUDO 02 junto a la galería, con pérgola de madera y living exterior",
-        width: 1486,
-        height: 704,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-d.png",
-        alt: "Galería de CRUDO 02 bajo pérgola de madera, con celosía de concreto, mesa exterior y pileta",
-        width: 1727,
-        height: 910,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-c.jpg",
-        alt: "Interior de CRUDO 02: cocina integrada al estar, con muro de paneles de hormigón y revestimiento de madera",
-        width: 1500,
-        height: 704,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-e.jpg",
-        alt: "Living de CRUDO 02 con muro de hormigón visto y panel de madera para TV",
-        width: 1405,
-        height: 679,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-f.jpg",
-        alt: "Cocina de CRUDO 02 con mesada de mármol, horno y anafe integrados",
-        width: 1282,
-        height: 816,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-g.jpg",
-        alt: "Cocina exterior de CRUDO 02 bajo pérgola, con parrilla y celosía de concreto",
-        width: 1338,
-        height: 784,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-l.jpg",
-        alt: "Cocina y estar integrados de CRUDO 02, con isla de mármol y muro de hormigón visto",
-        width: 1600,
-        height: 670,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-h.jpg",
-        alt: "Dormitorio de CRUDO 02 con paneles de hormigón y cabecera de madera",
-        width: 1375,
-        height: 768,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-i.jpg",
-        alt: "Dormitorio secundario de CRUDO 02 con dos camas y vista al exterior",
-        width: 1322,
-        height: 731,
-      },
-      {
-        src: "/images/renders/crudo-2/crudo-2-j.jpg",
-        alt: "Detalle del mueble de TV en madera del living de CRUDO 02",
-        width: 1287,
-        height: 832,
-      },
-    ],
-  },
-  {
-    slug: "crudo-03",
-    name: "CRUDO 03",
     tipology: "Loft con kitchenette",
     area: "28 m²",
     areaM2: 28,
@@ -337,53 +239,158 @@ export const models: Model[] = [
       "Baño con bacha de apoyo, mesada de mármol y espejo iluminado",
     ],
     shareDescription:
-      "CRUDO 03 - 28 m². Una habitación, kitchenette, baño y deck exterior.",
-    whatsapp: "crudo03",
-    cover: "/images/renders/crudo-3/crudo-3-a.jpg",
+      "CRUDO 02 - 28 m². Una habitación, kitchenette, baño y deck exterior.",
+    whatsapp: "crudo02",
+    cover: "/images/renders/crudo-2/crudo-2-a.jpg",
     coverAlt:
-      "Deck de CRUDO 03 con celosía de concreto y sillones, frente al dormitorio vidriado",
+      "Deck de CRUDO 02 con celosía de concreto y sillones, frente al dormitorio vidriado",
     plan: {
-      src: "/images/renders/crudo-3/crudo-3-d.jpg",
-      alt: "Planta de CRUDO 03: deck exterior, dormitorio, kitchenette con barra y baño con ducha",
+      src: "/images/renders/crudo-2/crudo-2-d.jpg",
+      alt: "Planta de CRUDO 02: deck exterior, dormitorio, kitchenette con barra y baño con ducha",
       width: 1630,
       height: 656,
     },
     gallery: [
       {
-        src: "/images/renders/crudo-3/crudo-3-a.jpg",
-        alt: "Deck de CRUDO 03 con celosía de concreto y sillones, frente al dormitorio vidriado",
+        src: "/images/renders/crudo-2/crudo-2-a.jpg",
+        alt: "Deck de CRUDO 02 con celosía de concreto y sillones, frente al dormitorio vidriado",
         width: 1313,
         height: 800,
       },
       {
-        src: "/images/renders/crudo-3/crudo-3-g.jpg",
-        alt: "Volumen de CRUDO 03 en paneles de hormigón y estructura negra, sobre el campo",
+        src: "/images/renders/crudo-2/crudo-2-g.jpg",
+        alt: "Volumen de CRUDO 02 en paneles de hormigón y estructura negra, sobre el campo",
         width: 1455,
         height: 736,
       },
       {
-        src: "/images/renders/crudo-3/crudo-3-b.jpg",
-        alt: "Interior de CRUDO 03: dormitorio con muros de hormigón visto y kitchenette al fondo",
+        src: "/images/renders/crudo-2/crudo-2-b.jpg",
+        alt: "Interior de CRUDO 02: dormitorio con muros de hormigón visto y kitchenette al fondo",
         width: 1312,
         height: 673,
       },
       {
-        src: "/images/renders/crudo-3/crudo-3-c.jpg",
-        alt: "Kitchenette de CRUDO 03 con bacha, microondas, heladera compacta roja y barra con banquetas",
+        src: "/images/renders/crudo-2/crudo-2-c.jpg",
+        alt: "Kitchenette de CRUDO 02 con bacha, microondas, heladera compacta roja y barra con banquetas",
         width: 1352,
         height: 784,
       },
       {
-        src: "/images/renders/crudo-3/crudo-3-e.jpg",
-        alt: "Detalle del dormitorio de CRUDO 03 con muro de paneles de hormigón y mesa de luz negra",
+        src: "/images/renders/crudo-2/crudo-2-e.jpg",
+        alt: "Detalle del dormitorio de CRUDO 02 con muro de paneles de hormigón y mesa de luz negra",
         width: 1231,
         height: 864,
       },
       {
-        src: "/images/renders/crudo-3/crudo-3-f.jpg",
-        alt: "Baño de CRUDO 03 con bacha de apoyo, mesada de mármol y espejo iluminado",
+        src: "/images/renders/crudo-2/crudo-2-f.jpg",
+        alt: "Baño de CRUDO 02 con bacha de apoyo, mesada de mármol y espejo iluminado",
         width: 1027,
         height: 1024,
+      },
+    ],
+  },
+  {
+    slug: "crudo-03",
+    name: "CRUDO 03",
+    tipology: "Vivienda industrial",
+    area: "60 m²",
+    areaM2: 60,
+    startingPrice: `Desde ${estimatedPrice(60)} + IVA`,
+    summary: "Dos habitaciones, cocina y comedor integrados al estar.",
+    description: [
+      "Una vivienda de estilo industrial en un solo nivel. La cocina y el comedor se integran al estar, y el deck exterior se suma al espacio principal en lugar de quedar afuera.",
+      "La celosía de concreto y la pérgola de madera ordenan el patio y crean un afuera que se usa todo el año.",
+    ],
+    specs: [
+      { label: "Superficie", value: "60 m²" },
+      { label: "Habitaciones", value: "2" },
+      { label: "Baño", value: "1" },
+      { label: "Cocina · comedor", value: "Integrado" },
+    ],
+    amenities: [
+      "Pileta integrada al deck exterior",
+      "Pérgola de madera y celosía de concreto",
+      "Cocina exterior bajo galería, con parrilla",
+      "Living con muro de hormigón visto y panel de madera para TV",
+    ],
+    shareDescription:
+      "CRUDO 03 - Vivienda industrial, 60 m². Dos habitaciones, un baño, cocina y comedor integrados al estar.",
+    whatsapp: "crudo03",
+    cover: "/images/renders/crudo-3/crudo-3-a.jpg",
+    coverAlt:
+      "Fachada de CRUDO 03 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
+    plan: {
+      src: "/images/renders/crudo-3/crudo-3-m.png",
+      alt: "Planta de CRUDO 03: dos dormitorios, baño, cocina-comedor-estar integrados y deck con pileta",
+      width: 4581,
+      height: 2250,
+    },
+    gallery: [
+      {
+        src: "/images/renders/crudo-3/crudo-3-a.jpg",
+        alt: "Fachada de CRUDO 03 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
+        width: 1568,
+        height: 688,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-b.jpg",
+        alt: "Pileta de CRUDO 03 junto a la galería, con pérgola de madera y living exterior",
+        width: 1486,
+        height: 704,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-d.png",
+        alt: "Galería de CRUDO 03 bajo pérgola de madera, con celosía de concreto, mesa exterior y pileta",
+        width: 1727,
+        height: 910,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-c.jpg",
+        alt: "Interior de CRUDO 03: cocina integrada al estar, con muro de paneles de hormigón y revestimiento de madera",
+        width: 1500,
+        height: 704,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-e.jpg",
+        alt: "Living de CRUDO 03 con muro de hormigón visto y panel de madera para TV",
+        width: 1405,
+        height: 679,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-f.jpg",
+        alt: "Cocina de CRUDO 03 con mesada de mármol, horno y anafe integrados",
+        width: 1282,
+        height: 816,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-g.jpg",
+        alt: "Cocina exterior de CRUDO 03 bajo pérgola, con parrilla y celosía de concreto",
+        width: 1338,
+        height: 784,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-l.jpg",
+        alt: "Cocina y estar integrados de CRUDO 03, con isla de mármol y muro de hormigón visto",
+        width: 1600,
+        height: 670,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-h.jpg",
+        alt: "Dormitorio de CRUDO 03 con paneles de hormigón y cabecera de madera",
+        width: 1375,
+        height: 768,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-i.jpg",
+        alt: "Dormitorio secundario de CRUDO 03 con dos camas y vista al exterior",
+        width: 1322,
+        height: 731,
+      },
+      {
+        src: "/images/renders/crudo-3/crudo-3-j.jpg",
+        alt: "Detalle del mueble de TV en madera del living de CRUDO 03",
+        width: 1287,
+        height: 832,
       },
     ],
   },
@@ -432,6 +439,14 @@ export const processSteps = [
   },
 ];
 
+// Pasos que sigue un cliente al trabajar con CRUDO (banner de la home).
+export const clientSteps = [
+  { id: "diseno", title: "Diseñamos" },
+  { id: "fabricacion", title: "Fabricamos" },
+  { id: "construccion", title: "Construimos" },
+  { id: "entrega", title: "Entregamos" },
+] as const;
+
 export const versatilityUses = [
   "Una casa de fin de semana.",
   "Un espacio de huéspedes.",
@@ -475,7 +490,7 @@ export const faqs = [
   {
     question: "¿Cuánto cuesta un CRUDO?",
     answer: SHOW_PRICES
-      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(28)} + IVA para CRUDO 01 y CRUDO 03, y ${estimatedPrice(60)} + IVA para CRUDO 02. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
+      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(28)} + IVA para CRUDO 01 y CRUDO 02, y ${estimatedPrice(60)} + IVA para CRUDO 03. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
       : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {
