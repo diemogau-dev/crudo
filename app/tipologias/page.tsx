@@ -25,7 +25,7 @@ export default function TipologiasPage() {
           priority: true,
           position: "object-[22%_center] md:object-center",
         }}
-        align="right"
+        placement="top"
       />
 
       <section className="shell py-20 md:py-28">

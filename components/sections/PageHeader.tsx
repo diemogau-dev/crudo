@@ -11,9 +11,9 @@ type Props = {
     // Encuadre de la foto (clase object-position de Tailwind).
     position?: string;
   };
-  // Lado del texto en desktop: a la derecha cuando el tema de la foto está a
-  // la izquierda y el título lo taparía.
-  align?: "left" | "right";
+  // "top" pone el texto arriba, sobre el cielo, con el título en una línea:
+  // para fotos donde el tema ocupa la parte baja y el título lo taparía.
+  placement?: "bottom" | "top";
 };
 
 export default function PageHeader({
@@ -21,7 +21,7 @@ export default function PageHeader({
   title,
   lede,
   image,
-  align = "left",
+  placement = "bottom",
 }: Props) {
   if (!image) {
     return (
@@ -51,12 +51,18 @@ export default function PageHeader({
       />
       <div aria-hidden className="absolute inset-0 bg-iron/45" />
       <div
-        className={`shell relative flex min-h-[62vh] flex-col justify-end pt-32 pb-14 md:min-h-[78vh] md:pb-20 ${
-          align === "right" ? "md:items-end md:text-right" : ""
+        className={`shell relative flex min-h-[62vh] flex-col pt-32 pb-14 md:min-h-[78vh] md:pb-20 ${
+          placement === "top" ? "justify-start md:pt-36" : "justify-end"
         }`}
       >
         <p className="kicker text-alabaster/70">{kicker}</p>
-        <h1 className="display-lg mt-5 max-w-5xl whitespace-pre-line">
+        <h1
+          className={`display-lg mt-5 ${
+            placement === "top"
+              ? "md:whitespace-nowrap"
+              : "max-w-5xl whitespace-pre-line"
+          }`}
+        >
           {title}
         </h1>
         {lede ? (

@@ -4,7 +4,7 @@
 
 ## 2026-10-13 — Portada de Tipologías
 
-1. Portada de `/tipologias` = **CRUDO 01 en el campo** (`Crudo 01 - Campo` en Drive → `renders/crudo-1/crudo-1-campo.jpg`, convertida de PNG de 3 MB a JPG de 2400 px). Como la casa está a la izquierda, el título va alineado a la derecha en desktop (`PageHeader` acepta `align` y `image.position`).
+1. Portada de `/tipologias` = **CRUDO 01 en el campo** (`Crudo 01 - Campo` en Drive → `renders/crudo-1/crudo-1-campo.jpg`, convertida de PNG de 3 MB a JPG de 2400 px). El título va arriba, sobre el cielo, en una sola línea en desktop, para no tapar la casa (`PageHeader` acepta `placement="top"` e `image.position`).
 
 ## 2026-10-13 — Precios reales y especificaciones por tipología (pedido de Diego)
 
