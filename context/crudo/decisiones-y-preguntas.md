@@ -2,6 +2,14 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-13 — Correcciones de Tipologías (pedido de Diego)
+
+1. **Superficies:** CRUDO 01 y CRUDO 02 = **31 m²**; CRUDO 03 = **66 m²**. Solo el módulo: deck, quincho y piscina son opcionales con costo extra y **no se especifican en la web** (se sacaron de specs, amenities, resúmenes y descripciones; las fotos que los muestran quedan). El precio "Desde" se mantiene como gancho comercial, calculado sobre el módulo.
+2. **`/tipologias`:** portada = interior de CRUDO 03 (`Crudo 03 - C` en Drive), kicker "Tipologías CRUDO", título "Muchas formas de vivirlas.", texto nuevo sobre CRUDO (hormigón armado, seguro, resistente, para toda la vida; sin hablar de prefabricado ni módulos transportables). Se eliminó "Sobre el presupuesto".
+3. **Tarjetas de tipología** al estilo de la referencia: nombre, tipología · m², y fila de íconos (habitaciones, baño, kitchenette / sala comedor). Formato apaisado 9:4 para que CRUDO 03 se vea completa. Portadas: CRUDO 02 = kitchenette (`Crudo 02 - C`), CRUDO 03 = fachada completa (`Crudo 03 - A`).
+4. **Plano de CRUDO 03** reemplazado por `Crudo 03 - M` de Drive (sin pileta).
+5. CTA "Hablemos sobre tu proyecto" debajo de las tipologías (home y `/tipologias`). En la home el kicker/título de la sección también pasan a "Tipologías CRUDO" / "Muchas formas de vivirlas.".
+
 ## 2026-10-13 — Cambios de home, numeración y contacto (pedido de Diego)
 
 1. **CRUDO 02 ↔ CRUDO 03.** El loft con kitchenette (28 m²) pasa a ser **CRUDO 02** y la vivienda industrial (60 m²) pasa a ser **CRUDO 03**. Se renombraron slugs, mensajes de WhatsApp, alts y carpetas de imágenes (`renders/crudo-2` ↔ `renders/crudo-3`, `tipologias/crudo-02-*` → `tipologias/crudo-03-*`). Las entradas anteriores de este registro hablan de la numeración vieja.

@@ -29,6 +29,8 @@ export const navLinks = [
   { href: "/faq", label: "FAQ" },
 ] as const;
 
+export type ModelFeatureIcon = "bed" | "bath" | "kitchen" | "living";
+
 export type Model = {
   slug: string;
   name: string;
@@ -36,6 +38,7 @@ export type Model = {
   area: string;
   areaM2: number;
   startingPrice: string;
+  features: { icon: ModelFeatureIcon; label: string }[];
   summary: string;
   description: string[];
   specs: { label: string; value: string }[];
@@ -124,27 +127,29 @@ export const models: Model[] = [
     slug: "crudo-01",
     name: "CRUDO 01",
     tipology: "Loft",
-    area: "28 m²",
-    areaM2: 28,
-    startingPrice: `Desde ${estimatedPrice(28)} + IVA`,
-    summary: "Un ambiente, baño y deck exterior.",
+    area: "31 m²",
+    areaM2: 31,
+    startingPrice: `Desde ${estimatedPrice(31)} + IVA`,
+    features: [
+      { icon: "bed", label: "1 habitación" },
+      { icon: "bath", label: "1 baño" },
+    ],
+    summary: "Un ambiente con baño y frente vidriado.",
     description: [
-      "Un loft de un solo ambiente pensado para vivirse entero: un volumen limpio de hormigón, frente vidriado y un deck que extiende el espacio hacia el terreno.",
+      "Un loft de un solo ambiente pensado para vivirse entero: un volumen limpio de hormigón con un frente vidriado que abre el espacio hacia el terreno.",
       "Casa de fin de semana, espacio de huéspedes, oficina o retiro en el fondo de una propiedad que ya existe.",
     ],
     specs: [
-      { label: "Superficie", value: "28 m²" },
+      { label: "Superficie", value: "31 m²" },
       { label: "Habitación", value: "1" },
       { label: "Baño", value: "1" },
-      { label: "Deck exterior", value: "Incluido" },
     ],
     amenities: [
-      "Deck exterior integrado al frente vidriado",
       "Frente vidriado de piso a techo",
       "Baño con bacha de concreto y mesada de mármol",
       "Escritorio y espacio de guardado incorporados",
     ],
-    shareDescription: "CRUDO 01 - 28 m². Una habitación, baño y deck exterior.",
+    shareDescription: "CRUDO 01 - Loft de 31 m². Una habitación y baño.",
     whatsapp: "crudo01",
     cover: "/images/renders/crudo-1/crudo-1-a.jpg",
     coverAlt:
@@ -216,34 +221,37 @@ export const models: Model[] = [
     slug: "crudo-02",
     name: "CRUDO 02",
     tipology: "Loft con kitchenette",
-    area: "28 m²",
-    areaM2: 28,
-    startingPrice: `Desde ${estimatedPrice(28)} + IVA`,
-    summary: "Un ambiente, kitchenette, baño y deck exterior.",
+    area: "31 m²",
+    areaM2: 31,
+    startingPrice: `Desde ${estimatedPrice(31)} + IVA`,
+    features: [
+      { icon: "bed", label: "1 habitación" },
+      { icon: "bath", label: "1 baño" },
+      { icon: "kitchen", label: "Kitchenette" },
+    ],
+    summary: "Un ambiente con kitchenette y baño.",
     description: [
       "El loft de CRUDO 01 con cocina propia: el mismo volumen de hormigón y frente vidriado, con una kitchenette equipada y una barra para comer sin salir del ambiente.",
       "Pensado para quedarse más de un fin de semana: casa de huéspedes, alquiler temporario, estudio con vivienda o un primer espacio independiente en el fondo de una propiedad que ya existe.",
     ],
     specs: [
-      { label: "Superficie", value: "28 m²" },
+      { label: "Superficie", value: "31 m²" },
       { label: "Habitación", value: "1" },
       { label: "Baño", value: "1" },
       { label: "Kitchenette", value: "Incluida" },
-      { label: "Deck exterior", value: "Incluido" },
     ],
     amenities: [
       "Kitchenette con anafe eléctrico, bacha, microondas y heladera compacta",
       "Barra de comedor con banquetas",
-      "Deck exterior con celosía de concreto",
       "Frente vidriado de piso a techo",
       "Baño con bacha de apoyo, mesada de mármol y espejo iluminado",
     ],
     shareDescription:
-      "CRUDO 02 - 28 m². Una habitación, kitchenette, baño y deck exterior.",
+      "CRUDO 02 - Loft de 31 m². Una habitación, kitchenette y baño.",
     whatsapp: "crudo02",
-    cover: "/images/renders/crudo-2/crudo-2-a.jpg",
+    cover: "/images/renders/crudo-2/crudo-2-c.jpg",
     coverAlt:
-      "Deck de CRUDO 02 con celosía de concreto y sillones, frente al dormitorio vidriado",
+      "Kitchenette de CRUDO 02 con bacha, microondas, heladera compacta roja y barra con banquetas",
     plan: {
       src: "/images/renders/crudo-2/crudo-2-d.jpg",
       alt: "Planta de CRUDO 02: deck exterior, dormitorio, kitchenette con barra y baño con ducha",
@@ -293,37 +301,41 @@ export const models: Model[] = [
     slug: "crudo-03",
     name: "CRUDO 03",
     tipology: "Vivienda industrial",
-    area: "60 m²",
-    areaM2: 60,
-    startingPrice: `Desde ${estimatedPrice(60)} + IVA`,
+    area: "66 m²",
+    areaM2: 66,
+    startingPrice: `Desde ${estimatedPrice(66)} + IVA`,
+    features: [
+      { icon: "bed", label: "2 habitaciones" },
+      { icon: "bath", label: "1 baño" },
+      { icon: "living", label: "Sala comedor" },
+    ],
     summary: "Dos habitaciones, cocina y comedor integrados al estar.",
     description: [
-      "Una vivienda de estilo industrial en un solo nivel. La cocina y el comedor se integran al estar, y el deck exterior se suma al espacio principal en lugar de quedar afuera.",
-      "La celosía de concreto y la pérgola de madera ordenan el patio y crean un afuera que se usa todo el año.",
+      "Una vivienda de estilo industrial en un solo nivel. La cocina y el comedor se integran al estar en un único espacio abierto, con grandes aberturas vidriadas hacia el exterior.",
+      "Dos habitaciones y un baño completan una casa pensada para vivir todos los días, con muros de hormigón visto y terminaciones en madera.",
     ],
     specs: [
-      { label: "Superficie", value: "60 m²" },
+      { label: "Superficie", value: "66 m²" },
       { label: "Habitaciones", value: "2" },
       { label: "Baño", value: "1" },
       { label: "Cocina · comedor", value: "Integrado" },
     ],
     amenities: [
-      "Pileta integrada al deck exterior",
-      "Pérgola de madera y celosía de concreto",
-      "Cocina exterior bajo galería, con parrilla",
+      "Cocina con isla de mármol, integrada al comedor y al estar",
+      "Frente vidriado hacia el exterior",
       "Living con muro de hormigón visto y panel de madera para TV",
     ],
     shareDescription:
-      "CRUDO 03 - Vivienda industrial, 60 m². Dos habitaciones, un baño, cocina y comedor integrados al estar.",
+      "CRUDO 03 - Vivienda industrial de 66 m². Dos habitaciones, un baño y sala comedor integrada.",
     whatsapp: "crudo03",
     cover: "/images/renders/crudo-3/crudo-3-a.jpg",
     coverAlt:
       "Fachada de CRUDO 03 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
     plan: {
       src: "/images/renders/crudo-3/crudo-3-m.png",
-      alt: "Planta de CRUDO 03: dos dormitorios, baño, cocina-comedor-estar integrados y deck con pileta",
-      width: 4581,
-      height: 2250,
+      alt: "Planta de CRUDO 03: dos dormitorios, baño y cocina-comedor-estar integrados",
+      width: 1420,
+      height: 655,
     },
     gallery: [
       {
@@ -490,7 +502,7 @@ export const faqs = [
   {
     question: "¿Cuánto cuesta un CRUDO?",
     answer: SHOW_PRICES
-      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(28)} + IVA para CRUDO 01 y CRUDO 02, y ${estimatedPrice(60)} + IVA para CRUDO 03. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
+      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(31)} + IVA para CRUDO 01 y CRUDO 02, y ${estimatedPrice(66)} + IVA para CRUDO 03. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
       : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {

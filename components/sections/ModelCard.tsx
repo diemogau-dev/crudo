@@ -1,6 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SHOW_PRICES, type Model } from "@/lib/content";
+import type { ReactNode } from "react";
+import { SHOW_PRICES, type Model, type ModelFeatureIcon } from "@/lib/content";
+
+const featureIcons: Record<ModelFeatureIcon, ReactNode> = {
+  bed: <path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M6 11.5h2" />,
+  bath: (
+    <path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM7 19l-1 2M17 19l1 2M6 12V6a2 2 0 0 1 4 0" />
+  ),
+  kitchen: (
+    <path d="M4 4h16v16H4zM4 9h16M8 6.5h.01M12 6.5h.01M9 13h6v4H9z" />
+  ),
+  living: <path d="M5 11V7h14v4M3 11h4v4h10v-4h4v6H3zM5 17v2M19 17v2" />,
+};
 
 export default function ModelCard({
   model,
@@ -15,7 +27,8 @@ export default function ModelCard({
       className="group block"
       aria-label={`Conocer ${model.name}`}
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
+      {/* Formato apaisado para que la vivienda completa entre en el recuadro. */}
+      <div className="relative aspect-[9/4] w-full overflow-hidden bg-cement">
         <Image
           src={model.cover}
           alt={model.coverAlt}
@@ -25,27 +38,37 @@ export default function ModelCard({
         />
       </div>
 
-      <div className="mt-7 flex flex-col gap-2 border-b border-hairline pb-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 lg:flex-col lg:items-start lg:gap-2">
-        <h3 className="display-md">{model.name}</h3>
-        <p className="kicker whitespace-nowrap text-muted">
-          {model.tipology} · {model.area}
-        </p>
-      </div>
+      <h3 className="display-md mt-6">{model.name}</h3>
+      <p className="kicker mt-3 text-muted">
+        {model.tipology} · {model.area}
+      </p>
 
-      <p className="body-text mt-5 max-w-sm text-muted">{model.summary}</p>
+      <ul className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-hairline pt-4">
+        {model.features.map((feature) => (
+          <li
+            key={feature.label}
+            className="body-text flex items-center gap-2 text-muted"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="h-[18px] w-[18px] shrink-0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              {featureIcons[feature.icon]}
+            </svg>
+            {feature.label}
+          </li>
+        ))}
+      </ul>
+
       {SHOW_PRICES && showPrice ? (
-        <p className="kicker mt-4 text-muted">{model.startingPrice}</p>
+        <p className="kicker mt-4 text-iron">{model.startingPrice}</p>
       ) : null}
-
-      <span className="kicker mt-7 inline-flex items-center gap-3 border-b border-hairline pb-1 transition-colors duration-300 group-hover:border-iron">
-        Conocer tipología
-        <span
-          aria-hidden
-          className="transition-transform duration-300 group-hover:translate-x-1"
-        >
-          →
-        </span>
-      </span>
     </Link>
   );
 }

@@ -67,12 +67,8 @@ export default function Home() {
       <section className="border-t border-hairline py-24 md:py-36">
         <div className="shell">
           <Reveal className="max-w-3xl">
-            <p className="kicker text-muted">Tipologías</p>
-            <h2 className="display-lg mt-6">
-              Tipologías CRUDO.
-              <br />
-              Muchas formas de vivirlas.
-            </h2>
+            <p className="kicker text-muted">Tipologías CRUDO</p>
+            <h2 className="display-lg mt-6">Muchas formas de vivirlas.</h2>
             <p className="lede mt-8 max-w-lg text-muted">
               Diseñadas para adaptarse a distintos terrenos y formas de usar la
               arquitectura. Un catálogo que va a seguir creciendo.
@@ -86,6 +82,12 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal className="mt-16 flex justify-center md:mt-20">
+            <Cta href={whatsappLink("aMedida")} external>
+              Hablemos sobre tu proyecto
+            </Cta>
+          </Reveal>
         </div>
       </section>
 
