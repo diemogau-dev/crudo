@@ -82,20 +82,19 @@ export default function AMedidaPage() {
 
       <section className="border-t border-hairline bg-cement/35">
         <div className="shell py-24 md:py-36">
-          <div className="grid gap-14 md:grid-cols-12 md:items-center md:gap-16">
-            <Reveal className="md:col-span-6">
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-cement">
-                <Image
-                  src="/images/a-medida/gym-noche.jpg"
-                  alt="Gimnasio CRUDO de noche: frente vidriado, paneles de hormigón e iluminación exterior"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </Reveal>
+          {/* Foto a todo el ancho y en su proporción original: el módulo entra completo. */}
+          <Reveal className="relative aspect-[1527/704] w-full overflow-hidden bg-cement">
+            <Image
+              src="/images/a-medida/gym-noche.jpg"
+              alt="Gimnasio CRUDO de noche: frente vidriado, paneles de hormigón e iluminación exterior"
+              fill
+              sizes="(min-width: 1680px) 1560px, 100vw"
+              className="object-cover"
+            />
+          </Reveal>
 
-            <Reveal className="md:col-span-5 md:col-start-8" delay={120}>
+          <div className="mt-16 grid gap-14 md:mt-24 md:grid-cols-12 md:gap-16">
+            <Reveal className="md:col-span-5">
               <p className="kicker text-muted">Qué podemos construir</p>
               <h2 className="display-lg mt-6">Un sistema que se adapta.</h2>
               <p className="body-text mt-8 text-muted">
@@ -103,7 +102,10 @@ export default function AMedidaPage() {
                 fondo de tu terreno: el mismo sistema, adaptado a lo que
                 necesitás.
               </p>
-              <div className="mt-10 space-y-8">
+            </Reveal>
+
+            <Reveal className="md:col-span-6 md:col-start-7" delay={120}>
+              <div className="space-y-8">
                 {possibilityGroups.map((group) => (
                   <div key={group.title}>
                     <p className="kicker text-iron">{group.title}</p>
