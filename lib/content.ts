@@ -1,18 +1,21 @@
 import type { WhatsappTopic } from "./whatsapp";
 
-// Precio de referencia mientras no está cerrado el presupuesto definitivo.
-// Valor provisorio a pedido de Diego: se reemplaza por el número real antes
-// del lanzamiento.
+// Precios "Desde" del módulo, sin IVA. Salen de las planillas de costo de
+// cada tipología (CRUDO 01 real; CRUDO 02 y 03 estimadas a partir de la de
+// CRUDO 01). Deck, quincho y piscina son extras y no entran en el precio.
 export const SHOW_PRICES = true;
-export const PRICE_PER_M2_GS = 4_500_000;
 
 export function formatGs(value: number) {
   return `Gs. ${Math.round(value).toLocaleString("es-PY")}`;
 }
 
-export function estimatedPrice(areaM2: number) {
-  return formatGs(areaM2 * PRICE_PER_M2_GS);
-}
+const PRICES_GS = {
+  crudo01: 147_900_462,
+  crudo02: 158_918_742,
+  crudo03: 291_332_917,
+} as const;
+
+const startingPrice = (value: number) => `Desde ${formatGs(value)} + IVA`;
 
 export const contact = {
   email: "crudohomes@gmail.com",
@@ -31,6 +34,8 @@ export const navLinks = [
 
 export type ModelFeatureIcon = "bed" | "bath" | "kitchen" | "living";
 
+export type SpecGroup = { label: string; items: string[] };
+
 export type Model = {
   slug: string;
   name: string;
@@ -43,6 +48,7 @@ export type Model = {
   description: string[];
   specs: { label: string; value: string }[];
   amenities: string[];
+  constructionSpecs: SpecGroup[];
   shareDescription: string;
   whatsapp: WhatsappTopic;
   cover: string;
@@ -51,76 +57,53 @@ export type Model = {
   plan?: { src: string; alt: string; width: number; height: number };
 };
 
-// Especificaciones generales del sistema constructivo CRUDO, compartidas
-// por todas las tipologías. Descripciones simplificadas para el cliente a
-// partir de la planilla de rubros de presupuesto (sin montos ni cantidades,
-// que todavía no están cerrados).
-export const constructionSpecs: { label: string; items: string[] }[] = [
+// Especificaciones por tipología, a partir de la planilla de costo de cada
+// una: solo se lista lo que está presupuestado en el módulo.
+const structureSpecs = (roof: string): SpecGroup[] => [
   {
     label: "Estructura",
     items: [
-      "Hormigón armado: dados y vigas de fundación calculados para cada proyecto.",
-      "Paneles de hormigón de nuestra propia fábrica como cerramiento, sin revoque.",
-    ],
-  },
-  {
-    label: "Terminación exterior",
-    items: [
-      "Paneles de hormigón visto de producción propia, con junta tomada.",
-      "Pintura sintética en estructura metálica, canaletas y bajadas.",
-    ],
-  },
-  {
-    label: "Terminación interior",
-    items: [
-      "Contrapiso, carpeta niveladora y piso según proyecto.",
-      "Tabiquería interior con aislación en dormitorios y baños.",
-      "Pintura interior en paredes de mampostería.",
+      "Platea de hormigón armado de 10 cm sobre zapatas y encadenado de hormigón armado.",
+      "Columnas y vigas de perfil estructural de acero.",
+      "Cerramiento de placas de hormigón de 1 × 1 m, vistas.",
     ],
   },
   {
     label: "Techo",
     items: [
-      "Estructura metálica con pendiente y cubierta de termopanel.",
-      "Canaletas, bajadas y desagüe pluvial integrados al diseño.",
-    ],
-  },
-  {
-    label: "Aislación termoacústica",
-    items: [
-      "Termopanel en cubierta para aislar calor y ruido de lluvia.",
-      "Lana de vidrio y banda acústica en tabiques interiores.",
-    ],
-  },
-  {
-    label: "Instalación sanitaria",
-    items: [
-      "Cañerías de termofusión para agua y PVC para desagües.",
-      "Artefactos y griferías: inodoro, bacha, ducha y termotanque.",
-    ],
-  },
-  {
-    label: "Instalación eléctrica",
-    items: [
-      "Tablero principal, tomas, puntos de luz y salida para aire acondicionado tipo split.",
-      "Iluminación con artefactos LED y ductos para TV y datos.",
-    ],
-  },
-  {
-    label: "Carpintería",
-    items: [
-      "Aberturas de vidrio templado con perfilería de aluminio negra.",
-      "Puertas interiores, mamparas de baño y espejos con estructura flotante.",
-    ],
-  },
-  {
-    label: "Muebles",
-    items: [
-      "Mesada de mármol o granito en cocina y baño según proyecto.",
-      "Mobiliario fijo de cocina y placares de producción propia.",
+      `Panel termoacústico de 40 mm sobre vigas y clavaderas metálicas${roof}.`,
+      "Canaleta y bajada pluvial.",
     ],
   },
 ];
+
+const exteriorSpecs: SpecGroup = {
+  label: "Terminación exterior",
+  items: [
+    "Placas de hormigón visto, limpiadas con ácido y con patinal.",
+    "Pintura sintética en estructura metálica, canaletas y bajadas.",
+  ],
+};
+
+const bathSpecs = (heater: string, extra: string[] = []): SpecGroup => ({
+  label: "Baño",
+  items: [
+    "Piso y paredes revestidos en cerámica.",
+    "Inodoro con cisterna baja y bidet, bacha de concreto sobre mesada de mármol.",
+    "Ducha frío/caliente, griferías y kit de accesorios.",
+    "Mampara de ducha y espejo flotante con luz LED.",
+    `Termocalefón de ${heater}.`,
+    ...extra,
+  ],
+});
+
+const plumbingSpecs = (extra: string): SpecGroup => ({
+  label: "Instalación sanitaria",
+  items: [
+    `Cañerías de termofusión para agua y PVC para desagües del baño${extra}.`,
+    "Registros cloacales y pluviales con cañería de 100 mm.",
+  ],
+});
 
 export const models: Model[] = [
   {
@@ -129,7 +112,7 @@ export const models: Model[] = [
     tipology: "Loft",
     area: "31 m²",
     areaM2: 31,
-    startingPrice: `Desde ${estimatedPrice(31)} + IVA`,
+    startingPrice: startingPrice(PRICES_GS.crudo01),
     features: [
       { icon: "bed", label: "1 habitación" },
       { icon: "bath", label: "1 baño" },
@@ -147,7 +130,47 @@ export const models: Model[] = [
     amenities: [
       "Frente vidriado de piso a techo",
       "Baño con bacha de concreto y mesada de mármol",
-      "Escritorio y espacio de guardado incorporados",
+      "Aire acondicionado y placard incluidos",
+    ],
+    constructionSpecs: [
+      ...structureSpecs(""),
+      {
+        label: "Vidriería",
+        items: [
+          "Frente de vidrio de 8 mm con puerta corrediza de 3,50 × 2,10 m y cerradura con llave.",
+          "Paño superior inclinado y paneles fijos de vidrio de 8 mm.",
+        ],
+      },
+      exteriorSpecs,
+      {
+        label: "Terminación interior",
+        items: [
+          "Piso cerámico sobre la platea, con zócalos.",
+          "Tabique de baño con cara antihumedad, lana de vidrio y banda acústica.",
+          "Pintura interior y puerta placa con contramarco.",
+        ],
+      },
+      bathSpecs("80 L", [
+        "Ventana batiente de vidrio templado con perfil negro.",
+      ]),
+      {
+        label: "Instalación eléctrica",
+        items: [
+          "Tablero principal con jabalina a tierra, tomas y tomas especiales.",
+          "Spots GU10 negros, colgantes de concreto y luz LED en fachada.",
+          "Ventilador de techo LED con control remoto.",
+          "Ductos para TV y datos.",
+        ],
+      },
+      {
+        label: "Climatización",
+        items: ["Aire acondicionado split de 18.000 BTU, instalado."],
+      },
+      plumbingSpecs(""),
+      {
+        label: "Muebles",
+        items: ["Placard de melamina."],
+      },
     ],
     shareDescription: "CRUDO 01 - Loft de 31 m². Una habitación y baño.",
     whatsapp: "crudo01",
@@ -223,7 +246,7 @@ export const models: Model[] = [
     tipology: "Loft con kitchenette",
     area: "31 m²",
     areaM2: 31,
-    startingPrice: `Desde ${estimatedPrice(31)} + IVA`,
+    startingPrice: startingPrice(PRICES_GS.crudo02),
     features: [
       { icon: "bed", label: "1 habitación" },
       { icon: "bath", label: "1 baño" },
@@ -241,10 +264,60 @@ export const models: Model[] = [
       { label: "Kitchenette", value: "Incluida" },
     ],
     amenities: [
-      "Kitchenette con anafe eléctrico, bacha, microondas y heladera compacta",
-      "Barra de comedor con banquetas",
+      "Kitchenette con anafe eléctrico y bacha de concreto",
+      "Barra para comer en mármol o granito",
       "Frente vidriado de piso a techo",
-      "Baño con bacha de apoyo, mesada de mármol y espejo iluminado",
+      "Baño con bacha de concreto, mesada de mármol y espejo iluminado",
+    ],
+    constructionSpecs: [
+      ...structureSpecs(""),
+      {
+        label: "Vidriería",
+        items: [
+          "Frente de vidrio de 8 mm con puerta corrediza de 3,50 × 2,10 m y cerradura con llave.",
+          "Paño superior inclinado y paneles fijos de vidrio de 8 mm.",
+        ],
+      },
+      exteriorSpecs,
+      {
+        label: "Terminación interior",
+        items: [
+          "Piso cerámico sobre la platea, con zócalos.",
+          "Tabique de baño con cara antihumedad, lana de vidrio y banda acústica.",
+          "Pintura interior y puerta placa con contramarco.",
+        ],
+      },
+      {
+        label: "Kitchenette",
+        items: [
+          "Mesada de mármol o granito con mueble bajo mesada de melamina.",
+          "Anafe eléctrico vitrocerámico de 2 hornallas.",
+          "Bacha de concreto con grifería monocomando negra.",
+          "Barra para comer en mármol o granito, con soporte metálico.",
+        ],
+      },
+      bathSpecs("80 L", [
+        "Ventana batiente de vidrio templado con perfil negro.",
+      ]),
+      {
+        label: "Instalación eléctrica",
+        items: [
+          "Tablero principal con jabalina a tierra, tomas y tomas especiales.",
+          "Toma de fuerza para el anafe.",
+          "Spots GU10 negros, colgantes de concreto y luz LED en fachada.",
+          "Ventilador de techo LED con control remoto.",
+          "Ductos para TV y datos.",
+        ],
+      },
+      {
+        label: "Climatización",
+        items: ["Aire acondicionado split de 18.000 BTU, instalado."],
+      },
+      plumbingSpecs(" y la kitchenette"),
+      {
+        label: "Muebles",
+        items: ["Placard de melamina."],
+      },
     ],
     shareDescription:
       "CRUDO 02 - Loft de 31 m². Una habitación, kitchenette y baño.",
@@ -303,7 +376,7 @@ export const models: Model[] = [
     tipology: "Vivienda industrial",
     area: "66 m²",
     areaM2: 66,
-    startingPrice: `Desde ${estimatedPrice(66)} + IVA`,
+    startingPrice: startingPrice(PRICES_GS.crudo03),
     features: [
       { icon: "bed", label: "2 habitaciones" },
       { icon: "bath", label: "1 baño" },
@@ -312,7 +385,7 @@ export const models: Model[] = [
     summary: "Dos habitaciones, cocina y comedor integrados al estar.",
     description: [
       "Una vivienda de estilo industrial en un solo nivel. La cocina y el comedor se integran al estar en un único espacio abierto, con grandes aberturas vidriadas hacia el exterior.",
-      "Dos habitaciones y un baño completan una casa pensada para vivir todos los días, con muros de hormigón visto y terminaciones en madera.",
+      "Dos habitaciones con placard y un baño completo completan una casa pensada para vivir todos los días, con muros de hormigón visto.",
     ],
     specs: [
       { label: "Superficie", value: "66 m²" },
@@ -323,7 +396,58 @@ export const models: Model[] = [
     amenities: [
       "Cocina con isla de mármol, integrada al comedor y al estar",
       "Frente vidriado hacia el exterior",
-      "Living con muro de hormigón visto y panel de madera para TV",
+      "Aire acondicionado en estar y dormitorios",
+    ],
+    constructionSpecs: [
+      ...structureSpecs(", con aleros"),
+      {
+        label: "Vidriería",
+        items: [
+          "Dos puertas corredizas de vidrio de 8 mm hacia el exterior, con cerradura.",
+          "Ventanal fijo en el estar y paño superior inclinado.",
+          "Ventanas de dormitorios y ventiluz de baño en vidrio templado con perfil negro.",
+        ],
+      },
+      exteriorSpecs,
+      {
+        label: "Terminación interior",
+        items: [
+          "Piso cerámico sobre la platea, con zócalos.",
+          "Tabiques con cara antihumedad en el baño, lana de vidrio y banda acústica.",
+          "Pintura interior y tres puertas placa con contramarco.",
+        ],
+      },
+      {
+        label: "Cocina",
+        items: [
+          "Mesada lineal e isla en mármol blanco veteado.",
+          "Muebles bajo mesada, alacenas, columna de guardado e isla con cajonera, en melamina.",
+          "Anafe eléctrico vitrocerámico de 2 hornallas.",
+          "Bacha doble de acero inoxidable con grifería de caño extraíble.",
+          "Frente de cocina revestido en cerámica.",
+        ],
+      },
+      bathSpecs("120 L"),
+      {
+        label: "Instalación eléctrica",
+        items: [
+          "Tablero principal con jabalina a tierra, tomas y tomas especiales.",
+          "Spots GU10 negros, colgantes de concreto y luz LED en fachada.",
+          "Ventilador de techo LED con control remoto en cada dormitorio.",
+          "Ductos para TV y datos.",
+        ],
+      },
+      {
+        label: "Climatización",
+        items: [
+          "Split de 24.000 BTU en estar y cocina, y split de 12.000 BTU en cada dormitorio.",
+        ],
+      },
+      plumbingSpecs(" y la cocina"),
+      {
+        label: "Muebles",
+        items: ["Placards de melamina en los dos dormitorios."],
+      },
     ],
     shareDescription:
       "CRUDO 03 - Vivienda industrial de 66 m². Dos habitaciones, un baño y sala comedor integrada.",
@@ -502,7 +626,7 @@ export const faqs = [
   {
     question: "¿Cuánto cuesta un CRUDO?",
     answer: SHOW_PRICES
-      ? `Trabajamos con una referencia de ${formatGs(PRICE_PER_M2_GS)}/m² + IVA: ${estimatedPrice(31)} + IVA para CRUDO 01 y CRUDO 02, y ${estimatedPrice(66)} + IVA para CRUDO 03. Es un número orientativo mientras cerramos el presupuesto definitivo; el valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
+      ? `CRUDO 01 desde ${formatGs(PRICES_GS.crudo01)} + IVA, CRUDO 02 desde ${formatGs(PRICES_GS.crudo02)} + IVA y CRUDO 03 desde ${formatGs(PRICES_GS.crudo03)} + IVA. El valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
       : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {

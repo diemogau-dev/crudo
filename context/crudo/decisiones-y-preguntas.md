@@ -2,6 +2,13 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-13 — Precios reales y especificaciones por tipología (pedido de Diego)
+
+1. **Precios "Desde" (sin IVA, solo el módulo):** CRUDO 01 = **Gs. 147.900.462** (planilla real "CRUDO 01 - Costo final unificado y utilidad (oct-2026)": costo + 5% imprevistos + 30% de ganancia neta sobre costo). CRUDO 02 = **Gs. 158.918.742** (C01 + kitchenette). CRUDO 03 = **Gs. 291.332.917** (estimado desde la planilla de C01, la planta y los renders; Gs. 4,41M/m² contra 4,82M/m² de C01).
+2. **Se eliminó la referencia de Gs. 4.500.000/m²** (constante, línea "Ref." del detalle y texto del FAQ). Solo se publica el precio total + IVA.
+3. **Especificaciones por tipología:** cada tipología tiene su propio bloque en `lib/content.ts` (`constructionSpecs`), escrito a partir de su planilla. Solo se lista lo presupuestado: sin escritorio en CRUDO 01, sin microondas/heladera/alacenas en CRUDO 02, sin horno/campana/panel de madera en CRUDO 03. Amenities y descripciones corregidas en el mismo sentido.
+4. **Planillas de CRUDO 02 y CRUDO 03** generadas con el mismo formato, pestañas y orden de rubros que la de CRUDO 01, y subidas a sus carpetas de Drive. Los supuestos propios de cada una están al final de la pestaña "Supuestos y fuentes". **A validar:** mano de obra de Fer para CRUDO 03, precios de cocina, AA y mobiliario.
+
 ## 2026-10-13 — Segunda ronda de Tipologías (pedido de Diego)
 
 1. **Portada de `/tipologias`:** galería de CRUDO 03 (`Crudo 03 - G` en Drive = `renders/crudo-3/crudo-3-g.jpg`).

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import FinalCta from "@/components/sections/FinalCta";
 import ModelDetail from "@/components/sections/ModelDetail";
-import { models, constructionSpecs, faqs } from "@/lib/content";
+import { models, faqs } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -37,12 +37,7 @@ export default async function ModelPage({ params }: Props) {
 
   return (
     <>
-      <ModelDetail
-        model={model}
-        other={other}
-        constructionSpecs={constructionSpecs}
-        faqs={faqs}
-      />
+      <ModelDetail model={model} other={other} faqs={faqs} />
 
       <FinalCta
         title={`¿Te imaginás\nun ${model.name} en tu terreno?`}

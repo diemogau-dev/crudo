@@ -6,30 +6,18 @@ import Link from "next/link";
 import Cta from "@/components/ui/Cta";
 import Reveal from "@/components/ui/Reveal";
 import Faq from "@/components/sections/Faq";
-import {
-  SHOW_PRICES,
-  PRICE_PER_M2_GS,
-  formatGs,
-  type Model,
-} from "@/lib/content";
+import { SHOW_PRICES, type Model } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
 
 type FaqItem = { question: string; answer: string };
-type ConstructionSpecGroup = { label: string; items: string[] };
 
 type Props = {
   model: Model;
   other?: Model;
-  constructionSpecs: ConstructionSpecGroup[];
   faqs: FaqItem[];
 };
 
-export default function ModelDetail({
-  model,
-  other,
-  constructionSpecs,
-  faqs,
-}: Props) {
+export default function ModelDetail({ model, other, faqs }: Props) {
   const sections = [
     { id: "imagenes", label: "Imágenes" },
     ...(model.plan ? [{ id: "planos", label: "Planos" }] : []),
@@ -162,14 +150,13 @@ export default function ModelDetail({
             </p>
             <Reveal className="mt-6 max-w-2xl">
               <p className="body-text text-muted">
-                Mismo sistema constructivo en todas las tipologías CRUDO.
-                Estas son las definiciones generales; los detalles finos se
-                cierran en el proyecto ejecutivo de cada obra.
+                Lo que incluye {model.name}. Los detalles finos se cierran en
+                el proyecto ejecutivo de cada obra.
               </p>
             </Reveal>
 
             <div className="mt-10 grid gap-x-10 gap-y-10 sm:grid-cols-2">
-              {constructionSpecs.map((group, index) => (
+              {model.constructionSpecs.map((group, index) => (
                 <Reveal
                   key={group.label}
                   delay={index * 50}
@@ -275,9 +262,6 @@ export default function ModelDetail({
               <p className="kicker text-muted">Precio (+IVA)</p>
               <p className="mt-1 text-base font-semibold">
                 {model.startingPrice}
-              </p>
-              <p className="mt-1 text-xs text-muted">
-                Ref. {formatGs(PRICE_PER_M2_GS)}/m² — precio provisorio.
               </p>
             </div>
           ) : null}
