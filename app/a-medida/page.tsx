@@ -51,7 +51,6 @@ export default function AMedidaPage() {
       <PageHeader
         kicker="Proyectos a medida"
         title={"Si lo imaginás,\nlo construimos."}
-        lede="Una casa para toda la familia, un quincho, una oficina, un gimnasio o algo que todavía no tiene nombre: nuestro sistema de hormigón armado está listo para construir cualquier proyecto, en cualquier escala, con el mismo control y un precio cerrado desde el inicio."
         image={{
           src: "/images/a-medida/crudo-04-frontal.jpg",
           alt: "Frente de un proyecto CRUDO con techo a dos aguas, galería vidriada y tina exenta, al pie de un cerro",
