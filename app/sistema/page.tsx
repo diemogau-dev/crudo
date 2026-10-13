@@ -53,6 +53,10 @@ const workshopImages = [
     src: "/images/taller/bachas-moldeadas.jpg",
     alt: "Bachas y piezas de concreto recién desmoldadas sobre la mesa de trabajo",
   },
+  {
+    src: "/images/taller/placa-y-piezas.jpg",
+    alt: "Placa de hormigón visto junto a un bloque calado, ladrillos y una baldosa de concreto",
+  },
 ];
 
 
