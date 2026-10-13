@@ -2,6 +2,10 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-13 — Portada de Tipologías
+
+1. Portada de `/tipologias` = **CRUDO 01 en el campo** (`Crudo 01 - Campo` en Drive → `renders/crudo-1/crudo-1-campo.jpg`, convertida de PNG de 3 MB a JPG de 2400 px). Como la casa está a la izquierda, el título va alineado a la derecha en desktop (`PageHeader` acepta `align` y `image.position`).
+
 ## 2026-10-13 — Precios reales y especificaciones por tipología (pedido de Diego)
 
 1. **Precios "Desde" (sin IVA, solo el módulo):** CRUDO 01 = **Gs. 147.900.462** (planilla real "CRUDO 01 - Costo final unificado y utilidad (oct-2026)": costo + 5% imprevistos + 30% de ganancia neta sobre costo). CRUDO 02 = **Gs. 158.918.742** (C01 + kitchenette). CRUDO 03 = **Gs. 291.332.917** (estimado desde la planilla de C01, la planta y los renders; Gs. 4,41M/m² contra 4,82M/m² de C01).

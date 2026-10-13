@@ -20,10 +20,12 @@ export default function TipologiasPage() {
         kicker="Tipologías CRUDO"
         title="Muchas formas de vivirlas."
         image={{
-          src: "/images/renders/crudo-3/crudo-3-g.jpg",
-          alt: "Galería de CRUDO 03 con cocina exterior, celosía de concreto y living vidriado",
+          src: "/images/renders/crudo-1/crudo-1-campo.jpg",
+          alt: "CRUDO 01 en el campo, junto a un arroyo, con su frente vidriado y celosía de concreto",
           priority: true,
+          position: "object-[22%_center] md:object-center",
         }}
+        align="right"
       />
 
       <section className="shell py-20 md:py-28">

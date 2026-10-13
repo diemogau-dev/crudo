@@ -4,10 +4,25 @@ type Props = {
   kicker: string;
   title: string;
   lede?: string;
-  image?: { src: string; alt: string; priority?: boolean };
+  image?: {
+    src: string;
+    alt: string;
+    priority?: boolean;
+    // Encuadre de la foto (clase object-position de Tailwind).
+    position?: string;
+  };
+  // Lado del texto en desktop: a la derecha cuando el tema de la foto está a
+  // la izquierda y el título lo taparía.
+  align?: "left" | "right";
 };
 
-export default function PageHeader({ kicker, title, lede, image }: Props) {
+export default function PageHeader({
+  kicker,
+  title,
+  lede,
+  image,
+  align = "left",
+}: Props) {
   if (!image) {
     return (
       <header className="border-b border-hairline pt-32 md:pt-44">
@@ -32,10 +47,14 @@ export default function PageHeader({ kicker, title, lede, image }: Props) {
         fill
         priority={image.priority}
         sizes="100vw"
-        className="object-cover"
+        className={`object-cover ${image.position ?? ""}`}
       />
       <div aria-hidden className="absolute inset-0 bg-iron/45" />
-      <div className="shell relative flex min-h-[62vh] flex-col justify-end pt-32 pb-14 md:min-h-[78vh] md:pb-20">
+      <div
+        className={`shell relative flex min-h-[62vh] flex-col justify-end pt-32 pb-14 md:min-h-[78vh] md:pb-20 ${
+          align === "right" ? "md:items-end md:text-right" : ""
+        }`}
+      >
         <p className="kicker text-alabaster/70">{kicker}</p>
         <h1 className="display-lg mt-5 max-w-5xl whitespace-pre-line">
           {title}
