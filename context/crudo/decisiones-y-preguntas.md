@@ -2,6 +2,13 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-13 — Correcciones de El Sistema (pedido de Diego)
+
+1. **Nuestro proceso:** título a la izquierda y texto a la derecha. Texto nuevo, más comercial: sistema propio en hormigón armado y concreto de alta resistencia, equipo experto, control total, forma de construir nueva en el país.
+2. **Pasos nuevos:** Diseñamos, Fabricamos, Construimos, Entregamos ("Curamos" se integra en Fabricamos). Textos reescritos como narrativa de venta: precio cerrado y plazo antes de empezar, fabricación bajo techo en paralelo, menos días de obra que una construcción tradicional, entrega llave en mano. Fotos nuevas en `public/images/proceso/` (`disenamos-planos`, `fabricamos-fabrica`, `construimos-montaje`, `entregamos-crudo-chaco`); a la de CRUDO Chaco se le aplicó el mismo blanco y negro cálido de las otras. Recuadro de fotos pasa a 4:5 (las fotos son verticales).
+3. **"La fábrica" → "Nuestra fábrica":** todo lo que es hormigón o concreto en una casa CRUDO lo diseñamos y fabricamos nosotros (muros, revestimientos, pisos, bachas, tinas, parrillas, mesadas), más taller de herrería propio (estructuras, techos, pérgolas, parrillas).
+4. **Se eliminó la sección "Tecnología y materiales".**
+
 ## 2026-10-13 — Portada de Tipologías
 
 1. Portada de `/tipologias` = **CRUDO 01 en el campo** (`Crudo 01 - Campo` en Drive → `renders/crudo-1/crudo-1-campo.jpg`, convertida de PNG de 3 MB a JPG de 2400 px). El título va arriba, sobre el cielo, en una sola línea en desktop, para no tapar la casa (`PageHeader` acepta `placement="top"` e `image.position`).

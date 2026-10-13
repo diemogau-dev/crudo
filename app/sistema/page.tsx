@@ -8,26 +8,17 @@ import { processSteps } from "@/lib/content";
 export const metadata: Metadata = {
   title: "El Sistema",
   description:
-    "Nuestro proceso: diseño, fabricación, curación y construcción bajo un mismo equipo, con fábrica propia de hormigón, concreto y carpintería metálica.",
+    "Un sistema constructivo propio en hormigón armado y concreto de alta resistencia: diseñamos, fabricamos, construimos y entregamos con nuestro propio equipo, fábrica y herrería.",
 };
 
 const workshopCapabilities = [
-  "Muros y estructuras de hormigón armado",
-  "Revestimientos de concreto",
-  "Celosías y piezas arquitectónicas",
-  "Bachas, tinas y piezas especiales",
+  "Muros y placas de hormigón armado",
+  "Revestimientos y celosías",
   "Pisos de concreto",
-  "Carpintería metálica",
+  "Bachas y tinas",
+  "Mesadas y parrillas",
+  "Estructuras metálicas, techos y pérgolas",
 ];
-
-const technologies = [
-  "Hormigón armado de alta resistencia",
-  "Concretos especiales",
-  "Estructuras metálicas",
-  "Carpintería metálica",
-];
-
-const technicalSpecs = ["GRC / GFRC", "UHPC"];
 
 const workshopImages = [
   {
@@ -75,14 +66,27 @@ export default function SistemaPage() {
 
       {/* Nuestro proceso — fondo claro, foto y texto alternados */}
       <section className="shell py-24 md:py-36">
-        <Reveal className="max-w-3xl">
-          <p className="kicker text-muted">Nuestro proceso</p>
-          <h2 className="display-lg mt-6">Cuatro etapas, un solo equipo.</h2>
-          <p className="lede mt-8 max-w-xl text-muted">
-            Diseño, fabricación, curación y construcción no están repartidos
-            entre distintos actores. Son etapas del mismo trabajo.
-          </p>
-        </Reveal>
+        <div className="grid gap-10 md:grid-cols-12 md:gap-16">
+          <Reveal className="md:col-span-5">
+            <p className="kicker text-muted">Nuestro proceso</p>
+            <h2 className="display-lg mt-6">Cuatro etapas, un solo equipo.</h2>
+          </Reveal>
+          <Reveal className="md:col-span-6 md:col-start-7 md:pt-4" delay={120}>
+            <p className="lede">
+              En Paraguay todavía se construye ladrillo por ladrillo, con
+              presupuestos que cambian sobre la marcha y plazos que se estiran.
+              CRUDO es otra cosa: un sistema constructivo propio, en hormigón
+              armado y concreto de alta resistencia, donde diseñamos,
+              fabricamos y construimos cada pieza bajo un mismo control.
+            </p>
+            <p className="body-text mt-6 text-muted">
+              Detrás hay un equipo experto en obra y en tecnología del
+              concreto, y una forma de construir nueva en el país, distinta a
+              todo lo que conocés. Los que la eligen hoy se adelantan a cómo se
+              van a construir las casas de mañana.
+            </p>
+          </Reveal>
+        </div>
 
         <div className="mt-20 flex flex-col gap-20 md:mt-28 md:gap-28">
           {processSteps.map((step, index) => (
@@ -91,7 +95,7 @@ export default function SistemaPage() {
               className="grid gap-8 md:grid-cols-12 md:items-center md:gap-16"
             >
               <Reveal
-                className={`relative aspect-[4/3] w-full overflow-hidden bg-cement md:col-span-6 ${
+                className={`relative aspect-[4/5] w-full overflow-hidden bg-cement md:col-span-6 ${
                   index % 2 === 1 ? "md:order-2 md:col-start-7" : ""
                 }`}
               >
@@ -126,13 +130,14 @@ export default function SistemaPage() {
       <section className="bg-iron text-alabaster">
         <div className="shell py-24 md:py-36">
           <Reveal className="max-w-4xl">
-            <p className="kicker text-alabaster/60">La fábrica</p>
+            <p className="kicker text-alabaster/60">Nuestra fábrica</p>
             <h2 className="display-lg mt-6">Producción propia.</h2>
-            <p className="lede mt-8 max-w-xl text-cement/85">
-              Tenemos fábrica propia de muros y placas de hormigón armado,
-              revestimientos, pisos y piezas de concreto de alto performance, y
-              una herrería propia. Eso nos permite decidir cómo se ve, cómo se
-              comporta y cuánto dura cada pieza que llega a tu obra.
+            <p className="lede mt-8 max-w-2xl text-cement/85">
+              Todo lo que lleva una casa CRUDO en hormigón o concreto lo
+              diseñamos y fabricamos nosotros: muros, revestimientos, pisos,
+              bachas, tinas, parrillas, mesadas y cada pieza especial. Así
+              decidimos cómo se ve, cómo se comporta y cuánto dura cada parte
+              de tu casa.
             </p>
           </Reveal>
 
@@ -155,9 +160,9 @@ export default function SistemaPage() {
 
           <Reveal className="mt-16 max-w-2xl md:mt-20">
             <p className="body-text text-alabaster/70">
-              Nuestra herrería nos permite controlar estructuras, techos,
-              puertas, ventanas y los detalles metálicos que definen el carácter
-              de cada proyecto.
+              Y en nuestro propio taller de herrería diseñamos y fabricamos las
+              estructuras metálicas, techos, pérgolas, parrillas y los detalles
+              que definen el carácter de cada proyecto.
             </p>
           </Reveal>
 
@@ -197,73 +202,6 @@ export default function SistemaPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Tecnología y materiales — bloque claro, tratamiento tipográfico */}
-      <section className="bg-cement/45">
-        <div className="shell py-24 md:py-36">
-          <Reveal className="max-w-4xl">
-            <p className="kicker text-muted">Tecnología y materiales</p>
-            <h2 className="display-lg mt-6">
-              El material lo define el proyecto.
-            </h2>
-            <p className="lede mt-8 max-w-2xl text-muted">
-              Elegimos sistemas y materiales según lo que cada proyecto
-              necesita. No todos usan las mismas tecnologías: la decisión se
-              toma en el diseño.
-            </p>
-          </Reveal>
-
-          <Reveal className="mt-16 md:mt-24" delay={120}>
-            {/* Apilado en mobile; corrido tipográfico con separadores en desktop. */}
-            <p className="display-md flex flex-col gap-y-3 normal-case tracking-[-0.02em] md:flex-row md:flex-wrap md:items-baseline md:gap-x-5">
-              {technologies.map((item, index) => (
-                <span
-                  key={item}
-                  className="md:inline-flex md:items-baseline md:gap-5"
-                >
-                  {index > 0 ? (
-                    <span
-                      aria-hidden
-                      className="hidden text-muted/60 md:inline"
-                    >
-                      ·
-                    </span>
-                  ) : null}
-                  {item}
-                </span>
-              ))}
-            </p>
-          </Reveal>
-
-          <Reveal className="mt-16 max-w-2xl md:mt-20" delay={90}>
-            <p className="body-text text-muted">
-              Detrás hay un equipo con experiencia real en obra y en el
-              desarrollo de piezas de concreto. Conocimiento aplicado, no un
-              catálogo.
-            </p>
-          </Reveal>
-
-          <Reveal className="mt-14 max-w-2xl md:mt-16" delay={120}>
-            <details className="group border-t border-hairline pt-6">
-              <summary className="kicker flex cursor-pointer list-none items-baseline justify-between gap-4 text-muted [&::-webkit-details-marker]:hidden">
-                <span>Materiales y especificaciones</span>
-                <span
-                  aria-hidden
-                  className="text-lg leading-none transition-transform duration-300 group-open:rotate-45"
-                >
-                  +
-                </span>
-              </summary>
-              <div className="mt-5">
-                <p className="body-text text-muted">
-                  Para proyectos que lo requieren, trabajamos también con
-                  sistemas y concretos especiales: {technicalSpecs.join(", ")}.
-                </p>
-              </div>
-            </details>
-          </Reveal>
         </div>
       </section>
 
