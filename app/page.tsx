@@ -75,7 +75,7 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="mt-16 grid gap-16 md:mt-24 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
+          <div className="mt-16 grid gap-16 md:mt-24 md:grid-cols-2 md:gap-x-10 md:gap-y-20">
             {models.map((model, index) => (
               <Reveal key={model.slug} delay={index * 120}>
                 <ModelCard model={model} showPrice={false} />

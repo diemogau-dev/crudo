@@ -2,6 +2,13 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-13 — Segunda ronda de Tipologías (pedido de Diego)
+
+1. **Portada de `/tipologias`:** galería de CRUDO 03 (`Crudo 03 - G` en Drive = `renders/crudo-3/crudo-3-g.jpg`).
+2. **Texto de intro** redactado por Diego, centrado y sin título (se eliminó "Casas de hormigón armado, para toda la vida.").
+3. **Tarjetas:** vuelven al formato 4:3 (CRUDO 01 entra completa) y la grilla pasa a 2 columnas en home y `/tipologias`, para que las fotos se vean más grandes. Reemplaza el formato 9:4 de la ronda anterior; CRUDO 03 se recorta a los costados.
+4. Botón **"Ver más detalles"** debajo del precio de cada tarjeta, que lleva al detalle de la tipología.
+
 ## 2026-10-13 — Correcciones de Tipologías (pedido de Diego)
 
 1. **Superficies:** CRUDO 01 y CRUDO 02 = **31 m²**; CRUDO 03 = **66 m²**. Solo el módulo: deck, quincho y piscina son opcionales con costo extra y **no se especifican en la web** (se sacaron de specs, amenities, resúmenes y descripciones; las fotos que los muestran quedan). El precio "Desde" se mantiene como gancho comercial, calculado sobre el módulo.

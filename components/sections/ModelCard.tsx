@@ -27,13 +27,12 @@ export default function ModelCard({
       className="group block"
       aria-label={`Conocer ${model.name}`}
     >
-      {/* Formato apaisado para que la vivienda completa entre en el recuadro. */}
-      <div className="relative aspect-[9/4] w-full overflow-hidden bg-cement">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
         <Image
           src={model.cover}
           alt={model.coverAlt}
           fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
         />
       </div>
@@ -69,6 +68,17 @@ export default function ModelCard({
       {SHOW_PRICES && showPrice ? (
         <p className="kicker mt-4 text-iron">{model.startingPrice}</p>
       ) : null}
+
+      {/* La tarjeta entera ya es un link: el botón es visual, no un <a> anidado. */}
+      <span className="kicker mt-7 inline-flex items-center gap-3 border border-iron px-6 py-3.5 transition-colors duration-300 group-hover:bg-iron group-hover:text-alabaster">
+        Ver más detalles
+        <span
+          aria-hidden
+          className="transition-transform duration-300 group-hover:translate-x-1"
+        >
+          →
+        </span>
+      </span>
     </Link>
   );
 }

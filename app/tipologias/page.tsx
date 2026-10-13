@@ -20,43 +20,31 @@ export default function TipologiasPage() {
         kicker="Tipologías CRUDO"
         title="Muchas formas de vivirlas."
         image={{
-          src: "/images/tipologias/crudo-03-interior.jpg",
-          alt: "Interior de CRUDO 03: muro de paneles de hormigón, cocina integrada al estar y revestimiento de madera",
+          src: "/images/renders/crudo-3/crudo-3-g.jpg",
+          alt: "Galería de CRUDO 03 con cocina exterior, celosía de concreto y living vidriado",
           priority: true,
         }}
       />
 
       <section className="shell py-20 md:py-28">
-        <div className="grid gap-10 md:grid-cols-12 md:gap-16">
-          <Reveal className="md:col-span-5">
-            <h2 className="display-md">
-              Casas de hormigón armado,
-              <br />
-              para toda la vida.
-            </h2>
-          </Reveal>
-          <Reveal className="md:col-span-6 md:col-start-7" delay={120}>
-            <p className="lede">
-              CRUDO ofrece un catálogo de tipologías diseñadas por arquitectos
-              y construidas en hormigón armado, con paneles de nuestra propia
-              fábrica. Son casas sólidas, seguras y resistentes, con la
-              estética industrial del hormigón a la vista y terminaciones
-              pensadas para durar.
-            </p>
-            <p className="body-text mt-6 text-muted">
-              Nada de paredes de plástico ni de isopor: cada CRUDO se levanta
-              sobre una estructura de hormigón armado calculada para tu
-              terreno. Sirve como vivienda permanente, casa de fin de semana,
-              espacio de huéspedes u oficina, y se construye para acompañarte
-              toda la vida.
-            </p>
-          </Reveal>
-        </div>
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="lede">
+            CRUDO ofrece un catálogo de tipologías diseñadas por arquitectos y
+            construidas con hormigón armado de alta resistencia. Son viviendas
+            sólidas, seguras y resistentes, con una estética y un diseño
+            industrial moderno.
+          </p>
+          <p className="body-text mx-auto mt-6 max-w-2xl text-muted">
+            No construimos con paredes prefabricadas de plástico e isopor, ni
+            con ningún otro material de poca resistencia, poca durabilidad o
+            que necesite mantenimiento constante.
+          </p>
+        </Reveal>
       </section>
 
       <section className="border-t border-hairline">
         <div className="shell py-20 md:py-28">
-          <div className="grid gap-16 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
+          <div className="grid gap-16 md:grid-cols-2 md:gap-x-10 md:gap-y-20">
             {models.map((model, index) => (
               <Reveal key={model.slug} delay={index * 120}>
                 <ModelCard model={model} />
