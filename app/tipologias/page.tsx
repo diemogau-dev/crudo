@@ -37,9 +37,14 @@ export default function TipologiasPage() {
             industrial moderno.
           </p>
           <p className="body-text mx-auto mt-6 max-w-2xl text-muted">
-            No construimos con paredes prefabricadas de plástico e isopor, ni
-            con ningún otro material de poca resistencia, poca durabilidad o
-            que necesite mantenimiento constante.
+            El hormigón gana resistencia con el tiempo: a medida que madura se
+            vuelve más sólido. Por eso una casa CRUDO es resistente desde el
+            primer día y pide muy poco mantenimiento a largo plazo.
+          </p>
+          <p className="body-text mx-auto mt-4 max-w-2xl text-muted">
+            Su masa térmica amortigua el calor paraguayo y ayuda a mantener el
+            interior más fresco en verano y más cálido en invierno. Cada
+            tipología está pensada para vivirse cómoda todo el año.
           </p>
         </Reveal>
       </section>
