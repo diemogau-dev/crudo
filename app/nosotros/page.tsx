@@ -19,8 +19,8 @@ export default function NosotrosPage() {
         title={"Creemos en los materiales\nen su estado puro."}
         lede="El concreto no se disfraza. No imita madera, ni piedra, ni mármol. Muestra de qué está hecho y envejece sin pedir permiso."
         image={{
-          src: "/images/tipologias/crudo-01-interior.jpg",
-          alt: "Interior de un loft CRUDO: muro de hormigón, madera cálida y luz natural",
+          src: "/images/renders/crudo-3/crudo-3-l.jpg",
+          alt: "Cocina y estar integrados de CRUDO 03, con isla de mármol y muro de hormigón visto",
           priority: true,
         }}
       />
@@ -41,19 +41,21 @@ export default function NosotrosPage() {
 
           <Reveal className="md:col-span-6 md:col-start-7 md:pt-4" delay={120}>
             <p className="lede">
-              Meses de obra, decisiones improvisadas sobre la marcha,
-              proveedores que no se hablan entre sí, y un resultado que se
-              parece apenas a lo que se había imaginado.
+              Construir en Paraguay suele significar meses de obra,
+              presupuestos que crecen y un resultado que se parece poco a lo
+              que imaginaste. CRUDO nació para cambiar eso.
             </p>
             <p className="body-text mt-6 text-muted">
-              Nos cansamos de eso. CRUDO nació de una idea simple: si el diseño,
-              la fabricación y la construcción están en las mismas manos, el
-              resultado deja de ser una sorpresa y empieza a ser una decisión.
+              Somos un equipo de arquitectos, ingenieros y operarios
+              especializados en hormigón armado y concreto. Diseñamos cada
+              proyecto pensando en cómo se va a fabricar y montar, producimos
+              las piezas en nuestra propia fábrica y las instalamos con
+              cuadrillas que conocen el material a fondo.
             </p>
             <p className="body-text mt-6 text-muted">
-              Por eso diseñamos, fabricamos y construimos bajo el mismo techo,
-              en vez de repartir tu proyecto entre un estudio, una fábrica y un
-              constructor que no se hablan entre sí.
+              El resultado es un proceso claro de principio a fin: un precio
+              cerrado antes de empezar, menos días de obra y una casa
+              terminada con la precisión de algo hecho en fábrica.
             </p>
           </Reveal>
         </div>
