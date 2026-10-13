@@ -7,7 +7,7 @@ import FinalCta from "@/components/sections/FinalCta";
 export const metadata: Metadata = {
   title: "Proyectos a Medida",
   description:
-    "Un terreno, un plano o una idea. Desarrollamos y construimos proyectos a medida con el sistema constructivo de CRUDO.",
+    "Viviendas, quinchos, oficinas, gimnasios o lo que tengas en mente: el sistema constructivo de CRUDO está listo para construir cualquier proyecto a medida.",
 };
 
 const startingPoints = [
@@ -41,7 +41,7 @@ const possibilityGroups = [
   },
   {
     title: "Lo que completa el proyecto",
-    items: ["Piletas", "Espacios exteriores", "Paisajismo"],
+    items: ["Piletas", "Vestuarios", "Saunas"],
   },
 ];
 
@@ -50,11 +50,11 @@ export default function AMedidaPage() {
     <>
       <PageHeader
         kicker="Proyectos a medida"
-        title={"Tu idea.\nNuestro sistema."}
-        lede="No necesitás entrar en un molde para trabajar con CRUDO. Partimos de una conversación, un plano o una necesidad concreta y lo transformamos en un proyecto listo para construir."
+        title={"Si lo imaginás,\nlo construimos."}
+        lede="Una casa para toda la familia, un quincho, una oficina, un gimnasio o algo que todavía no tiene nombre: nuestro sistema de hormigón armado está listo para construir cualquier proyecto, en cualquier escala, con el mismo control y un precio cerrado desde el inicio."
         image={{
-          src: "/images/tipologias/crudo-03-pileta.jpg",
-          alt: "CRUDO 03 con pileta, pérgola de madera y celosía de concreto",
+          src: "/images/a-medida/crudo-04-lateral.jpg",
+          alt: "Proyecto CRUDO con techo a dos aguas, galería vidriada, celosía de concreto, deck de madera y pileta",
           priority: true,
         }}
       />
@@ -84,10 +84,10 @@ export default function AMedidaPage() {
         <div className="shell py-24 md:py-36">
           <div className="grid gap-14 md:grid-cols-12 md:items-center md:gap-16">
             <Reveal className="md:col-span-6">
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-cement">
                 <Image
-                  src="/images/proceso/gimnasio.jpg"
-                  alt="Gimnasio propio construido en concreto visto, con equipamiento de entrenamiento"
+                  src="/images/a-medida/gym-noche.jpg"
+                  alt="Gimnasio CRUDO de noche: frente vidriado, paneles de hormigón e iluminación exterior"
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
@@ -97,19 +97,16 @@ export default function AMedidaPage() {
 
             <Reveal className="md:col-span-5 md:col-start-8" delay={120}>
               <p className="kicker text-muted">Qué podemos construir</p>
-              <h2 className="display-lg mt-6">
-                Un sistema,
-                <br />
-                muchos programas.
-              </h2>
+              <h2 className="display-lg mt-6">Un sistema que se adapta.</h2>
               <p className="body-text mt-8 text-muted">
-                Un sistema que se adapta a diferentes formas de vivir y de
-                usar un terreno.
+                Desde una casa para toda la familia hasta un gimnasio en el
+                fondo de tu terreno: el mismo sistema, adaptado a lo que
+                necesitás.
               </p>
               <div className="mt-10 space-y-8">
                 {possibilityGroups.map((group) => (
                   <div key={group.title}>
-                    <p className="kicker text-muted">{group.title}</p>
+                    <p className="kicker text-iron">{group.title}</p>
                     <ul className="mt-3 flex flex-wrap gap-3">
                       {group.items.map((item) => (
                         <li
