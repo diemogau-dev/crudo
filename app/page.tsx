@@ -52,8 +52,8 @@ export default function Home() {
 
         <Reveal className="relative mt-20 aspect-[16/10] w-full overflow-hidden bg-cement md:mt-28 md:aspect-[21/9]">
           <Image
-            src="/images/tipologias/crudo-03-interior.jpg"
-            alt="Interior de CRUDO 03: muro de paneles de hormigón, cocina integrada al estar y revestimiento de madera"
+            src="/images/a-medida/crudo-04-lateral.jpg"
+            alt="Proyecto CRUDO con techo a dos aguas, galería vidriada, celosía de concreto, deck de madera y pileta"
             fill
             sizes="100vw"
             className="object-cover"
