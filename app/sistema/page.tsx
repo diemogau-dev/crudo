@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 };
 
 const workshopCapabilities = [
-  "Muros y placas de hormigón armado",
-  "Revestimientos y celosías",
-  "Pisos de concreto",
-  "Bachas y tinas",
-  "Mesadas y parrillas",
-  "Estructuras metálicas, techos y pérgolas",
+  "Paredes de hormigón armado",
+  "Revestimientos y cobogós de concreto",
+  "Pisos y decks de concreto",
+  "Bachas y tinas de concreto",
+  "Estructuras metálicas",
+  "Techos de paneles termoacústicos",
 ];
 
 const workshopImages = [
@@ -33,13 +33,6 @@ const workshopImages = [
     src: "/images/taller/panel-hormigon.png",
     alt: "Panel de hormigón terminado en la fábrica",
   },
-];
-
-const workshopImagesSecondRow = [
-  {
-    src: "/images/proceso/celosia-instalada-noche.jpg",
-    alt: "Celosía de concreto instalada, de noche con iluminación de jardín",
-  },
   {
     src: "/images/proceso/soldadura-herreria.jpg",
     alt: "Soldadura de estructura metálica en nuestra herrería",
@@ -48,7 +41,20 @@ const workshopImagesSecondRow = [
     src: "/images/taller/bachas-taller.png",
     alt: "Bachas de concreto de producción propia en distintos colores, en la fábrica",
   },
+  {
+    src: "/images/taller/arenado-placa.jpg",
+    alt: "Operaria arenando una placa de hormigón en la fábrica",
+  },
+  {
+    src: "/images/taller/placas-colores.jpg",
+    alt: "Placas de concreto en distintos colores y texturas, secándose sobre pallets",
+  },
+  {
+    src: "/images/taller/bachas-moldeadas.jpg",
+    alt: "Bachas y piezas de concreto recién desmoldadas sobre la mesa de trabajo",
+  },
 ];
+
 
 export default function SistemaPage() {
   return (
@@ -58,8 +64,8 @@ export default function SistemaPage() {
         title={"Diseño, fábrica y obra\nen las mismas manos."}
         lede="Un proceso completo que va del proyecto a la entrega, y que controlamos de punta a punta."
         image={{
-          src: "/images/tipologias/crudo-01-volumen.jpg",
-          alt: "Volumen exterior de CRUDO 01 mostrando la grilla de paneles de hormigón",
+          src: "/images/renders/crudo-3/crudo-3-a.jpg",
+          alt: "Fachada de CRUDO 03 en paneles de hormigón, con jardín, deck de madera y pileta",
           priority: true,
         }}
       />
@@ -133,9 +139,8 @@ export default function SistemaPage() {
             <p className="kicker text-alabaster/60">Nuestra fábrica</p>
             <h2 className="display-lg mt-6">Producción propia.</h2>
             <p className="lede mt-8 max-w-2xl text-cement/85">
-              Todo lo que lleva una casa CRUDO en hormigón o concreto lo
-              diseñamos y fabricamos nosotros: muros, revestimientos, pisos,
-              bachas, tinas, parrillas, mesadas y cada pieza especial. Así
+              Todo lo que es hormigón, concreto o metal en una casa CRUDO sale
+              de nuestra propia fábrica y de nuestro taller de herrería. Así
               decidimos cómo se ve, cómo se comporta y cuánto dura cada parte
               de tu casa.
             </p>
@@ -158,13 +163,6 @@ export default function SistemaPage() {
             ))}
           </div>
 
-          <Reveal className="mt-16 max-w-2xl md:mt-20">
-            <p className="body-text text-alabaster/70">
-              Y en nuestro propio taller de herrería diseñamos y fabricamos las
-              estructuras metálicas, techos, pérgolas, parrillas y los detalles
-              que definen el carácter de cada proyecto.
-            </p>
-          </Reveal>
 
           <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-3">
             {workshopImages.map((image, index) => (
@@ -184,24 +182,6 @@ export default function SistemaPage() {
             ))}
           </div>
 
-          {/* Celosías y pisos: prueba visual de dos ítems de la lista de arriba. */}
-          <div className="mt-4 grid gap-4 md:grid-cols-3">
-            {workshopImagesSecondRow.map((image, index) => (
-              <Reveal
-                key={image.src}
-                delay={index * 90}
-                className="relative aspect-[4/5] w-full overflow-hidden bg-iron"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover"
-                />
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
