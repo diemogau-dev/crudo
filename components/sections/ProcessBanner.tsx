@@ -4,88 +4,88 @@ import { clientSteps } from "@/lib/content";
 
 type StepId = (typeof clientSteps)[number]["id"];
 
-// Íconos de línea fina dibujados a mano para seguir la estética editorial:
-// trazo de 1.25 px, sin rellenos ni esquinas redondeadas.
+// Las piezas que se superponen usan el fondo como relleno para tapar las
+// líneas de atrás, como en un dibujo de línea.
+const BG = "var(--color-alabaster)";
+
 const icons: Record<StepId, ReactNode> = {
   diseno: (
     <>
-      <rect x="8" y="10" width="34" height="42" />
-      <path d="M14 42V30l10-8 10 8v12zM21 42v-7h6v7" />
-      <path d="M40 54h16V38zM46 50h5v-5z" />
-      <path d="M50 6l6 6-18 18-7 2 2-7z M46 10l6 6" />
+      <path d="M10 12h34v38H10z" />
+      <path d="M10 12c-3 0-5 2-5 4v32c0-2 2-3 5-3M10 45V12M5 48c0 2 2 4 5 4h6" />
+      <path d="M16 38V28l7-6 7 6v10zM14 29l9-8 9 8M21 38v-5h4v5M30 32h6v6h-6M33 32v6" />
+      <path d="M30 56h28V28z" fill={BG} />
+      <path d="M42 51h10V41z" />
+      <path d="M54 6l5 5-20 20-7 2 2-7z" fill={BG} />
+      <path d="M50 10l5 5M34 26l5 5" />
     </>
   ),
   fabricacion: (
     <>
-      <rect x="10" y="10" width="44" height="44" />
-      <path d="M34 10v22h20" />
-      <path d="M40 10v22M47 10v22M34 17h20M34 24h20" />
-      <path d="M10 46h24v8" />
+      <path d="M10 14h40v40H10z" strokeWidth={3} />
+      <rect x="30" y="8" width="26" height="24" fill={BG} stroke="none" />
+      <path d="M30 14v18h20" strokeWidth={3} />
+      <path d="M36 8v26M42 8v26M48 8v26M54 8v20M30 14h26M30 20h26M30 26h26" />
     </>
   ),
   construccion: (
     <>
-      <path d="M8 56h48" />
-      <path d="M18 56V16M26 56V16" />
-      <path d="M18 20l8 6-8 6 8 6-8 6 8 6-8 6" />
-      <path d="M8 16h48M12 16v-4h6M22 16l0-8M14 16l8-8 22 8" />
-      <path d="M48 16v12" />
-      <rect x="42" y="28" width="12" height="8" />
+      <path d="M28 6v48M34 6v48M28 12l6 6-6 6 6 6-6 6 6 6-6 6" />
+      <path d="M14 12h46M14 16h46M14 12v4M60 12v4M20 12l11-8 11 8" />
+      <path d="M8 13h6v6H8zM52 16v12M46 28h12v6H46zM44 38h16" />
+      <path d="M4 36h20v16H4z" fill={BG} />
+      <path d="M24 42h8l4 5v5H24" fill={BG} />
+      <path d="M8 41h10M8 45h6" />
+      <circle cx="10" cy="54" r="3" fill={BG} />
+      <circle cx="29" cy="54" r="3" fill={BG} />
     </>
   ),
   entrega: (
     <>
-      <path d="M6 44l26-10 26 10-26 10z" />
-      <path d="M6 44v4l26 10 26-10v-4M32 54v4" />
-      <path d="M20 42V26l12-10 12 10v16" />
-      <path d="M29 43V33h6v10" />
+      <path d="M4 42l28-12 28 12-28 12z" />
+      <path d="M4 42v5l28 12 28-12v-5M32 54v5" />
+      <path d="M18 43V30l14-6 14 6v13l-14 6z" fill={BG} />
+      <path d="M32 49V36M18 30l14 6 14-6M15 30l17-15 17 15M32 36L15 30M32 36l17-6M38 46v-7l5-2v7" />
     </>
   ),
 };
 
 export default function ProcessBanner() {
   return (
-    <section className="border-t border-hairline py-16 md:py-24">
-      <div className="shell">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="kicker text-muted">Cómo trabajamos</p>
-          <h2 className="display-md mt-5">
-            Construir con materiales duraderos nunca fue tan fácil.
-          </h2>
-        </Reveal>
+    <section className="border-t border-hairline py-12 md:py-14">
+      <Reveal className="shell">
+        <h2 className="text-center text-base font-light tracking-[0.14em] text-muted md:text-xl">
+          Construir con <strong className="font-bold">materiales duraderos</strong>{" "}
+          nunca fue tan fácil.
+        </h2>
 
-        <ol className="mx-auto mt-14 grid max-w-5xl grid-cols-2 md:mt-16 md:grid-cols-4">
+        <ol className="mx-auto mt-8 grid max-w-4xl grid-cols-4 gap-2 md:mt-10 md:gap-8">
           {clientSteps.map((step, index) => (
-            <Reveal
-              key={step.id}
-              as="li"
-              delay={index * 100}
-              className={`flex flex-col items-center gap-5 py-8 md:py-4 ${
-                index % 2 === 1 ? "border-l border-hairline" : ""
-              } ${index > 1 ? "border-t border-hairline md:border-t-0" : ""} ${
-                index === 2 ? "md:border-l" : ""
-              }`}
-            >
-              <span className="kicker text-muted">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <svg
-                viewBox="0 0 64 64"
-                className="h-14 w-14 md:h-16 md:w-16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.25}
-                strokeLinejoin="miter"
-                strokeLinecap="square"
-                aria-hidden
-              >
-                {icons[step.id]}
-              </svg>
-              <h3 className="kicker">{step.title}</h3>
-            </Reveal>
+            <li key={step.id} className="flex flex-col items-center">
+              <div className="relative">
+                <span className="absolute -top-1 -left-4 text-[0.6875rem] font-semibold text-muted md:-left-6 md:text-xs">
+                  {index + 1}
+                </span>
+                <svg
+                  viewBox="0 0 64 64"
+                  className="h-12 w-12 md:h-[5.5rem] md:w-[5.5rem]"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                  aria-hidden
+                >
+                  {icons[step.id]}
+                </svg>
+              </div>
+              <h3 className="mt-3 text-[0.6875rem] font-semibold md:text-sm">
+                {step.title}
+              </h3>
+            </li>
           ))}
         </ol>
-      </div>
+      </Reveal>
     </section>
   );
 }
