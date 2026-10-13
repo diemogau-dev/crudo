@@ -32,19 +32,14 @@ export default function TipologiasPage() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="lede">
             CRUDO ofrece un catálogo de tipologías diseñadas por arquitectos y
-            construidas con hormigón armado de alta resistencia. Son viviendas
-            sólidas, seguras y resistentes, con una estética y un diseño
-            industrial moderno.
+            construidas con hormigón armado de alta resistencia, un material
+            que madura con el tiempo y pide muy poco mantenimiento a largo
+            plazo.
           </p>
-          <p className="body-text mx-auto mt-6 max-w-2xl text-muted">
-            El hormigón gana resistencia con el tiempo: a medida que madura se
-            vuelve más sólido. Por eso una casa CRUDO es resistente desde el
-            primer día y pide muy poco mantenimiento a largo plazo.
-          </p>
-          <p className="body-text mx-auto mt-4 max-w-2xl text-muted">
-            Su masa térmica amortigua el calor paraguayo y ayuda a mantener el
-            interior más fresco en verano y más cálido en invierno. Cada
-            tipología está pensada para vivirse cómoda todo el año.
+          <p className="lede mt-6">
+            Su masa térmica amortigua el calor paraguayo: más fresco en verano,
+            más cálido en invierno. Viviendas sólidas y seguras, con un diseño
+            industrial moderno pensado para vivirse cómodas todo el año.
           </p>
         </Reveal>
       </section>
