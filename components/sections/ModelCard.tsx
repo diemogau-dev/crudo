@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { SHOW_PRICES, type Model, type ModelFeatureIcon } from "@/lib/content";
 
-const featureIcons: Record<ModelFeatureIcon, ReactNode> = {
+export const featureIcons: Record<ModelFeatureIcon, ReactNode> = {
   bed: <path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M6 11.5h2" />,
   bath: (
     <path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM7 19l-1 2M17 19l1 2M6 12V6a2 2 0 0 1 4 0" />

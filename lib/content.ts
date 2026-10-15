@@ -551,6 +551,13 @@ export const models: Model[] = [
 export const upcomingModels = [
   {
     name: "CRUDO 04",
+    // 84 m² con el quincho incluido.
+    area: "84 m²",
+    features: [
+      { icon: "bed", label: "2 habitaciones" },
+      { icon: "bath", label: "1 baño" },
+      { icon: "living", label: "Cocina y estar" },
+    ] as { icon: ModelFeatureIcon; label: string }[],
     cover: "/images/a-medida/crudo-04-frontal.jpg",
     coverAlt:
       "CRUDO 04 de frente: techo a dos aguas, galería vidriada y tina exenta, al pie de un cerro",

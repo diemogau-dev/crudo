@@ -1,12 +1,20 @@
 import Image from "next/image";
+import { featureIcons } from "@/components/sections/ModelCard";
+import type { ModelFeatureIcon } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
 
 type Props = {
-  model: { name: string; cover: string; coverAlt: string };
+  model: {
+    name: string;
+    area: string;
+    features: { icon: ModelFeatureIcon; label: string }[];
+    cover: string;
+    coverAlt: string;
+  };
 };
 
 // Tarjeta de una tipología que todavía no tiene página: misma estética que
-// ModelCard, sin datos técnicos y con consulta por WhatsApp.
+// ModelCard, con consulta por WhatsApp en lugar del detalle.
 export default function UpcomingModelCard({ model }: Props) {
   return (
     <div>
@@ -21,11 +29,30 @@ export default function UpcomingModelCard({ model }: Props) {
       </div>
 
       <h3 className="display-md mt-6">{model.name}</h3>
-      <p className="kicker mt-3 text-muted">Próximamente</p>
+      <p className="kicker mt-3 text-muted">Próximamente · {model.area}</p>
 
-      <p className="body-text mt-5 border-t border-hairline pt-4 text-muted">
-        Una nueva tipología CRUDO, muy pronto.
-      </p>
+      <ul className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-hairline pt-4">
+        {model.features.map((feature) => (
+          <li
+            key={feature.label}
+            className="body-text flex items-center gap-2 text-muted"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="h-[18px] w-[18px] shrink-0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              {featureIcons[feature.icon]}
+            </svg>
+            {feature.label}
+          </li>
+        ))}
+      </ul>
 
       <a
         href={whatsappLink("general")}
