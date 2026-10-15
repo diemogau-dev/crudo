@@ -546,6 +546,17 @@ export const models: Model[] = [
   },
 ];
 
+// Tipologías anunciadas que todavía no tienen página propia: solo se muestran
+// como tarjeta en la home.
+export const upcomingModels = [
+  {
+    name: "CRUDO 04",
+    cover: "/images/a-medida/crudo-04-frontal.jpg",
+    coverAlt:
+      "CRUDO 04 de frente: techo a dos aguas, galería vidriada y tina exenta, al pie de un cerro",
+  },
+];
+
 export const processSteps = [
   {
     number: "01",

@@ -3,10 +3,11 @@ import Cta from "@/components/ui/Cta";
 import Reveal from "@/components/ui/Reveal";
 import Hero from "@/components/sections/Hero";
 import ModelCard from "@/components/sections/ModelCard";
+import UpcomingModelCard from "@/components/sections/UpcomingModelCard";
 import ProcessBanner from "@/components/sections/ProcessBanner";
 import Versatility from "@/components/sections/Versatility";
 import FinalCta from "@/components/sections/FinalCta";
-import { models } from "@/lib/content";
+import { models, upcomingModels } from "@/lib/content";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export default function Home() {
@@ -79,6 +80,11 @@ export default function Home() {
             {models.map((model, index) => (
               <Reveal key={model.slug} delay={index * 120}>
                 <ModelCard model={model} showPrice={false} useHomeCover />
+              </Reveal>
+            ))}
+            {upcomingModels.map((model, index) => (
+              <Reveal key={model.name} delay={(models.length + index) * 120}>
+                <UpcomingModelCard model={model} />
               </Reveal>
             ))}
           </div>
