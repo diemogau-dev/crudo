@@ -53,6 +53,8 @@ export type Model = {
   whatsapp: WhatsappTopic;
   cover: string;
   coverAlt: string;
+  // Portada distinta para la tarjeta de la home (si no está, usa cover).
+  homeCover?: { src: string; alt: string };
   gallery: { src: string; alt: string; width: number; height: number }[];
   plan?: { src: string; alt: string; width: number; height: number };
 };
@@ -174,6 +176,10 @@ export const models: Model[] = [
     ],
     shareDescription: "CRUDO 01 - Loft de 31 m². Una habitación y baño.",
     whatsapp: "crudo01",
+    homeCover: {
+      src: "/images/renders/crudo-1/crudo-1-c.jpg",
+      alt: "Frente vidriado de CRUDO 01 con estructura negra, deck de madera y sillones exteriores",
+    },
     cover: "/images/renders/crudo-1/crudo-1-a.jpg",
     coverAlt:
       "Vista aérea de CRUDO 01: volumen de vidrio y hormigón sobre el campo, con deck de madera",
@@ -322,6 +328,10 @@ export const models: Model[] = [
     shareDescription:
       "CRUDO 02 - Loft de 31 m². Una habitación, kitchenette y baño.",
     whatsapp: "crudo02",
+    homeCover: {
+      src: "/images/renders/crudo-2/crudo-2-a.jpg",
+      alt: "CRUDO 02 con frente vidriado, deck y celosía de concreto, sobre el campo",
+    },
     cover: "/images/renders/crudo-2/crudo-2-c.jpg",
     coverAlt:
       "Kitchenette de CRUDO 02 con bacha, microondas, heladera compacta roja y barra con banquetas",
@@ -452,6 +462,10 @@ export const models: Model[] = [
     shareDescription:
       "CRUDO 03 - Vivienda industrial de 66 m². Dos habitaciones, un baño y sala comedor integrada.",
     whatsapp: "crudo03",
+    homeCover: {
+      src: "/images/renders/crudo-3/crudo-3-n.jpg",
+      alt: "Fachada de CRUDO 03 con galería vidriada, deck de madera y pileta",
+    },
     cover: "/images/renders/crudo-3/crudo-3-a.jpg",
     coverAlt:
       "Fachada de CRUDO 03 en paneles de hormigón, con jardín, deck de madera y pileta integrada",
@@ -549,8 +563,8 @@ export const processSteps = [
     short: "Tu casa se fabrica bajo techo, no a la intemperie.",
     long: "Mientras preparamos el terreno, muros, placas, revestimientos y estructura metálica se producen en nuestra fábrica y nuestra herrería, con control pieza por pieza y el tiempo de curado que el hormigón necesita. Sin lluvia que frene la obra ni material esperando en la vereda.",
     image: {
-      src: "/images/proceso/fabricamos-fabrica.jpg",
-      alt: "Operarios cortando y manipulando placas de hormigón en la fábrica",
+      src: "/images/proceso/fabricamos-planta.jpg",
+      alt: "Dos operarios en la planta junto a un molde con placas de hormigón recién coladas",
     },
   },
   {

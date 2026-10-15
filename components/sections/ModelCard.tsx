@@ -17,10 +17,17 @@ const featureIcons: Record<ModelFeatureIcon, ReactNode> = {
 export default function ModelCard({
   model,
   showPrice = true,
+  useHomeCover = false,
 }: {
   model: Model;
   showPrice?: boolean;
+  useHomeCover?: boolean;
 }) {
+  const cover =
+    useHomeCover && model.homeCover
+      ? model.homeCover
+      : { src: model.cover, alt: model.coverAlt };
+
   return (
     <Link
       href={`/tipologias/${model.slug}`}
@@ -29,8 +36,8 @@ export default function ModelCard({
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
         <Image
-          src={model.cover}
-          alt={model.coverAlt}
+          src={cover.src}
+          alt={cover.alt}
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
