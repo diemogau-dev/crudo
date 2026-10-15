@@ -25,7 +25,15 @@ export const metadata: Metadata = {
       "Diseñamos, fabricamos y construimos tu espacio. Tipologías definidas y proyectos a medida en Paraguay.",
     locale: "es_PY",
     type: "website",
-    images: ["/images/tipologias/crudo-01-exterior-aereo.jpg"],
+    // Imagen que muestran WhatsApp y las redes al compartir el link.
+    images: [
+      {
+        url: "/images/og/crudo-share.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Frente vidriado de CRUDO 01 con estructura negra, deck de madera y sillones exteriores",
+      },
+    ],
   },
 };
 
