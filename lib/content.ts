@@ -64,8 +64,9 @@ export type Model = {
   whatsapp: WhatsappTopic;
   cover: string;
   coverAlt: string;
-  // Portada distinta para la tarjeta de la home (si no está, usa cover).
-  homeCover?: { src: string; alt: string };
+  // Portada de la tarjeta, la misma en la home y en /tipologias (si no está,
+  // usa cover).
+  cardCover?: { src: string; alt: string };
   gallery: { src: string; alt: string; width: number; height: number }[];
   plan?: { src: string; alt: string; width: number; height: number };
 };
@@ -190,7 +191,7 @@ export const models: Model[] = [
     ],
     shareDescription: "CRUDO 01 - Loft de 31 m². Una habitación y baño.",
     whatsapp: "crudo01",
-    homeCover: {
+    cardCover: {
       src: "/images/renders/crudo-1/crudo-1-c.jpg",
       alt: "Frente vidriado de CRUDO 01 con estructura negra, deck de madera y sillones exteriores",
     },
@@ -345,7 +346,7 @@ export const models: Model[] = [
     shareDescription:
       "CRUDO 02 - Loft de 31 m². Una habitación, kitchenette y baño.",
     whatsapp: "crudo02",
-    homeCover: {
+    cardCover: {
       src: "/images/renders/crudo-2/crudo-2-a.jpg",
       alt: "CRUDO 02 con frente vidriado, deck y celosía de concreto, sobre el campo",
     },
@@ -484,7 +485,7 @@ export const models: Model[] = [
     shareDescription:
       "CRUDO 03 - Vivienda industrial de 66 m². Dos habitaciones, un baño y sala comedor integrada.",
     whatsapp: "crudo03",
-    homeCover: {
+    cardCover: {
       src: "/images/renders/crudo-3/crudo-3-n.jpg",
       alt: "Fachada de CRUDO 03 con galería vidriada, deck de madera y pileta",
     },

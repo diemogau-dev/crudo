@@ -79,7 +79,7 @@ export default function Home() {
           <div className="mt-16 grid gap-16 md:mt-24 md:grid-cols-2 md:gap-x-10 md:gap-y-20">
             {models.map((model, index) => (
               <Reveal key={model.slug} delay={index * 120}>
-                <ModelCard model={model} showPrice={false} useHomeCover />
+                <ModelCard model={model} showPrice={false} />
               </Reveal>
             ))}
             {upcomingModels.map((model, index) => (

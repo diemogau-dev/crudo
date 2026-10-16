@@ -21,16 +21,11 @@ export const featureIcons: Record<ModelFeatureIcon, ReactNode> = {
 export default function ModelCard({
   model,
   showPrice = true,
-  useHomeCover = false,
 }: {
   model: Model;
   showPrice?: boolean;
-  useHomeCover?: boolean;
 }) {
-  const cover =
-    useHomeCover && model.homeCover
-      ? model.homeCover
-      : { src: model.cover, alt: model.coverAlt };
+  const cover = model.cardCover ?? { src: model.cover, alt: model.coverAlt };
 
   return (
     <Link
