@@ -9,7 +9,9 @@
 3. **Detalle en mobile:** sin el menú Imágenes/Planos/Especificaciones/FAQ. Orden: título, datos y amenities, todas las fotos, precio y CTA; después descripción, planos, especificaciones y FAQ. Desktop no cambia.
 4. **Amenities nuevos en tarjetas y detalle:** CRUDO 01 y 02 suman **Terraza**; CRUDO 03 suma Cocina y **Quincho con parrilla opcional**; CRUDO 04 incluye Quincho con parrilla. Esto revierte en parte la decisión de no especificar deck/quincho en la web. Los precios de 01, 02 y 03 no cambian.
 5. **Portadas de las tipologías iguales en la home y en `/tipologias`:** las dos usan la de la tarjeta de la home (`cardCover` en `lib/content.ts`; CRUDO 04 usa su `cover`).
-6. **Versatilidad (home):** foto de fondo nueva (`tipologias/versatilidad-quincho.jpg`, "camper 1" en Drive) y título "Diferentes usos y posibilidades."
+6. **Plano de CRUDO 04** (`renders/crudo-4/crudo-4-plano.jpg`) en su página, sección Planos.
+7. **Portada de `/tipologias`:** el título baja y queda centrado entre el navbar y el techo de la casa (`PageHeader` con `placement="top"`).
+8. **Versatilidad (home):** foto de fondo nueva (`tipologias/versatilidad-quincho.jpg`, "camper 1" en Drive) y título "Diferentes usos y posibilidades."
 
 ## 2026-10-13 — Correcciones de El Sistema (pedido de Diego)
 

@@ -12,7 +12,9 @@ type Props = {
     position?: string;
   };
   // "top" pone el texto arriba, sobre el cielo, con el título en una línea:
-  // para fotos donde el tema ocupa la parte baja y el título lo taparía.
+  // para fotos donde el tema ocupa la parte baja y el título lo taparía. El
+  // texto queda centrado entre el navbar y el ~57% de la altura de la foto
+  // (donde empieza el tema, p. ej. el techo de la casa).
   placement?: "bottom" | "top";
 };
 
@@ -51,8 +53,10 @@ export default function PageHeader({
       />
       <div aria-hidden className="absolute inset-0 bg-iron/45" />
       <div
-        className={`shell relative flex min-h-[62vh] flex-col pt-32 pb-14 md:min-h-[78vh] md:pb-20 ${
-          placement === "top" ? "justify-start md:pt-36" : "justify-end"
+        className={`shell relative flex min-h-[62vh] flex-col md:min-h-[78vh] ${
+          placement === "top"
+            ? "justify-center pt-20 pb-[27vh] md:pb-[33vh]"
+            : "justify-end pt-32 pb-14 md:pb-20"
         }`}
       >
         <p className="kicker text-alabaster/70">{kicker}</p>

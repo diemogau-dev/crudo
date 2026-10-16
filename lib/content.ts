@@ -688,6 +688,12 @@ export const models: Model[] = [
     cover: "/images/renders/crudo-4/crudo-4-a.jpg",
     coverAlt:
       "CRUDO 04 de frente: techo a dos aguas, frente vidriado y tina exenta, al pie de un cerro",
+    plan: {
+      src: "/images/renders/crudo-4/crudo-4-plano.jpg",
+      alt: "Planta de CRUDO 04: dos dormitorios, baño, cocina con barra, comedor y estar integrados, y quincho con deck",
+      width: 1522,
+      height: 688,
+    },
     gallery: [
       {
         src: "/images/renders/crudo-4/crudo-4-a.jpg",
