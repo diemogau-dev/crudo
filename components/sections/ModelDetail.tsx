@@ -64,6 +64,36 @@ export default function ModelDetail({ model, other, faqs }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [model.slug]);
 
+  const description = model.description.map((paragraph) => (
+    <p
+      key={paragraph}
+      className="body-text mt-3 text-justify text-muted first:mt-0"
+    >
+      {paragraph}
+    </p>
+  ));
+
+  const priceAndCta = (
+    <>
+      {SHOW_PRICES ? (
+        <div className="mt-5 border-t border-hairline pt-5">
+          <p className="kicker text-muted">Precio (+IVA)</p>
+          <p className="mt-1 text-base font-semibold">{model.startingPrice}</p>
+        </div>
+      ) : null}
+
+      <div className="mt-5">
+        <Cta
+          href={whatsappLink(model.whatsapp)}
+          external
+          className="w-full justify-center"
+        >
+          Hablemos de {model.name}
+        </Cta>
+      </div>
+    </>
+  );
+
   return (
     <div className="shell pt-24 pb-24 md:pb-32 md:pt-28">
       <div className="flex flex-col md:grid md:grid-cols-[1fr_300px] md:items-start md:gap-14 lg:grid-cols-[1fr_320px] lg:gap-20">
@@ -75,25 +105,18 @@ export default function ModelDetail({ model, other, faqs }: Props) {
             }}
             className="scroll-mt-28"
           >
-            <div className="border-b border-hairline pb-4">
+            <div className="hidden border-b border-hairline pb-4 md:block">
               <p className="kicker text-muted">
                 {model.tipology} · {model.area}
               </p>
               <h1 className="display-md mt-2">{model.name}</h1>
             </div>
             {model.description.length ? (
-              <Reveal className="mt-6 max-w-2xl">
-                {model.description.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="body-text mt-3 text-justify text-muted first:mt-0"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+              <Reveal className="mt-6 hidden max-w-2xl md:block">
+                {description}
               </Reveal>
             ) : null}
-            <div className="mt-8 flex flex-col gap-3">
+            <div className="flex flex-col gap-3 md:mt-8">
               {model.gallery.map((image, index) => (
                 <Reveal
                   key={image.src}
@@ -112,6 +135,15 @@ export default function ModelDetail({ model, other, faqs }: Props) {
                 </Reveal>
               ))}
             </div>
+          </div>
+
+          <div className="-mt-8 md:hidden">
+            {priceAndCta}
+            {model.description.length ? (
+              <div className="mt-14 border-t border-hairline pt-6">
+                {description}
+              </div>
+            ) : null}
           </div>
 
           {model.plan ? (
@@ -219,11 +251,12 @@ export default function ModelDetail({ model, other, faqs }: Props) {
           ) : null}
         </div>
 
-        <aside className="order-1 mb-14 md:order-none md:sticky md:top-28 md:mb-0 md:self-start">
+        <aside className="order-1 mb-8 md:order-none md:sticky md:top-28 md:mb-0 md:self-start">
           <p className="kicker text-muted">{model.tipology}</p>
           <h1 className="display-sm mt-2">{model.name}</h1>
 
-          <nav className="mt-6 border-t border-hairline">
+          {/* En mobile no hay menú: título, datos, fotos y recién después el precio. */}
+          <nav className="mt-6 hidden border-t border-hairline md:block">
             {sections.map((section) => (
               <a
                 key={section.id}
@@ -257,24 +290,7 @@ export default function ModelDetail({ model, other, faqs }: Props) {
             </p>
           </div>
 
-          {SHOW_PRICES ? (
-            <div className="mt-5 border-t border-hairline pt-5">
-              <p className="kicker text-muted">Precio (+IVA)</p>
-              <p className="mt-1 text-base font-semibold">
-                {model.startingPrice}
-              </p>
-            </div>
-          ) : null}
-
-          <div className="mt-5">
-            <Cta
-              href={whatsappLink(model.whatsapp)}
-              external
-              className="w-full justify-center"
-            >
-              Hablemos de {model.name}
-            </Cta>
-          </div>
+          <div className="hidden md:block">{priceAndCta}</div>
         </aside>
       </div>
     </div>

@@ -23,8 +23,8 @@ export default function Versatility() {
   return (
     <section className="relative overflow-hidden bg-iron text-alabaster">
       <Image
-        src="/images/tipologias/crudo-01-frente.jpg"
-        alt="Frente vidriado del loft CRUDO 01 abierto al jardín"
+        src="/images/tipologias/versatilidad-quincho.jpg"
+        alt="Quincho CRUDO con parrilla, mesa para recibir y deck de madera bajo la pérgola"
         fill
         sizes="100vw"
         className="object-cover opacity-45"
@@ -33,9 +33,9 @@ export default function Versatility() {
         <Reveal className="max-w-4xl">
           <p className="kicker text-alabaster/70">Versatilidad</p>
           <h2 className="display-lg mt-6">
-            Un espacio.
+            Diferentes usos
             <br />
-            Muchas posibilidades.
+            y posibilidades.
           </h2>
 
           <p className="kicker mt-12 text-alabaster/60">Hoy puede ser</p>

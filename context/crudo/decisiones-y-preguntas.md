@@ -2,6 +2,14 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-16 — CRUDO 04, detalle mobile y amenities (pedido de Diego)
+
+1. **CRUDO 04 tiene página propia** (`/tipologias/crudo-04`) y deja de ser "Próximamente" en la home. Datos de la planilla "Presupuesto CRUDO 04": **85 m²** (85,05 m²; reemplaza los 84 m² de la tarjeta anterior), 2 habitaciones, 1 baño, cocina con isla, sala comedor y **quincho con parrilla incluido** (parrilla, pérgola metálica y deck de 7 × 4 m). Renders en `public/images/renders/crudo-4/`.
+2. **Precio CRUDO 04 = Gs. 348.297.858 + IVA**: (vivienda Gs. 231.298.413 + quincho Gs. 26.700.000) × 1,35, mismo criterio que CRUDO 01. Quedan fuera los demás trabajos exteriores de la planilla (cobogó, ANDE, pozo ciego, cámaras, flete). **A validar con Diego.**
+3. **Detalle en mobile:** sin el menú Imágenes/Planos/Especificaciones/FAQ. Orden: título, datos y amenities, todas las fotos, precio y CTA; después descripción, planos, especificaciones y FAQ. Desktop no cambia.
+4. **Amenities nuevos en tarjetas y detalle:** CRUDO 01 y 02 suman **Terraza**; CRUDO 03 suma Cocina y **Quincho con parrilla opcional**; CRUDO 04 incluye Quincho con parrilla. Esto revierte en parte la decisión de no especificar deck/quincho en la web. Los precios de 01, 02 y 03 no cambian.
+5. **Versatilidad (home):** foto de fondo nueva (`tipologias/versatilidad-quincho.jpg`, "camper 1" en Drive) y título "Diferentes usos y posibilidades."
+
 ## 2026-10-13 — Correcciones de El Sistema (pedido de Diego)
 
 1. **Nuestro proceso:** título a la izquierda y texto a la derecha. Texto nuevo, más comercial: sistema propio en hormigón armado y concreto de alta resistencia, equipo experto, control total, forma de construir nueva en el país.

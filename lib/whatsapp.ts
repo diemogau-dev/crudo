@@ -5,6 +5,7 @@ export const whatsappMessages = {
   crudo01: "Hola, quiero conocer más sobre CRUDO 01.",
   crudo02: "Hola, quiero conocer más sobre CRUDO 02.",
   crudo03: "Hola, quiero conocer más sobre CRUDO 03.",
+  crudo04: "Hola, quiero conocer más sobre CRUDO 04.",
   aMedida:
     "Hola, tengo una idea o proyecto y quiero conversar sobre construir con CRUDO.",
 } as const;

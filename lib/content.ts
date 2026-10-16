@@ -1,8 +1,10 @@
 import type { WhatsappTopic } from "./whatsapp";
 
 // Precios "Desde" del módulo, sin IVA. Salen de las planillas de costo de
-// cada tipología (CRUDO 01 real; CRUDO 02 y 03 estimadas a partir de la de
-// CRUDO 01). Deck, quincho y piscina son extras y no entran en el precio.
+// cada tipología (CRUDO 01 y 04 reales; CRUDO 02 y 03 estimadas a partir de
+// la de CRUDO 01), con el mismo criterio: costo + 5% de imprevistos + 30% de
+// ganancia. Piscina y trabajos del terreno son extras y no entran en el
+// precio; en CRUDO 04 el quincho con parrilla sí está incluido.
 export const SHOW_PRICES = true;
 
 export function formatGs(value: number) {
@@ -13,6 +15,9 @@ const PRICES_GS = {
   crudo01: 147_900_462,
   crudo02: 158_918_742,
   crudo03: 291_332_917,
+  // Planilla "Presupuesto CRUDO 04": vivienda (Gs. 231.298.413) + quincho
+  // (parrilla, pérgola y deck, Gs. 26.700.000), × 1,35.
+  crudo04: 348_297_858,
 } as const;
 
 const startingPrice = (value: number) => `Desde ${formatGs(value)} + IVA`;
@@ -32,7 +37,13 @@ export const navLinks = [
   { href: "/faq", label: "FAQ" },
 ] as const;
 
-export type ModelFeatureIcon = "bed" | "bath" | "kitchen" | "living";
+export type ModelFeatureIcon =
+  | "bed"
+  | "bath"
+  | "kitchen"
+  | "living"
+  | "terrace"
+  | "grill";
 
 export type SpecGroup = { label: string; items: string[] };
 
@@ -118,8 +129,9 @@ export const models: Model[] = [
     features: [
       { icon: "bed", label: "1 habitación" },
       { icon: "bath", label: "1 baño" },
+      { icon: "terrace", label: "Terraza" },
     ],
-    summary: "Un ambiente con baño y frente vidriado.",
+    summary: "Un ambiente con baño, frente vidriado y terraza.",
     description: [
       "Un loft de un solo ambiente pensado para vivirse entero: un volumen limpio de hormigón con un frente vidriado que abre el espacio hacia el terreno.",
       "Casa de fin de semana, espacio de huéspedes, oficina o retiro en el fondo de una propiedad que ya existe.",
@@ -128,9 +140,11 @@ export const models: Model[] = [
       { label: "Superficie", value: "31 m²" },
       { label: "Habitación", value: "1" },
       { label: "Baño", value: "1" },
+      { label: "Terraza", value: "Incluida" },
     ],
     amenities: [
       "Frente vidriado de piso a techo",
+      "Terraza exterior",
       "Baño con bacha de concreto y mesada de mármol",
       "Aire acondicionado y placard incluidos",
     ],
@@ -257,8 +271,9 @@ export const models: Model[] = [
       { icon: "bed", label: "1 habitación" },
       { icon: "bath", label: "1 baño" },
       { icon: "kitchen", label: "Kitchenette" },
+      { icon: "terrace", label: "Terraza" },
     ],
-    summary: "Un ambiente con kitchenette y baño.",
+    summary: "Un ambiente con kitchenette, baño y terraza.",
     description: [
       "El loft de CRUDO 01 con cocina propia: el mismo volumen de hormigón y frente vidriado, con una kitchenette equipada y una barra para comer sin salir del ambiente.",
       "Pensado para quedarse más de un fin de semana: casa de huéspedes, alquiler temporario, estudio con vivienda o un primer espacio independiente en el fondo de una propiedad que ya existe.",
@@ -268,11 +283,13 @@ export const models: Model[] = [
       { label: "Habitación", value: "1" },
       { label: "Baño", value: "1" },
       { label: "Kitchenette", value: "Incluida" },
+      { label: "Terraza", value: "Incluida" },
     ],
     amenities: [
       "Kitchenette con anafe eléctrico y bacha de concreto",
       "Barra para comer en mármol o granito",
       "Frente vidriado de piso a techo",
+      "Terraza exterior",
       "Baño con bacha de concreto, mesada de mármol y espejo iluminado",
     ],
     constructionSpecs: [
@@ -390,7 +407,9 @@ export const models: Model[] = [
     features: [
       { icon: "bed", label: "2 habitaciones" },
       { icon: "bath", label: "1 baño" },
+      { icon: "kitchen", label: "Cocina" },
       { icon: "living", label: "Sala comedor" },
+      { icon: "grill", label: "Quincho con parrilla opcional" },
     ],
     summary: "Dos habitaciones, cocina y comedor integrados al estar.",
     description: [
@@ -401,12 +420,15 @@ export const models: Model[] = [
       { label: "Superficie", value: "66 m²" },
       { label: "Habitaciones", value: "2" },
       { label: "Baño", value: "1" },
-      { label: "Cocina · comedor", value: "Integrado" },
+      { label: "Cocina", value: "Incluida" },
+      { label: "Sala comedor", value: "Integrada" },
+      { label: "Quincho con parrilla", value: "Opcional" },
     ],
     amenities: [
       "Cocina con isla de mármol, integrada al comedor y al estar",
       "Frente vidriado hacia el exterior",
       "Aire acondicionado en estar y dormitorios",
+      "Quincho con parrilla opcional",
     ],
     constructionSpecs: [
       ...structureSpecs(", con aleros"),
@@ -544,25 +566,189 @@ export const models: Model[] = [
       },
     ],
   },
+  {
+    slug: "crudo-04",
+    name: "CRUDO 04",
+    tipology: "Casa con quincho",
+    area: "85 m²",
+    areaM2: 85,
+    startingPrice: startingPrice(PRICES_GS.crudo04),
+    features: [
+      { icon: "bed", label: "2 habitaciones" },
+      { icon: "bath", label: "1 baño" },
+      { icon: "kitchen", label: "Cocina" },
+      { icon: "living", label: "Sala comedor" },
+      { icon: "grill", label: "Quincho con parrilla" },
+    ],
+    summary: "Dos habitaciones, cocina con isla, sala comedor y quincho con parrilla.",
+    description: [
+      "Una casa de techo a dos aguas con un frente vidriado de doble altura. La cocina con isla, el comedor y el estar comparten un mismo espacio abierto que se continúa hacia afuera.",
+      "Afuera, el quincho con parrilla bajo pérgola metálica y un deck para recibir. Dos habitaciones con placard y un baño completo completan una casa para vivir todos los días.",
+    ],
+    specs: [
+      { label: "Superficie", value: "85 m²" },
+      { label: "Habitaciones", value: "2" },
+      { label: "Baño", value: "1" },
+      { label: "Cocina", value: "Con isla" },
+      { label: "Sala comedor", value: "Integrada" },
+      { label: "Quincho con parrilla", value: "Incluido" },
+    ],
+    amenities: [
+      "Cocina con isla, anafe, extractor y horno empotrado",
+      "Sala comedor integrada a la cocina",
+      "Quincho con parrilla, pérgola metálica y deck",
+      "Frente vidriado de piso a techo",
+      "Aire acondicionado en estar y dormitorios",
+    ],
+    constructionSpecs: [
+      {
+        label: "Estructura",
+        items: [
+          "Platea de hormigón armado de 10 cm sobre dados y vigas de fundación de hormigón armado.",
+          "Vigas y pilares de estructura metálica.",
+          "Muros de placas de hormigón armado, con revestimiento interior de placas de concreto o durlock.",
+        ],
+      },
+      {
+        label: "Techo",
+        items: [
+          "Panel termoacústico de 40 mm sobre estructura metálica.",
+          "Canaleta y bajada pluvial.",
+        ],
+      },
+      {
+        label: "Vidriería",
+        items: [
+          "Dos accesos de vidrio templado de 8 mm con perfilería negra, de 4 hojas (2 fijas y 2 corredizas).",
+          "Paño fijo superior sobre el acceso.",
+          "Ventanas batientes en dormitorios y ventiluz corredizo en el baño, en vidrio templado con perfil negro.",
+        ],
+      },
+      exteriorSpecs,
+      {
+        label: "Terminación interior",
+        items: [
+          "Piso sobre carpeta, con zócalos.",
+          "Tabiques con lana de vidrio y banda acústica; cara antihumedad en el baño.",
+          "Pintura interior y cuatro puertas placa con contramarco.",
+        ],
+      },
+      {
+        label: "Cocina",
+        items: [
+          "Muebles de cocina e isla.",
+          "Anafe con extractor.",
+          "Microondas y horno empotrados.",
+        ],
+      },
+      {
+        label: "Baño",
+        items: [
+          "Piso y paredes revestidos.",
+          "Inodoro con cisterna baja y ducha higiénica.",
+          "Bacha de concreto sobre mesada de mármol blanco veteado, con zócalo y pollera de mármol.",
+          "Ducha frío/caliente con nicho de mármol, griferías y kit de accesorios.",
+          "Mampara de ducha y espejo flotante con luz LED.",
+          "Termocalefón de 80 L.",
+        ],
+      },
+      {
+        label: "Instalación eléctrica",
+        items: [
+          "Tablero de 36 llaves con llave de corte general trifásica, disyuntor diferencial, protección contra sobretensiones y puesta a tierra.",
+          "Tomas, tomas especiales y bocas de luz.",
+          "Spots GU10 negros y colgantes de concreto.",
+          "Ductos para datos y TV.",
+        ],
+      },
+      {
+        label: "Climatización",
+        items: [
+          "Split de 24.000 BTU en el estar y split de 12.000 BTU en cada dormitorio, instalados.",
+        ],
+      },
+      plumbingSpecs(" y la cocina"),
+      {
+        label: "Quincho",
+        items: [
+          "Módulo de parrilla.",
+          "Pérgola metálica.",
+          "Deck símil madera de 7 × 4 m sobre platea de 10 cm.",
+        ],
+      },
+      {
+        label: "Muebles",
+        items: ["Placards en los dos dormitorios."],
+      },
+    ],
+    shareDescription:
+      "CRUDO 04 - Casa de 85 m². Dos habitaciones, un baño, cocina, sala comedor y quincho con parrilla.",
+    whatsapp: "crudo04",
+    cover: "/images/renders/crudo-4/crudo-4-a.jpg",
+    coverAlt:
+      "CRUDO 04 de frente: techo a dos aguas, frente vidriado y tina exenta, al pie de un cerro",
+    gallery: [
+      {
+        src: "/images/renders/crudo-4/crudo-4-a.jpg",
+        alt: "CRUDO 04 de frente: techo a dos aguas, frente vidriado y tina exenta, al pie de un cerro",
+        width: 1449,
+        height: 736,
+      },
+      {
+        src: "/images/renders/crudo-4/crudo-4-b.jpg",
+        alt: "Vista lateral de CRUDO 04 en paneles de hormigón, con galería, celosía de concreto y deck",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        src: "/images/renders/crudo-4/crudo-4-c.jpg",
+        alt: "Galería de CRUDO 04 con tina exenta, comedor exterior y parrilla junto a la celosía de concreto",
+        width: 1600,
+        height: 672,
+      },
+      {
+        src: "/images/renders/crudo-4/crudo-4-d.jpg",
+        alt: "Tina exenta de concreto y comedor exterior de CRUDO 04, con vista a los cerros",
+        width: 1575,
+        height: 656,
+      },
+      {
+        src: "/images/renders/crudo-4/crudo-4-e.jpg",
+        alt: "Estar de CRUDO 04 con panel de madera para TV, integrado al comedor y la cocina",
+        width: 1600,
+        height: 672,
+      },
+      {
+        src: "/images/renders/crudo-4/crudo-4-f.jpg",
+        alt: "Estar, comedor y cocina de CRUDO 04 en un mismo espacio, bajo el techo a dos aguas",
+        width: 1592,
+        height: 656,
+      },
+      {
+        src: "/images/renders/crudo-4/crudo-4-g.jpg",
+        alt: "Comedor y cocina de CRUDO 04 vistos desde arriba, con barra y muro de placas de hormigón",
+        width: 1370,
+        height: 768,
+      },
+      {
+        src: "/images/renders/crudo-4/crudo-4-h.jpg",
+        alt: "Dormitorio de CRUDO 04 con cabecera de madera y ventana al jardín",
+        width: 1511,
+        height: 704,
+      },
+    ],
+  },
 ];
 
 // Tipologías anunciadas que todavía no tienen página propia: solo se muestran
 // como tarjeta en la home.
-export const upcomingModels = [
-  {
-    name: "CRUDO 04",
-    // 84 m² con el quincho incluido.
-    area: "84 m²",
-    features: [
-      { icon: "bed", label: "2 habitaciones" },
-      { icon: "bath", label: "1 baño" },
-      { icon: "living", label: "Cocina y estar" },
-    ] as { icon: ModelFeatureIcon; label: string }[],
-    cover: "/images/a-medida/crudo-04-frontal.jpg",
-    coverAlt:
-      "CRUDO 04 de frente: techo a dos aguas, galería vidriada y tina exenta, al pie de un cerro",
-  },
-];
+export const upcomingModels: {
+  name: string;
+  area: string;
+  features: { icon: ModelFeatureIcon; label: string }[];
+  cover: string;
+  coverAlt: string;
+}[] = [];
 
 export const processSteps = [
   {
@@ -636,7 +822,7 @@ export const faqs = [
       "En una obra tradicional, el diseño, la fabricación de materiales y la construcción suelen depender de distintos equipos y proveedores. En CRUDO conectamos esas etapas desde el principio: diseñamos pensando en cómo se va a producir y construir cada proyecto, fabricamos elementos clave en nuestra propia fábrica y ejecutamos la obra con nuestro equipo, dentro del mismo sistema. El resultado es más control sobre el proceso y menos improvisación entre etapas.",
   },
   {
-    question: "¿CRUDO solo construye las tipologías CRUDO 01, 02 y 03?",
+    question: "¿CRUDO solo construye las tipologías CRUDO 01, 02, 03 y 04?",
     answer:
       "No. Son nuestro punto de partida y vamos a ir lanzando nuevas tipologías. También desarrollamos proyectos personalizados según el terreno y las ideas de cada cliente.",
   },
@@ -658,7 +844,7 @@ export const faqs = [
   {
     question: "¿Cuánto cuesta un CRUDO?",
     answer: SHOW_PRICES
-      ? `CRUDO 01 desde ${formatGs(PRICES_GS.crudo01)} + IVA, CRUDO 02 desde ${formatGs(PRICES_GS.crudo02)} + IVA y CRUDO 03 desde ${formatGs(PRICES_GS.crudo03)} + IVA. El valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
+      ? `CRUDO 01 desde ${formatGs(PRICES_GS.crudo01)} + IVA, CRUDO 02 desde ${formatGs(PRICES_GS.crudo02)} + IVA, CRUDO 03 desde ${formatGs(PRICES_GS.crudo03)} + IVA y CRUDO 04 desde ${formatGs(PRICES_GS.crudo04)} + IVA. El valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
       : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {
