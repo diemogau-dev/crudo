@@ -6,7 +6,7 @@
 
 1. **CRUDO 04 tiene página propia** (`/tipologias/crudo-04`) y deja de ser "Próximamente" en la home. Datos de la planilla "Presupuesto CRUDO 04": **85 m²** (85,05 m²; reemplaza los 84 m² de la tarjeta anterior), 2 habitaciones, 1 baño, cocina con isla, sala comedor y **quincho con parrilla incluido** (parrilla, pérgola metálica y deck de 7 × 4 m). Renders en `public/images/renders/crudo-4/`.
 2. **Precio CRUDO 04 = Gs. 348.297.858 + IVA**: (vivienda Gs. 231.298.413 + quincho Gs. 26.700.000) × 1,35, mismo criterio que CRUDO 01. Quedan fuera los demás trabajos exteriores de la planilla (cobogó, ANDE, pozo ciego, cámaras, flete). **A validar con Diego.**
-3. **Detalle en mobile:** sin el menú Imágenes/Planos/Especificaciones/FAQ. Orden: título, datos y amenities, todas las fotos, precio y CTA; después descripción, planos, especificaciones y FAQ. Desktop no cambia.
+3. **Detalle en mobile:** sin el menú Imágenes/Planos/Especificaciones/FAQ. Orden: título, datos y amenities, todas las fotos, planos, precio y CTA; después descripción, especificaciones y FAQ. Desktop no cambia.
 4. **Amenities nuevos en tarjetas y detalle:** CRUDO 01 y 02 suman **Terraza**; CRUDO 03 suma Cocina y **Quincho con parrilla opcional**; CRUDO 04 incluye Quincho con parrilla. Esto revierte en parte la decisión de no especificar deck/quincho en la web. Los precios de 01, 02 y 03 no cambian.
 5. **Portadas de las tipologías iguales en la home y en `/tipologias`:** las dos usan la de la tarjeta de la home (`cardCover` en `lib/content.ts`; CRUDO 04 usa su `cover`).
 6. **Plano de CRUDO 04** (`renders/crudo-4/crudo-4-plano.jpg`) en su página, sección Planos.

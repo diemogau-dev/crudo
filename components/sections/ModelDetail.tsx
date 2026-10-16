@@ -137,15 +137,6 @@ export default function ModelDetail({ model, other, faqs }: Props) {
             </div>
           </div>
 
-          <div className="-mt-8 md:hidden">
-            {priceAndCta}
-            {model.description.length ? (
-              <div className="mt-14 border-t border-hairline pt-6">
-                {description}
-              </div>
-            ) : null}
-          </div>
-
           {model.plan ? (
             <div
               id="planos"
@@ -169,6 +160,15 @@ export default function ModelDetail({ model, other, faqs }: Props) {
               </Reveal>
             </div>
           ) : null}
+
+          <div className="md:hidden">
+            {priceAndCta}
+            {model.description.length ? (
+              <div className="mt-14 border-t border-hairline pt-6">
+                {description}
+              </div>
+            ) : null}
+          </div>
 
           <div
             id="especificaciones"
