@@ -150,10 +150,6 @@
         {
           "name": "Bajada eléctrica desde la red de ANDE",
           "price_gs": 3712500
-        },
-        {
-          "name": "Cámaras de seguridad con grabador (2 cámaras)",
-          "price_gs": 2750000
         }
       ],
       "images": {
@@ -201,10 +197,10 @@
           "rotate": 90
         },
         "workshop": {
-          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "src": "public/images/proceso/fabricamos-planta.jpg",
           "focus": {
             "x": 0.5,
-            "y": 0.55
+            "y": 0.58
           },
           "render": false
         }
@@ -295,10 +291,6 @@
         {
           "name": "Bajada eléctrica desde la red de ANDE",
           "price_gs": 3712500
-        },
-        {
-          "name": "Cámaras de seguridad con grabador (2 cámaras)",
-          "price_gs": 2750000
         }
       ],
       "images": {
@@ -343,10 +335,10 @@
           "rotate": 90
         },
         "workshop": {
-          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "src": "public/images/proceso/fabricamos-planta.jpg",
           "focus": {
             "x": 0.5,
-            "y": 0.55
+            "y": 0.58
           },
           "render": false
         }
@@ -444,10 +436,6 @@
           "price_gs": 3712500
         },
         {
-          "name": "Cámaras de seguridad con grabador (4 cámaras)",
-          "price_gs": 4000000
-        },
-        {
           "name": "Pared de cobogós (7 m²)",
           "price_gs": 3591000
         },
@@ -511,10 +499,10 @@
           "rotate": 90
         },
         "workshop": {
-          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "src": "public/images/proceso/fabricamos-planta.jpg",
           "focus": {
             "x": 0.5,
-            "y": 0.55
+            "y": 0.58
           },
           "render": false
         }
@@ -620,10 +608,6 @@
         {
           "name": "Bajada eléctrica desde la red de ANDE",
           "price_gs": 3712500
-        },
-        {
-          "name": "Cámaras de seguridad con grabador (4 cámaras)",
-          "price_gs": 4000000
         }
       ],
       "images": {
@@ -668,10 +652,10 @@
           "rotate": 90
         },
         "workshop": {
-          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "src": "public/images/proceso/fabricamos-planta.jpg",
           "focus": {
             "x": 0.5,
-            "y": 0.55
+            "y": 0.58
           },
           "render": false
         }

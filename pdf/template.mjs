@@ -20,7 +20,7 @@ export const SLOTS = {
     { width: 412, height: 700 },
   ],
   planMax: { width: 600, height: 1440 },
-  workshop: { width: 1080, height: 540 },
+  workshop: { width: 1080, height: 600 },
 };
 
 // Wordmark oficial (public/logo/crudo-wordmark.svg): viewBox 0 -30 2540 760.
@@ -122,7 +122,6 @@ function draftLayer(pending) {
 }
 
 export function renderProposal({ model, common, contact, assets, issuedAt, pending = [] }) {
-  const payments = paymentSchedule(model.price_gs, common.payment_plan);
   const price = formatGs(model.price_gs);
   const waUrl = `https://wa.me/${contact.whatsapp.number}?text=${encodeURIComponent(model.whatsapp_text)}`;
   const draft = draftLayer(pending);
@@ -263,8 +262,8 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   // 5 · Por qué hormigón armado
   const reasons = [
     [
-      "Dura décadas",
-      "Cada placa sale del molde, cura en el taller y se monta con la tolerancia del plano. Muros y fundaciones hechos para durar.",
+      "Hecha para durar",
+      "Cada placa sale de nuestra fábrica, curada por expertos, y se monta exactamente según planos y diseño. Muros, revestimientos y fundaciones pensados para durar décadas.",
     ],
     [
       "Fresca y silenciosa",
@@ -281,7 +280,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     <img class="workshop" src="${assets.workshop}" alt="">
     <div class="concrete-body">
       ${kicker("05", "Por qué hormigón armado")}
-      <h2 class="display h2">Diseñamos el molde. Fabricamos el panel. Levantamos la casa.</h2>
+      <h2 class="display h2">Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos la casa.</h2>
       <ol class="list">
         ${reasons
           .map(
@@ -292,8 +291,8 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
       </ol>
       <p class="series">${esc(model.name)} es parte de la primera serie de la marca: casas de hormigón armado con sistema propio.</p>
       <div class="touch">
-        <div class="label">Tocalo en la oficina</div>
-        <p>Las placas, los revestimientos y los cobogós están en Sucre. Vení a verlos y tocarlos antes de decidir.</p>
+        <div class="label">Pasá a conocernos en la oficina</div>
+        <p>Te esperamos sobre Sucre, en Asunción, para que conozcas nuestro sistema y la solidez de nuestros productos: placas, revestimientos, cobogós, bachas y más.</p>
       </div>
     </div>
     ${footer(assets.workshopIsRender)}`,
@@ -322,13 +321,12 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
       }
       <div class="label sub">Cómo lo pagás</div>
       <table class="schedule">
-        ${payments
+        ${common.payment_plan
           .map(
             (p) => `
           <tr>
             <td class="pct">${p.pct} %</td>
             <td class="ms"><strong>${esc(p.label)}</strong><span>${esc(p.milestone)}</span></td>
-            <td class="amt">${formatGs(p.amount)}</td>
           </tr>`,
           )
           .join("")}
@@ -345,10 +343,10 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
 
   // 7 · Cómo seguimos
   const steps = [
-    ["Vení a la oficina", "En Sucre tocás las placas, recorrés el plano y resolvemos tus dudas."],
-    ["Firmás y arrancamos", "Con la firma y el primer 40 % empezamos tu obra."],
-    ["Obra", `${model.delivery.text.charAt(0).toUpperCase()}${model.delivery.text.slice(1)}.`],
-    ["Entrega", "Te entregamos tu Crudo y arrancan 12 meses de postventa."],
+    ["Vení a conocernos", "Te esperamos en la oficina de Sucre para mostrarte el sistema y resolver tus dudas."],
+    ["Conocemos tu terreno", "Lo vemos con vos para ubicar tu Crudo y planificar la obra."],
+    ["Definimos el diseño de tu Crudo", "Ajustamos juntos el diseño y los adicionales que quieras sumar, con precio cerrado."],
+    ["Firmamos y arrancamos", `Con la firma y la entrega inicial del 40 % empezamos. Tu casa queda lista en ${model.delivery.text}.`],
   ];
   const hours = contact.office.hours ? `${esc(contact.office.hours)}.` : pendingMark("horario");
   const next = page(
@@ -581,11 +579,10 @@ strong { font-weight: 600; }
 .schedule { width: 100%; border-collapse: collapse; }
 .schedule td { border-top: 1px solid var(--line); padding: 18px 0; vertical-align: top; }
 .schedule tr:last-child td { border-bottom: 1px solid var(--line); }
-.schedule .pct { width: 112px; font-weight: 500; font-size: 40px; line-height: 1; }
-.schedule .ms { padding-right: 20px; }
+.schedule .pct { width: 140px; font-weight: 500; font-size: 44px; line-height: 1; }
+.schedule .ms { padding-right: 0; }
 .schedule .ms strong { display: block; font-size: 28px; line-height: 1.2; }
 .schedule .ms span { display: block; font-size: 26px; line-height: 1.35; margin-top: 4px; color: var(--muted); }
-.schedule .amt { text-align: right; white-space: nowrap; font-weight: 500; font-size: 40px; line-height: 1; }
 .validity { font-weight: 600; font-size: 28px; margin-top: 22px; }
 .plain li { font-size: 28px; line-height: 1.5; }
 .plain li::before, .warranty li::before { content: "— "; }

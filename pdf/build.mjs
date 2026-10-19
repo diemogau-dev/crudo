@@ -28,6 +28,8 @@ const MAX_SIDE = 1600;
 const FORBIDDEN = [
   "Concrit*", "Fernando", "Brutal", "Nodo", "Calmo", "Casa Fácil", "Casa Facil",
   "Deca", "Maccini", "Gemini*", "dividendo*", "ganancia*", "costo*", "Diego", "Calde*",
+  // Diego: no decir "panel" (suena a casa prefabricada liviana).
+  "panel*",
 ];
 const forbiddenRegex = (word) =>
   word.endsWith("*")

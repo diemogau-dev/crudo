@@ -10,6 +10,7 @@
 4. **Leídos del plano de cada álbum:** CRUDO 02 = 1 dormitorio, 1 baño, kitchenette y deck; CRUDO 03 = 2 dormitorios, 1 baño (el deck del plano es el adicional de 7 × 4 m); CRUDO 04 = 2 dormitorios, 1 baño, quincho con parrilla y deck. **A confirmar con Diego:** deck incluido en 02 y 04.
 5. **Manual de Marca oficial** en `context/crudo/manual-de-marca.html` y wordmark vectorial en `public/logo/crudo-wordmark.svg`. La portada del PDF sigue la ficha técnica de la sección 06 del manual.
 6. **Renders con adicionales a la vista:** CRUDO 03 muestra piscina, deck, pérgola, cobogós y parrilla (adicionales) y CRUDO 04 una tina de concreto (no incluida); el PDF lo aclara al pie de la portada y en "Así se vive".
+7. **Ajustes de Diego al copy del PDF:** nunca decir "panel" (suena a casa prefabricada liviana): "Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos la casa." En precios va solo el precio final y el esquema 40/40/20 sin montos. Sin cámaras de seguridad en los adicionales. Pasos: conocernos en la oficina → conocemos tu terreno → definimos el diseño → firma, entrega inicial y obra. Foto de "Por qué hormigón armado": la de la planta (`proceso/fabricamos-planta.jpg`).
 
 ## 2026-10-16 — CRUDO 04, detalle mobile y amenities (pedido de Diego)
 
