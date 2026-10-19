@@ -1,0 +1,20 @@
+{
+  "brand": "CRUDO",
+  "whatsapp": {
+    "number": "595991574500",
+    "display": "+595 991 574 500"
+  },
+  "office": {
+    "address": "Sucre 1862 casi José Campos Lanzoni",
+    "city": "Asunción",
+    "hours": null
+  },
+  "instagram": {
+    "handle": "@crudohomes",
+    "url": "https://www.instagram.com/crudohomes/"
+  },
+  "web": {
+    "domain": "crudo.com.py",
+    "url": "https://crudo.com.py"
+  }
+}

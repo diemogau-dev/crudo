@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# propuestas PDF (se regeneran con npm run build:pdf)
+/pdf/out/
+/pdf/.cache/

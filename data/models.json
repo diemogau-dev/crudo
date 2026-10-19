@@ -1,0 +1,391 @@
+{
+  "common": {
+    "valid_days": 15,
+    "payment_plan": [
+      {
+        "pct": 40,
+        "label": "Al firmar",
+        "milestone": "Firmamos y empezamos la obra."
+      },
+      {
+        "pct": 40,
+        "label": "Terminaciones",
+        "milestone": "Fundaciones, cerramientos, techo y conexiones ya terminados."
+      },
+      {
+        "pct": 20,
+        "label": "Entrega",
+        "milestone": "Te entregamos tu Crudo."
+      }
+    ],
+    "includes": {
+      "estructura": {
+        "title": "Estructura",
+        "lines": [
+          "Fundaciones de hormigón armado: dados, vigas y platea.",
+          "Muros de placas de hormigón armado de nuestro taller.",
+          "Techo metálico termoaislante sobre estructura metálica, con canaletas y bajadas."
+        ]
+      },
+      "terminaciones": {
+        "title": "Terminaciones",
+        "lines": [
+          "Revestimiento exterior de placas de concreto de nuestro taller y tabiques con lana de vidrio.",
+          "{access}",
+          "Pisos, revestimiento de baño, pintura completa y limpieza final de obra."
+        ]
+      },
+      "bano": {
+        "title": "Baño",
+        "lines": [
+          "Inodoro y ducha frío/caliente con mampara y grifería.",
+          "Bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+          "Espejo flotante con luz LED y termocalefón de 80 L."
+        ]
+      },
+      "equipamiento": {
+        "title": "Equipamiento",
+        "lines": []
+      },
+      "instalaciones": {
+        "title": "Instalaciones",
+        "lines": [
+          "Eléctrica completa: tablero, puesta a tierra, disyuntor diferencial y protección contra sobretensión.",
+          "Tomas, luces y ductos para internet y TV. Sanitaria completa."
+        ]
+      },
+      "clima": {
+        "title": "Climatización e iluminación",
+        "lines": [
+          "{climate}",
+          "Spots negros y lámparas colgantes de concreto."
+        ]
+      }
+    },
+    "not_included": [
+      "Flete: depende de la zona y lo definimos con vos.",
+      "Todo lo que no figura en «Qué incluye»."
+    ],
+    "extras_footnote": "Y si querés algo que no está acá, lo armamos juntos.",
+    "warranty": [
+      "12 meses de asistencia desde la entrega definitiva de tu casa.",
+      "Un profesional asignado a tu obra, que te responde en 48 hs.",
+      "Si algo falla por material o mano de obra, lo reparamos en 15 días como máximo."
+    ],
+    "warranty_note": "Respondemos por cualquier daño durante la obra. El desgaste por uso normal no entra."
+  },
+  "models": [
+    {
+      "id": "crudo-01",
+      "name": "Crudo 01",
+      "area_m2": 30.71,
+      "price_gs": 152438424,
+      "show_price_per_m2": true,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "deck": null,
+      "kitchen": null,
+      "delivery": {
+        "short": "45 días",
+        "text": "45 días contados desde la palada inicial"
+      },
+      "whatsapp_text": "Hola! Quiero armar mi Crudo 01",
+      "access": "Frente de vidrio templado de 8 mm y aluminio negro: acceso de 4 hojas (2 fijas y 2 móviles) y fijo superior.",
+      "climate": "Aire acondicionado de 18.000 BTU, ventilador de techo LED y luz LED en el borde de la fachada.",
+      "includes": {
+        "bano": {
+          "mode": "replace",
+          "lines": [
+            "Inodoro, bidet y ducha frío/caliente con mampara y grifería.",
+            "Bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+            "Espejo flotante con luz LED y termocalefón de 80 L."
+          ]
+        },
+        "equipamiento": {
+          "lines": [
+            "Placard de melamina de 2,10 × 0,80 m."
+          ]
+        }
+      },
+      "highlights": [],
+      "gallery_phrase": "Abrís el frente de vidrio y la casa sigue en la galería.",
+      "plan": {
+        "dimensions": null,
+        "rooms": [
+          {
+            "label": "Galería",
+            "x": 0.79,
+            "y": 0.11
+          },
+          {
+            "label": "Dormitorio y estar",
+            "x": 0.8,
+            "y": 0.43
+          },
+          {
+            "label": "Baño",
+            "x": 0.22,
+            "y": 0.79
+          }
+        ]
+      },
+      "extras": [
+        {
+          "name": "Pozo ciego y cámara séptica",
+          "price_gs": 4860000
+        },
+        {
+          "name": "Pilastra para el medidor de ANDE",
+          "price_gs": 1062500
+        },
+        {
+          "name": "Bajada eléctrica desde la red de ANDE",
+          "price_gs": 3712500
+        },
+        {
+          "name": "Cámaras de seguridad con grabador (2 cámaras)",
+          "price_gs": 2750000
+        }
+      ],
+      "images": {
+        "cover": {
+          "src": "public/images/renders/crudo-1/crudo-1-c.jpg",
+          "trim": {
+            "bottom": 0.075
+          },
+          "focus": {
+            "x": 0.55,
+            "y": 0.5
+          }
+        },
+        "gallery": [
+          {
+            "src": "public/images/renders/crudo-1/crudo-1-i.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-1/crudo-1-k.jpg",
+            "focus": {
+              "x": 0.62,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-1/crudo-1-l.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.45
+            }
+          }
+        ],
+        "plan": {
+          "src": "public/images/renders/crudo-1/crudo-1-f.jpg",
+          "crop": [
+            60,
+            62,
+            1314,
+            594
+          ],
+          "rotate": 90
+        },
+        "workshop": {
+          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "focus": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "render": false
+        }
+      }
+    },
+    {
+      "id": "crudo-02",
+      "name": "Crudo 02",
+      "area_m2": 26.2,
+      "price_gs": 148717706,
+      "show_price_per_m2": true,
+      "bedrooms": null,
+      "bathrooms": null,
+      "deck": null,
+      "kitchen": "Kitchenette con desayunador y anafe.",
+      "delivery": {
+        "short": "45 días",
+        "text": "45 días contados desde la palada inicial"
+      },
+      "whatsapp_text": "Hola! Quiero armar mi Crudo 02",
+      "access": "Frente de vidrio templado de 8 mm y aluminio negro: acceso de 4 hojas (2 fijas y 2 móviles) y fijo superior.",
+      "climate": "Aire acondicionado de 18.000 BTU, ventilador de techo LED y luz LED en el borde de la fachada.",
+      "includes": {
+        "bano": {
+          "mode": "replace",
+          "lines": [
+            "Inodoro, ducha higiénica y ducha frío/caliente con mampara y grifería.",
+            "Dos bachas de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+            "Espejo flotante con luz LED y termocalefón de 80 L."
+          ]
+        },
+        "equipamiento": {
+          "title": "Cocina y equipamiento",
+          "lines": [
+            "Placard.",
+            "Pared de cobogós: celosía de concreto de nuestro taller."
+          ]
+        }
+      },
+      "highlights": [],
+      "gallery_phrase": null,
+      "plan": {
+        "dimensions": null,
+        "rooms": []
+      },
+      "extras": [
+        {
+          "name": "Pozo ciego y cámara séptica",
+          "price_gs": 4860000
+        },
+        {
+          "name": "Pilastra para el medidor de ANDE",
+          "price_gs": 1062500
+        },
+        {
+          "name": "Bajada eléctrica desde la red de ANDE",
+          "price_gs": 3712500
+        },
+        {
+          "name": "Cámaras de seguridad con grabador (2 cámaras)",
+          "price_gs": 2750000
+        }
+      ],
+      "images": null
+    },
+    {
+      "id": "crudo-03",
+      "name": "Crudo 03",
+      "area_m2": 66,
+      "price_gs": 308783965,
+      "show_price_per_m2": true,
+      "bedrooms": null,
+      "bathrooms": null,
+      "deck": null,
+      "kitchen": "Cocina con isla, anafe con extractor y microondas con horno empotrado.",
+      "delivery": {
+        "short": "2 meses",
+        "text": "2 meses contados desde la palada inicial"
+      },
+      "whatsapp_text": "Hola! Quiero armar mi Crudo 03",
+      "access": "Dos accesos de vidrio templado de 8 mm y aluminio negro, de 4 hojas, y ventanas batientes en las habitaciones.",
+      "climate": "Tres aires acondicionados: dos de 12.000 BTU y uno de 24.000 BTU.",
+      "includes": {
+        "equipamiento": {
+          "title": "Cocina y equipamiento",
+          "lines": [
+            "Dos placards y cuatro puertas interiores."
+          ]
+        }
+      },
+      "highlights": [],
+      "gallery_phrase": null,
+      "plan": {
+        "dimensions": null,
+        "rooms": []
+      },
+      "extras": [
+        {
+          "name": "Pozo ciego y cámara séptica",
+          "price_gs": 4860000
+        },
+        {
+          "name": "Pilastra para el medidor de ANDE",
+          "price_gs": 1062500
+        },
+        {
+          "name": "Bajada eléctrica desde la red de ANDE",
+          "price_gs": 3712500
+        },
+        {
+          "name": "Cámaras de seguridad con grabador (4 cámaras)",
+          "price_gs": 4000000
+        },
+        {
+          "name": "Pared de cobogós (7 m²)",
+          "price_gs": 3591000
+        },
+        {
+          "name": "Módulo de parrilla",
+          "price_gs": 12750000
+        },
+        {
+          "name": "Pérgola metálica",
+          "price_gs": 10125000
+        },
+        {
+          "name": "Deck símil madera de 7 × 4 m",
+          "price_gs": 10500000
+        },
+        {
+          "name": "Piscina con deck",
+          "price_gs": null,
+          "custom": "A medida, la cotizamos en la reunión"
+        }
+      ],
+      "images": null
+    },
+    {
+      "id": "crudo-04",
+      "name": "Crudo 04",
+      "area_m2": 85.05,
+      "price_gs": 339186601,
+      "show_price_per_m2": true,
+      "bedrooms": null,
+      "bathrooms": null,
+      "deck": null,
+      "kitchen": "Cocina con isla, anafe con extractor y microondas con horno empotrado.",
+      "delivery": {
+        "short": "2 meses",
+        "text": "2 meses contados desde la palada inicial"
+      },
+      "whatsapp_text": "Hola! Quiero armar mi Crudo 04",
+      "access": "Dos accesos de vidrio templado de 8 mm y aluminio negro, de 4 hojas, y ventanas batientes en las habitaciones.",
+      "climate": "Tres aires acondicionados: dos de 12.000 BTU y uno de 24.000 BTU.",
+      "includes": {
+        "equipamiento": {
+          "title": "Cocina y equipamiento",
+          "lines": [
+            "Dos placards y tres puertas interiores."
+          ]
+        }
+      },
+      "highlights": [
+        "Pared de cobogós de 12 m², incluida.",
+        "Módulo de parrilla incluido: mesada de hormigón, parrilla de acero inoxidable y campana."
+      ],
+      "gallery_phrase": null,
+      "plan": {
+        "dimensions": null,
+        "rooms": []
+      },
+      "extras": [
+        {
+          "name": "Pozo ciego y cámara séptica",
+          "price_gs": 4860000
+        },
+        {
+          "name": "Pilastra para el medidor de ANDE",
+          "price_gs": 1062500
+        },
+        {
+          "name": "Bajada eléctrica desde la red de ANDE",
+          "price_gs": 3712500
+        },
+        {
+          "name": "Cámaras de seguridad con grabador (4 cámaras)",
+          "price_gs": 4000000
+        }
+      ],
+      "images": null
+    }
+  ]
+}
