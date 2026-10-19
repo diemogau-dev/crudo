@@ -11,7 +11,8 @@ Next.js 16 (App Router) + TypeScript + Tailwind v4. Deploy a Vercel.
 Leé `context/` — es la fuente de verdad del proyecto y se mantiene actualizada:
 
 - `context/crudo/brief-proyecto-web.md` — brief completo (estrategia, estructura, reglas).
-- `context/crudo/manual-marca.md` — paleta, tipografía, tono, CTAs, WhatsApp.
+- `context/crudo/manual-de-marca.html` — **Manual de Marca oficial**. Manda en todo diseño (logo, paleta, tipografía, imagen, tono). Wordmark vectorial: `public/logo/crudo-wordmark.svg`.
+- `context/crudo/manual-marca.md` — resumen operativo de la web (paleta, tipografía, tono, CTAs, WhatsApp).
 - `context/crudo/decisiones-y-preguntas.md` — decisiones cerradas y preguntas abiertas.
 - `context/general/contexto-maestro-house-of-brands.md` — contexto del proyecto madre.
 
@@ -24,6 +25,10 @@ Leé `context/` — es la fuente de verdad del proyecto y se mantiene actualizad
 - Los proyectos se llaman **tipologías**, nunca "modelos" ni "Serie": son CRUDO 01, CRUDO 02, y a futuro 03, 04.
 - Las specs de los modelos vienen del manual de marca; no se inventan ni se estiman de los renders.
 - Nada de stock photography: solo renders propios y fotos reales de taller.
+
+## Propuestas comerciales en PDF
+
+Las propuestas que se mandan por WhatsApp salen de `data/models.json` y `data/contact.json` con `npm run build:pdf` (ver `pdf/README.md`). Ahí sí van precio cerrado y plazo desde la palada: es la excepción a la regla de la web. Los datos de las planillas de presupuesto mandan sobre los de la web.
 
 ## Convenciones de código
 

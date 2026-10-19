@@ -46,7 +46,7 @@ function pendingFields(model, contact) {
   if (model.bathrooms == null) pending.push("baños");
   if (model.deck == null) pending.push("deck");
   if (model.kitchen === null) pending.push("cocina");
-  if (model.plan?.dimensions == null) pending.push("medidas del plano");
+  if (!model.plan?.rooms?.length) pending.push("ambientes del plano");
   if (!model.gallery_phrase) pending.push("frase de galería");
   if (contact.office.hours == null) pending.push("horario de oficina");
   return pending;
@@ -80,7 +80,10 @@ function validate(model, common) {
 // Recorta la imagen a la proporción del slot alrededor de `focus`, reduce a
 // MAX_SIDE y devuelve un pipeline de sharp sin metadatos.
 async function prepare(spec, slot) {
-  let img = sharp(path.join(ROOT, spec.src)).rotate();
+  // flatten: los PNG con transparencia van sobre blanco antes de recortar.
+  let img = sharp(
+    await sharp(path.join(ROOT, spec.src)).rotate().flatten({ background: "#ffffff" }).toBuffer(),
+  );
   let { width, height } = await img.metadata();
   if (spec.crop) {
     const [left, top, w, h] = spec.crop;
@@ -124,64 +127,64 @@ async function prepare(spec, slot) {
 const toDataUri = (buf, mime) => `data:${mime};base64,${buf.toString("base64")}`;
 const jpeg = (img) => img.jpeg({ quality: 80, mozjpeg: true }).toBuffer();
 
-// Portada: el logo va sobre Iron, arriba de la foto, así nunca cruza el filo
-// del volumen ni una carpintería. La foto va sin filtro y se funde con Iron
-// arriba y abajo, donde apoyan el logo y el texto.
-async function coverImage(spec) {
-  const { img, width, height } = await prepare(spec, SLOTS.cover);
-  const svg = Buffer.from(`
-    <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
-      <defs>
-        <linearGradient id="t" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#1A1A1A" stop-opacity="1"/>
-          <stop offset="0.12" stop-color="#1A1A1A" stop-opacity="0"/>
-          <stop offset="0.8" stop-color="#1A1A1A" stop-opacity="0"/>
-          <stop offset="1" stop-color="#1A1A1A" stop-opacity="1"/>
-        </linearGradient>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#t)"/>
-    </svg>`);
-  return toDataUri(await jpeg(img.composite([{ input: svg }])), "image/jpeg");
-}
-
 async function slotImage(spec, slot, transform) {
   const { img } = await prepare(spec, slot);
   const buf = await jpeg(transform ? transform(img) : img);
   return toDataUri(buf, "image/jpeg");
 }
 
+// Plano: se recorta, se gira y entra en la caja máxima con su proporción.
+// Los marcadores vienen en píxeles del archivo original y se pasan a
+// fracciones de la imagen final.
+async function planImage(spec, rooms) {
+  const meta = await sharp(path.join(ROOT, spec.src)).metadata();
+  const [cx, cy, cw, ch] = spec.crop ?? [0, 0, meta.width, meta.height];
+  const turned = spec.rotate % 180 !== 0;
+  const w = turned ? ch : cw;
+  const h = turned ? cw : ch;
+  const k = Math.min(SLOTS.planMax.width / w, SLOTS.planMax.height / h);
+  const box = { width: Math.round(w * k), height: Math.round(h * k) };
+  const uri = await slotImage(spec, box, (img) =>
+    // El plano viene sobre blanco puro: lo llevamos a Alabaster.
+    img.linear([245 / 255, 245 / 255, 243 / 255], [0, 0, 0]),
+  );
+  const markers = rooms.map(({ at: [x, y] }) => {
+    const u = (x - cx) / cw;
+    const v = (y - cy) / ch;
+    if (!turned) return { x: u, y: v };
+    return spec.rotate === 90 ? { x: 1 - v, y: u } : { x: v, y: 1 - u };
+  });
+  return { uri, box, markers };
+}
+
 async function sharedAssets() {
   // Archivo estática en los cuatro pesos del manual, embebida en el PDF.
   const fonts = {};
-  for (const weight of [400, 500, 600, 900]) {
+  for (const weight of [400, 500, 600, 800, 900]) {
     const file = `node_modules/@fontsource/archivo/files/archivo-latin-${weight}-normal.woff2`;
     fonts[weight] = toDataUri(await fs.readFile(path.join(ROOT, file)), "font/woff2");
   }
-  const logo = await sharp(path.join(ROOT, "public/logo/crudo-wordmark-alabaster.png"))
-    .png()
-    .toBuffer();
-  return {
-    fonts,
-    logo: toDataUri(logo, "image/png"),
-  };
+  // Wordmark vectorial oficial: se embeben sus trazos y toma el color del texto.
+  const svg = await fs.readFile(path.join(ROOT, "public/logo/crudo-wordmark.svg"), "utf8");
+  const wordmark = svg.match(/<g[^>]*>([\s\S]*)<\/g>/)[1].trim();
+  return { fonts, wordmark };
 }
 
 async function modelAssets(model, shared) {
   const im = model.images;
-  const cover = await coverImage(im.cover);
+  const cover = await slotImage(im.cover, SLOTS.cover);
   const gallery = await Promise.all(
     im.gallery.map((spec, i) => slotImage(spec, SLOTS.gallery[i])),
   );
-  // El plano viene sobre blanco puro: lo llevamos a Alabaster.
-  const plan = await slotImage(im.plan, SLOTS.plan, (img) =>
-    img.linear([245 / 255, 245 / 255, 243 / 255], [0, 0, 0]),
-  );
+  const plan = await planImage(im.plan, model.plan.rooms);
   const workshop = await slotImage(im.workshop, SLOTS.workshop);
   return {
     ...shared,
     cover,
     gallery,
-    plan,
+    plan: plan.uri,
+    planBox: plan.box,
+    planMarkers: plan.markers,
     workshop,
     workshopIsRender: im.workshop.render !== false,
   };
@@ -220,6 +223,34 @@ function qa(file) {
     if (re.test(text) || re.test(info)) problems.push(`aparece la palabra prohibida "${word}"`);
   }
   return { problems };
+}
+
+// Nada se corta ni se pisa: cada bloque de contenido termina antes del pie
+// de su página y ningún elemento se sale por los costados.
+async function checkLayout(page) {
+  return page.evaluate(() => {
+    const problems = [];
+    document.querySelectorAll("section.page").forEach((sec, i) => {
+      const box = sec.getBoundingClientRect();
+      const foot = sec.querySelector(".foot, .cover-ref");
+      const limit = (foot ? foot.getBoundingClientRect().top - 20 : box.bottom - 40) - box.top;
+      for (const el of sec.querySelectorAll(".flow, .cover-body, .gallery-text, .plan-side, .concrete-body, .next-bottom")) {
+        const bottom = el.getBoundingClientRect().bottom - box.top;
+        if (bottom > limit) problems.push(`página ${i + 1}: el contenido se pasa ${Math.ceil(bottom - limit)} px sobre el pie`);
+      }
+      const flow = sec.querySelector(".flow");
+      const bottomBlock = sec.querySelector(".next-bottom");
+      if (flow && bottomBlock && flow.getBoundingClientRect().bottom > bottomBlock.getBoundingClientRect().top - 24)
+        problems.push(`página ${i + 1}: la garantía se pisa con el botón`);
+      for (const el of sec.querySelectorAll("*")) {
+        if (el.closest(".draft-mark, .draft-band")) continue;
+        const r = el.getBoundingClientRect();
+        if (r.width && (r.right > box.right + 0.5 || r.left < box.left - 0.5))
+          problems.push(`página ${i + 1}: un elemento se sale por el costado`);
+      }
+    });
+    return [...new Set(problems)];
+  });
 }
 
 async function rasterize(file, id) {
@@ -261,6 +292,7 @@ async function main() {
       const page = await browser.newPage({ viewport: { width: PAGE.width, height: PAGE.height } });
       await page.setContent(html, { waitUntil: "load" });
       await page.evaluate(() => document.fonts.ready);
+      const layout = await checkLayout(page);
       const raw = await page.pdf({
         width: `${PAGE.width}px`,
         height: `${PAGE.height}px`,
@@ -275,6 +307,7 @@ async function main() {
       await fs.writeFile(file, bytes);
 
       const { problems } = qa(file);
+      problems.push(...layout);
       if (pages !== 7) problems.push(`tiene ${pages} páginas (deben ser 7)`);
       if (bytes.length > MAX_BYTES) problems.push(`pesa ${(bytes.length / 1048576).toFixed(2)} MB`);
       const wa = `https://wa.me/${contact.whatsapp.number}?text=`;

@@ -5,17 +5,17 @@
       {
         "pct": 40,
         "label": "Al firmar",
-        "milestone": "Firmamos y empezamos la obra."
+        "milestone": "Firmamos y empezamos tu obra."
       },
       {
         "pct": 40,
         "label": "Terminaciones",
-        "milestone": "Fundaciones, cerramientos, techo y conexiones ya terminados."
+        "milestone": "Con fundaciones, cerramientos, techo y conexiones terminados."
       },
       {
         "pct": 20,
         "label": "Entrega",
-        "milestone": "Te entregamos tu Crudo."
+        "milestone": "Cuando te entregamos tu Crudo."
       }
     ],
     "includes": {
@@ -64,6 +64,7 @@
     },
     "not_included": [
       "Flete: depende de la zona y lo definimos con vos.",
+      "Muebles y decoración que ves en las imágenes.",
       "Todo lo que no figura en «Qué incluye»."
     ],
     "extras_footnote": "Y si querés algo que no está acá, lo armamos juntos.",
@@ -72,7 +73,7 @@
       "Un profesional asignado a tu obra, que te responde en 48 hs.",
       "Si algo falla por material o mano de obra, lo reparamos en 15 días como máximo."
     ],
-    "warranty_note": "Respondemos por cualquier daño durante la obra. El desgaste por uso normal no entra."
+    "warranty_note": "Respondemos por cualquier daño durante la obra. El desgaste por uso normal no entra en la garantía."
   },
   "models": [
     {
@@ -83,8 +84,9 @@
       "show_price_per_m2": true,
       "bedrooms": 1,
       "bathrooms": 1,
-      "deck": null,
-      "kitchen": null,
+      "deck": true,
+      "kitchen": false,
+      "feature": null,
       "delivery": {
         "short": "45 días",
         "text": "45 días contados desde la palada inicial"
@@ -97,35 +99,42 @@
           "mode": "replace",
           "lines": [
             "Inodoro, bidet y ducha frío/caliente con mampara y grifería.",
-            "Bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+            "Tocador con bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
             "Espejo flotante con luz LED y termocalefón de 80 L."
           ]
         },
         "equipamiento": {
           "lines": [
-            "Placard de melamina de 2,10 × 0,80 m."
+            "Placard de melamina de 2,10 × 0,80 m.",
+            "Deck exterior bajo el mismo techo."
           ]
         }
       },
       "highlights": [],
-      "gallery_phrase": "Abrís el frente de vidrio y la casa sigue en la galería.",
+      "gallery_phrase": "Abrís el frente de vidrio y la casa sigue en el deck.",
+      "render_note": null,
       "plan": {
-        "dimensions": null,
         "rooms": [
           {
-            "label": "Galería",
-            "x": 0.79,
-            "y": 0.11
+            "label": "Deck",
+            "at": [
+              215,
+              190
+            ]
           },
           {
             "label": "Dormitorio y estar",
-            "x": 0.8,
-            "y": 0.43
+            "at": [
+              620,
+              190
+            ]
           },
           {
-            "label": "Baño",
-            "x": 0.22,
-            "y": 0.79
+            "label": "Baño y tocador",
+            "at": [
+              1090,
+              520
+            ]
           }
         ]
       },
@@ -207,10 +216,14 @@
       "area_m2": 26.2,
       "price_gs": 148717706,
       "show_price_per_m2": true,
-      "bedrooms": null,
-      "bathrooms": null,
-      "deck": null,
-      "kitchen": "Kitchenette con desayunador y anafe.",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "deck": true,
+      "kitchen": "Kitchenette con desayunador, anafe y bacha de concreto de nuestro taller.",
+      "feature": {
+        "label": "Kitchenette",
+        "value": "Con desayunador"
+      },
       "delivery": {
         "short": "45 días",
         "text": "45 días contados desde la palada inicial"
@@ -223,7 +236,7 @@
           "mode": "replace",
           "lines": [
             "Inodoro, ducha higiénica y ducha frío/caliente con mampara y grifería.",
-            "Dos bachas de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+            "Bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
             "Espejo flotante con luz LED y termocalefón de 80 L."
           ]
         },
@@ -236,10 +249,39 @@
         }
       },
       "highlights": [],
-      "gallery_phrase": null,
+      "gallery_phrase": "Cocinás, dormís y salís al deck. Todo a un paso.",
+      "render_note": null,
       "plan": {
-        "dimensions": null,
-        "rooms": []
+        "rooms": [
+          {
+            "label": "Deck",
+            "at": [
+              330,
+              110
+            ]
+          },
+          {
+            "label": "Dormitorio y estar",
+            "at": [
+              680,
+              160
+            ]
+          },
+          {
+            "label": "Kitchenette con desayunador",
+            "at": [
+              1110,
+              170
+            ]
+          },
+          {
+            "label": "Baño",
+            "at": [
+              1460,
+              230
+            ]
+          }
+        ]
       },
       "extras": [
         {
@@ -259,7 +301,56 @@
           "price_gs": 2750000
         }
       ],
-      "images": null
+      "images": {
+        "cover": {
+          "src": "public/images/renders/crudo-2/crudo-2-a.jpg",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "gallery": [
+          {
+            "src": "public/images/renders/crudo-2/crudo-2-b.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-2/crudo-2-c.jpg",
+            "focus": {
+              "x": 0.62,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-2/crudo-2-f.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "plan": {
+          "src": "public/images/renders/crudo-2/crudo-2-d.jpg",
+          "crop": [
+            22,
+            32,
+            1572,
+            590
+          ],
+          "rotate": 90
+        },
+        "workshop": {
+          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "focus": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "render": false
+        }
+      }
     },
     {
       "id": "crudo-03",
@@ -267,16 +358,20 @@
       "area_m2": 66,
       "price_gs": 308783965,
       "show_price_per_m2": true,
-      "bedrooms": null,
-      "bathrooms": null,
-      "deck": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "deck": false,
       "kitchen": "Cocina con isla, anafe con extractor y microondas con horno empotrado.",
+      "feature": {
+        "label": "Cocina",
+        "value": "Con isla"
+      },
       "delivery": {
         "short": "2 meses",
         "text": "2 meses contados desde la palada inicial"
       },
       "whatsapp_text": "Hola! Quiero armar mi Crudo 03",
-      "access": "Dos accesos de vidrio templado de 8 mm y aluminio negro, de 4 hojas, y ventanas batientes en las habitaciones.",
+      "access": "Dos accesos de vidrio templado de 8 mm y aluminio negro, de 4 hojas. Ventanas batientes en las habitaciones.",
       "climate": "Tres aires acondicionados: dos de 12.000 BTU y uno de 24.000 BTU.",
       "includes": {
         "equipamiento": {
@@ -287,10 +382,53 @@
         }
       },
       "highlights": [],
-      "gallery_phrase": null,
+      "gallery_phrase": "Dos dormitorios y un estar con cocina que se abre afuera.",
+      "render_note": "Piscina, deck, pérgola, cobogós y parrilla se suman como adicionales.",
       "plan": {
-        "dimensions": null,
-        "rooms": []
+        "rooms": [
+          {
+            "label": "Dormitorio",
+            "at": [
+              245,
+              85
+            ]
+          },
+          {
+            "label": "Baño",
+            "at": [
+              395,
+              165
+            ]
+          },
+          {
+            "label": "Dormitorio",
+            "at": [
+              650,
+              250
+            ]
+          },
+          {
+            "label": "Cocina con isla",
+            "at": [
+              990,
+              330
+            ]
+          },
+          {
+            "label": "Estar",
+            "at": [
+              1250,
+              360
+            ]
+          },
+          {
+            "label": "Deck (adicional)",
+            "at": [
+              1060,
+              520
+            ]
+          }
+        ]
       },
       "extras": [
         {
@@ -331,7 +469,56 @@
           "custom": "A medida, la cotizamos en la reunión"
         }
       ],
-      "images": null
+      "images": {
+        "cover": {
+          "src": "public/images/renders/crudo-3/crudo-3-a.jpg",
+          "focus": {
+            "x": 0.42,
+            "y": 0.5
+          }
+        },
+        "gallery": [
+          {
+            "src": "public/images/renders/crudo-3/crudo-3-c.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-3/crudo-3-f.jpg",
+            "focus": {
+              "x": 0.6,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-3/crudo-3-h.jpg",
+            "focus": {
+              "x": 0.6,
+              "y": 0.5
+            }
+          }
+        ],
+        "plan": {
+          "src": "public/images/renders/crudo-3/crudo-3-m.png",
+          "crop": [
+            6,
+            12,
+            1408,
+            642
+          ],
+          "rotate": 90
+        },
+        "workshop": {
+          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "focus": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "render": false
+        }
+      }
     },
     {
       "id": "crudo-04",
@@ -339,16 +526,20 @@
       "area_m2": 85.05,
       "price_gs": 339186601,
       "show_price_per_m2": true,
-      "bedrooms": null,
-      "bathrooms": null,
-      "deck": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "deck": true,
       "kitchen": "Cocina con isla, anafe con extractor y microondas con horno empotrado.",
+      "feature": {
+        "label": "Quincho",
+        "value": "Con parrilla"
+      },
       "delivery": {
         "short": "2 meses",
         "text": "2 meses contados desde la palada inicial"
       },
       "whatsapp_text": "Hola! Quiero armar mi Crudo 04",
-      "access": "Dos accesos de vidrio templado de 8 mm y aluminio negro, de 4 hojas, y ventanas batientes en las habitaciones.",
+      "access": "Dos accesos de vidrio templado de 8 mm y aluminio negro, de 4 hojas. Ventanas batientes en las habitaciones.",
       "climate": "Tres aires acondicionados: dos de 12.000 BTU y uno de 24.000 BTU.",
       "includes": {
         "equipamiento": {
@@ -359,13 +550,63 @@
         }
       },
       "highlights": [
-        "Pared de cobogós de 12 m², incluida.",
-        "Módulo de parrilla incluido: mesada de hormigón, parrilla de acero inoxidable y campana."
+        "Pared de cobogós de 12 m², de nuestro taller.",
+        "Módulo de parrilla: mesada de hormigón, parrilla de acero inoxidable y campana."
       ],
-      "gallery_phrase": null,
+      "gallery_phrase": "La parrilla y la pared de cobogós ya vienen con la casa.",
+      "render_note": "La tina de concreto no está incluida.",
       "plan": {
-        "dimensions": null,
-        "rooms": []
+        "rooms": [
+          {
+            "label": "Dormitorio",
+            "at": [
+              295,
+              180
+            ]
+          },
+          {
+            "label": "Dormitorio",
+            "at": [
+              310,
+              410
+            ]
+          },
+          {
+            "label": "Baño",
+            "at": [
+              600,
+              610
+            ]
+          },
+          {
+            "label": "Cocina con isla",
+            "at": [
+              600,
+              175
+            ]
+          },
+          {
+            "label": "Estar y comedor",
+            "at": [
+              900,
+              330
+            ]
+          },
+          {
+            "label": "Quincho con parrilla",
+            "at": [
+              1150,
+              165
+            ]
+          },
+          {
+            "label": "Deck",
+            "at": [
+              1462,
+              350
+            ]
+          }
+        ]
       },
       "extras": [
         {
@@ -385,7 +626,56 @@
           "price_gs": 4000000
         }
       ],
-      "images": null
+      "images": {
+        "cover": {
+          "src": "public/images/renders/crudo-4/crudo-4-a.jpg",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        "gallery": [
+          {
+            "src": "public/images/renders/crudo-4/crudo-4-c.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-4/crudo-4-e.jpg",
+            "focus": {
+              "x": 0.72,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-4/crudo-4-h.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "plan": {
+          "src": "public/images/renders/crudo-4/crudo-4-plano.jpg",
+          "crop": [
+            24,
+            18,
+            1492,
+            652
+          ],
+          "rotate": 90
+        },
+        "workshop": {
+          "src": "public/images/proceso/fabricamos-acabado.jpg",
+          "focus": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "render": false
+        }
+      }
     }
   ]
 }

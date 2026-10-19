@@ -2,6 +2,15 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-19 — Propuestas comerciales en PDF (pedido de Diego)
+
+1. **Cuatro PDF de 7 páginas (1080 × 1920)** para mandar por WhatsApp: `npm run build:pdf`, datos en `data/models.json` y `data/contact.json`, plantilla en `pdf/template.mjs`. Salen a `pdf/out/` (no se versionan).
+2. **Las planillas de presupuesto mandan** sobre la web: superficies 30,71 / 26,2 / 66 / 85,05 m² y precio cerrado con IVA incluido. La web (31 m², precios "Desde … + IVA") se corrige después.
+3. **Datos confirmados por Diego:** CRUDO 01 incluye deck y no lleva cocina (la mesada con bacha es un tocador). El plano de los renders es el único plano; las medidas y detalles técnicos están en las planillas. Oficina: lunes a viernes, de 8:30 a 17:30. WhatsApp comercial: +595 991 574 500.
+4. **Leídos del plano de cada álbum:** CRUDO 02 = 1 dormitorio, 1 baño, kitchenette y deck; CRUDO 03 = 2 dormitorios, 1 baño (el deck del plano es el adicional de 7 × 4 m); CRUDO 04 = 2 dormitorios, 1 baño, quincho con parrilla y deck. **A confirmar con Diego:** deck incluido en 02 y 04.
+5. **Manual de Marca oficial** en `context/crudo/manual-de-marca.html` y wordmark vectorial en `public/logo/crudo-wordmark.svg`. La portada del PDF sigue la ficha técnica de la sección 06 del manual.
+6. **Renders con adicionales a la vista:** CRUDO 03 muestra piscina, deck, pérgola, cobogós y parrilla (adicionales) y CRUDO 04 una tina de concreto (no incluida); el PDF lo aclara al pie de la portada y en "Así se vive".
+
 ## 2026-10-16 — CRUDO 04, detalle mobile y amenities (pedido de Diego)
 
 1. **CRUDO 04 tiene página propia** (`/tipologias/crudo-04`) y deja de ser "Próximamente" en la home. Datos de la planilla "Presupuesto CRUDO 04": **85 m²** (85,05 m²; reemplaza los 84 m² de la tarjeta anterior), 2 habitaciones, 1 baño, cocina con isla, sala comedor y **quincho con parrilla incluido** (parrilla, pérgola metálica y deck de 7 × 4 m). Renders en `public/images/renders/crudo-4/`.

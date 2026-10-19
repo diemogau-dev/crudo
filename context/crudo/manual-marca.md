@@ -1,6 +1,6 @@
 # CRUDO — Manual de Marca (resumen operativo)
 
-> No existe todavía un documento de Manual de Marca separado en el repo. Este archivo consolida lo que el brief de proyecto (sección 12 en adelante) define como identidad de marca, para usarlo como fuente de verdad hasta que exista un manual dedicado. Actualizar este archivo, no duplicarlo, si aparece un manual formal más adelante.
+> El Manual de Marca oficial está en `context/crudo/manual-de-marca.html` (abrir en el navegador) y manda sobre este resumen. El wordmark vectorial oficial sale de ese manual: `public/logo/crudo-wordmark.svg`. Este archivo queda como resumen operativo de la web.
 
 ## Naming
 
