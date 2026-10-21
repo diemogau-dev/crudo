@@ -1,6 +1,6 @@
 # Propuestas comerciales en PDF
 
-Una propuesta de 7 páginas (1080 × 1920 px) por tipología, para mandar por WhatsApp.
+Una propuesta de 8 páginas (1080 × 1920 px) por tipología, para mandar por WhatsApp.
 
 ```bash
 npm run build:pdf                 # todas las tipologías con renders cargados
@@ -17,7 +17,7 @@ ISSUED_AT=2026-10-20 npm run build:pdf   # fecha desde la que corren los 15 día
   de la sección 06; el wordmark sale de `public/logo/crudo-wordmark.svg`.
 - Plantilla: `pdf/template.mjs`, función pura `renderProposal()` que recibe datos y devuelve HTML.
 - Build: `pdf/build.mjs` recorta y comprime los renders (sin metadatos), embebe Archivo,
-  imprime con Chromium, limpia los metadatos del PDF y corre el QA (7 páginas, < 6 MB,
+  imprime con Chromium, limpia los metadatos del PDF y corre el QA (8 páginas, < 6 MB,
   pagos que suman, link de WhatsApp, nada cortado ni pisado sobre el pie, palabras prohibidas
   vía `pdftotext`).
 - Salida: `pdf/out/Crudo-0X.pdf`. Páginas rasterizadas para revisar: `pdf/.cache/qa/`.

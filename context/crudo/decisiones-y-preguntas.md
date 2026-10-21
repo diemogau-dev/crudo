@@ -8,6 +8,7 @@
 2. **Superficie en m² enteros:** 31 / 26 / 66 / 85 m².
 3. Sin "Primera serie" en la portada; "Así se vive por dentro" (solo interiores); lema "Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos tu hogar."; "de nuestra fábrica" en lugar de "de nuestro taller"; revestimiento de placas es **interior**; pilares metálicos de 10 mm; conexiones eléctricas y sanitarias embutidas incluidas; "listos para empezar de inmediato".
 4. **ANDE fuera de los adicionales:** se conversa al visitar el terreno. Adicionales: pozo ciego y cámara séptica (más los opcionales de CRUDO 03).
+5. **El precio aparece solo en la página "Tu Crudo 0X, cerrado".** La portada vende el producto (render, nombre, m², plazo y datos) y se suma una página completa de renders ("Más de tu Crudo 0X"): el PDF pasa a 8 páginas.
 
 ## 2026-10-19 — Propuestas comerciales en PDF (pedido de Diego)
 

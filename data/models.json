@@ -181,6 +181,45 @@
             }
           }
         ],
+        "showcase": [
+          {
+            "src": "public/images/renders/crudo-1/crudo-1-k.jpg",
+            "focus": {
+              "x": 0.55,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-1/crudo-1-a.jpg",
+            "trim": {
+              "bottom": 0.12
+            },
+            "focus": {
+              "x": 0.55,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-1/crudo-1-e.jpg",
+            "trim": {
+              "bottom": 0.12
+            },
+            "focus": {
+              "x": 0.45,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-1/crudo-1-b.jpg",
+            "trim": {
+              "bottom": 0.12
+            },
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
         "plan": {
           "src": "public/images/renders/crudo-1/crudo-1-f.jpg",
           "crop": [
@@ -307,6 +346,29 @@
             "src": "public/images/renders/crudo-2/crudo-2-f.jpg",
             "focus": {
               "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "showcase": [
+          {
+            "src": "public/images/renders/crudo-2/crudo-2-g.jpg",
+            "focus": {
+              "x": 0.6,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-2/crudo-2-e.jpg",
+            "focus": {
+              "x": 0.6,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-2/crudo-2-a.jpg",
+            "focus": {
+              "x": 0.75,
               "y": 0.5
             }
           }
@@ -467,6 +529,36 @@
             }
           }
         ],
+        "showcase": [
+          {
+            "src": "public/images/renders/crudo-3/crudo-3-d.png",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-3/crudo-3-g.jpg",
+            "focus": {
+              "x": 0.55,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-3/crudo-3-e.jpg",
+            "focus": {
+              "x": 0.6,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-3/crudo-3-b.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
         "plan": {
           "src": "public/images/renders/crudo-3/crudo-3-m.png",
           "crop": [
@@ -606,6 +698,29 @@
           },
           {
             "src": "public/images/renders/crudo-4/crudo-4-h.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "showcase": [
+          {
+            "src": "public/images/renders/crudo-4/crudo-4-d.jpg",
+            "focus": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-4/crudo-4-f.jpg",
+            "focus": {
+              "x": 0.62,
+              "y": 0.5
+            }
+          },
+          {
+            "src": "public/images/renders/crudo-4/crudo-4-g.jpg",
             "focus": {
               "x": 0.5,
               "y": 0.5

@@ -179,11 +179,17 @@ async function modelAssets(model, shared) {
     im.gallery.map((spec, i) => slotImage(spec, SLOTS.gallery[i])),
   );
   const plan = await planImage(im.plan, model.plan.rooms);
+  const showcaseSlots = SLOTS.showcase[im.showcase?.length];
+  if (!showcaseSlots) throw new Error(`${model.name}: la página de renders lleva 3 o 4 imágenes`);
+  const showcase = await Promise.all(
+    im.showcase.map((spec, i) => slotImage(spec, showcaseSlots[i])),
+  );
   const workshop = await slotImage(im.workshop, SLOTS.workshop);
   return {
     ...shared,
     cover,
     gallery,
+    showcase,
     plan: plan.uri,
     planBox: plan.box,
     planMarkers: plan.markers,
@@ -236,7 +242,7 @@ async function checkLayout(page) {
       const box = sec.getBoundingClientRect();
       const foot = sec.querySelector(".foot, .cover-ref");
       const limit = (foot ? foot.getBoundingClientRect().top - 20 : box.bottom - 40) - box.top;
-      for (const el of sec.querySelectorAll(".flow, .cover-body, .gallery-text, .plan-side, .concrete-body, .next-bottom")) {
+      for (const el of sec.querySelectorAll(".flow, .cover-body, .gallery-text, .shots, .plan-side, .concrete-body, .next-bottom")) {
         const bottom = el.getBoundingClientRect().bottom - box.top;
         if (bottom > limit) problems.push(`página ${i + 1}: el contenido se pasa ${Math.ceil(bottom - limit)} px sobre el pie`);
       }
@@ -310,7 +316,7 @@ async function main() {
 
       const { problems } = qa(file);
       problems.push(...layout);
-      if (pages !== 7) problems.push(`tiene ${pages} páginas (deben ser 7)`);
+      if (pages !== 8) problems.push(`tiene ${pages} páginas (deben ser 8)`);
       if (bytes.length > MAX_BYTES) problems.push(`pesa ${(bytes.length / 1048576).toFixed(2)} MB`);
       const wa = `https://wa.me/${contact.whatsapp.number}?text=`;
       if (!links.some((l) => l.startsWith(wa))) problems.push("falta el link de WhatsApp");

@@ -1,4 +1,4 @@
-// Plantilla de la propuesta comercial (7 páginas de 1080 × 1920 px).
+// Plantilla de la propuesta comercial (8 páginas de 1080 × 1920 px).
 // Es una función pura: recibe datos ya resueltos y devuelve HTML. El build
 // (pdf/build.mjs) prepara imágenes, fuentes y logo; un futuro ERP puede llamar
 // a renderProposal con sus propios datos y reutilizar el mismo diseño.
@@ -13,12 +13,26 @@ export const PAGE = { width: 1080, height: 1920 };
 // proporciones antes de embeberlo. El plano se ajusta dentro de su caja
 // máxima respetando la proporción del dibujo.
 export const SLOTS = {
-  cover: { width: 1080, height: 740 },
+  cover: { width: 1080, height: 960 },
   gallery: [
     { width: 1080, height: 520 },
     { width: 652, height: 700 },
     { width: 412, height: 700 },
   ],
+  // Página completa de renders: el layout depende de cuántas imágenes haya.
+  showcase: {
+    3: [
+      { width: 1080, height: 820 },
+      { width: 532, height: 780 },
+      { width: 532, height: 780 },
+    ],
+    4: [
+      { width: 1080, height: 560 },
+      { width: 532, height: 520 },
+      { width: 532, height: 520 },
+      { width: 1080, height: 520 },
+    ],
+  },
   planMax: { width: 600, height: 1440 },
   workshop: { width: 1080, height: 600 },
 };
@@ -144,10 +158,10 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   const note = model.render_note ? ` · ${esc(model.render_note)}` : "";
 
   // Pie: firma con el wordmark y, si hay renders, la línea de imagen referencial.
-  const footer = (renders) => `
+  const footer = (renders, renderNote) => `
     <footer class="foot">
       ${wordmark(W, 112)}
-      ${renders ? `<span class="ref">Imagen referencial</span>` : ""}
+      ${renders ? `<span class="ref">Imagen referencial${renderNote ? ` · ${esc(renderNote)}` : ""}</span>` : ""}
     </footer>`;
 
   const page = (cls, body) =>
@@ -173,18 +187,6 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
           .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
           .join("")}
       </dl>
-      <div class="boxes">
-        <div class="box">
-          <div class="label">Precio cerrado</div>
-          <div class="box-value">${price}</div>
-          <div class="box-sub">IVA incluido</div>
-        </div>
-        <div class="box">
-          <div class="label">Entrega</div>
-          <div class="box-value">${esc(model.delivery.short)}</div>
-          <div class="box-sub">desde la palada inicial</div>
-        </div>
-      </div>
       <a class="cta-bar" href="${esc(waUrl)}"><span>Armemos tu Crudo</span>${arrow}</a>
     </div>
     <span class="ref cover-ref">Imagen referencial${note}</span>`,
@@ -209,7 +211,25 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     ${footer(true)}`,
   );
 
-  // 3 · El plano
+  // 3 · Página completa de renders
+  const shots = assets.showcase;
+  const showcaseSlots = SLOTS.showcase[shots.length];
+  const showcase = page(
+    "dark showcase",
+    `
+    ${kicker("03", `Más de tu ${esc(model.name)}`)}
+    <div class="shots">
+      ${shots
+        .map(
+          (src, i) =>
+            `<img src="${src}" alt="" style="width:${showcaseSlots[i].width}px;height:${showcaseSlots[i].height}px">`,
+        )
+        .join("")}
+    </div>
+    ${footer(true, model.render_note)}`,
+  );
+
+  // 4 · El plano
   const markers = assets.planMarkers
     .map(
       (m, i) =>
@@ -219,7 +239,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   const plan = page(
     "light plan",
     `
-    ${kicker("03", "El plano")}
+    ${kicker("04", "El plano")}
     <div class="plan-row">
       <div class="plan-img" style="width:${assets.planBox.width}px;height:${assets.planBox.height}px">
         <img src="${assets.plan}" alt="">
@@ -250,7 +270,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   const includes = page(
     "dark includes",
     `
-    ${kicker("04", "Qué incluye")}
+    ${kicker("05", "Qué incluye")}
     <div class="flow">
       <h2 class="display h2">Todo esto va en el precio.</h2>
       ${highlights}
@@ -290,7 +310,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     `
     <img class="workshop" src="${assets.workshop}" alt="">
     <div class="concrete-body">
-      ${kicker("05", "Por qué hormigón armado")}
+      ${kicker("06", "Por qué hormigón armado")}
       <h2 class="display h2">Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos tu hogar.</h2>
       <ol class="list">
         ${reasons
@@ -321,7 +341,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   const pricing = page(
     "dark pricing",
     `
-    ${kicker("06", `Tu ${esc(model.name)}, cerrado`)}
+    ${kicker("07", `Tu ${esc(model.name)}, cerrado`)}
     <div class="flow">
       <div class="price-xl">${price}</div>
       <p class="price-sub"><strong>IVA incluido.</strong> Lo que ves es lo que pagás.</p>
@@ -364,7 +384,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   const next = page(
     "light next",
     `
-    ${kicker("07", "Cómo seguimos")}
+    ${kicker("08", "Cómo seguimos")}
     <div class="flow">
       <h2 class="display h2">Armemos tu Crudo.</h2>
       <ol class="list steps">
@@ -402,7 +422,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
 <style>${css(assets.fonts)}</style>
 </head>
 <body>
-${cover}${gallery}${plan}${includes}${concrete}${pricing}${next}
+${cover}${gallery}${showcase}${plan}${includes}${concrete}${pricing}${next}
 </body>
 </html>`;
 }
@@ -474,7 +494,7 @@ strong { font-weight: 600; }
   line-height: 0.98;
 }
 .h2 { font-size: 56px; }
-.tab, .big-data, .amt, .pct, .price-xl, .box-value, .area, dd { font-variant-numeric: tabular-nums; }
+.tab, .big-data, .amt, .pct, .price-xl, .area, dd { font-variant-numeric: tabular-nums; }
 .dot { margin: 0 0.5em; opacity: 0.5; }
 .arrow { display: inline-block; width: 34px; height: 20px; flex: none; }
 .pending { background: var(--cement); color: var(--iron); font-weight: 600; padding: 0 0.2em; }
@@ -522,10 +542,7 @@ strong { font-weight: 600; }
 .facts div { display: flex; justify-content: space-between; align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--line); }
 .facts dt { font-size: 28px; }
 .facts dd { font-weight: 500; font-size: 30px; }
-.boxes { display: flex; gap: 20px; margin-top: 32px; }
-.box { flex: 1; border: 1px solid var(--line); padding: 22px 24px 20px; }
-.box-value { font-weight: 500; font-size: 42px; line-height: 1.1; margin-top: 12px; white-space: nowrap; letter-spacing: -0.01em; }
-.box-sub { font-size: 24px; margin-top: 4px; color: var(--muted); }
+.shots { position: absolute; top: 140px; left: 0; width: 1080px; display: flex; flex-wrap: wrap; gap: 16px; }
 .cta-bar {
   display: flex; justify-content: space-between; align-items: center;
   margin-top: 32px; padding: 30px 32px;
