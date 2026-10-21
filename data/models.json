@@ -23,14 +23,14 @@
         "title": "Estructura",
         "lines": [
           "Fundaciones de hormigón armado: dados, vigas y platea.",
-          "Muros de placas de hormigón armado de nuestro taller.",
-          "Techo metálico termoaislante sobre estructura metálica, con canaletas y bajadas."
+          "Muros de placas de hormigón armado de nuestra fábrica.",
+          "Pilares metálicos de 10 mm y techo metálico termoaislante, con canaletas y bajadas."
         ]
       },
       "terminaciones": {
         "title": "Terminaciones",
         "lines": [
-          "Revestimiento exterior de placas de concreto de nuestro taller y tabiques con lana de vidrio.",
+          "Revestimiento interior de placas de concreto de nuestra fábrica y tabiques con lana de vidrio.",
           "{access}",
           "Pisos, revestimiento de baño, pintura completa y limpieza final de obra."
         ]
@@ -39,7 +39,7 @@
         "title": "Baño",
         "lines": [
           "Inodoro y ducha frío/caliente con mampara y grifería.",
-          "Bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+          "Bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado.",
           "Espejo flotante con luz LED y termocalefón de 80 L."
         ]
       },
@@ -50,8 +50,8 @@
       "instalaciones": {
         "title": "Instalaciones",
         "lines": [
-          "Eléctrica completa: tablero, puesta a tierra, disyuntor diferencial y protección contra sobretensión.",
-          "Tomas, luces y ductos para internet y TV. Sanitaria completa."
+          "Conexiones eléctricas y sanitarias, embutidas.",
+          "Tablero, puesta a tierra, disyuntor diferencial, protección contra sobretensión, tomas, luces y ductos para internet y TV."
         ]
       },
       "clima": {
@@ -64,6 +64,7 @@
     },
     "not_included": [
       "Flete: depende de la zona y lo definimos con vos.",
+      "Conexión a la red de ANDE: la vemos juntos cuando visitemos tu terreno.",
       "Muebles y decoración que ves en las imágenes.",
       "Todo lo que no figura en «Qué incluye»."
     ],
@@ -73,7 +74,9 @@
       "Un profesional asignado a tu obra, que te responde en 48 hs.",
       "Si algo falla por material o mano de obra, lo reparamos en 15 días como máximo."
     ],
-    "warranty_note": "Respondemos por cualquier daño durante la obra. El desgaste por uso normal no entra en la garantía."
+    "warranty_note": "Respondemos por cualquier daño durante la obra. El desgaste por uso normal no entra en la garantía.",
+    "contingency_pct": 5,
+    "price_rounding_gs": 100000
   },
   "models": [
     {
@@ -99,7 +102,7 @@
           "mode": "replace",
           "lines": [
             "Inodoro, bidet y ducha frío/caliente con mampara y grifería.",
-            "Tocador con bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+            "Tocador con bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado.",
             "Espejo flotante con luz LED y termocalefón de 80 L."
           ]
         },
@@ -111,7 +114,7 @@
         }
       },
       "highlights": [],
-      "gallery_phrase": "Abrís el frente de vidrio y la casa sigue en el deck.",
+      "gallery_phrase": "Un módulo conectado con la naturaleza.",
       "render_note": null,
       "plan": {
         "rooms": [
@@ -123,7 +126,7 @@
             ]
           },
           {
-            "label": "Dormitorio y estar",
+            "label": "Dormitorio y escritorio",
             "at": [
               620,
               190
@@ -142,14 +145,6 @@
         {
           "name": "Pozo ciego y cámara séptica",
           "price_gs": 4860000
-        },
-        {
-          "name": "Pilastra para el medidor de ANDE",
-          "price_gs": 1062500
-        },
-        {
-          "name": "Bajada eléctrica desde la red de ANDE",
-          "price_gs": 3712500
         }
       ],
       "images": {
@@ -172,9 +167,9 @@
             }
           },
           {
-            "src": "public/images/renders/crudo-1/crudo-1-k.jpg",
+            "src": "public/images/renders/crudo-1/crudo-1-j.jpg",
             "focus": {
-              "x": 0.62,
+              "x": 0.55,
               "y": 0.5
             }
           },
@@ -215,7 +210,7 @@
       "bedrooms": 1,
       "bathrooms": 1,
       "deck": true,
-      "kitchen": "Kitchenette con desayunador, anafe y bacha de concreto de nuestro taller.",
+      "kitchen": "Kitchenette con desayunador, anafe y bacha de concreto de nuestra fábrica.",
       "feature": {
         "label": "Kitchenette",
         "value": "Con desayunador"
@@ -232,7 +227,7 @@
           "mode": "replace",
           "lines": [
             "Inodoro, ducha higiénica y ducha frío/caliente con mampara y grifería.",
-            "Bacha de concreto de nuestro taller sobre mesada de mármol blanco veteado.",
+            "Bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado.",
             "Espejo flotante con luz LED y termocalefón de 80 L."
           ]
         },
@@ -240,7 +235,7 @@
           "title": "Cocina y equipamiento",
           "lines": [
             "Placard.",
-            "Pared de cobogós: celosía de concreto de nuestro taller."
+            "Pared de cobogós: celosía de concreto de nuestra fábrica."
           ]
         }
       },
@@ -283,14 +278,6 @@
         {
           "name": "Pozo ciego y cámara séptica",
           "price_gs": 4860000
-        },
-        {
-          "name": "Pilastra para el medidor de ANDE",
-          "price_gs": 1062500
-        },
-        {
-          "name": "Bajada eléctrica desde la red de ANDE",
-          "price_gs": 3712500
         }
       ],
       "images": {
@@ -428,14 +415,6 @@
           "price_gs": 4860000
         },
         {
-          "name": "Pilastra para el medidor de ANDE",
-          "price_gs": 1062500
-        },
-        {
-          "name": "Bajada eléctrica desde la red de ANDE",
-          "price_gs": 3712500
-        },
-        {
           "name": "Pared de cobogós (7 m²)",
           "price_gs": 3591000
         },
@@ -538,7 +517,7 @@
         }
       },
       "highlights": [
-        "Pared de cobogós de 12 m², de nuestro taller.",
+        "Pared de cobogós de 12 m², de nuestra fábrica.",
         "Módulo de parrilla: mesada de hormigón, parrilla de acero inoxidable y campana."
       ],
       "gallery_phrase": "La parrilla y la pared de cobogós ya vienen con la casa.",
@@ -600,14 +579,6 @@
         {
           "name": "Pozo ciego y cámara séptica",
           "price_gs": 4860000
-        },
-        {
-          "name": "Pilastra para el medidor de ANDE",
-          "price_gs": 1062500
-        },
-        {
-          "name": "Bajada eléctrica desde la red de ANDE",
-          "price_gs": 3712500
         }
       ],
       "images": {

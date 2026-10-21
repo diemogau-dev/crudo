@@ -2,6 +2,13 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-21 — Ajustes de Diego a las propuestas PDF
+
+1. **Precio de venta = precio de la planilla + 5 % de imprevistos, redondeado a Gs 100.000** (se calcula en el build: `contingency_pct` y `price_rounding_gs` en `data/models.json`). Quedan: CRUDO 01 Gs 160.100.000 · 02 Gs 156.200.000 · 03 Gs 324.200.000 · 04 Gs 356.100.000.
+2. **Superficie en m² enteros:** 31 / 26 / 66 / 85 m².
+3. Sin "Primera serie" en la portada; "Así se vive por dentro" (solo interiores); lema "Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos tu hogar."; "de nuestra fábrica" en lugar de "de nuestro taller"; revestimiento de placas es **interior**; pilares metálicos de 10 mm; conexiones eléctricas y sanitarias embutidas incluidas; "listos para empezar de inmediato".
+4. **ANDE fuera de los adicionales:** se conversa al visitar el terreno. Adicionales: pozo ciego y cámara séptica (más los opcionales de CRUDO 03).
+
 ## 2026-10-19 — Propuestas comerciales en PDF (pedido de Diego)
 
 1. **Cuatro PDF de 7 páginas (1080 × 1920)** para mandar por WhatsApp: `npm run build:pdf`, datos en `data/models.json` y `data/contact.json`, plantilla en `pdf/template.mjs`. Salen a `pdf/out/` (no se versionan).

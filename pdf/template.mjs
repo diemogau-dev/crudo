@@ -63,6 +63,17 @@ export function paymentSchedule(price, plan) {
   return plan.map((step, i) => ({ ...step, amount: amounts[i] }));
 }
 
+// Precio de venta: precio de la planilla más el margen de imprevistos,
+// redondeado a la unidad indicada (hoy +5 %, a los Gs 100.000 más cercanos).
+export function salePrice(model, common) {
+  const raw = model.price_gs * (1 + (common.contingency_pct ?? 0) / 100);
+  const unit = common.price_rounding_gs ?? 1;
+  return Math.round(raw / unit) * unit;
+}
+
+// Superficie como se comunica: en m² enteros.
+export const displayArea = (model) => Math.round(model.area_m2);
+
 export function pricePerM2(price, area) {
   return Math.round(price / area / 1000) * 1000;
 }
@@ -122,11 +133,12 @@ function draftLayer(pending) {
 }
 
 export function renderProposal({ model, common, contact, assets, issuedAt, pending = [] }) {
-  const price = formatGs(model.price_gs);
+  const sale = salePrice(model, common);
+  const price = formatGs(sale);
   const waUrl = `https://wa.me/${contact.whatsapp.number}?text=${encodeURIComponent(model.whatsapp_text)}`;
   const draft = draftLayer(pending);
   const blocks = includeBlocks(model, common);
-  const area = `${formatNumber(model.area_m2)} m²`;
+  const area = `${formatNumber(displayArea(model))} m²`;
   const g = assets.gallery;
   const W = assets.wordmark;
   const note = model.render_note ? ` · ${esc(model.render_note)}` : "";
@@ -147,7 +159,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     `
     <header class="cover-head">
       ${wordmark(W, 210)}
-      <div class="cover-tag">Propuesta comercial<br>Primera serie · ${issuedAt.getFullYear()}</div>
+      <div class="cover-tag">Propuesta comercial<br>Asunción · ${issuedAt.getFullYear()}</div>
     </header>
     <img class="cover-img" src="${assets.cover}" alt="">
     <div class="cover-body">
@@ -182,7 +194,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   const gallery = page(
     "dark gallery",
     `
-    ${kicker("02", "Así se vive")}
+    ${kicker("02", "Así se vive por dentro")}
     <img class="g0" src="${g[0]}" alt="">
     <div class="g-row">
       <img class="g1" src="${g[1]}" alt="">
@@ -223,7 +235,6 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
             .map((r, i) => `<li><span class="num">${String(i + 1).padStart(2, "0")}</span><span>${esc(r.label)}</span></li>`)
             .join("")}
         </ol>
-        <p class="plan-note">Planta ilustrativa, sin escala. Las medidas y especificaciones van en tu presupuesto.</p>
       </div>
     </div>
     ${footer(true)}`,
@@ -280,7 +291,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     <img class="workshop" src="${assets.workshop}" alt="">
     <div class="concrete-body">
       ${kicker("05", "Por qué hormigón armado")}
-      <h2 class="display h2">Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos la casa.</h2>
+      <h2 class="display h2">Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos tu hogar.</h2>
       <ol class="list">
         ${reasons
           .map(
@@ -316,7 +327,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
       <p class="price-sub"><strong>IVA incluido.</strong> Lo que ves es lo que pagás.</p>
       ${
         model.show_price_per_m2
-          ? `<p class="ppm">${formatGs(pricePerM2(model.price_gs, model.area_m2))} por m²</p>`
+          ? `<p class="ppm">${formatGs(pricePerM2(sale, displayArea(model)))} por m²</p>`
           : ""
       }
       <div class="label sub">Cómo lo pagás</div>
@@ -332,6 +343,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
           .join("")}
       </table>
       <p class="validity">Precio válido por ${common.valid_days} días, desde el ${formatDate(issuedAt)}.</p>
+      <p class="ready">Estamos listos para empezar tu obra de inmediato.</p>
       <div class="label sub">No incluye</div>
       <ul class="plain">${common.not_included.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>
       <div class="label sub">Sumale a tu Crudo</div>
@@ -346,7 +358,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     ["Vení a conocernos", "Te esperamos en la oficina de Sucre para mostrarte el sistema y resolver tus dudas."],
     ["Conocemos tu terreno", "Lo vemos con vos para ubicar tu Crudo y planificar la obra."],
     ["Definimos el diseño de tu Crudo", "Ajustamos juntos el diseño y los adicionales que quieras sumar, con precio cerrado."],
-    ["Firmamos y arrancamos", `Con la firma y la entrega inicial del 40 % empezamos. Tu casa queda lista en ${model.delivery.text}.`],
+    ["Firmamos y arrancamos", `Estamos listos para empezar de inmediato: con la firma y la entrega inicial del 40 % arrancamos, y tu casa queda lista en ${model.delivery.text}.`],
   ];
   const hours = contact.office.hours ? `${esc(contact.office.hours)}.` : pendingMark("horario");
   const next = page(
@@ -546,7 +558,6 @@ strong { font-weight: 600; }
 .rooms { margin-top: 40px; border-top: 1px solid var(--line); }
 .rooms li { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 28px; line-height: 1.3; }
 .rooms .num, .list .num { font-weight: 600; font-size: 21px; letter-spacing: 0.1em; color: var(--muted); padding-top: 5px; flex: none; font-variant-numeric: tabular-nums; }
-.plan-note { margin-top: auto; font-size: 24px; line-height: 1.45; color: var(--muted); }
 
 /* 4 · Qué incluye */
 .highlights { margin-top: 28px; background: var(--alabaster); color: var(--iron); padding: 26px 30px; }
@@ -584,6 +595,7 @@ strong { font-weight: 600; }
 .schedule .ms strong { display: block; font-size: 28px; line-height: 1.2; }
 .schedule .ms span { display: block; font-size: 26px; line-height: 1.35; margin-top: 4px; color: var(--muted); }
 .validity { font-weight: 600; font-size: 28px; margin-top: 22px; }
+.ready { font-size: 28px; margin-top: 4px; }
 .plain li { font-size: 28px; line-height: 1.5; }
 .plain li::before, .warranty li::before { content: "— "; }
 .extras li { display: flex; justify-content: space-between; gap: 24px; font-size: 28px; line-height: 1.3; padding: 12px 0; border-top: 1px solid var(--line); }
