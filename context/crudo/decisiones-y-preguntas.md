@@ -2,6 +2,14 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-21 (b) — PDF genérico y precio de planilla
+
+1. **Se revierte el +5 %:** los imprevistos ya están en el costo. Precio = planilla redondeado **hacia arriba** a Gs 100.000: CRUDO 01 Gs 152.500.000 · 02 Gs 148.800.000 · 03 Gs 308.800.000 · 04 Gs 339.200.000.
+2. **PDF genérico:** sin fechas ni datos del cliente; "Precio válido por 15 días" y Diego controla la fecha de envío. Sin precio por m².
+3. No se habla de "series" (confunde). Sección 6: "Por qué hormigón armado y concreto de alto performance"; revestimiento interior de concreto de alto performance; cámara de aire con aislante (fresca en verano, cálida en invierno).
+4. Respuesta del profesional asignado: **en el día** (Diego lo cambia también en el contrato).
+5. Pozo ciego y cámara séptica pasa a "No incluye", sin monto. Link a Google Maps de la oficina en el PDF.
+
 ## 2026-10-21 — Ajustes de Diego a las propuestas PDF
 
 1. **Precio de venta = precio de la planilla + 5 % de imprevistos, redondeado a Gs 100.000** (se calcula en el build: `contingency_pct` y `price_rounding_gs` en `data/models.json`). Quedan: CRUDO 01 Gs 160.100.000 · 02 Gs 156.200.000 · 03 Gs 324.200.000 · 04 Gs 356.100.000.

@@ -7,7 +7,8 @@
   "office": {
     "address": "Sucre 1862 casi José Campos Lanzoni",
     "city": "Asunción",
-    "hours": "Lunes a viernes, de 8:30 a 17:30"
+    "hours": "Lunes a viernes, de 8:30 a 17:30",
+    "maps_url": "https://www.google.com/maps/place/Mariscal+Antonio+Sucre+1862,+Asunci%C3%B3n+001408/@-25.291727,-57.5729162,17z/data=!3m1!4b1!4m6!3m5!1s0x945da8a3750be4d9:0xb86d5835d3a5577d!8m2!3d-25.291727!4d-57.571521!16s%2Fg%2F11y8lxrs0b"
   },
   "instagram": {
     "handle": "@crudohomes",

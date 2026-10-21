@@ -59,38 +59,15 @@ export function formatNumber(value, decimals = 2) {
   });
 }
 
-const MONTHS = [
-  "enero", "febrero", "marzo", "abril", "mayo", "junio",
-  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
-];
-
-export function formatDate(date) {
-  return `${date.getDate()} de ${MONTHS[date.getMonth()]} de ${date.getFullYear()}`;
-}
-
-// 40 % y 40 % redondeados al millar; el 20 % es el resto, así suman exacto.
-export function paymentSchedule(price, plan) {
-  const amounts = plan.map((step, i) =>
-    i < plan.length - 1 ? Math.round((price * step.pct) / 100 / 1000) * 1000 : 0,
-  );
-  amounts[amounts.length - 1] = price - amounts.reduce((a, b) => a + b, 0);
-  return plan.map((step, i) => ({ ...step, amount: amounts[i] }));
-}
-
-// Precio de venta: precio de la planilla más el margen de imprevistos,
-// redondeado a la unidad indicada (hoy +5 %, a los Gs 100.000 más cercanos).
+// Precio de venta: precio de la planilla (los imprevistos ya están en el
+// costo) redondeado hacia arriba a la unidad indicada (hoy Gs 100.000).
 export function salePrice(model, common) {
-  const raw = model.price_gs * (1 + (common.contingency_pct ?? 0) / 100);
   const unit = common.price_rounding_gs ?? 1;
-  return Math.round(raw / unit) * unit;
+  return Math.ceil(model.price_gs / unit) * unit;
 }
 
 // Superficie como se comunica: en m² enteros.
 export const displayArea = (model) => Math.round(model.area_m2);
-
-export function pricePerM2(price, area) {
-  return Math.round(price / area / 1000) * 1000;
-}
 
 const pendingMark = (label) =>
   `<span class="pending">[PENDIENTE: ${esc(label)}]</span>`;
@@ -146,7 +123,7 @@ function draftLayer(pending) {
     <div class="draft-mark">Borrador</div>`;
 }
 
-export function renderProposal({ model, common, contact, assets, issuedAt, pending = [] }) {
+export function renderProposal({ model, common, contact, assets, pending = [] }) {
   const sale = salePrice(model, common);
   const price = formatGs(sale);
   const waUrl = `https://wa.me/${contact.whatsapp.number}?text=${encodeURIComponent(model.whatsapp_text)}`;
@@ -173,7 +150,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     `
     <header class="cover-head">
       ${wordmark(W, 210)}
-      <div class="cover-tag">Propuesta comercial<br>Asunción · ${issuedAt.getFullYear()}</div>
+      <div class="cover-tag">Propuesta comercial<br>Asunción · Paraguay</div>
     </header>
     <img class="cover-img" src="${assets.cover}" alt="">
     <div class="cover-body">
@@ -294,11 +271,11 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
   const reasons = [
     [
       "Hecha para durar",
-      "Cada placa sale de nuestra fábrica, curada por expertos, y se monta exactamente según planos y diseño. Muros, revestimientos y fundaciones pensados para durar décadas.",
+      "Cada pieza sale de nuestra fábrica, curada por expertos, y se monta exactamente según planos y diseño. Muros, revestimientos y fundaciones pensados para durar décadas.",
     ],
     [
-      "Fresca y silenciosa",
-      "La masa del hormigón frena el calor del día y el ruido de afuera. Adentro, la temperatura cambia más despacio.",
+      "Fresca en verano, cálida en invierno",
+      "Una cámara de aire con material aislante mantiene la casa fresca con el calor paraguayo y cálida en invierno. La masa del hormigón, además, frena el ruido de afuera.",
     ],
     [
       "No arde ni se pudre",
@@ -310,7 +287,7 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     `
     <img class="workshop" src="${assets.workshop}" alt="">
     <div class="concrete-body">
-      ${kicker("06", "Por qué hormigón armado")}
+      ${kicker("06", "Por qué hormigón armado y concreto de alto performance")}
       <h2 class="display h2">Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos tu hogar.</h2>
       <ol class="list">
         ${reasons
@@ -320,10 +297,10 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
           )
           .join("")}
       </ol>
-      <p class="series">${esc(model.name)} es parte de la primera serie de la marca: casas de hormigón armado con sistema propio.</p>
       <div class="touch">
         <div class="label">Pasá a conocernos en la oficina</div>
         <p>Te esperamos sobre Sucre, en Asunción, para que conozcas nuestro sistema y la solidez de nuestros productos: placas, revestimientos, cobogós, bachas y más.</p>
+        <a class="map-link" href="${esc(contact.office.maps_url)}">Cómo llegar: ${esc(contact.office.address)}, ${esc(contact.office.city)} ${arrow}</a>
       </div>
     </div>
     ${footer(assets.workshopIsRender)}`,
@@ -345,11 +322,6 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
     <div class="flow">
       <div class="price-xl">${price}</div>
       <p class="price-sub"><strong>IVA incluido.</strong> Lo que ves es lo que pagás.</p>
-      ${
-        model.show_price_per_m2
-          ? `<p class="ppm">${formatGs(pricePerM2(sale, displayArea(model)))} por m²</p>`
-          : ""
-      }
       <div class="label sub">Cómo lo pagás</div>
       <table class="schedule">
         ${common.payment_plan
@@ -362,12 +334,16 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
           )
           .join("")}
       </table>
-      <p class="validity">Precio válido por ${common.valid_days} días, desde el ${formatDate(issuedAt)}.</p>
+      <p class="validity">Precio válido por ${common.valid_days} días.</p>
       <p class="ready">Estamos listos para empezar tu obra de inmediato.</p>
       <div class="label sub">No incluye</div>
       <ul class="plain">${common.not_included.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>
-      <div class="label sub">Sumale a tu Crudo</div>
-      <ul class="extras">${extras}</ul>
+      ${
+        model.extras.length
+          ? `<div class="label sub">Sumale a tu Crudo</div>
+      <ul class="extras">${extras}</ul>`
+          : ""
+      }
       <p class="footnote">${esc(common.extras_footnote)}</p>
     </div>
     ${footer(false)}`,
@@ -398,13 +374,12 @@ export function renderProposal({ model, common, contact, assets, issuedAt, pendi
       <div class="warranty">
         <div class="label">Tu garantía</div>
         <ul>${common.warranty.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>
-        <p class="note">${esc(common.warranty_note)}</p>
       </div>
     </div>
     <div class="next-bottom">
       <a class="button" href="${esc(waUrl)}"><span>Armemos tu Crudo</span>${arrow}</a>
       <div class="office">
-        <p><strong>Oficina:</strong> ${esc(contact.office.address)}, ${esc(contact.office.city)}.</p>
+        <p><strong>Oficina:</strong> <a class="u" href="${esc(contact.office.maps_url)}">${esc(contact.office.address)}, ${esc(contact.office.city)}</a>.</p>
         <p><strong>Horario:</strong> ${hours}</p>
         <p class="links">
           <a href="${esc(contact.instagram.url)}">${esc(contact.instagram.handle)}</a><span class="dot">·</span><a href="${esc(contact.web.url)}">${esc(contact.web.domain)}</a><span class="dot">·</span><a href="${esc(waUrl)}">${esc(contact.whatsapp.display)}</a>
@@ -581,7 +556,7 @@ strong { font-weight: 600; }
 .highlights p { font-weight: 500; font-size: 28px; line-height: 1.38; margin-top: 8px; }
 .blocks { margin-top: 28px; }
 .block { display: flex; gap: 28px; padding: 16px 0; border-top: 1px solid var(--line); }
-.block-title { flex: none; width: 236px; font-size: 19px; letter-spacing: 0.2em; padding-top: 6px; }
+.block-title { flex: none; width: 206px; font-size: 19px; letter-spacing: 0.2em; padding-top: 6px; }
 .block-body p { font-size: 28px; line-height: 1.4; }
 .block-body p + p { margin-top: 2px; }
 .closing { font-weight: 500; font-size: 28px; line-height: 1.4; padding-top: 18px; border-top: 1px solid var(--line); }
@@ -595,14 +570,14 @@ strong { font-weight: 600; }
 .list li { display: flex; gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); }
 .list h3 { font-weight: 600; font-size: 30px; line-height: 1.3; }
 .list p { font-size: 28px; line-height: 1.45; margin-top: 4px; }
-.series { font-size: 28px; line-height: 1.45; padding-top: 18px; border-top: 1px solid var(--line); }
 .touch { margin-top: 28px; background: var(--iron); color: var(--alabaster); padding: 26px 30px; }
 .touch p { font-weight: 500; font-size: 28px; line-height: 1.45; margin-top: 10px; }
+.map-link { display: inline-flex; align-items: center; gap: 14px; margin-top: 16px; font-weight: 600; font-size: 26px; text-decoration: underline; text-underline-offset: 6px; }
+.u { text-decoration: underline; text-underline-offset: 5px; }
 
 /* 6 · Precio */
 .price-xl { font-weight: 900; font-size: 88px; letter-spacing: -0.03em; line-height: 1; white-space: nowrap; }
 .price-sub { font-size: 30px; margin-top: 18px; }
-.ppm { font-weight: 500; font-size: 26px; margin-top: 4px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .label.sub { margin-top: 44px; margin-bottom: 14px; }
 .schedule { width: 100%; border-collapse: collapse; }
 .schedule td { border-top: 1px solid var(--line); padding: 18px 0; vertical-align: top; }

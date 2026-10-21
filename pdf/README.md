@@ -6,7 +6,6 @@ Una propuesta de 8 páginas (1080 × 1920 px) por tipología, para mandar por Wh
 npm run build:pdf                 # todas las tipologías con renders cargados
 npm run build:pdf -- crudo-01     # una sola
 npm run build:pdf:release         # falla si queda algún dato [PENDIENTE]
-ISSUED_AT=2026-10-20 npm run build:pdf   # fecha desde la que corren los 15 días
 ```
 
 - Datos: `data/models.json` (tipologías) y `data/contact.json` (oficina, redes, WhatsApp).
@@ -18,7 +17,7 @@ ISSUED_AT=2026-10-20 npm run build:pdf   # fecha desde la que corren los 15 día
 - Plantilla: `pdf/template.mjs`, función pura `renderProposal()` que recibe datos y devuelve HTML.
 - Build: `pdf/build.mjs` recorta y comprime los renders (sin metadatos), embebe Archivo,
   imprime con Chromium, limpia los metadatos del PDF y corre el QA (8 páginas, < 6 MB,
-  pagos que suman, link de WhatsApp, nada cortado ni pisado sobre el pie, palabras prohibidas
+  link de WhatsApp, nada cortado ni pisado sobre el pie, palabras prohibidas
   vía `pdftotext`).
 - Salida: `pdf/out/Crudo-0X.pdf`. Páginas rasterizadas para revisar: `pdf/.cache/qa/`.
 

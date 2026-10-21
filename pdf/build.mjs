@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { PDFDocument, PDFName } from "pdf-lib";
 import { chromium } from "playwright";
-import { PAGE, SLOTS, paymentSchedule, renderProposal } from "./template.mjs";
+import { PAGE, SLOTS, renderProposal } from "./template.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "pdf/out");
@@ -59,14 +59,6 @@ function validate(model, common) {
   if (!Number.isInteger(model.price_gs) || model.price_gs <= 0)
     errors.push("el precio es cero, nulo o no es un entero");
   if (!(model.area_m2 > 0)) errors.push("la superficie no es válida");
-  if (typeof model.show_price_per_m2 !== "boolean")
-    errors.push("show_price_per_m2 tiene que ser true o false");
-  if (errors.length) return errors;
-  const payments = paymentSchedule(model.price_gs, common.payment_plan);
-  const total = payments.reduce((a, p) => a + p.amount, 0);
-  if (total !== model.price_gs)
-    errors.push(`los pagos suman ${total} y el precio es ${model.price_gs}`);
-  if (payments.some((p) => p.amount <= 0)) errors.push("hay un pago en cero");
   if (common.payment_plan.reduce((a, p) => a + p.pct, 0) !== 100)
     errors.push("los porcentajes del plan de pagos no suman 100");
   for (const e of model.extras) {
@@ -271,7 +263,6 @@ async function rasterize(file, id) {
 async function main() {
   const data = await readJson("data/models.json");
   const contact = await readJson("data/contact.json");
-  const issuedAt = process.env.ISSUED_AT ? new Date(`${process.env.ISSUED_AT}T12:00:00`) : new Date();
   const models = data.models.filter((m) =>
     only.length ? only.includes(m.id) : m.images,
   );
@@ -294,7 +285,7 @@ async function main() {
       }
       const pending = pendingFields(model, contact);
       const assets = await modelAssets(model, shared);
-      const html = renderProposal({ model, common: data.common, contact, assets, issuedAt, pending });
+      const html = renderProposal({ model, common: data.common, contact, assets, pending });
       await fs.writeFile(path.join(CACHE, `${model.id}.html`), html);
 
       const page = await browser.newPage({ viewport: { width: PAGE.width, height: PAGE.height } });

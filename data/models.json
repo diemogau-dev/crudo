@@ -30,7 +30,7 @@
       "terminaciones": {
         "title": "Terminaciones",
         "lines": [
-          "Revestimiento interior de placas de concreto de nuestra fábrica y tabiques con lana de vidrio.",
+          "Revestimiento interior de concreto de alto performance, de nuestra fábrica, y tabiques con lana de vidrio.",
           "{access}",
           "Pisos, revestimiento de baño, pintura completa y limpieza final de obra."
         ]
@@ -64,6 +64,7 @@
     },
     "not_included": [
       "Flete: depende de la zona y lo definimos con vos.",
+      "Pozo ciego y cámara séptica.",
       "Conexión a la red de ANDE: la vemos juntos cuando visitemos tu terreno.",
       "Muebles y decoración que ves en las imágenes.",
       "Todo lo que no figura en «Qué incluye»."
@@ -71,11 +72,9 @@
     "extras_footnote": "Y si querés algo que no está acá, lo armamos juntos.",
     "warranty": [
       "12 meses de asistencia desde la entrega definitiva de tu casa.",
-      "Un profesional asignado a tu obra, que te responde en 48 hs.",
+      "Un profesional asignado a tu obra, que te responde en el día.",
       "Si algo falla por material o mano de obra, lo reparamos en 15 días como máximo."
     ],
-    "warranty_note": "Respondemos por cualquier daño durante la obra. El desgaste por uso normal no entra en la garantía.",
-    "contingency_pct": 5,
     "price_rounding_gs": 100000
   },
   "models": [
@@ -84,7 +83,6 @@
       "name": "Crudo 01",
       "area_m2": 30.71,
       "price_gs": 152438424,
-      "show_price_per_m2": true,
       "bedrooms": 1,
       "bathrooms": 1,
       "deck": true,
@@ -141,12 +139,7 @@
           }
         ]
       },
-      "extras": [
-        {
-          "name": "Pozo ciego y cámara séptica",
-          "price_gs": 4860000
-        }
-      ],
+      "extras": [],
       "images": {
         "cover": {
           "src": "public/images/renders/crudo-1/crudo-1-c.jpg",
@@ -245,7 +238,6 @@
       "name": "Crudo 02",
       "area_m2": 26.2,
       "price_gs": 148717706,
-      "show_price_per_m2": true,
       "bedrooms": 1,
       "bathrooms": 1,
       "deck": true,
@@ -313,12 +305,7 @@
           }
         ]
       },
-      "extras": [
-        {
-          "name": "Pozo ciego y cámara séptica",
-          "price_gs": 4860000
-        }
-      ],
+      "extras": [],
       "images": {
         "cover": {
           "src": "public/images/renders/crudo-2/crudo-2-a.jpg",
@@ -398,7 +385,6 @@
       "name": "Crudo 03",
       "area_m2": 66,
       "price_gs": 308783965,
-      "show_price_per_m2": true,
       "bedrooms": 2,
       "bathrooms": 1,
       "deck": false,
@@ -472,10 +458,6 @@
         ]
       },
       "extras": [
-        {
-          "name": "Pozo ciego y cámara séptica",
-          "price_gs": 4860000
-        },
         {
           "name": "Pared de cobogós (7 m²)",
           "price_gs": 3591000
@@ -584,7 +566,6 @@
       "name": "Crudo 04",
       "area_m2": 85.05,
       "price_gs": 339186601,
-      "show_price_per_m2": true,
       "bedrooms": 2,
       "bathrooms": 1,
       "deck": true,
@@ -667,12 +648,7 @@
           }
         ]
       },
-      "extras": [
-        {
-          "name": "Pozo ciego y cámara séptica",
-          "price_gs": 4860000
-        }
-      ],
+      "extras": [],
       "images": {
         "cover": {
           "src": "public/images/renders/crudo-4/crudo-4-a.jpg",
