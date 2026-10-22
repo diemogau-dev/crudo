@@ -79,7 +79,7 @@ Objetivo: home relativamente corta, 8 objetivos (generar deseo, explicar CRUDO, 
 
 CTA principal: **"HABLEMOS →"** (nunca "Contactanos"/"Solicitar información"). Variaciones aceptables: "HABLEMOS DE TU PROYECTO →", "CONTANOS QUÉ TENÉS EN MENTE →", "CONOCER MÁS →". Todos los CTA comerciales llevan a WhatsApp.
 
-- Número: +595 981 625 546 (formato técnico `595981625546`).
+- Número: +595 991 574 500 (formato técnico `595991574500`).
 - Mensajes predefinidos por contexto: general / CRUDO 01 / CRUDO 02 / proyecto personalizado.
 - Utilidad reutilizable para todos los enlaces de WhatsApp.
 

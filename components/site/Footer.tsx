@@ -34,7 +34,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="kicker text-alabaster transition-opacity duration-300 hover:opacity-70"
             >
-              WhatsApp · +595 981 625 546
+              WhatsApp · +595 991 574 500
             </a>
             <a
               href={`mailto:${contact.email}`}

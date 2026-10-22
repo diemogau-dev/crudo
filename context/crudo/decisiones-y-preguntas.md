@@ -55,7 +55,7 @@
 5. **CTA final por defecto:** "¿Tenés una idea en mente? Contanos. Nosotros la hacemos realidad."
 6. **Banner de proceso en la home** (`ProcessBanner`), entre el render interior y Tipologías: "Construir con materiales duraderos nunca fue tan fácil." con 4 pasos (Diseñamos, Fabricamos, Construimos, Entregamos) e íconos de línea propios. Referencia visual: banner de pasos estilo ViBert. Ajustado después a banner fino (título chico en gris con "materiales duraderos" en negrita, íconos de ~88 px redibujados en el estilo de la referencia, sin divisores).
 7. **Nav:** El Sistema, Tipologías, A Medida, Nosotros, FAQ, Hablemos.
-8. **Footer:** correo crudohomes@gmail.com, oficina en Sucre 1862 casi José Campos Lanzoni (Asunción), Instagram @crudohomes con link. Facebook eliminado (no hay cuenta). WhatsApp confirmado: 0981 625 546.
+8. **Footer:** correo crudohomes@gmail.com, oficina en Sucre 1862 casi José Campos Lanzoni (Asunción), Instagram @crudohomes con link. Facebook eliminado (no hay cuenta). WhatsApp actualizado: 0991 574 500 (antes 0981 625 546).
 
 ## 2026-09-26 — Nueva tipología: CRUDO 03
 

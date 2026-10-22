@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "595981625546";
+const WHATSAPP_NUMBER = "595991574500";
 
 export const whatsappMessages = {
   general: "Hola, quiero conocer más sobre CRUDO.",
