@@ -2,6 +2,14 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-22 — Ajustes de "Qué incluye" (pedido de Diego)
+
+1. **CRUDO 01 no incluye bidet** (baño con inodoro y ducha higiénica, igual que CRUDO 04). CRUDO 02 y 03 no se tocaron. El precio de CRUDO 01 queda **pendiente** de confirmar con la planilla actualizada.
+2. Sección "Vidriería" pasa a **"Vidrios"** en todas las tipologías. En CRUDO 03: "Puertas corredizas de vidrio de 8 mm hacia el exterior, con cerradura".
+3. Terminación exterior: "limpiadas con ácido y **protegidas con sellador**" (antes "con patinal").
+4. Todos los pisos son de **porcelanato** (no cerámico), incluidos piso y paredes del baño.
+5. Cerramiento: sin medidas de placa (hay varios tamaños). Texto: "placas de hormigón armado reforzado, vistas: máxima solidez".
+
 ## 2026-10-16 — CRUDO 04, detalle mobile y amenities (pedido de Diego)
 
 1. **CRUDO 04 tiene página propia** (`/tipologias/crudo-04`) y deja de ser "Próximamente" en la home. Datos de la planilla "Presupuesto CRUDO 04": **85 m²** (85,05 m²; reemplaza los 84 m² de la tarjeta anterior), 2 habitaciones, 1 baño, cocina con isla, sala comedor y **quincho con parrilla incluido** (parrilla, pérgola metálica y deck de 7 × 4 m). Renders en `public/images/renders/crudo-4/`.

@@ -79,7 +79,7 @@ const structureSpecs = (roof: string): SpecGroup[] => [
     items: [
       "Platea de hormigón armado de 10 cm sobre zapatas y encadenado de hormigón armado.",
       "Columnas y vigas de perfil estructural de acero.",
-      "Cerramiento de placas de hormigón de 1 × 1 m, vistas.",
+      "Cerramiento de placas de hormigón armado reforzado, vistas: máxima solidez.",
     ],
   },
   {
@@ -94,16 +94,20 @@ const structureSpecs = (roof: string): SpecGroup[] => [
 const exteriorSpecs: SpecGroup = {
   label: "Terminación exterior",
   items: [
-    "Placas de hormigón visto, limpiadas con ácido y con patinal.",
+    "Placas de hormigón visto, limpiadas con ácido y protegidas con sellador.",
     "Pintura sintética en estructura metálica, canaletas y bajadas.",
   ],
 };
 
-const bathSpecs = (heater: string, extra: string[] = []): SpecGroup => ({
+const bathSpecs = (
+  heater: string,
+  extra: string[] = [],
+  toilet = "Inodoro con cisterna baja y bidet",
+): SpecGroup => ({
   label: "Baño",
   items: [
-    "Piso y paredes revestidos en cerámica.",
-    "Inodoro con cisterna baja y bidet, bacha de concreto sobre mesada de mármol.",
+    "Piso y paredes revestidos en porcelanato.",
+    `${toilet}, bacha de concreto sobre mesada de mármol.`,
     "Ducha frío/caliente, griferías y kit de accesorios.",
     "Mampara de ducha y espejo flotante con luz LED.",
     `Termocalefón de ${heater}.`,
@@ -152,7 +156,7 @@ export const models: Model[] = [
     constructionSpecs: [
       ...structureSpecs(""),
       {
-        label: "Vidriería",
+        label: "Vidrios",
         items: [
           "Frente de vidrio de 8 mm con puerta corrediza de 3,50 × 2,10 m y cerradura con llave.",
           "Paño superior inclinado y paneles fijos de vidrio de 8 mm.",
@@ -162,14 +166,16 @@ export const models: Model[] = [
       {
         label: "Terminación interior",
         items: [
-          "Piso cerámico sobre la platea, con zócalos.",
+          "Piso de porcelanato sobre la platea, con zócalos.",
           "Tabique de baño con cara antihumedad, lana de vidrio y banda acústica.",
           "Pintura interior y puerta placa con contramarco.",
         ],
       },
-      bathSpecs("80 L", [
-        "Ventana batiente de vidrio templado con perfil negro.",
-      ]),
+      bathSpecs(
+        "80 L",
+        ["Ventana batiente de vidrio templado con perfil negro."],
+        "Inodoro con cisterna baja y ducha higiénica",
+      ),
       {
         label: "Instalación eléctrica",
         items: [
@@ -296,7 +302,7 @@ export const models: Model[] = [
     constructionSpecs: [
       ...structureSpecs(""),
       {
-        label: "Vidriería",
+        label: "Vidrios",
         items: [
           "Frente de vidrio de 8 mm con puerta corrediza de 3,50 × 2,10 m y cerradura con llave.",
           "Paño superior inclinado y paneles fijos de vidrio de 8 mm.",
@@ -306,7 +312,7 @@ export const models: Model[] = [
       {
         label: "Terminación interior",
         items: [
-          "Piso cerámico sobre la platea, con zócalos.",
+          "Piso de porcelanato sobre la platea, con zócalos.",
           "Tabique de baño con cara antihumedad, lana de vidrio y banda acústica.",
           "Pintura interior y puerta placa con contramarco.",
         ],
@@ -434,9 +440,9 @@ export const models: Model[] = [
     constructionSpecs: [
       ...structureSpecs(", con aleros"),
       {
-        label: "Vidriería",
+        label: "Vidrios",
         items: [
-          "Dos puertas corredizas de vidrio de 8 mm hacia el exterior, con cerradura.",
+          "Puertas corredizas de vidrio de 8 mm hacia el exterior, con cerradura.",
           "Ventanal fijo en el estar y paño superior inclinado.",
           "Ventanas de dormitorios y ventiluz de baño en vidrio templado con perfil negro.",
         ],
@@ -445,7 +451,7 @@ export const models: Model[] = [
       {
         label: "Terminación interior",
         items: [
-          "Piso cerámico sobre la platea, con zócalos.",
+          "Piso de porcelanato sobre la platea, con zócalos.",
           "Tabiques con cara antihumedad en el baño, lana de vidrio y banda acústica.",
           "Pintura interior y tres puertas placa con contramarco.",
         ],
@@ -618,7 +624,7 @@ export const models: Model[] = [
         ],
       },
       {
-        label: "Vidriería",
+        label: "Vidrios",
         items: [
           "Dos accesos de vidrio templado de 8 mm con perfilería negra, de 4 hojas (2 fijas y 2 corredizas).",
           "Paño fijo superior sobre el acceso.",
@@ -629,7 +635,7 @@ export const models: Model[] = [
       {
         label: "Terminación interior",
         items: [
-          "Piso sobre carpeta, con zócalos.",
+          "Piso de porcelanato sobre carpeta, con zócalos.",
           "Tabiques con lana de vidrio y banda acústica; cara antihumedad en el baño.",
           "Pintura interior y cuatro puertas placa con contramarco.",
         ],
@@ -645,7 +651,7 @@ export const models: Model[] = [
       {
         label: "Baño",
         items: [
-          "Piso y paredes revestidos.",
+          "Piso y paredes revestidos en porcelanato.",
           "Inodoro con cisterna baja y ducha higiénica.",
           "Bacha de concreto sobre mesada de mármol blanco veteado, con zócalo y pollera de mármol.",
           "Ducha frío/caliente con nicho de mármol, griferías y kit de accesorios.",
