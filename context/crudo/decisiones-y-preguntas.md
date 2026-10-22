@@ -4,7 +4,7 @@
 
 ## 2026-10-22 — Ajustes de "Qué incluye" (pedido de Diego)
 
-1. **CRUDO 01 no incluye bidet** (baño con inodoro y ducha higiénica, igual que CRUDO 04). CRUDO 02 y 03 no se tocaron. El precio de CRUDO 01 queda **pendiente** de confirmar con la planilla actualizada.
+1. **CRUDO 01 no incluye bidet** (baño con inodoro y ducha higiénica, igual que CRUDO 04). CRUDO 02 y 03 no se tocaron. **Precio CRUDO 01 = Gs. 151.900.000 + IVA** (precio de venta de la planilla "Presupuesto CRUDO 01" sin bidet: Gs. 151.844.674, redondeado). Los precios de CRUDO 02 y 03 no se recalcularon: siguen siendo estimaciones a partir de la planilla anterior.
 2. Sección "Vidriería" pasa a **"Vidrios"** en todas las tipologías. En CRUDO 03: "Puertas corredizas de vidrio de 8 mm hacia el exterior, con cerradura".
 3. Terminación exterior: "limpiadas con ácido y **protegidas con sellador**" (antes "con patinal").
 4. Todos los pisos son de **porcelanato** (no cerámico), incluidos piso y paredes del baño.

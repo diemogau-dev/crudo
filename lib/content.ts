@@ -3,7 +3,7 @@ import type { WhatsappTopic } from "./whatsapp";
 // Precios "Desde" del módulo, sin IVA. Salen de las planillas de costo de
 // cada tipología (CRUDO 01 y 04 reales; CRUDO 02 y 03 estimadas a partir de
 // la de CRUDO 01), con el mismo criterio: costo + 5% de imprevistos + 30% de
-// ganancia. Piscina y trabajos del terreno son extras y no entran en el
+// ganancia (CRUDO 01 usa el precio de venta de su planilla). Piscina y trabajos del terreno son extras y no entran en el
 // precio; en CRUDO 04 el quincho con parrilla sí está incluido.
 export const SHOW_PRICES = true;
 
@@ -12,7 +12,9 @@ export function formatGs(value: number) {
 }
 
 const PRICES_GS = {
-  crudo01: 147_900_462,
+  // Planilla "Presupuesto CRUDO 01" sin bidet: precio de venta Gs. 151.844.674,
+  // redondeado a Gs. 151.900.000.
+  crudo01: 151_900_000,
   crudo02: 158_918_742,
   crudo03: 291_332_917,
   // Planilla "Presupuesto CRUDO 04": vivienda (Gs. 231.298.413) + quincho
