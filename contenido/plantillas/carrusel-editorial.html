@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Carrusel editorial · CRUDO 01</title>
+<style>
+/* Carrusel editorial a partir de la referencia de Diego (23/10): fondo claro,
+   grilla asimétrica de fotos chicas, tipografía en mayúsculas con palabras
+   muy espaciadas. Lienzo 1080 × 1350. */
+@font-face { font-family: "Archivo"; src: url("fuentes/Archivo-latin.woff2") format("woff2"); font-weight: 100 900; }
+:root { --iron: #1a1a1a; --alabaster: #f5f5f3; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #888; }
+.lam { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--alabaster); color: var(--iron);
+       font-family: "Archivo", sans-serif; font-weight: 500; text-transform: uppercase; -webkit-font-smoothing: antialiased; margin-bottom: 20px; }
+.t { position: absolute; font-size: 17px; line-height: 1.2; letter-spacing: -0.01em; }
+.palabras { position: absolute; display: flex; }
+.foto { position: absolute; object-fit: cover; display: block; }
+.nocaps { text-transform: none; }
+.oscura { color: var(--alabaster); }
+</style>
+</head>
+<body>
+
+<!-- 1 · Portada: seis fotos en grilla asimétrica -->
+<section class="lam" id="l1">
+  <div class="palabras" style="left:97px;top:112px;font-size:38px;letter-spacing:-0.02em;gap:46px">
+    <span>El</span><span>refugio</span><span>que</span><span>buscabas</span>
+  </div>
+
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-campo.jpg" style="left:97px;top:272px;width:214px;height:298px;object-position:31% 62%">
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-e.jpg" style="left:343px;top:272px;width:214px;height:298px;object-position:62% 50%">
+  <div class="t" style="left:880px;top:268px">Hormigón<br><span class="nocaps">31 m²</span></div>
+  <div class="t" style="left:990px;top:268px">armado<br>Loft</div>
+
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-i.jpg" style="left:97px;top:625px;width:214px;height:298px;object-position:72% 50%">
+  <div class="t" style="left:327px;top:622px">Despertar<br>frente al verde</div>
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-k.jpg" style="left:803px;top:625px;width:214px;height:298px;object-position:58% 50%">
+
+  <div class="t" style="right:539px;top:978px;text-align:right">Hecho en nuestra fábrica</div>
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-d.jpg" style="left:555px;top:981px;width:214px;height:298px;object-position:58% 50%">
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-l.jpg" style="left:803px;top:981px;width:214px;height:298px;object-position:50% 72%">
+
+  <div class="palabras" style="left:81px;top:1262px;font-size:17px;gap:40px">
+    <span>Un</span><span>sistema,</span><span>no</span><span>una</span><span>obra</span>
+  </div>
+</section>
+
+<!-- 2 · Exterior a sangre -->
+<section class="lam oscura" id="l2">
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-campo.jpg" style="left:0;top:0;width:1080px;height:1350px;object-position:27% 50%">
+  <div style="position:absolute;left:0;top:0;width:1080px;height:300px;background:linear-gradient(to bottom, rgb(26 26 26 / 0.5), rgb(26 26 26 / 0))"></div>
+  <div style="position:absolute;left:0;bottom:0;width:1080px;height:260px;background:linear-gradient(to top, rgb(26 26 26 / 0.42), rgb(26 26 26 / 0))"></div>
+  <div class="t" style="left:47px;top:66px;font-size:19px">Crudo 01<br><span class="nocaps">31 m²</span></div>
+  <div class="t" style="left:420px;top:66px;font-size:19px">Tu casa de fin de semana<br>en hormigón, vidrio y deck</div>
+  <div class="palabras" style="left:0;right:0;justify-content:center;top:1296px;font-size:19px;gap:40px">
+    <span>Un</span><span>sistema,</span><span>no</span><span>una</span><span>obra</span>
+  </div>
+</section>
+
+<!-- 3 · Close-up de interior, sin texto -->
+<section class="lam" id="l3">
+  <img class="foto" src="../renders-aprobados/crudo-01/crudo-1-l.jpg" style="left:0;top:0;width:1080px;height:1350px;object-position:50% 78%">
+</section>
+
+</body>
+</html>
