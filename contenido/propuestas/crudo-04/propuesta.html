@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Crudo 04 — Propuesta</title>
+<style>
+@font-face { font-family: "Archivo"; src: url("fuentes/Archivo-latin.woff2") format("woff2"); font-weight: 100 900; }
+@page { size: A4; margin: 0; }
+:root { --iron: #1a1a1a; --cement: #d2d1cd; --alabaster: #f5f5f3; --m: 16mm; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Archivo", sans-serif; color: var(--iron); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: inherit; text-decoration: none; }
+.pag { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; background: var(--alabaster); }
+.pag:last-child { page-break-after: auto; }
+.oscura { background: var(--iron); color: var(--alabaster); }
+.kicker { font-weight: 600; font-size: 8pt; letter-spacing: 0.28em; text-transform: uppercase; }
+.num { font-weight: 600; font-size: 8pt; letter-spacing: 0.28em; }
+.display { font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; line-height: 0.95; }
+.sub { font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.cuerpo { font-weight: 400; font-size: 9.5pt; line-height: 1.65; }
+.dato { font-weight: 500; font-variant-numeric: tabular-nums; }
+.etq { font-weight: 600; font-size: 6.5pt; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.75; }
+.foto { position: absolute; background-size: cover; background-position: center; }
+.cab { position: absolute; left: var(--m); right: var(--m); top: 14mm; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 0.3mm solid rgb(26 26 26 / 0.25); padding-bottom: 3mm; }
+.oscura .cab { border-color: rgb(245 245 243 / 0.25); }
+.pie { position: absolute; left: var(--m); right: var(--m); bottom: 12mm; display: flex; justify-content: space-between; align-items: center; }
+.logo { height: 7mm; }
+.hair { height: 0.3mm; background: rgb(26 26 26 / 0.2); }
+.oscura .hair { background: rgb(245 245 243 / 0.22); }
+.fila { display: flex; justify-content: space-between; padding: 2.4mm 0; border-top: 0.3mm solid rgb(245 245 243 / 0.22); }
+.blq { padding: 3.2mm 0; border-top: 0.3mm solid rgb(26 26 26 / 0.18); display: grid; grid-template-columns: 38mm 1fr; gap: 6mm; }
+.blq .kicker { padding-top: 1mm; }
+.cta { display: inline-block; background: var(--alabaster); color: var(--iron); padding: 4mm 6mm; }
+.oscura-cta { background: var(--iron); color: var(--alabaster); }
+.marca { position: absolute; width: 8mm; height: 8mm; border-radius: 0; background: var(--iron); color: var(--alabaster); font-weight: 700; font-size: 8pt; display: flex; align-items: center; justify-content: center; transform: translate(-50%, -50%); }
+</style>
+</head>
+<body>
+
+<!-- 01 PORTADA -->
+<section class="pag oscura">
+  <div class="foto" style="left:0;top:0;width:210mm;height:178mm;background-image:url(img/portada.jpg);background-position:50% 55%"></div>
+  <div class="foto" style="left:0;top:118mm;width:210mm;height:60mm;background:linear-gradient(to top, rgb(26 26 26 / 1), rgb(26 26 26 / 0))"></div>
+  <p class="etq" style="position:absolute;left:var(--m);top:170mm">Imagen referencial · La tina de concreto no está incluida. La piscina se suma como adicional.</p>
+  <div style="position:absolute;left:var(--m);right:var(--m);top:186mm">
+    <p class="kicker" style="color:var(--cement)">Propuesta comercial · Asunción · Paraguay</p>
+    <h1 class="display" style="font-size:44pt;margin-top:5mm">CRUDO 04 <span style="text-transform:none">85 m²</span></h1>
+    <p class="sub" style="font-size:15pt;margin-top:4mm">Hormigón armado. Lista en 2 meses.</p>
+    <div style="margin-top:8mm;width:120mm">
+      <div class="fila"><span class="kicker" style="color:var(--cement)">Dormitorios</span><span class="dato">2</span></div>
+      <div class="fila"><span class="kicker" style="color:var(--cement)">Baño</span><span class="dato">1</span></div>
+      <div class="fila"><span class="kicker" style="color:var(--cement)">Quincho</span><span class="dato">Con parrilla</span></div>
+      <div class="fila" style="border-bottom:0.3mm solid rgb(245 245 243 / 0.22)"><span class="kicker" style="color:var(--cement)">Deck exterior</span><span class="dato">Incluido</span></div>
+    </div>
+  </div>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-alabaster.png" alt="Crudo"><span class="kicker">Armemos tu Crudo</span></div>
+</section>
+
+<!-- 02 ASÍ SE VIVE POR DENTRO -->
+<section class="pag">
+  <div class="cab"><span class="num">02</span><span class="kicker">Así se vive por dentro</span></div>
+  <h2 class="display" style="position:absolute;left:var(--m);right:var(--m);top:30mm;font-size:30pt">La parrilla y la pared de cobogós ya vienen con la casa.</h2>
+  <div class="foto" style="left:var(--m);right:var(--m);top:92mm;height:150mm;background-image:url(img/quincho.jpg);background-position:70% 50%"></div>
+  <p class="etq" style="position:absolute;left:var(--m);top:246mm">Imagen referencial · La tina de concreto no está incluida.</p>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-iron.png" alt="Crudo"><span class="kicker">CRUDO 04</span></div>
+</section>
+
+<!-- 03 MÁS DE TU CRUDO 04 -->
+<section class="pag">
+  <div class="cab"><span class="num">03</span><span class="kicker">Más de tu Crudo 04</span></div>
+  <div class="foto" style="left:var(--m);width:178mm;top:30mm;height:84mm;background-image:url(img/lateral.jpg);background-position:40% 60%"></div>
+  <div class="foto" style="left:var(--m);width:87.5mm;top:117mm;height:56mm;background-image:url(img/estar.jpg)"></div>
+  <div class="foto" style="left:calc(var(--m) + 90.5mm);width:87.5mm;top:117mm;height:56mm;background-image:url(img/cocina.jpg)"></div>
+  <div class="foto" style="left:var(--m);width:87.5mm;top:176mm;height:56mm;background-image:url(img/dormitorio.jpg)"></div>
+  <div class="foto" style="left:calc(var(--m) + 90.5mm);width:87.5mm;top:176mm;height:56mm;background-image:url(img/tina.jpg)"></div>
+  <p class="etq" style="position:absolute;left:var(--m);top:236mm">Imágenes referenciales · La tina de concreto no está incluida. La piscina se suma como adicional.</p>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-iron.png" alt="Crudo"><span class="kicker">CRUDO 04</span></div>
+</section>
+
+<!-- 04 EL PLANO -->
+<section class="pag">
+  <div class="cab"><span class="num">04</span><span class="kicker">El plano</span></div>
+  <div style="position:absolute;left:var(--m);top:30mm"><p class="kicker">Superficie</p><p class="display" style="font-size:30pt;margin-top:2mm"><span style="text-transform:none">85 m²</span></p></div>
+  <div style="position:absolute;left:var(--m);width:178mm;top:62mm;height:80.5mm">
+    <img src="img/plano.jpg" style="width:178mm;height:80.5mm;display:block" alt="Plano de Crudo 04">
+    <span class="marca" style="left:19%;top:41%">1</span>
+    <span class="marca" style="left:19.5%;top:72%">2</span>
+    <span class="marca" style="left:36%;top:74%">3</span>
+    <span class="marca" style="left:39%;top:22%">4</span>
+    <span class="marca" style="left:60%;top:48%">5</span>
+    <span class="marca" style="left:78%;top:26%">6</span>
+    <span class="marca" style="left:96.2%;top:50%">7</span>
+  </div>
+  <p class="etq" style="position:absolute;left:var(--m);top:146mm">Imagen referencial</p>
+  <div style="position:absolute;left:var(--m);width:110mm;top:160mm" class="cuerpo">
+    <div class="blq" style="grid-template-columns:12mm 1fr"><span class="num">01</span><span>Dormitorio</span></div>
+    <div class="blq" style="grid-template-columns:12mm 1fr"><span class="num">02</span><span>Dormitorio</span></div>
+    <div class="blq" style="grid-template-columns:12mm 1fr"><span class="num">03</span><span>Baño</span></div>
+    <div class="blq" style="grid-template-columns:12mm 1fr"><span class="num">04</span><span>Cocina con isla</span></div>
+    <div class="blq" style="grid-template-columns:12mm 1fr"><span class="num">05</span><span>Estar y comedor</span></div>
+    <div class="blq" style="grid-template-columns:12mm 1fr"><span class="num">06</span><span>Quincho con parrilla</span></div>
+    <div class="blq" style="grid-template-columns:12mm 1fr;border-bottom:0.3mm solid rgb(26 26 26 / 0.18)"><span class="num">07</span><span>Deck</span></div>
+  </div>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-iron.png" alt="Crudo"><span class="kicker">CRUDO 04</span></div>
+</section>
+
+<!-- 05 QUÉ INCLUYE -->
+<section class="pag">
+  <div class="cab"><span class="num">05</span><span class="kicker">Qué incluye</span></div>
+  <h2 class="display" style="position:absolute;left:var(--m);top:30mm;font-size:30pt">Todo esto va en el precio.</h2>
+  <div class="cuerpo" style="position:absolute;left:var(--m);right:var(--m);top:52mm">
+    <div class="blq"><span class="kicker">Incluido en tu Crudo 04</span><span>Pared de cobogós de 12 m², de nuestra fábrica. Módulo de parrilla: mesada de hormigón, parrilla de acero inoxidable y campana.</span></div>
+    <div class="blq"><span class="kicker">Estructura</span><span>Fundaciones de hormigón armado: dados, vigas y platea. Muros de placas de hormigón armado de nuestra fábrica. Pilares metálicos de 10 mm y techo metálico termoaislante, con canaletas y bajadas.</span></div>
+    <div class="blq"><span class="kicker">Terminaciones</span><span>Revestimiento interior de concreto de alto performance, de nuestra fábrica, y tabiques con lana de vidrio. Dos accesos de vidrio templado de 8 mm y aluminio negro, de 4 hojas. Ventanas batientes en las habitaciones. Pisos, revestimiento de baño, pintura completa y limpieza final de obra.</span></div>
+    <div class="blq"><span class="kicker">Baño</span><span>Inodoro y ducha frío/caliente con mampara y grifería. Bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado. Espejo flotante con luz LED y termocalefón de 80 L.</span></div>
+    <div class="blq"><span class="kicker">Cocina y equipamiento</span><span>Cocina con isla, anafe con extractor y microondas con horno empotrado. Dos placards y tres puertas interiores.</span></div>
+    <div class="blq"><span class="kicker">Instalaciones</span><span>Conexiones eléctricas y sanitarias, embutidas. Tablero, puesta a tierra, disyuntor diferencial, protección contra sobretensión, tomas, luces y ductos para internet y TV.</span></div>
+    <div class="blq" style="border-bottom:0.3mm solid rgb(26 26 26 / 0.18)"><span class="kicker">Climatización e iluminación</span><span>Tres aires acondicionados: dos de 12.000 BTU y uno de 24.000 BTU. Spots negros y lámparas colgantes de concreto.</span></div>
+    <p style="margin-top:6mm">Todo lo que no está acá es adicional, y lo cotizamos antes de ejecutarlo.</p>
+  </div>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-iron.png" alt="Crudo"><span class="kicker">CRUDO 04</span></div>
+</section>
+
+<!-- 06 POR QUÉ HORMIGÓN -->
+<section class="pag oscura">
+  <div class="cab"><span class="num">06</span><span class="kicker">Por qué hormigón armado y concreto de alto performance</span></div>
+  <h2 class="display" style="position:absolute;left:var(--m);right:var(--m);top:30mm;font-size:26pt">Diseñamos la casa. Fabricamos los muros de hormigón armado. Construimos tu hogar.</h2>
+  <div class="cuerpo" style="position:absolute;left:var(--m);right:var(--m);top:92mm">
+    <div class="blq" style="border-color:rgb(245 245 243 / 0.22)"><span class="num">01</span><span><b class="sub" style="font-size:12pt">Hecha para durar</b><br>Cada pieza sale de nuestra fábrica, curada por expertos, y se monta exactamente según planos y diseño. Muros, revestimientos y fundaciones pensados para durar décadas.</span></div>
+    <div class="blq" style="border-color:rgb(245 245 243 / 0.22)"><span class="num">02</span><span><b class="sub" style="font-size:12pt">Fresca en verano, cálida en invierno</b><br>Una cámara de aire con material aislante mantiene la casa fresca con el calor paraguayo y cálida en invierno. La masa del hormigón, además, frena el ruido de afuera.</span></div>
+    <div class="blq" style="border-color:rgb(245 245 243 / 0.22);border-bottom:0.3mm solid rgb(245 245 243 / 0.22)"><span class="num">03</span><span><b class="sub" style="font-size:12pt">No arde ni se pudre</b><br>El hormigón no se quema, aguanta la humedad y no le entran termitas ni plagas.</span></div>
+  </div>
+  <div style="position:absolute;left:var(--m);right:var(--m);top:196mm">
+    <p class="kicker" style="color:var(--cement)">Pasá a conocernos en la oficina</p>
+    <p class="cuerpo" style="margin-top:4mm;max-width:150mm">Te esperamos sobre Sucre, en Asunción, para que conozcas nuestro sistema y la solidez de nuestros productos: placas, revestimientos, cobogós, bachas y más.</p>
+    <p class="cuerpo" style="margin-top:3mm"><a href="https://www.google.com/maps/place/Mariscal+Antonio+Sucre+1862,+Asunci%C3%B3n+001408/@-25.291727,-57.5729162,17z"><b>Cómo llegar:</b> Sucre 1862 casi José Campos Lanzoni, Asunción →</a></p>
+  </div>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-alabaster.png" alt="Crudo"><span class="kicker">CRUDO 04</span></div>
+</section>
+
+<!-- 07 PRECIO -->
+<section class="pag">
+  <div class="cab"><span class="num">07</span><span class="kicker">Tu Crudo 04, cerrado</span></div>
+  <p class="display dato" style="position:absolute;left:var(--m);top:32mm;font-size:40pt;text-transform:none">Gs 364.900.000</p>
+  <p class="sub" style="position:absolute;left:var(--m);top:52mm;font-size:13pt">IVA incluido. Lo que ves es lo que pagás.</p>
+  <div class="cuerpo" style="position:absolute;left:var(--m);right:var(--m);top:72mm">
+    <p class="kicker">Cómo lo pagás</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:4mm">
+      <div style="border-top:0.6mm solid var(--iron);padding-top:3mm"><p class="display" style="font-size:22pt">40 %</p><p class="kicker" style="margin-top:2mm">Al firmar</p><p style="margin-top:2mm">Firmamos y empezamos tu obra.</p></div>
+      <div style="border-top:0.6mm solid var(--iron);padding-top:3mm"><p class="display" style="font-size:22pt">40 %</p><p class="kicker" style="margin-top:2mm">Terminaciones</p><p style="margin-top:2mm">Con fundaciones, cerramientos, techo y conexiones terminados.</p></div>
+      <div style="border-top:0.6mm solid var(--iron);padding-top:3mm"><p class="display" style="font-size:22pt">20 %</p><p class="kicker" style="margin-top:2mm">Entrega</p><p style="margin-top:2mm">Cuando te entregamos tu Crudo.</p></div>
+    </div>
+    <p style="margin-top:6mm">Precio válido por 15 días. Estamos listos para empezar tu obra de inmediato.</p>
+  </div>
+  <div class="cuerpo" style="position:absolute;left:var(--m);right:var(--m);top:146mm">
+    <div class="blq"><span class="kicker">No incluye</span><span>— Flete: depende de la zona y lo definimos con vos.<br>— Pozo ciego y cámara séptica.<br>— Conexión a la red de ANDE: la vemos juntos cuando visitemos tu terreno.<br>— Muebles y decoración que ves en las imágenes.<br>— Todo lo que no figura en «Qué incluye».</span></div>
+    <div class="blq" style="border-bottom:0.3mm solid rgb(26 26 26 / 0.18)"><span class="kicker">Sumale a tu Crudo</span><span style="display:flex;justify-content:space-between;gap:6mm"><span>Piscina con deck</span><span class="dato">A medida, la cotizamos en la reunión</span></span></div>
+    <p style="margin-top:6mm">Y si querés algo que no está acá, lo armamos juntos.</p>
+  </div>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-iron.png" alt="Crudo"><span class="kicker">CRUDO 04</span></div>
+</section>
+
+<!-- 08 CÓMO SEGUIMOS -->
+<section class="pag oscura">
+  <div class="cab"><span class="num">08</span><span class="kicker">Cómo seguimos</span></div>
+  <h2 class="display" style="position:absolute;left:var(--m);top:30mm;font-size:30pt">Armemos tu Crudo.</h2>
+  <div class="cuerpo" style="position:absolute;left:var(--m);right:var(--m);top:52mm">
+    <div class="blq" style="border-color:rgb(245 245 243 / 0.22)"><span class="num">01</span><span><b>Vení a conocernos.</b> Te esperamos en la oficina de Sucre para mostrarte el sistema y resolver tus dudas.</span></div>
+    <div class="blq" style="border-color:rgb(245 245 243 / 0.22)"><span class="num">02</span><span><b>Conocemos tu terreno.</b> Lo vemos con vos para ubicar tu Crudo y planificar la obra.</span></div>
+    <div class="blq" style="border-color:rgb(245 245 243 / 0.22)"><span class="num">03</span><span><b>Definimos el diseño de tu Crudo.</b> Ajustamos juntos el diseño y los adicionales que quieras sumar, con precio cerrado.</span></div>
+    <div class="blq" style="border-color:rgb(245 245 243 / 0.22);border-bottom:0.3mm solid rgb(245 245 243 / 0.22)"><span class="num">04</span><span><b>Firmamos y arrancamos.</b> Estamos listos para empezar de inmediato: con la firma y la entrega inicial del 40 % arrancamos, y tu casa queda lista en 2 meses contados desde la palada inicial.</span></div>
+  </div>
+  <div class="cuerpo" style="position:absolute;left:var(--m);right:var(--m);top:150mm">
+    <p class="kicker" style="color:var(--cement)">Tu garantía</p>
+    <p style="margin-top:3mm">— 12 meses de asistencia desde la entrega definitiva de tu casa.<br>— Un profesional asignado a tu obra, que te responde en el día.<br>— Si algo falla por material o mano de obra, lo reparamos en 15 días como máximo.</p>
+  </div>
+  <div style="position:absolute;left:var(--m);right:var(--m);top:200mm">
+    <a class="cta" href="https://wa.me/595991574500?text=Hola!%20Quiero%20armar%20mi%20Crudo%2004"><span class="kicker">Armemos tu Crudo · WhatsApp</span><br><span class="dato" style="font-size:13pt;font-weight:600">+595 991 574 500</span></a>
+    <p class="cuerpo" style="margin-top:7mm">Oficina: Sucre 1862 casi José Campos Lanzoni, Asunción.<br>Horario: lunes a viernes, de 8:30 a 17:30.</p>
+    <p class="cuerpo" style="margin-top:3mm"><a href="https://www.instagram.com/crudohomes/">@crudohomes</a> · <a href="https://crudo.com.py/">crudo.com.py</a></p>
+  </div>
+  <div class="pie"><img class="logo" src="img/crudo-wordmark-alabaster.png" alt="Crudo"><span class="kicker">Propuesta comercial · 23/10/2026</span></div>
+</section>
+
+</body>
+</html>
