@@ -2,6 +2,11 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-23 (tarde) — Nuevo precio de CRUDO 04
+
+1. **CRUDO 04 = Gs. 364.900.000 IVA incluido** (antes 339.200.000). La planilla "Presupuesto CRUDO 04.xlsx" corregida por Calde (23/10) cuantifica fundaciones, platea, cobogós (12 m²) y lámparas con las cantidades reales de CRUDO 04: el costo pasa de Gs. 251.739.163 a 270.799.278 (+19.060.115). Aplicando los coeficientes de la planilla a esas líneas (×1,35 materiales y mano de obra, ×1,25 subcontratos) la venta sube Gs. 25.696.155 → 364.896.155, redondeado a 364.900.000. Las celdas de precio final de la planilla siguen dando error al leerlas desde Drive: **Calde debe confirmar el número**.
+2. Se regenera la propuesta comercial de CRUDO 04 con el precio nuevo y la piscina como adicional a cotizar.
+
 ## 2026-10-23 — Web alineada con las propuestas (pedido de Diego)
 
 1. **CRUDO 02 = 26 m²** (antes 31 m²) en toda la web.

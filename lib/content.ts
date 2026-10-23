@@ -14,7 +14,9 @@ const PRICES_GS = {
   crudo01: 152_500_000,
   crudo02: 148_800_000,
   crudo03: 308_800_000,
-  crudo04: 339_200_000,
+  // Planilla corregida del 23/10 (fundaciones y cobogós con cantidades de
+  // CRUDO 04): Gs. 364.896.155, redondeado.
+  crudo04: 364_900_000,
 } as const;
 
 const closedPrice = (value: number) => `${formatGs(value)} IVA incluido`;
