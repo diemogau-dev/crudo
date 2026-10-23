@@ -1,0 +1,91 @@
+/* Sistema gráfico CRUDO para redes (manual de marca, solo lo gráfico).
+   Lienzo en px CSS a la mitad del tamaño final: se exporta con
+   deviceScaleFactor 2 → 540 × 675 = 1080 × 1350 y 540 × 960 = 1080 × 1920.
+   Así los tamaños del manual (kicker 11 px, etiqueta 10 px) rinden a 2× en
+   el PNG y los márgenes de 64 px en 1080 quedan en 32 px CSS. */
+
+@font-face {
+  font-family: "Archivo";
+  src: url("fuentes/Archivo-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("fuentes/Archivo-latin-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  --iron: #1a1a1a;
+  --cement: #d2d1cd;
+  --alabaster: #f5f5f3;
+  --margen: 32px;
+  --franja-top: 136px;   /* 9:16: 14 % superior libre (134,4 px) */
+  --franja-pie: 192px;   /* 9:16: 20 % inferior libre */
+  --margen-der-916: 80px; /* 9:16: margen derecho libre de texto */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--iron); }
+
+.pieza {
+  position: relative;
+  width: 540px;
+  overflow: hidden;
+  background: var(--iron);
+  color: var(--alabaster);
+  font-family: "Archivo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.pieza.f4x5 { height: 675px; }
+.pieza.f9x16 { height: 960px; }
+
+.foto { position: absolute; overflow: hidden; }
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.kicker {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+.titular {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 0.96;
+}
+.subtitulo {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+.dato {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.etiqueta {
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1.45;
+  color: rgb(245 245 243 / 0.7);
+}
+.logo { display: block; height: auto; }
+
+.cta {
+  display: inline-block;
+  background: var(--alabaster);
+  color: var(--iron);
+  padding: 14px 18px;
+}
+.cta .kicker { font-size: 12px; }
+.cta .dato { margin-top: 4px; font-size: 15px; font-weight: 600; }
+
+.hairline { height: 1px; background: rgb(245 245 243 / 0.18); }

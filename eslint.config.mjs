@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Plantillas de contenido para redes: no son parte de la web.
+    "contenido/**",
   ]),
 ]);
 

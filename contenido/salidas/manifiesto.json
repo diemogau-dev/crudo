@@ -1,0 +1,746 @@
+{
+ "salidas/organico/O2_crudo04_4x5.png": {
+  "pieza": "O2_crudo04",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica, acero y vidrio. CRUDO 04 es la casa de verano completa. Pedí la propuesta por WhatsApp.",
+  "anuncio": null,
+  "formato": "4x5",
+  "plantilla": "editorial",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1011.59375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1102.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1228,
+    "w": 952,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/organico/O2_crudo04_9x16.png": {
+  "pieza": "O2_crudo04",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica, acero y vidrio. CRUDO 04 es la casa de verano completa. Pedí la propuesta por WhatsApp.",
+  "anuncio": null,
+  "formato": "9x16",
+  "plantilla": "editorial",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1197.59375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1288.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1414,
+    "w": 856,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1_precio-cerrado_4x5.png": {
+  "pieza": "A1_precio-cerrado",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "4x5",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 808.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "TU CASA DE VERANO, CON PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 859.125,
+    "w": 880,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Quincho, deck y cobogós incluidos · Gs 339.200.000 IVA incl.",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1006,
+    "w": 716.3125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1102.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1228,
+    "w": 952,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1_precio-cerrado_9x16.png": {
+  "pieza": "A1_precio-cerrado",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "9x16",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 994.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "TU CASA DE VERANO, CON PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 1045.125,
+    "w": 800,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Quincho, deck y cobogós incluidos · Gs 339.200.000 IVA incl.",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1192,
+    "w": 716.3125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1288.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1414,
+    "w": 856,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1a_lista-en-2-meses_4x5.png": {
+  "pieza": "A1a_lista-en-2-meses",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "4x5",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 808.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "LISTA EN 2 MESES. PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 859.125,
+    "w": 880,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "2 meses desde la palada inicial · Gs 339.200.000 IVA incl.",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1006,
+    "w": 668.75,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1102.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1228,
+    "w": 952,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1a_lista-en-2-meses_9x16.png": {
+  "pieza": "A1a_lista-en-2-meses",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "9x16",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 994.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "LISTA EN 2 MESES. PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 1045.125,
+    "w": 800,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "2 meses desde la palada inicial · Gs 339.200.000 IVA incl.",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1192,
+    "w": 668.75,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1288.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1414,
+    "w": 856,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1b_quincho_4x5.png": {
+  "pieza": "A1b_quincho",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "4x5",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-c.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 808.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "TU CASA DE VERANO, CON PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 859.125,
+    "w": 880,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Quincho, deck y cobogós incluidos · Gs 339.200.000 IVA incl.",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1006,
+    "w": 716.3125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1102.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1228,
+    "w": 952,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1b_quincho_9x16.png": {
+  "pieza": "A1b_quincho",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "9x16",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-c.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 994.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "TU CASA DE VERANO, CON PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 1045.125,
+    "w": 800,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Quincho, deck y cobogós incluidos · Gs 339.200.000 IVA incl.",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1192,
+    "w": 716.3125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1288.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1414,
+    "w": 856,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1c_sin-precio_4x5.png": {
+  "pieza": "A1c_sin-precio",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "4x5",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 808.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "TU CASA DE VERANO, CON PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 859.125,
+    "w": 880,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Quincho, deck y cobogós incluidos · Precio cerrado, IVA incluido",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1006,
+    "w": 750.375,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1102.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1228,
+    "w": 952,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/anuncios/A1c_sin-precio_9x16.png": {
+  "pieza": "A1c_sin-precio",
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "anuncio": {
+   "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.",
+   "titulo": "CRUDO 04 · Precio cerrado",
+   "cta": "Enviar mensaje (WhatsApp)"
+  },
+  "formato": "9x16",
+  "plantilla": "publicitaria",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": true,
+    "clase": "kicker",
+    "x": 64,
+    "y": 994.34375,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "TU CASA DE VERANO, CON PRECIO CERRADO.",
+    "sobre_imagen": true,
+    "clase": "titular",
+    "x": 64,
+    "y": 1045.125,
+    "w": 800,
+    "h": 122.875,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Quincho, deck y cobogós incluidos · Precio cerrado, IVA incluido",
+    "sobre_imagen": true,
+    "clase": "dato",
+    "x": 64,
+    "y": 1192,
+    "w": 750.375,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1288.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 1414,
+    "w": 856,
+    "h": 58,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ }
+}

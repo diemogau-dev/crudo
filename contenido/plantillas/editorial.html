@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Plantilla editorial</title>
+<link rel="stylesheet" href="base.css">
+<script src="comun.js"></script>
+</head>
+<body>
+<script>
+// Editorial: render sin filtro en una franja ancha (proporción ~1,2, para que
+// entre la casa completa) y, debajo, campo Iron Black con kicker, logo al pie
+// y etiqueta. Un degradado mínimo funde el borde inferior del render.
+// En 9:16 la franja arranca debajo del 14 % superior y todo el texto queda
+// por encima del 20 % inferior.
+const ALTO_FOTO = { "4x5": 450, "9x16": 450 };
+
+window.render = (d) => {
+  const es916 = d.formato === "9x16";
+  const top = es916 ? 136 : 0;
+  const pie = es916 ? 192 : 0;
+  const alto = d.alto_foto || ALTO_FOTO[d.formato];
+  const p = el("div", "pieza f" + d.formato);
+  document.body.appendChild(p);
+
+  p.appendChild(foto(d.render, d.encuadre, { left: 0, top: top + "px", width: "540px", height: alto + "px" }));
+  p.appendChild(capa({
+    left: 0, width: "540px", top: top + alto - 60 + "px", height: "60px",
+    background: "linear-gradient(to top, rgb(26 26 26 / 0.85), rgb(26 26 26 / 0))",
+  }));
+
+  const s = pila({ left: "32px", bottom: pie + 32 + "px", right: es916 ? "80px" : "32px" });
+  s.append(
+    el("p", "kicker", d.kicker),
+    respiroLogo(110),
+    logo(110),
+    respiroLogo(110),
+    el("p", "etiqueta", d.etiqueta),
+  );
+  p.appendChild(s);
+  return esperarImagenes();
+};
+</script>
+</body>
+</html>

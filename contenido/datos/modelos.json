@@ -1,0 +1,139 @@
+{
+  "_nota": "Única fuente de datos para textos y números de las piezas. Precios en guaraníes, IVA incluido, de las propuestas del 21/10/2026, alineadas con la web. Los textos de las piezas usan {marcadores} que el script resuelve desde acá.",
+  "contacto": {
+    "whatsapp": "+595 991 574 500",
+    "instagram": "@crudohomes",
+    "web": "crudo.com.py",
+    "oficina": "Sucre 1862 casi José Campos Lanzoni, Asunción",
+    "horario": "Lunes a viernes, 8:30 a 17:30"
+  },
+  "condiciones": {
+    "precio": "Precio cerrado, IVA incluido.",
+    "plazo": "Plazo desde la palada inicial.",
+    "garantia": "Garantía de 12 meses.",
+    "pago": "40 % al firmar, 40 % en terminaciones, 20 % a la entrega.",
+    "validez": "Precio válido por 15 días."
+  },
+  "modelos": {
+    "crudo01": {
+      "nombre": "CRUDO 01",
+      "tipologia": "Loft",
+      "superficie_m2": 31,
+      "dormitorios": 1,
+      "destacados": ["Dormitorio y escritorio", "Baño con tocador", "Deck"],
+      "plazo": "45 días",
+      "precio_gs": 152500000,
+      "etiqueta": "Imagen referencial"
+    },
+    "crudo02": {
+      "nombre": "CRUDO 02",
+      "tipologia": "Loft con kitchenette",
+      "superficie_m2": 26,
+      "dormitorios": 1,
+      "destacados": ["Dormitorio y estar", "Kitchenette", "Deck"],
+      "plazo": "45 días",
+      "precio_gs": 148800000,
+      "etiqueta": "Imagen referencial"
+    },
+    "crudo03": {
+      "nombre": "CRUDO 03",
+      "tipologia": "Vivienda industrial",
+      "superficie_m2": 66,
+      "dormitorios": 2,
+      "destacados": ["2 dormitorios", "Cocina con isla"],
+      "plazo": "2 meses",
+      "precio_gs": 308800000,
+      "etiqueta": "Imagen referencial · Piscina, deck, pérgola, parrilla y cobogós son adicionales"
+    },
+    "crudo04": {
+      "nombre": "CRUDO 04",
+      "tipologia": "Casa con quincho",
+      "superficie_m2": 85,
+      "dormitorios": 2,
+      "destacados": ["2 dormitorios", "Quincho con parrilla", "Deck"],
+      "incluidos": "Quincho, deck y cobogós incluidos",
+      "plazo": "2 meses",
+      "precio_gs": 339200000,
+      "etiqueta": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+    }
+  },
+  "piezas": [
+    {
+      "id": "O2_crudo04",
+      "carpeta": "organico",
+      "plantilla": "editorial",
+      "formatos": ["4x5", "9x16"],
+      "modelo": "crudo04",
+      "render": "crudo-04/crudo-4-a.jpg",
+      "encuadre": "50% 60%",
+      "kicker": "{m.nombre} · {m.superficie}",
+      "copy": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica, acero y vidrio. {m.nombre} es la casa de verano completa. Pedí la propuesta por WhatsApp."
+    },
+    {
+      "id": "O4_cuatro-crudo",
+      "carpeta": "organico",
+      "plantilla": "ficha",
+      "formatos": ["4x5"],
+      "copy": "Cuatro tipologías, del {crudo02.tipologia_min} de {crudo02.superficie} a la {crudo04.tipologia_min} de {crudo04.superficie}. Todas de hormigón armado, con precio cerrado y plazo definido desde la palada inicial. ¿Cuál va en tu terreno? Escribinos el número del que te interesa y te mandamos la propuesta completa.",
+      "laminas": [
+        {
+          "tipo": "portada",
+          "renders": [
+            {"modelo": "crudo02", "render": "crudo-02/crudo-2-a.jpg", "encuadre": "55% 55%"},
+            {"modelo": "crudo01", "render": "crudo-01/crudo-1-k.jpg", "encuadre": "60% 55%"},
+            {"modelo": "crudo03", "render": "crudo-03/crudo-3-a.jpg", "encuadre": "62% 55%"},
+            {"modelo": "crudo04", "render": "crudo-04/crudo-4-a.jpg", "encuadre": "50% 60%"}
+          ],
+          "kicker": "{crudo01.nombre} · 02 · 03 · 04",
+          "titular": "CUATRO FORMAS DE SUMAR UN CRUDO A TU TERRENO",
+          "dato": "Del {crudo02.tipologia_min} de {crudo02.superficie} a la {crudo04.tipologia_min} de {crudo04.superficie}.",
+          "etiqueta": "Imágenes referenciales · {crudo03.nombre}: piscina, deck, pérgola, parrilla y cobogós son adicionales · {crudo04.nombre}: la tina no está incluida y la piscina se suma como adicional"
+        },
+        {"tipo": "modelo", "modelo": "crudo02", "render": "crudo-02/crudo-2-a.jpg", "encuadre": "55% 55%"},
+        {"tipo": "modelo", "modelo": "crudo01", "render": "crudo-01/crudo-1-k.jpg", "encuadre": "60% 50%"},
+        {"tipo": "modelo", "modelo": "crudo03", "render": "crudo-03/crudo-3-a.jpg", "encuadre": "62% 55%"},
+        {"tipo": "modelo", "modelo": "crudo04", "render": "crudo-04/crudo-4-a.jpg", "encuadre": "50% 60%"},
+        {
+          "tipo": "cierre",
+          "kicker": "ARMEMOS TU CRUDO",
+          "texto": "{condiciones.precio} {condiciones.plazo} {condiciones.garantia}",
+          "cta": "ESCRIBINOS POR WHATSAPP",
+          "cta_dato": "{contacto.whatsapp}"
+        }
+      ]
+    },
+    {
+      "id": "A1_precio-cerrado",
+      "carpeta": "anuncios",
+      "plantilla": "publicitaria",
+      "formatos": ["4x5", "9x16"],
+      "modelo": "crudo04",
+      "render": "crudo-04/crudo-4-a.jpg",
+      "encuadre": "50% 60%",
+      "kicker": "{m.nombre} · {m.superficie}",
+      "titular": "TU CASA DE VERANO, CON PRECIO CERRADO.",
+      "dato": "{m.incluidos} · {m.precio} IVA incl.",
+      "anuncio": {
+        "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en {m.plazo} desde la palada inicial.",
+        "titulo": "{m.nombre_titulo} · Precio cerrado",
+        "cta": "Enviar mensaje (WhatsApp)"
+      },
+      "variantes": [
+        {
+          "id": "A1a_lista-en-2-meses",
+          "titular": "LISTA EN {m.plazo_mayus}. PRECIO CERRADO.",
+          "dato": "{m.plazo} desde la palada inicial · {m.precio} IVA incl."
+        },
+        {
+          "id": "A1b_quincho",
+          "render": "crudo-04/crudo-4-c.jpg",
+          "encuadre": "72% 50%"
+        },
+        {
+          "id": "A1c_sin-precio",
+          "dato": "{m.incluidos} · Precio cerrado, IVA incluido"
+        }
+      ]
+    }
+  ]
+}

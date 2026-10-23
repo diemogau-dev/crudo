@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Plantilla publicitaria</title>
+<link rel="stylesheet" href="base.css">
+<script src="comun.js"></script>
+</head>
+<body>
+<script>
+// Publicitaria: render tratado (saturación 55 %, brillo 62 %) en franja ancha
+// con scrim Iron Black en degradado desde abajo, que se funde con el campo
+// Iron Black. Texto en el tercio inferior: kicker, titular, una línea de
+// dato, logo al pie y etiqueta.
+const ALTO_FOTO = { "4x5": 400, "9x16": 356 };
+
+window.render = (d) => {
+  const es916 = d.formato === "9x16";
+  const top = es916 ? 136 : 0;
+  const pie = es916 ? 192 : 0;
+  const alto = d.alto_foto || ALTO_FOTO[d.formato];
+  const p = el("div", "pieza f" + d.formato);
+  document.body.appendChild(p);
+
+  p.appendChild(foto(d.render, d.encuadre,
+    { left: 0, top: top + "px", width: "540px", height: alto + "px" },
+    "saturate(0.55) brightness(0.62)"));
+  p.appendChild(capa({
+    left: 0, width: "540px", top: top + alto * 0.45 + "px", height: alto * 0.55 + 1 + "px",
+    background: "linear-gradient(to top, rgb(26 26 26 / 1), rgb(26 26 26 / 0.82) 40%, rgb(26 26 26 / 0))",
+  }));
+
+  const s = pila({ left: "32px", bottom: pie + 32 + "px", right: es916 ? "80px" : "32px" });
+  const tit = el("h1", "titular", d.titular, { "data-sobre-imagen": "" });
+  tit.style.fontSize = "32px";
+  tit.style.marginTop = "10px";
+  tit.style.maxWidth = es916 ? "400px" : "440px";
+  const dato = el("p", "dato", d.dato, { "data-sobre-imagen": "" });
+  dato.style.marginTop = "12px";
+  dato.style.color = "var(--cement)";
+  s.append(
+    el("p", "kicker", d.kicker, { "data-sobre-imagen": "" }),
+    tit,
+    dato,
+    respiroLogo(110),
+    logo(110),
+    respiroLogo(110),
+    el("p", "etiqueta", d.etiqueta),
+  );
+  p.appendChild(s);
+  return esperarImagenes();
+};
+</script>
+</body>
+</html>

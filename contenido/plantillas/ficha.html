@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Plantilla ficha</title>
+<link rel="stylesheet" href="base.css">
+<script src="comun.js"></script>
+<style>
+  .filas { width: 476px; margin-top: 14px; }
+  .fila { display: flex; justify-content: space-between; gap: 16px; padding: 6px 0; border-top: 1px solid rgb(245 245 243 / 0.18); }
+  .fila .kicker { color: var(--cement); font-size: 10px; padding-top: 2px; }
+  .fila .dato { text-align: right; }
+</style>
+</head>
+<body>
+<script>
+// Ficha para carrusel (4:5): portada con grilla 2 × 2, una lámina por modelo
+// (render arriba al 60 %, ficha abajo) y una lámina de cierre con CTA.
+const laminas = {
+  portada(p, d) {
+    const W = 269, Hh = 189, g = 2;
+    d.renders.forEach((r, i) => {
+      p.appendChild(foto(r.render, r.encuadre, {
+        left: (i % 2) * (W + g) + "px", top: Math.floor(i / 2) * (Hh + g) + "px",
+        width: W + "px", height: Hh + "px",
+      }));
+    });
+    const et = el("p", "etiqueta", d.etiqueta);
+    Object.assign(et.style, { position: "absolute", left: "32px", top: 2 * Hh + g + 10 + "px", width: "476px" });
+    p.appendChild(et);
+
+    const s = pila({ left: "32px", bottom: "32px", right: "32px" });
+    const tit = el("h1", "titular", d.titular);
+    Object.assign(tit.style, { fontSize: "34px", marginTop: "10px" });
+    const dato = el("p", "dato", d.dato);
+    Object.assign(dato.style, { marginTop: "12px", color: "var(--cement)" });
+    s.append(el("p", "kicker", d.kicker), tit, dato, respiroLogo(96), logo(96));
+    p.appendChild(s);
+  },
+
+  modelo(p, d) {
+    p.appendChild(foto(d.render, d.encuadre, { left: 0, top: 0, width: "540px", height: "405px" }));
+    p.appendChild(capa({ left: 0, top: "325px", width: "540px", height: "80px",
+      background: "linear-gradient(to top, rgb(26 26 26 / 0.7), rgb(26 26 26 / 0))" }));
+    const et = el("p", "etiqueta", d.etiqueta, { "data-sobre-imagen": "" });
+    Object.assign(et.style, { position: "absolute", left: "32px", bottom: 675 - 405 + 12 + "px", width: "476px" });
+    p.appendChild(et);
+
+    const s = pila({ left: "32px", top: "433px", right: "32px" });
+    const tit = el("h2", "titular", d.titular);
+    Object.assign(tit.style, { fontSize: "30px", marginTop: "8px" });
+    const filas = el("div", "filas");
+    for (const [k, v] of d.filas) {
+      const f = el("div", "fila");
+      f.append(el("span", "kicker", k), el("span", "dato", v));
+      filas.appendChild(f);
+    }
+    s.append(el("p", "kicker", d.kicker), tit, filas);
+    p.appendChild(s);
+  },
+
+  cierre(p, d) {
+    const k = el("p", "kicker", d.kicker);
+    Object.assign(k.style, { position: "absolute", left: "32px", top: "32px", color: "var(--cement)" });
+    p.appendChild(k);
+    const s = pila({ left: "32px", bottom: "32px", right: "32px" });
+    const t = el("p", "subtitulo", d.texto);
+    Object.assign(t.style, { fontSize: "26px", maxWidth: "440px" });
+    const cta = el("div", "cta");
+    cta.style.marginTop = "28px";
+    cta.append(el("p", "kicker", d.cta), el("p", "dato", d.cta_dato));
+    s.append(t, cta, respiroLogo(110), logo(110));
+    p.appendChild(s);
+  },
+};
+
+window.render = (d) => {
+  const p = el("div", "pieza f4x5");
+  document.body.appendChild(p);
+  laminas[d.tipo](p, d);
+  return esperarImagenes();
+};
+</script>
+</body>
+</html>

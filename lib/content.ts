@@ -698,6 +698,10 @@ export const models: Model[] = [
         ],
       },
       {
+        label: "Adicionales (no incluidos en el precio)",
+        items: ["Piscina con deck: a medida, se cotiza en la reunión."],
+      },
+      {
         label: "Muebles",
         items: ["Placards en los dos dormitorios."],
       },
