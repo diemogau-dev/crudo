@@ -77,8 +77,13 @@ export default function ModelDetail({ model, other, faqs }: Props) {
     <>
       {SHOW_PRICES ? (
         <div className="mt-5 border-t border-hairline pt-5">
-          <p className="kicker text-muted">Precio (+IVA)</p>
-          <p className="mt-1 text-base font-semibold">{model.startingPrice}</p>
+          <p className="kicker text-muted">Precio cerrado</p>
+          <p className="mt-1 text-base font-semibold">{model.price}</p>
+          {model.leadTime ? (
+            <p className="body-text mt-1 text-muted">
+              Plazo: {model.leadTime}
+            </p>
+          ) : null}
         </div>
       ) : null}
 

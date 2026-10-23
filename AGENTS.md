@@ -17,11 +17,12 @@ Leé `context/` — es la fuente de verdad del proyecto y se mantiene actualizad
 
 ## Reglas de contenido no negociables
 
-- No mostrar precios ni plazos de entrega específicos.
+- Precios y plazos: solo los de las propuestas comerciales (precio cerrado con IVA incluido; 45 días en CRUDO 01 y 02). Web y propuestas tienen que coincidir. Decisión de Diego, 2026-10-23.
 - No usar afirmaciones absolutas de velocidad ("siempre", "récord", "garantizado").
 - No inventar certificaciones, testimonios, clientes ni proyectos construidos.
 - No mencionar a la constructora madre, a Concrit ni a proveedores externos.
 - Los proyectos se llaman **tipologías**, nunca "modelos" ni "Serie": son CRUDO 01, CRUDO 02, y a futuro 03, 04.
+- Se escribe **cobogós**, no "celosías". No se inventan nombres comerciales para las tipologías (Loft, Loft con kitchenette, Vivienda industrial, Casa con quincho).
 - Las specs de los modelos vienen del manual de marca; no se inventan ni se estiman de los renders.
 - Nada de stock photography: solo renders propios y fotos reales de taller.
 

@@ -54,7 +54,7 @@ export default function Home() {
         <Reveal className="relative mt-20 aspect-[16/10] w-full overflow-hidden bg-cement md:mt-28 md:aspect-[21/9]">
           <Image
             src="/images/a-medida/crudo-04-lateral.jpg"
-            alt="Proyecto CRUDO con techo a dos aguas, galería vidriada, celosía de concreto, deck de madera y pileta"
+            alt="Proyecto CRUDO con techo a dos aguas, galería vidriada, cobogós de concreto, deck de madera y pileta"
             fill
             sizes="100vw"
             className="object-cover"
@@ -106,7 +106,7 @@ export default function Home() {
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-cement">
               <Image
                 src="/images/tipologias/crudo-03-pileta.jpg"
-                alt="CRUDO 03 con pileta, pérgola de madera y celosía de concreto"
+                alt="CRUDO 03 con pileta, pérgola metálica y cobogós de concreto"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"

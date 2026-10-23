@@ -1,10 +1,9 @@
 import type { WhatsappTopic } from "./whatsapp";
 
-// Precios "Desde" del módulo, sin IVA. Salen de las planillas de costo de
-// cada tipología (CRUDO 01 y 04 reales; CRUDO 02 y 03 estimadas a partir de
-// la de CRUDO 01), con el mismo criterio: costo + 5% de imprevistos + 30% de
-// ganancia (CRUDO 01 usa el precio de venta de su planilla). Piscina y trabajos del terreno son extras y no entran en el
-// precio; en CRUDO 04 el quincho con parrilla sí está incluido.
+// Precios cerrados con IVA incluido. Salen de las propuestas comerciales
+// "Crudo 0X - Propuesta" (21/10/2026); web y propuestas tienen que coincidir.
+// No incluyen flete, pozo ciego y cámara séptica, conexión a ANDE ni muebles
+// y decoración de las imágenes. Cualquier cambio de precio se hace acá.
 export const SHOW_PRICES = true;
 
 export function formatGs(value: number) {
@@ -12,17 +11,13 @@ export function formatGs(value: number) {
 }
 
 const PRICES_GS = {
-  // Planilla "Presupuesto CRUDO 01" sin bidet: precio de venta Gs. 151.844.674,
-  // redondeado a Gs. 151.900.000.
-  crudo01: 151_900_000,
-  crudo02: 158_918_742,
-  crudo03: 291_332_917,
-  // Planilla "Presupuesto CRUDO 04": vivienda (Gs. 231.298.413) + quincho
-  // (parrilla, pérgola y deck, Gs. 26.700.000), × 1,35.
-  crudo04: 348_297_858,
+  crudo01: 152_500_000,
+  crudo02: 148_800_000,
+  crudo03: 308_800_000,
+  crudo04: 339_200_000,
 } as const;
 
-const startingPrice = (value: number) => `Desde ${formatGs(value)} + IVA`;
+const closedPrice = (value: number) => `${formatGs(value)} IVA incluido`;
 
 export const contact = {
   email: "crudohomes@gmail.com",
@@ -55,7 +50,9 @@ export type Model = {
   tipology: string;
   area: string;
   areaM2: number;
-  startingPrice: string;
+  price: string;
+  // Plazo de obra que se muestra en la web (solo donde está definido).
+  leadTime?: string;
   features: { icon: ModelFeatureIcon; label: string }[];
   summary: string;
   description: string[];
@@ -104,7 +101,7 @@ const exteriorSpecs: SpecGroup = {
 const bathSpecs = (
   heater: string,
   extra: string[] = [],
-  toilet = "Inodoro con cisterna baja y bidet",
+  toilet = "Inodoro con cisterna baja y ducha higiénica",
 ): SpecGroup => ({
   label: "Baño",
   items: [
@@ -132,13 +129,14 @@ export const models: Model[] = [
     tipology: "Loft",
     area: "31 m²",
     areaM2: 31,
-    startingPrice: startingPrice(PRICES_GS.crudo01),
+    price: closedPrice(PRICES_GS.crudo01),
+    leadTime: "45 días",
     features: [
       { icon: "bed", label: "1 habitación" },
       { icon: "bath", label: "1 baño" },
-      { icon: "terrace", label: "Terraza" },
+      { icon: "terrace", label: "Deck" },
     ],
-    summary: "Un ambiente con baño, frente vidriado y terraza.",
+    summary: "Un ambiente con baño, frente vidriado y deck.",
     description: [
       "Un loft de un solo ambiente pensado para vivirse entero: un volumen limpio de hormigón con un frente vidriado que abre el espacio hacia el terreno.",
       "Casa de fin de semana, espacio de huéspedes, oficina o retiro en el fondo de una propiedad que ya existe.",
@@ -147,11 +145,11 @@ export const models: Model[] = [
       { label: "Superficie", value: "31 m²" },
       { label: "Habitación", value: "1" },
       { label: "Baño", value: "1" },
-      { label: "Terraza", value: "Incluida" },
+      { label: "Deck", value: "Incluido" },
     ],
     amenities: [
       "Frente vidriado de piso a techo",
-      "Terraza exterior",
+      "Deck exterior bajo el mismo techo",
       "Baño con bacha de concreto y mesada de mármol",
       "Aire acondicionado y placard incluidos",
     ],
@@ -273,32 +271,34 @@ export const models: Model[] = [
     slug: "crudo-02",
     name: "CRUDO 02",
     tipology: "Loft con kitchenette",
-    area: "31 m²",
-    areaM2: 31,
-    startingPrice: startingPrice(PRICES_GS.crudo02),
+    area: "26 m²",
+    areaM2: 26,
+    price: closedPrice(PRICES_GS.crudo02),
+    leadTime: "45 días",
     features: [
       { icon: "bed", label: "1 habitación" },
       { icon: "bath", label: "1 baño" },
       { icon: "kitchen", label: "Kitchenette" },
-      { icon: "terrace", label: "Terraza" },
+      { icon: "terrace", label: "Deck" },
     ],
-    summary: "Un ambiente con kitchenette, baño y terraza.",
+    summary: "Un ambiente con kitchenette, baño y deck.",
     description: [
-      "El loft de CRUDO 01 con cocina propia: el mismo volumen de hormigón y frente vidriado, con una kitchenette equipada y una barra para comer sin salir del ambiente.",
+      "Un loft de 26 m² con dormitorio y estar en un mismo ambiente, frente vidriado hacia el deck y una kitchenette con desayunador para cocinar sin salir.",
       "Pensado para quedarse más de un fin de semana: casa de huéspedes, alquiler temporario, estudio con vivienda o un primer espacio independiente en el fondo de una propiedad que ya existe.",
     ],
     specs: [
-      { label: "Superficie", value: "31 m²" },
+      { label: "Superficie", value: "26 m²" },
       { label: "Habitación", value: "1" },
       { label: "Baño", value: "1" },
       { label: "Kitchenette", value: "Incluida" },
-      { label: "Terraza", value: "Incluida" },
+      { label: "Deck", value: "Incluido" },
     ],
     amenities: [
       "Kitchenette con anafe eléctrico y bacha de concreto",
       "Barra para comer en mármol o granito",
       "Frente vidriado de piso a techo",
-      "Terraza exterior",
+      "Deck exterior",
+      "Pared de cobogós",
       "Baño con bacha de concreto, mesada de mármol y espejo iluminado",
     ],
     constructionSpecs: [
@@ -352,11 +352,11 @@ export const models: Model[] = [
       },
     ],
     shareDescription:
-      "CRUDO 02 - Loft de 31 m². Una habitación, kitchenette y baño.",
+      "CRUDO 02 - Loft de 26 m². Una habitación, kitchenette y baño.",
     whatsapp: "crudo02",
     cardCover: {
       src: "/images/renders/crudo-2/crudo-2-a.jpg",
-      alt: "CRUDO 02 con frente vidriado, deck y celosía de concreto, sobre el campo",
+      alt: "CRUDO 02 con frente vidriado, deck y cobogós de concreto, sobre el campo",
     },
     cover: "/images/renders/crudo-2/crudo-2-c.jpg",
     coverAlt:
@@ -370,7 +370,7 @@ export const models: Model[] = [
     gallery: [
       {
         src: "/images/renders/crudo-2/crudo-2-a.jpg",
-        alt: "Deck de CRUDO 02 con celosía de concreto y sillones, frente al dormitorio vidriado",
+        alt: "Deck de CRUDO 02 con cobogós de concreto y sillones, frente al dormitorio vidriado",
         width: 1313,
         height: 800,
       },
@@ -412,7 +412,7 @@ export const models: Model[] = [
     tipology: "Vivienda industrial",
     area: "66 m²",
     areaM2: 66,
-    startingPrice: startingPrice(PRICES_GS.crudo03),
+    price: closedPrice(PRICES_GS.crudo03),
     features: [
       { icon: "bed", label: "2 habitaciones" },
       { icon: "bath", label: "1 baño" },
@@ -468,7 +468,17 @@ export const models: Model[] = [
           "Frente de cocina revestido en cerámica.",
         ],
       },
-      bathSpecs("120 L"),
+      bathSpecs("120 L", [], "Inodoro con cisterna baja y bidet"),
+      {
+        label: "Adicionales (no incluidos en el precio)",
+        items: [
+          "Pared de cobogós (7 m²): Gs. 3.591.000.",
+          "Módulo de parrilla: Gs. 12.750.000.",
+          "Pérgola metálica: Gs. 10.125.000.",
+          "Deck símil madera de 7 × 4 m: Gs. 10.500.000.",
+          "Piscina con deck: a medida, se cotiza en la reunión.",
+        ],
+      },
       {
         label: "Instalación eléctrica",
         items: [
@@ -515,13 +525,13 @@ export const models: Model[] = [
       },
       {
         src: "/images/renders/crudo-3/crudo-3-b.jpg",
-        alt: "Pileta de CRUDO 03 junto a la galería, con pérgola de madera y living exterior",
+        alt: "Pileta de CRUDO 03 junto a la galería, con pérgola metálica y living exterior",
         width: 1486,
         height: 704,
       },
       {
         src: "/images/renders/crudo-3/crudo-3-d.png",
-        alt: "Galería de CRUDO 03 bajo pérgola de madera, con celosía de concreto, mesa exterior y pileta",
+        alt: "Galería de CRUDO 03 bajo pérgola metálica, con cobogós de concreto, mesa exterior y pileta",
         width: 1727,
         height: 910,
       },
@@ -545,7 +555,7 @@ export const models: Model[] = [
       },
       {
         src: "/images/renders/crudo-3/crudo-3-g.jpg",
-        alt: "Cocina exterior de CRUDO 03 bajo pérgola, con parrilla y celosía de concreto",
+        alt: "Cocina exterior de CRUDO 03 bajo pérgola, con parrilla y cobogós de concreto",
         width: 1338,
         height: 784,
       },
@@ -581,7 +591,7 @@ export const models: Model[] = [
     tipology: "Casa con quincho",
     area: "85 m²",
     areaM2: 85,
-    startingPrice: startingPrice(PRICES_GS.crudo04),
+    price: closedPrice(PRICES_GS.crudo04),
     features: [
       { icon: "bed", label: "2 habitaciones" },
       { icon: "bath", label: "1 baño" },
@@ -606,6 +616,7 @@ export const models: Model[] = [
       "Cocina con isla, anafe, extractor y horno empotrado",
       "Sala comedor integrada a la cocina",
       "Quincho con parrilla, pérgola metálica y deck",
+      "Pared de cobogós de 12 m²",
       "Frente vidriado de piso a techo",
       "Aire acondicionado en estar y dormitorios",
     ],
@@ -680,9 +691,10 @@ export const models: Model[] = [
       {
         label: "Quincho",
         items: [
-          "Módulo de parrilla.",
-          "Pérgola metálica.",
+          "Módulo de parrilla: mesada de hormigón, parrilla de acero inoxidable y campana.",
+          "Pérgola metálica, integrada a la estructura del techo.",
           "Deck símil madera de 7 × 4 m sobre platea de 10 cm.",
+          "Pared de cobogós de 12 m², de nuestra fábrica.",
         ],
       },
       {
@@ -711,13 +723,13 @@ export const models: Model[] = [
       },
       {
         src: "/images/renders/crudo-4/crudo-4-b.jpg",
-        alt: "Vista lateral de CRUDO 04 en paneles de hormigón, con galería, celosía de concreto y deck",
+        alt: "Vista lateral de CRUDO 04 en paneles de hormigón, con galería, cobogós de concreto y deck",
         width: 1800,
         height: 1200,
       },
       {
         src: "/images/renders/crudo-4/crudo-4-c.jpg",
-        alt: "Galería de CRUDO 04 con tina exenta, comedor exterior y parrilla junto a la celosía de concreto",
+        alt: "Galería de CRUDO 04 con tina exenta, comedor exterior y parrilla junto a los cobogós de concreto",
         width: 1600,
         height: 672,
       },
@@ -859,13 +871,13 @@ export const faqs = [
   {
     question: "¿Cuánto cuesta un CRUDO?",
     answer: SHOW_PRICES
-      ? `CRUDO 01 desde ${formatGs(PRICES_GS.crudo01)} + IVA, CRUDO 02 desde ${formatGs(PRICES_GS.crudo02)} + IVA, CRUDO 03 desde ${formatGs(PRICES_GS.crudo03)} + IVA y CRUDO 04 desde ${formatGs(PRICES_GS.crudo04)} + IVA. El valor final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
+      ? `CRUDO 01 ${closedPrice(PRICES_GS.crudo01)}, CRUDO 02 ${closedPrice(PRICES_GS.crudo02)}, CRUDO 03 ${closedPrice(PRICES_GS.crudo03)} y CRUDO 04 ${closedPrice(PRICES_GS.crudo04)}. Son precios cerrados: lo que ves en la propuesta es lo que pagás. No incluyen flete, pozo ciego y cámara séptica, conexión a ANDE ni los muebles y la decoración de las imágenes. Te preparamos una propuesta clara con el alcance exacto apenas conversemos.`
       : "El número final depende del terreno, la ubicación y los trabajos necesarios para prepararlo. Escribinos por WhatsApp y te preparamos una propuesta clara con el alcance y la inversión correspondiente.",
   },
   {
     question: "¿Cuánto tiempo demora la construcción?",
     answer:
-      "Depende del proyecto y del terreno, pero buena parte del trabajo se resuelve antes de llegar al terreno: al diseñar y fabricar elementos dentro del mismo sistema, reducimos coordinaciones innecesarias y tiempos muertos durante la ejecución. Cada proyecto tiene sus propios plazos; te damos uno concreto apenas revisamos tu caso.",
+      "Depende del proyecto y del terreno, pero buena parte del trabajo se resuelve antes de llegar al terreno: al diseñar y fabricar elementos dentro del mismo sistema, reducimos coordinaciones innecesarias y tiempos muertos durante la ejecución. CRUDO 01 y CRUDO 02 se construyen en 45 días. Para el resto, cada proyecto tiene sus propios plazos y te damos uno concreto apenas revisamos tu caso.",
   },
   {
     question: "¿Qué necesito tener para empezar?",

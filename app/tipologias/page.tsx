@@ -10,7 +10,7 @@ import { whatsappLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Tipologías",
   description:
-    "CRUDO 01, loft de 31 m²; CRUDO 02, loft de 31 m² con kitchenette; CRUDO 03, vivienda industrial de 66 m², y CRUDO 04, casa de 85 m² con quincho. Casas de hormigón armado diseñadas y construidas con nuestro sistema.",
+    "CRUDO 01, loft de 31 m²; CRUDO 02, loft de 26 m² con kitchenette; CRUDO 03, vivienda industrial de 66 m², y CRUDO 04, casa de 85 m² con quincho. Casas de hormigón armado diseñadas y construidas con nuestro sistema.",
 };
 
 export default function TipologiasPage() {
@@ -21,7 +21,7 @@ export default function TipologiasPage() {
         title="Muchas formas de vivirlas."
         image={{
           src: "/images/renders/crudo-1/crudo-1-campo.jpg",
-          alt: "CRUDO 01 en el campo, junto a un arroyo, con su frente vidriado y celosía de concreto",
+          alt: "CRUDO 01 en el campo, junto a un arroyo, con su frente vidriado y cobogós de concreto",
           priority: true,
           position: "object-[22%_center] md:object-center",
         }}

@@ -72,7 +72,7 @@ export default function ModelCard({
       </ul>
 
       {SHOW_PRICES && showPrice ? (
-        <p className="kicker mt-4 text-iron">{model.startingPrice}</p>
+        <p className="kicker mt-4 text-iron">{model.price}</p>
       ) : null}
 
       {/* La tarjeta entera ya es un link: el botón es visual, no un <a> anidado. */}

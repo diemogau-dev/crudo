@@ -2,6 +2,17 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-23 — Web alineada con las propuestas (pedido de Diego)
+
+1. **CRUDO 02 = 26 m²** (antes 31 m²) en toda la web.
+2. **Precios cerrados con IVA incluido, los de las propuestas del 21/10:** CRUDO 01 Gs. 152.500.000 · CRUDO 02 Gs. 148.800.000 · CRUDO 03 Gs. 308.800.000 · CRUDO 04 Gs. 339.200.000. Reemplazan los "Desde … + IVA". Web y propuestas tienen que coincidir. Los precios de venta no cambian aunque se corrija el costo interno de las planillas de 03 y 04.
+3. **Plazo en la web: 45 días** en CRUDO 01 y 02 como propuesta de valor. La aclaración "desde la palada inicial" se hace en la reunión presencial. En piezas de Instagram y Meta se sigue escribiendo "desde la palada inicial".
+4. **CRUDO 04 incluye todo** lo de la ficha: la estructura metálica ya contempla el techo y la pérgola sobre el deck, no hay pérgola extra. Suma pared de cobogós de 12 m² y parrilla (mesada de hormigón, parrilla inox y campana).
+5. **CRUDO 03:** termocalefón de 120 L, pérgola metálica (adicional). Se agregan a la ficha los adicionales con precio. Pendiente: actualizar la propuesta de CRUDO 03, que dice 80 L.
+6. **Bidet:** CRUDO 01 y 02 no llevan (inodoro con ducha higiénica). CRUDO 03 queda como estaba.
+7. **Cobogós** en lugar de "celosías" en textos visibles de la web. Deck en lugar de terraza en CRUDO 01 y 02.
+8. **Nombres:** no se inventan nombres comerciales; se usan los de la web. El número de cada CRUDO es su número dentro de la serie (01, 02, 03, 04, 05…).
+
 ## 2026-10-22 — Ajustes de "Qué incluye" (pedido de Diego)
 
 1. **CRUDO 01 no incluye bidet** (baño con inodoro y ducha higiénica, igual que CRUDO 04). CRUDO 02 y 03 no se tocaron. **Precio CRUDO 01 = Gs. 151.900.000 + IVA** (precio de venta de la planilla "Presupuesto CRUDO 01" sin bidet: Gs. 151.844.674, redondeado). Los precios de CRUDO 02 y 03 no se recalcularon: siguen siendo estimaciones a partir de la planilla anterior.
