@@ -8,6 +8,11 @@ Generado por `plantillas/exportar.py` desde `datos/modelos.json`. No editar a ma
 **Copy:** Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica, acero y vidrio. CRUDO 04 es la casa de verano completa. Pedí la propuesta por WhatsApp.
 
 
+## O4_cuatro-crudo
+
+**Copy:** Cuatro tipologías, del loft con kitchenette de 26 m² a la casa con quincho de 85 m². Todas de hormigón armado, con precio cerrado y plazo definido desde la palada inicial. ¿Cuál va en tu terreno? Escribinos el número del que te interesa y te mandamos la propuesta completa.
+
+
 ## A1_precio-cerrado
 
 **Texto principal:** Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en 2 meses desde la palada inicial.

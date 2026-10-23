@@ -18,7 +18,7 @@
 // (render arriba al 60 %, ficha abajo) y una lámina de cierre con CTA.
 const laminas = {
   portada(p, d) {
-    const W = 269, Hh = 189, g = 2;
+    const W = 269, Hh = 168, g = 2;
     d.renders.forEach((r, i) => {
       p.appendChild(foto(r.render, r.encuadre, {
         left: (i % 2) * (W + g) + "px", top: Math.floor(i / 2) * (Hh + g) + "px",
@@ -40,8 +40,8 @@ const laminas = {
 
   modelo(p, d) {
     p.appendChild(foto(d.render, d.encuadre, { left: 0, top: 0, width: "540px", height: "405px" }));
-    p.appendChild(capa({ left: 0, top: "325px", width: "540px", height: "80px",
-      background: "linear-gradient(to top, rgb(26 26 26 / 0.7), rgb(26 26 26 / 0))" }));
+    p.appendChild(capa({ left: 0, top: "285px", width: "540px", height: "120px",
+      background: "linear-gradient(to top, rgb(26 26 26 / 0.85), rgb(26 26 26 / 0.5) 45%, rgb(26 26 26 / 0))" }));
     const et = el("p", "etiqueta", d.etiqueta, { "data-sobre-imagen": "" });
     Object.assign(et.style, { position: "absolute", left: "32px", bottom: 675 - 405 + 12 + "px", width: "476px" });
     p.appendChild(et);

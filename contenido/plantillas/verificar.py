@@ -90,7 +90,7 @@ def main():
         for req in m["etiquetas_requeridas"]:
             if req not in etiquetas:
                 err.append(f"falta la etiqueta «{req}»")
-        if m["render"] and not any(e.lower().startswith("imagen") for e in etiquetas):
+        if m["render"] and not any(e.lower().startswith(("imagen referencial", "imágenes referenciales")) for e in etiquetas):
             err.append("pieza con render sin «Imagen referencial»")
 
         # 3. contraste: fondo bajo texto apoyado en render y bajo el logo

@@ -6,6 +6,12 @@ Generado por `plantillas/verificar.py`. Controles: números y textos contra `dat
 |---|---|---|
 | `salidas/organico/O2_crudo04_4x5.png` | OK | 9.3 |
 | `salidas/organico/O2_crudo04_9x16.png` | OK | 9.3 |
+| `salidas/organico/O4_cuatro-crudo_L1_4x5.png` | OK | 9.3 |
+| `salidas/organico/O4_cuatro-crudo_L2_4x5.png` | OK | 24.1 |
+| `salidas/organico/O4_cuatro-crudo_L3_4x5.png` | OK | 22.9 |
+| `salidas/organico/O4_cuatro-crudo_L4_4x5.png` | OK | 25.2 |
+| `salidas/organico/O4_cuatro-crudo_L5_4x5.png` | OK | 22.4 |
+| `salidas/organico/O4_cuatro-crudo_L6_4x5.png` | OK | 9.3 |
 | `salidas/anuncios/A1_precio-cerrado_4x5.png` | OK | 9.3 |
 | `salidas/anuncios/A1_precio-cerrado_9x16.png` | OK | 9.3 |
 | `salidas/anuncios/A1a_lista-en-2-meses_4x5.png` | OK | 9.3 |

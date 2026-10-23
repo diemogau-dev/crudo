@@ -35,4 +35,4 @@ Las plantillas se dibujan a 540 px CSS de ancho y se exportan con densidad 2×: 
 ## Ampliación y retoque
 
 - `herramientas/ampliar.py`: Real-ESRGAN ×2 (CPU, por mosaicos) mezclado al 80 % con un Lanczos del original, para ganar nitidez sin el aspecto "pintado" del modelo puro. Requiere `torch` (CPU), `torchvision` y `spandrel`.
-- `herramientas/quitar_marca_gemini.py`: tapa la estrella de Gemini (a ~61 × 62 px de la esquina inferior derecha) con un parche de la misma imagen.
+- `herramientas/quitar_marca_de_agua.py`: tapa la estrella de Gemini (a ~61 × 62 px de la esquina inferior derecha) con un parche de la misma imagen.

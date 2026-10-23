@@ -103,6 +103,658 @@
    }
   ]
  },
+ "salidas/organico/O4_cuatro-crudo_L1_4x5.png": {
+  "pieza": "O4_cuatro-crudo",
+  "lamina": 1,
+  "modelos": [
+   "crudo02",
+   "crudo01",
+   "crudo03",
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imágenes referenciales · CRUDO 03: piscina, deck, pérgola, parrilla y cobogós son adicionales · CRUDO 04: la tina no está incluida y la piscina se suma como adicional"
+  ],
+  "copy": "Cuatro tipologías, del loft con kitchenette de 26 m² a la casa con quincho de 85 m². Todas de hormigón armado, con precio cerrado y plazo definido desde la palada inicial. ¿Cuál va en tu terreno? Escribinos el número del que te interesa y te mandamos la propuesta completa.",
+  "formato": "4x5",
+  "plantilla": "ficha",
+  "render": [
+   "crudo-02/crudo-2-a.jpg",
+   "crudo-01/crudo-1-k.jpg",
+   "crudo-03/crudo-3-a.jpg",
+   "crudo-04/crudo-4-a.jpg"
+  ],
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "Imágenes referenciales · CRUDO 03: piscina, deck, pérgola, parrilla y cobogós son adicionales · CRUDO 04: la tina no está incluida y la piscina se suma como adicional",
+    "sobre_imagen": false,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 696,
+    "w": 952,
+    "h": 87,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 01 · 02 · 03 · 04",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 869.8125,
+    "w": 376.34375,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "CUATRO FORMAS DE SUMAR UN CRUDO A TU TERRENO",
+    "sobre_imagen": false,
+    "clase": "titular",
+    "x": 64,
+    "y": 920.59375,
+    "w": 952,
+    "h": 195.75,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Del loft con kitchenette de 26 m² a la casa con quincho de 85 m².",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 64,
+    "y": 1140.34375,
+    "w": 744.21875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1228.71875,
+    "w": 192,
+    "h": 57.28125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/organico/O4_cuatro-crudo_L2_4x5.png": {
+  "pieza": "O4_cuatro-crudo",
+  "lamina": 2,
+  "modelos": [
+   "crudo02"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial"
+  ],
+  "copy": null,
+  "formato": "4x5",
+  "plantilla": "ficha",
+  "render": "crudo-02/crudo-2-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial",
+    "sobre_imagen": true,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 757,
+    "w": 952,
+    "h": 29,
+    "fondo_L_media": 24.1,
+    "fondo_L_p90": 34.1
+   },
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 02 · 26 m²",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 866,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "LOFT CON KITCHENETTE",
+    "sobre_imagen": false,
+    "clase": "titular",
+    "x": 64,
+    "y": 912.78125,
+    "w": 780.6875,
+    "h": 57.59375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Programa",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1012.375,
+    "w": 163.5625,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Dormitorio y estar · Kitchenette · Deck",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 574,
+    "y": 1012.375,
+    "w": 442,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Plazo",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1074.75,
+    "w": 95.125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "45 días desde la palada inicial",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 670.375,
+    "y": 1074.75,
+    "w": 345.625,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Precio cerrado",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1137.125,
+    "w": 260.21875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Gs 148.800.000 IVA incl.",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 726.53125,
+    "y": 1137.125,
+    "w": 289.46875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/organico/O4_cuatro-crudo_L3_4x5.png": {
+  "pieza": "O4_cuatro-crudo",
+  "lamina": 3,
+  "modelos": [
+   "crudo01"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial"
+  ],
+  "copy": null,
+  "formato": "4x5",
+  "plantilla": "ficha",
+  "render": "crudo-01/crudo-1-k.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial",
+    "sobre_imagen": true,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 757,
+    "w": 952,
+    "h": 29,
+    "fondo_L_media": 22.9,
+    "fondo_L_p90": 27.1
+   },
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 01 · 31 m²",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 866,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "LOFT",
+    "sobre_imagen": false,
+    "clase": "titular",
+    "x": 64,
+    "y": 912.78125,
+    "w": 164.34375,
+    "h": 57.59375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Programa",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1012.375,
+    "w": 163.5625,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Dormitorio y escritorio · Baño con tocador · Deck",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 449.625,
+    "y": 1012.375,
+    "w": 566.375,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Plazo",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1074.75,
+    "w": 95.125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "45 días desde la palada inicial",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 670.375,
+    "y": 1074.75,
+    "w": 345.625,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Precio cerrado",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1137.125,
+    "w": 260.21875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Gs 152.500.000 IVA incl.",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 726.53125,
+    "y": 1137.125,
+    "w": 289.46875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/organico/O4_cuatro-crudo_L4_4x5.png": {
+  "pieza": "O4_cuatro-crudo",
+  "lamina": 4,
+  "modelos": [
+   "crudo03"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · Piscina, deck, pérgola, parrilla y cobogós son adicionales"
+  ],
+  "copy": null,
+  "formato": "4x5",
+  "plantilla": "ficha",
+  "render": "crudo-03/crudo-3-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · Piscina, deck, pérgola, parrilla y cobogós son adicionales",
+    "sobre_imagen": true,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 728,
+    "w": 952,
+    "h": 58,
+    "fondo_L_media": 25.2,
+    "fondo_L_p90": 31.5
+   },
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 03 · 66 m²",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 866,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "VIVIENDA INDUSTRIAL",
+    "sobre_imagen": false,
+    "clase": "titular",
+    "x": 64,
+    "y": 912.78125,
+    "w": 710.65625,
+    "h": 57.59375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Programa",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1012.375,
+    "w": 163.5625,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "2 dormitorios · Cocina con isla",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 663.5625,
+    "y": 1012.375,
+    "w": 352.4375,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Plazo",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1074.75,
+    "w": 95.125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "2 meses desde la palada inicial",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 656,
+    "y": 1074.75,
+    "w": 360,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Precio cerrado",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1137.125,
+    "w": 260.21875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Gs 308.800.000 IVA incl.",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 726.53125,
+    "y": 1137.125,
+    "w": 289.46875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/organico/O4_cuatro-crudo_L5_4x5.png": {
+  "pieza": "O4_cuatro-crudo",
+  "lamina": 5,
+  "modelos": [
+   "crudo04"
+  ],
+  "etiquetas_requeridas": [
+   "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
+  ],
+  "copy": null,
+  "formato": "4x5",
+  "plantilla": "ficha",
+  "render": "crudo-04/crudo-4-a.jpg",
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional",
+    "sobre_imagen": true,
+    "clase": "etiqueta",
+    "x": 64,
+    "y": 728,
+    "w": 952,
+    "h": 58,
+    "fondo_L_media": 22.4,
+    "fondo_L_p90": 35.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "CRUDO 04 · 85 m²",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 866,
+    "w": 281.53125,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "CASA CON QUINCHO",
+    "sobre_imagen": false,
+    "clase": "titular",
+    "x": 64,
+    "y": 912.78125,
+    "w": 640.34375,
+    "h": 57.59375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Programa",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1012.375,
+    "w": 163.5625,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "2 dormitorios · Quincho con parrilla · Deck",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 526.3125,
+    "y": 1012.375,
+    "w": 489.6875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Plazo",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1074.75,
+    "w": 95.125,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "2 meses desde la palada inicial",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 656,
+    "y": 1074.75,
+    "w": 360,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Precio cerrado",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 1137.125,
+    "w": 260.21875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Gs 339.200.000 IVA incl.",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 726.53125,
+    "y": 1137.125,
+    "w": 289.46875,
+    "h": 36.375,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
+ "salidas/organico/O4_cuatro-crudo_L6_4x5.png": {
+  "pieza": "O4_cuatro-crudo",
+  "lamina": 6,
+  "modelos": [],
+  "etiquetas_requeridas": [],
+  "copy": null,
+  "formato": "4x5",
+  "plantilla": "ficha",
+  "render": [],
+  "cajas": [
+   {
+    "tipo": "texto",
+    "texto": "ARMEMOS TU CRUDO",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 64,
+    "y": 64,
+    "w": 332.65625,
+    "h": 30.78125,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "Precio cerrado, IVA incluido. Plazo desde la palada inicial. Garantía de 12 meses.",
+    "sobre_imagen": false,
+    "clase": "subtitulo",
+    "x": 64,
+    "y": 790.125,
+    "w": 880,
+    "h": 174.65625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   },
+   {
+    "tipo": "texto",
+    "texto": "ESCRIBINOS POR WHATSAPP",
+    "sobre_imagen": false,
+    "clase": "kicker",
+    "x": 100,
+    "y": 1048.78125,
+    "w": 501.1875,
+    "h": 33.59375,
+    "fondo_L_media": 96.5,
+    "fondo_L_p90": 96.5
+   },
+   {
+    "tipo": "texto",
+    "texto": "+595 991 574 500",
+    "sobre_imagen": false,
+    "clase": "dato",
+    "x": 100,
+    "y": 1090.375,
+    "w": 501.1875,
+    "h": 42,
+    "fondo_L_media": 96.5,
+    "fondo_L_p90": 96.5
+   },
+   {
+    "tipo": "logo",
+    "texto": "",
+    "sobre_imagen": false,
+    "clase": "logo",
+    "x": 64,
+    "y": 1220.375,
+    "w": 220,
+    "h": 65.625,
+    "fondo_L_media": 9.3,
+    "fondo_L_p90": 9.3
+   }
+  ]
+ },
  "salidas/anuncios/A1_precio-cerrado_4x5.png": {
   "pieza": "A1_precio-cerrado",
   "modelos": [
