@@ -80,7 +80,7 @@ const structureSpecs = (roof: string): SpecGroup[] => [
   {
     label: "Estructura",
     items: [
-      "Platea de hormigón armado sobre zapatas y encadenado de hormigón armado.",
+      "Platea de hormigón armado de 10 cm sobre zapatas y encadenado de hormigón armado.",
       "Columnas y vigas de perfil estructural de acero.",
       "Cerramiento de placas de hormigón armado reforzado.",
     ],
@@ -88,7 +88,7 @@ const structureSpecs = (roof: string): SpecGroup[] => [
   {
     label: "Techo",
     items: [
-      `Panel termoacústico sobre vigas y clavaderas metálicas${roof}.`,
+      `Panel termoacústico de 40 mm sobre vigas y clavaderas metálicas${roof}.`,
       "Canaleta y bajada pluvial.",
     ],
   },
@@ -122,7 +122,7 @@ const plumbingSpecs = (extra: string): SpecGroup => ({
   label: "Instalación sanitaria",
   items: [
     `Cañerías de termofusión para agua y PVC para desagües del baño${extra}.`,
-    "Registros cloacales y pluviales con cañería de PVC.",
+    "Registros cloacales y pluviales con cañería de PVC de 100 mm.",
   ],
 });
 
@@ -162,8 +162,8 @@ export const models: Model[] = [
       {
         label: "Vidrios",
         items: [
-          "Frente de vidrio templado con puerta corrediza y cerradura con llave.",
-          "Paño superior inclinado y paneles fijos de vidrio templado.",
+          "Frente de vidrio templado de 8 mm con puerta corrediza y cerradura con llave.",
+          "Paño superior inclinado y paneles fijos de vidrio templado de 8 mm.",
         ],
       },
       exteriorSpecs,
@@ -310,8 +310,8 @@ export const models: Model[] = [
       {
         label: "Vidrios",
         items: [
-          "Frente de vidrio templado con puerta corrediza y cerradura con llave.",
-          "Paño superior inclinado y paneles fijos de vidrio templado.",
+          "Frente de vidrio templado de 8 mm con puerta corrediza y cerradura con llave.",
+          "Paño superior inclinado y paneles fijos de vidrio templado de 8 mm.",
         ],
       },
       exteriorSpecs,
@@ -448,7 +448,7 @@ export const models: Model[] = [
       {
         label: "Vidrios",
         items: [
-          "Puertas corredizas de vidrio templado hacia el exterior, con cerradura.",
+          "Puertas corredizas de vidrio templado de 8 mm hacia el exterior, con cerradura.",
           "Ventanal fijo en el estar y paño superior inclinado.",
           "Ventanas de dormitorios y ventiluz de baño en vidrio templado con perfil negro.",
         ],
@@ -620,7 +620,7 @@ export const models: Model[] = [
       "Cocina con desayunador, anafe, extractor y horno empotrado",
       "Sala comedor integrada a la cocina",
       "Quincho con parrilla, pérgola metálica y deck",
-      "Pared de cobogós de 12 m²",
+      "Pared de cobogós",
       "Frente vidriado de piso a techo",
       "Aire acondicionado en estar y dormitorios",
     ],
@@ -628,7 +628,7 @@ export const models: Model[] = [
       {
         label: "Estructura",
         items: [
-          "Platea de hormigón armado sobre dados y vigas de fundación de hormigón armado.",
+          "Platea de hormigón armado de 10 cm sobre dados y vigas de fundación de hormigón armado.",
           "Vigas y pilares de estructura metálica.",
           "Muros de placas de hormigón armado, con revestimiento interior de placas de concreto o durlock.",
         ],
@@ -636,14 +636,14 @@ export const models: Model[] = [
       {
         label: "Techo",
         items: [
-          "Panel termoacústico sobre estructura metálica.",
+          "Panel termoacústico de 40 mm sobre estructura metálica.",
           "Canaleta y bajada pluvial.",
         ],
       },
       {
         label: "Vidrios",
         items: [
-          "Dos accesos de vidrio templado con perfilería negra, de 4 hojas (2 fijas y 2 corredizas).",
+          "Dos accesos de vidrio templado de 8 mm con perfilería negra.",
           "Paño fijo superior sobre el acceso.",
           "Ventanas batientes en dormitorios y ventiluz corredizo en el baño, en vidrio templado con perfil negro.",
         ],
@@ -697,7 +697,7 @@ export const models: Model[] = [
         items: [
           "Módulo de parrilla: mesada de hormigón, parrilla de acero inoxidable y campana.",
           "Pérgola metálica, integrada a la estructura del techo.",
-          "Deck símil madera sobre platea de hormigón.",
+          "Deck símil madera sobre platea de hormigón de 10 cm.",
           "Pared de cobogós, de nuestra fábrica.",
         ],
       },

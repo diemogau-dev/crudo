@@ -2,6 +2,11 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-27 (noche) — Regla de medidas y portada de CRUDO 03 (pedido de Diego)
+
+1. **Medidas: sí las especificaciones de material, no los tamaños.** Van espesores y capacidades (vidrio de 8 mm, pilares de 10 mm, panel de 40 mm, platea de 10 cm, cañería de 100 mm, termocalefón de 80 L, BTU). No van tamaños de piezas o ambientes (puerta de 3,50 × 2,10 m, placard de 2,10 × 0,80 m, cobogós de 12 m², deck de 7 × 4 m). Reemplaza el punto 5 del 27/10 en lo que dice de espesores: se vuelven a poner en la web. Las medidas de los adicionales con precio de CRUDO 03 (cobogós 7 m², deck 7 × 4 m) se mantienen porque definen qué se cotiza.
+2. **Portada de la propuesta de CRUDO 03:** render `crudo-3-g` (galería con cobogós, parrilla y piscina, que son adicionales).
+
 ## 2026-10-27 (tarde) — Propuestas comerciales corregidas (pedido de Diego)
 
 1. **Las propuestas en PDF ahora se generan desde el repo** (`contenido/propuestas/`, ver su README), con el mismo diseño que las aprobadas del 21/10. Salen a `contenido/propuestas/salidas/Crudo 0X - Propuesta.pdf` con los precios de la web: 150.800.000 · 148.800.000 · 318.800.000 · 354.000.000.

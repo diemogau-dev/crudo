@@ -27,4 +27,5 @@ entorno, en `/opt/pw-browsers`; si cambia, ajustá `CHROMIUM` en `exportar.py`).
 Las de `imagenes/crudo-0X/` son los recortes de los PDF aprobados, salvo
 `crudo-02/mas-1.jpg` (fachada con cobogós, de `renders-aprobados/crudo-02/crudo-2-a.jpg`)
 y `crudo-04/mas-1.jpg` (vista lateral con quincho, de `renders-aprobados/crudo-04/crudo-4-b.jpg`),
-recortadas a 2160 × 1640 para el hueco grande de la página 3.
+recortadas a 2160 × 1640 para el hueco grande de la página 3. La portada de CRUDO 03
+(`crudo-03/portada.jpg`) es `public/images/renders/crudo-3/crudo-3-g.jpg`, recortada a 1080 × 960.
