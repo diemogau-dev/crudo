@@ -1,5 +1,5 @@
 {
-  "_nota": "Única fuente de datos para textos y números de las piezas. Precios en guaraníes, IVA incluido, de las propuestas del 21/10/2026, alineadas con la web. Los textos de las piezas usan {marcadores} que el script resuelve desde acá.",
+  "_nota": "Única fuente de datos para textos y números de las piezas. Precios en guaraníes, IVA incluido, de las planillas de presupuesto del 27/10/2026 (redondeados hacia arriba a 100.000 Gs.), alineados con la web. Los textos de las piezas usan {marcadores} que el script resuelve desde acá.",
   "contacto": {
     "whatsapp": "+595 991 574 500",
     "instagram": "@crudohomes",
@@ -22,7 +22,7 @@
       "dormitorios": 1,
       "destacados": ["Dormitorio y escritorio", "Baño con tocador", "Deck"],
       "plazo": "45 días",
-      "precio_gs": 152500000,
+      "precio_gs": 150800000,
       "etiqueta": "Imagen referencial"
     },
     "crudo02": {
@@ -42,7 +42,7 @@
       "dormitorios": 2,
       "destacados": ["2 dormitorios", "Cocina con isla"],
       "plazo": "2 meses",
-      "precio_gs": 308800000,
+      "precio_gs": 318800000,
       "etiqueta": "Imagen referencial · Piscina, deck, pérgola, parrilla y cobogós son adicionales"
     },
     "crudo04": {
@@ -53,7 +53,7 @@
       "destacados": ["2 dormitorios", "Quincho con parrilla", "Deck"],
       "incluidos": "Quincho, deck y cobogós incluidos",
       "plazo": "2 meses",
-      "precio_gs": 339200000,
+      "precio_gs": 354000000,
       "etiqueta": "Imagen referencial · La tina no está incluida · La piscina se suma como adicional"
     }
   },

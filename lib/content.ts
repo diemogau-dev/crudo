@@ -11,14 +11,14 @@ export function formatGs(value: number) {
 }
 
 const PRICES_GS = {
-  // Planillas "Presupuesto CRUDO 0X.xlsx" (27/10): costo de la vivienda con los
-  // coeficientes de la planilla (×1,35 materiales y mano de obra, ×1,25
-  // subcontratos), redondeado hacia arriba a los 100.000 Gs. más cercanos.
-  // Exteriores y adicionales quedan fuera.
-  crudo01: 152_300_000, // 152.236.673
-  crudo02: 149_100_000, // 149.020.393
-  crudo03: 318_800_000, // 318.718.715
-  crudo04: 354_500_000, // 354.438.200
+  // Planillas "Presupuesto CRUDO 0X.xlsx" (27/10), celda "Construcción
+  // vivienda", redondeada hacia arriba a los 100.000 Gs.: 150.799.174,
+  // 148.717.706, 318.718.715 y 353.938.201. Exteriores y adicionales quedan
+  // fuera.
+  crudo01: 150_800_000,
+  crudo02: 148_800_000,
+  crudo03: 318_800_000,
+  crudo04: 354_000_000,
 } as const;
 
 const closedPrice = (value: number) => `${formatGs(value)} IVA incluido`;
@@ -472,7 +472,7 @@ export const models: Model[] = [
           "Frente de cocina revestido en cerámica.",
         ],
       },
-      bathSpecs("120 L", [], "Inodoro con cisterna baja y bidet"),
+      bathSpecs("80 L"),
       {
         label: "Adicionales (no incluidos en el precio)",
         items: [
