@@ -12,6 +12,7 @@ contenido/
   salidas/anuncios/         piezas de anuncio (PNG)
   salidas/textos.md         copys y textos de anuncio, generados desde modelos.json
   salidas/verificacion.md   resultado de los controles automáticos
+  propuestas/               propuestas comerciales en PDF (ver propuestas/README.md)
   reporte-verificacion.md   etapa 1 · seleccion-renders.md: etapa 2 · piloto.md: etapa 3
   hoja-contactos-crudo-0X.png
 ```

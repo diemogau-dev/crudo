@@ -603,21 +603,21 @@ export const models: Model[] = [
       { icon: "living", label: "Sala comedor" },
       { icon: "grill", label: "Quincho con parrilla" },
     ],
-    summary: "Dos habitaciones, cocina con isla, sala comedor y quincho con parrilla.",
+    summary: "Dos habitaciones, cocina con desayunador, sala comedor y quincho con parrilla.",
     description: [
-      "Una casa de techo a dos aguas con un frente vidriado de doble altura. La cocina con isla, el comedor y el estar comparten un mismo espacio abierto que se continúa hacia afuera.",
+      "Una casa de techo a dos aguas con un frente vidriado de doble altura. La cocina con desayunador, el comedor y el estar comparten un mismo espacio abierto que se continúa hacia afuera.",
       "Afuera, el quincho con parrilla bajo pérgola metálica y un deck para recibir. Dos habitaciones con placard y un baño completo completan una casa para vivir todos los días.",
     ],
     specs: [
       { label: "Superficie", value: "85 m²" },
       { label: "Habitaciones", value: "2" },
       { label: "Baño", value: "1" },
-      { label: "Cocina", value: "Con isla" },
+      { label: "Cocina", value: "Con desayunador" },
       { label: "Sala comedor", value: "Integrada" },
       { label: "Quincho con parrilla", value: "Incluido" },
     ],
     amenities: [
-      "Cocina con isla, anafe, extractor y horno empotrado",
+      "Cocina con desayunador, anafe, extractor y horno empotrado",
       "Sala comedor integrada a la cocina",
       "Quincho con parrilla, pérgola metálica y deck",
       "Pared de cobogós de 12 m²",
@@ -660,7 +660,7 @@ export const models: Model[] = [
       {
         label: "Cocina",
         items: [
-          "Muebles de cocina e isla.",
+          "Muebles de cocina y desayunador.",
           "Anafe con extractor.",
           "Microondas y horno empotrados.",
         ],

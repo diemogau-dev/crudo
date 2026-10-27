@@ -2,6 +2,14 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-27 (tarde) — Propuestas comerciales corregidas (pedido de Diego)
+
+1. **Las propuestas en PDF ahora se generan desde el repo** (`contenido/propuestas/`, ver su README), con el mismo diseño que las aprobadas del 21/10. Salen a `contenido/propuestas/salidas/Crudo 0X - Propuesta.pdf` con los precios de la web: 150.800.000 · 148.800.000 · 318.800.000 · 354.000.000.
+2. **En los cuatro PDF:** sin «Imagen referencial»; sin «Estamos listos para empezar tu obra de inmediato» (ni la variante del paso 04); bloque nuevo **Financiación** en la página de precio: «Contamos con alianzas bancarias para financiar tu Crudo vía AFD, a un plazo de hasta 27 años.» (sin nombrar bancos ni tasas); título de la página 6 pasa a «Precisa, sólida y sin complicaciones.»; baño con «Inodoro, ducha higiénica y ducha frío/caliente», sin bidé; frente de vidrio sin detalle de hojas ni fijo superior; «ventilador de techo y luz LED» en CRUDO 01 y 02; «cobogós» en lugar de «celosía» en CRUDO 02.
+3. **CRUDO 02:** la foto grande de «Más de tu CRUDO 02» pasa a la fachada frontal con la pared de cobogós (render `crudo-2-a`, el mismo de la portada con otro encuadre; es el único render de ese frente).
+4. **CRUDO 03:** portada con Dormitorios, Baño, Cocina y **Estar comedor**; plano con «05 Estar comedor»; título de la página 2: «Diseño, calidad y comodidad para descansar de verdad.»
+5. **CRUDO 04:** portada con Dormitorios, Baño, **Cocina** (con desayunador), **Estar comedor**, Quincho y Deck; título de la página 2: «Diseñada para descansar y disfrutar con los tuyos.»; sin la aclaración de la tina; foto grande de la página 3 sin la tina (vista lateral con quincho, render `crudo-4-b`); **cocina con desayunador, no isla**, en el plano, en «Qué incluye», en la web y en los textos de las piezas.
+
 ## 2026-10-27 — Precios finales desde las 4 planillas, CRUDO 03 sin bidet y especificaciones sin medidas (pedido de Diego)
 
 1. **Precios cerrados IVA incluido, de la celda "Construcción vivienda" de cada planilla, redondeados hacia arriba a 100.000 Gs.:** CRUDO 01 **Gs. 150.800.000** (150.799.174) · CRUDO 02 **Gs. 148.800.000** (148.717.706) · CRUDO 03 **Gs. 318.800.000** (318.718.715) · CRUDO 04 **Gs. 354.000.000** (353.938.201). Reemplazan los de las propuestas del 21/10 y el de CRUDO 04 del 23/10. Se unifican en la web (`lib/content.ts`), en `contenido/datos/modelos.json` y en las piezas de Instagram y Meta (`contenido/salidas/`, regeneradas). Los trabajos exteriores y los adicionales quedan fuera del precio. CRUDO 04 incluye el quincho.

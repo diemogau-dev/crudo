@@ -1,0 +1,669 @@
+{
+  "_nota": "Textos y números de las propuestas comerciales (PDF). Precios en guaraníes, IVA incluido, iguales a los de la web (lib/content.ts). Coordenadas en px de un lienzo de 1080 × 1920 (se exporta a 810 × 1440 pt).",
+  "comun": {
+    "whatsapp": "595991574500",
+    "telefono": "+595 991 574 500",
+    "instagram": "@crudohomes",
+    "instagram_url": "https://www.instagram.com/crudohomes/",
+    "web": "crudo.com.py",
+    "web_url": "https://crudo.com.py/",
+    "oficina": "Sucre 1862 casi José Campos Lanzoni, Asunción",
+    "mapa_url": "https://www.google.com/maps/place/Mariscal+Antonio+Sucre+1862,+Asunci%C3%B3n+001408/@-25.291727,-57.5729162,17z/data=!3m1!4b1!4m6!3m5!1s0x945da8a3750be4d9:0xb86d5835d3a5577d!8m2!3d-25.291727!4d-57.571521!16s%2Fg%2F11y8lxrs0b",
+    "horario": "Lunes a viernes, de 8:30 a 17:30.",
+    "por_que": {
+      "kicker": "Por qué hormigón armado y concreto de alto performance",
+      "titulo": "Precisa, sólida y sin complicaciones.",
+      "pasos": [
+        [
+          "Hecha para durar",
+          "Cada pieza sale de nuestra fábrica, curada por expertos, y se monta exactamente según planos y diseño. Muros, revestimientos y fundaciones pensados para durar décadas."
+        ],
+        [
+          "Fresca en verano, cálida en invierno",
+          "Una cámara de aire con material aislante mantiene la casa fresca con el calor paraguayo y cálida en invierno. La masa del hormigón, además, frena el ruido de afuera."
+        ],
+        [
+          "No arde ni se pudre",
+          "El hormigón no se quema, aguanta la humedad y no le entran termitas ni plagas."
+        ]
+      ]
+    },
+    "pagos": [
+      [
+        "40 %",
+        "Al firmar",
+        "Firmamos y empezamos tu obra."
+      ],
+      [
+        "40 %",
+        "Terminaciones",
+        "Con fundaciones, cerramientos, techo y conexiones terminados."
+      ],
+      [
+        "20 %",
+        "Entrega",
+        "Cuando te entregamos tu Crudo."
+      ]
+    ],
+    "financiacion": "Contamos con alianzas bancarias para financiar tu Crudo vía AFD, a un plazo de hasta 27 años.",
+    "no_incluye": [
+      "Flete: depende de la zona y lo definimos con vos.",
+      "Pozo ciego y cámara séptica.",
+      "Conexión a la red de ANDE: la vemos juntos cuando visitemos tu terreno.",
+      "Muebles y decoración que ves en las imágenes.",
+      "Todo lo que no figura en «Qué incluye»."
+    ],
+    "garantia": [
+      "12 meses de asistencia desde la entrega definitiva de tu casa.",
+      "Un profesional asignado a tu obra, que te responde en el día.",
+      "Si algo falla por material o mano de obra, lo reparamos en 15 días como máximo."
+    ]
+  },
+  "crudos": [
+    {
+      "archivo": "Crudo 01 - Propuesta.pdf",
+      "carpeta": "crudo-01",
+      "nombre": "CRUDO 01",
+      "numero": "01",
+      "superficie": "31",
+      "plazo": "45 días",
+      "plazo_titulo": "Lista en 45 días.",
+      "precio_gs": 150800000,
+      "portada": {
+        "imagen": "crudo-01/portada.jpg",
+        "alto": 960
+      },
+      "datos": [
+        [
+          "Dormitorio",
+          "1"
+        ],
+        [
+          "Baño",
+          "1"
+        ],
+        [
+          "Deck exterior",
+          "Incluido"
+        ]
+      ],
+      "dentro": {
+        "imagenes": [
+          "crudo-01/dentro-1.jpg",
+          "crudo-01/dentro-2.jpg",
+          "crudo-01/dentro-3.jpg"
+        ],
+        "titulo": "Un módulo conectado con la naturaleza."
+      },
+      "mas": {
+        "disposicion": "cuatro",
+        "imagenes": [
+          "crudo-01/mas-1.jpg",
+          "crudo-01/mas-2.jpg",
+          "crudo-01/mas-3.jpg",
+          "crudo-01/mas-4.jpg"
+        ]
+      },
+      "plano": {
+        "imagen": "crudo-01/plano.jpg",
+        "caja": [
+          72,
+          150,
+          600,
+          1327
+        ],
+        "leyenda": [
+          720,
+          288
+        ],
+        "ambientes": [
+          "Deck",
+          "Dormitorio y escritorio",
+          "Baño y tocador"
+        ],
+        "marcas": [
+          [
+            "1",
+            520,
+            284
+          ],
+          [
+            "2",
+            520,
+            693
+          ],
+          [
+            "3",
+            186,
+            1167
+          ]
+        ]
+      },
+      "incluye": [
+        [
+          "Estructura",
+          [
+            "Fundaciones de hormigón armado: dados, vigas y platea.",
+            "Muros de placas de hormigón armado de nuestra fábrica.",
+            "Pilares metálicos de 10 mm y techo metálico termoaislante, con canaletas y bajadas."
+          ]
+        ],
+        [
+          "Terminaciones",
+          [
+            "Revestimiento interior de concreto de alto performance, de nuestra fábrica, y tabiques con lana de vidrio.",
+            "Frente de vidrio templado de 8 mm y aluminio negro.",
+            "Pisos, revestimiento de baño, pintura completa y limpieza final de obra."
+          ]
+        ],
+        [
+          "Baño",
+          [
+            "Inodoro, ducha higiénica y ducha frío/caliente con mampara y grifería.",
+            "Tocador con bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado.",
+            "Espejo flotante con luz LED y termocalefón de 80 L."
+          ]
+        ],
+        [
+          "Equipamiento",
+          [
+            "Placard de melamina de 2,10 × 0,80 m.",
+            "Deck exterior bajo el mismo techo."
+          ]
+        ],
+        [
+          "Instalaciones",
+          [
+            "Conexiones eléctricas y sanitarias, embutidas.",
+            "Tablero, puesta a tierra, disyuntor diferencial, protección contra sobretensión, tomas, luces y ductos para internet y TV."
+          ]
+        ],
+        [
+          "Climatización e iluminación",
+          [
+            "Aire acondicionado de 18.000 BTU, ventilador de techo y luz LED.",
+            "Spots negros y lámparas colgantes de concreto."
+          ]
+        ]
+      ]
+    },
+    {
+      "archivo": "Crudo 02 - Propuesta.pdf",
+      "carpeta": "crudo-02",
+      "nombre": "CRUDO 02",
+      "numero": "02",
+      "superficie": "26",
+      "plazo": "45 días",
+      "plazo_titulo": "Lista en 45 días.",
+      "precio_gs": 148800000,
+      "portada": {
+        "imagen": "crudo-02/portada.jpg",
+        "alto": 960
+      },
+      "datos": [
+        [
+          "Dormitorio",
+          "1"
+        ],
+        [
+          "Baño",
+          "1"
+        ],
+        [
+          "Kitchenette",
+          "Con desayunador"
+        ],
+        [
+          "Deck exterior",
+          "Incluido"
+        ]
+      ],
+      "dentro": {
+        "imagenes": [
+          "crudo-02/dentro-1.jpg",
+          "crudo-02/dentro-2.jpg",
+          "crudo-02/dentro-3.jpg"
+        ],
+        "titulo": "Cocinás, dormís y salís al deck. Todo a un paso."
+      },
+      "mas": {
+        "disposicion": "tres",
+        "imagenes": [
+          "crudo-02/mas-1.jpg",
+          "crudo-02/mas-2.jpg",
+          "crudo-02/mas-3.jpg"
+        ]
+      },
+      "plano": {
+        "imagen": "crudo-02/plano.jpg",
+        "caja": [
+          72,
+          150,
+          540,
+          1440
+        ],
+        "leyenda": [
+          660,
+          348
+        ],
+        "ambientes": [
+          "Deck",
+          "Dormitorio y estar",
+          "Kitchenette con desayunador",
+          "Baño"
+        ],
+        "marcas": [
+          [
+            "1",
+            518,
+            409
+          ],
+          [
+            "2",
+            472,
+            730
+          ],
+          [
+            "3",
+            463,
+            1124
+          ],
+          [
+            "4",
+            408,
+            1444
+          ]
+        ]
+      },
+      "incluye": [
+        [
+          "Estructura",
+          [
+            "Fundaciones de hormigón armado: dados, vigas y platea.",
+            "Muros de placas de hormigón armado de nuestra fábrica.",
+            "Pilares metálicos de 10 mm y techo metálico termoaislante, con canaletas y bajadas."
+          ]
+        ],
+        [
+          "Terminaciones",
+          [
+            "Revestimiento interior de concreto de alto performance, de nuestra fábrica, y tabiques con lana de vidrio.",
+            "Frente de vidrio templado de 8 mm y aluminio negro.",
+            "Pisos, revestimiento de baño, pintura completa y limpieza final de obra."
+          ]
+        ],
+        [
+          "Baño",
+          [
+            "Inodoro, ducha higiénica y ducha frío/caliente con mampara y grifería.",
+            "Bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado.",
+            "Espejo flotante con luz LED y termocalefón de 80 L."
+          ]
+        ],
+        [
+          "Cocina y equipamiento",
+          [
+            "Kitchenette con desayunador, anafe y bacha de concreto de nuestra fábrica.",
+            "Placard.",
+            "Pared de cobogós de nuestra fábrica."
+          ]
+        ],
+        [
+          "Instalaciones",
+          [
+            "Conexiones eléctricas y sanitarias, embutidas.",
+            "Tablero, puesta a tierra, disyuntor diferencial, protección contra sobretensión, tomas, luces y ductos para internet y TV."
+          ]
+        ],
+        [
+          "Climatización e iluminación",
+          [
+            "Aire acondicionado de 18.000 BTU, ventilador de techo y luz LED.",
+            "Spots negros y lámparas colgantes de concreto."
+          ]
+        ]
+      ]
+    },
+    {
+      "archivo": "Crudo 03 - Propuesta.pdf",
+      "carpeta": "crudo-03",
+      "nombre": "CRUDO 03",
+      "numero": "03",
+      "superficie": "66",
+      "plazo": "2 meses",
+      "plazo_titulo": "Lista en 2 meses.",
+      "precio_gs": 318800000,
+      "portada": {
+        "imagen": "crudo-03/portada.jpg",
+        "alto": 960
+      },
+      "datos": [
+        [
+          "Dormitorios",
+          "2"
+        ],
+        [
+          "Baño",
+          "1"
+        ],
+        [
+          "Cocina",
+          "Con isla"
+        ],
+        [
+          "Estar comedor",
+          "Integrado"
+        ]
+      ],
+      "dentro": {
+        "imagenes": [
+          "crudo-03/dentro-1.jpg",
+          "crudo-03/dentro-2.jpg",
+          "crudo-03/dentro-3.jpg"
+        ],
+        "titulo": "Diseño, calidad y comodidad para descansar de verdad.",
+        "nota": "Piscina, deck, pérgola, cobogós y parrilla se suman como adicionales."
+      },
+      "mas": {
+        "disposicion": "cuatro",
+        "imagenes": [
+          "crudo-03/mas-1.jpg",
+          "crudo-03/mas-2.jpg",
+          "crudo-03/mas-3.jpg",
+          "crudo-03/mas-4.jpg"
+        ]
+      },
+      "plano": {
+        "imagen": "crudo-03/plano.jpg",
+        "caja": [
+          72,
+          150,
+          600,
+          1316
+        ],
+        "leyenda": [
+          720,
+          288
+        ],
+        "ambientes": [
+          "Dormitorio",
+          "Baño",
+          "Dormitorio",
+          "Cocina con isla",
+          "Estar comedor",
+          "Deck (adicional)"
+        ],
+        "marcas": [
+          [
+            "1",
+            581,
+            350
+          ],
+          [
+            "2",
+            506,
+            491
+          ],
+          [
+            "3",
+            427,
+            729
+          ],
+          [
+            "4",
+            352,
+            1047
+          ],
+          [
+            "6",
+            174,
+            1112
+          ],
+          [
+            "5",
+            324,
+            1290
+          ]
+        ]
+      },
+      "incluye": [
+        [
+          "Estructura",
+          [
+            "Fundaciones de hormigón armado: dados, vigas y platea.",
+            "Muros de placas de hormigón armado de nuestra fábrica.",
+            "Pilares metálicos de 10 mm y techo metálico termoaislante, con canaletas y bajadas."
+          ]
+        ],
+        [
+          "Terminaciones",
+          [
+            "Revestimiento interior de concreto de alto performance, de nuestra fábrica, y tabiques con lana de vidrio.",
+            "Dos accesos de vidrio templado de 8 mm y aluminio negro. Ventanas batientes en las habitaciones.",
+            "Pisos, revestimiento de baño, pintura completa y limpieza final de obra."
+          ]
+        ],
+        [
+          "Baño",
+          [
+            "Inodoro, ducha higiénica y ducha frío/caliente con mampara y grifería.",
+            "Bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado.",
+            "Espejo flotante con luz LED y termocalefón de 80 L."
+          ]
+        ],
+        [
+          "Cocina y equipamiento",
+          [
+            "Cocina con isla, anafe con extractor y microondas con horno empotrado.",
+            "Dos placards y cuatro puertas interiores."
+          ]
+        ],
+        [
+          "Instalaciones",
+          [
+            "Conexiones eléctricas y sanitarias, embutidas.",
+            "Tablero, puesta a tierra, disyuntor diferencial, protección contra sobretensión, tomas, luces y ductos para internet y TV."
+          ]
+        ],
+        [
+          "Climatización e iluminación",
+          [
+            "Tres aires acondicionados: dos de 12.000 BTU y uno de 24.000 BTU.",
+            "Spots negros y lámparas colgantes de concreto."
+          ]
+        ]
+      ],
+      "sumale": [
+        [
+          "Pared de cobogós (7 m²)",
+          "Gs 3.591.000"
+        ],
+        [
+          "Módulo de parrilla",
+          "Gs 12.750.000"
+        ],
+        [
+          "Pérgola metálica",
+          "Gs 10.125.000"
+        ],
+        [
+          "Deck símil madera de 7 × 4 m",
+          "Gs 10.500.000"
+        ],
+        [
+          "Piscina con deck",
+          "A medida, la cotizamos en la reunión"
+        ]
+      ]
+    },
+    {
+      "archivo": "Crudo 04 - Propuesta.pdf",
+      "carpeta": "crudo-04",
+      "nombre": "CRUDO 04",
+      "numero": "04",
+      "superficie": "85",
+      "plazo": "2 meses",
+      "plazo_titulo": "Lista en 2 meses.",
+      "precio_gs": 354000000,
+      "portada": {
+        "imagen": "crudo-04/portada.jpg",
+        "alto": 810
+      },
+      "datos": [
+        [
+          "Dormitorios",
+          "2"
+        ],
+        [
+          "Baño",
+          "1"
+        ],
+        [
+          "Cocina",
+          "Con desayunador"
+        ],
+        [
+          "Estar comedor",
+          "Integrado"
+        ],
+        [
+          "Quincho",
+          "Con parrilla"
+        ],
+        [
+          "Deck exterior",
+          "Incluido"
+        ]
+      ],
+      "dentro": {
+        "imagenes": [
+          "crudo-04/dentro-1.jpg",
+          "crudo-04/dentro-2.jpg",
+          "crudo-04/dentro-3.jpg"
+        ],
+        "titulo": "Diseñada para descansar y disfrutar con los tuyos."
+      },
+      "mas": {
+        "disposicion": "tres",
+        "imagenes": [
+          "crudo-04/mas-1.jpg",
+          "crudo-04/mas-2.jpg",
+          "crudo-04/mas-3.jpg"
+        ]
+      },
+      "plano": {
+        "imagen": "crudo-04/plano.jpg",
+        "caja": [
+          72,
+          150,
+          600,
+          1373
+        ],
+        "leyenda": [
+          720,
+          288
+        ],
+        "ambientes": [
+          "Dormitorio",
+          "Dormitorio",
+          "Baño",
+          "Cocina con desayunador",
+          "Estar y comedor",
+          "Quincho con parrilla",
+          "Deck"
+        ],
+        "marcas": [
+          [
+            "1",
+            500,
+            376
+          ],
+          [
+            "2",
+            288,
+            390
+          ],
+          [
+            "3",
+            104,
+            657
+          ],
+          [
+            "4",
+            505,
+            657
+          ],
+          [
+            "5",
+            362,
+            933
+          ],
+          [
+            "6",
+            514,
+            1163
+          ],
+          [
+            "7",
+            343,
+            1450
+          ]
+        ]
+      },
+      "incluido": {
+        "titulo": "Incluido en tu CRUDO 04",
+        "lineas": [
+          "Pared de cobogós de 12 m², de nuestra fábrica.",
+          "Módulo de parrilla: mesada de hormigón, parrilla de acero inoxidable y campana."
+        ]
+      },
+      "incluye": [
+        [
+          "Estructura",
+          [
+            "Fundaciones de hormigón armado: dados, vigas y platea.",
+            "Muros de placas de hormigón armado de nuestra fábrica.",
+            "Pilares metálicos de 10 mm y techo metálico termoaislante, con canaletas y bajadas."
+          ]
+        ],
+        [
+          "Terminaciones",
+          [
+            "Revestimiento interior de concreto de alto performance, de nuestra fábrica, y tabiques con lana de vidrio.",
+            "Dos accesos de vidrio templado de 8 mm y aluminio negro. Ventanas batientes en las habitaciones.",
+            "Pisos, revestimiento de baño, pintura completa y limpieza final de obra."
+          ]
+        ],
+        [
+          "Baño",
+          [
+            "Inodoro, ducha higiénica y ducha frío/caliente con mampara y grifería.",
+            "Bacha de concreto de nuestra fábrica sobre mesada de mármol blanco veteado.",
+            "Espejo flotante con luz LED y termocalefón de 80 L."
+          ]
+        ],
+        [
+          "Cocina y equipamiento",
+          [
+            "Cocina con desayunador, anafe con extractor y microondas con horno empotrado.",
+            "Dos placards y tres puertas interiores."
+          ]
+        ],
+        [
+          "Instalaciones",
+          [
+            "Conexiones eléctricas y sanitarias, embutidas.",
+            "Tablero, puesta a tierra, disyuntor diferencial, protección contra sobretensión, tomas, luces y ductos para internet y TV."
+          ]
+        ],
+        [
+          "Climatización e iluminación",
+          [
+            "Tres aires acondicionados: dos de 12.000 BTU y uno de 24.000 BTU.",
+            "Spots negros y lámparas colgantes de concreto."
+          ]
+        ]
+      ]
+    }
+  ]
+}

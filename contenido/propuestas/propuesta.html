@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<title>{{ c.nombre }} · Propuesta comercial</title>
+<link rel="stylesheet" href="propuesta.css">
+</head>
+<body>
+{%- macro logo(clase) -%}
+<div class="logo {{ clase }}">{{ logo_svg }}</div>
+{%- endmacro -%}
+{%- macro rotulo(n, t) -%}
+<div class="rotulo"><span class="n">{{ n }}</span><span class="raya"></span><span class="t">{{ t }}</span></div>
+{%- endmacro -%}
+{%- macro foto(img, x, y, w, h) -%}
+<img class="foto" src="imagenes/{{ img }}" style="left:{{ x }}px;top:{{ y }}px;width:{{ w }}px;height:{{ h }}px" alt="">
+{%- endmacro -%}
+{%- macro flecha() -%}
+<svg class="flecha" viewBox="0 0 30 17" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M0 8.5h29M21 1l8 7.5-8 7.5"/></svg>
+{%- endmacro -%}
+
+{# 1 · Portada #}
+<section class="pagina clara">
+  {{ logo('portada-cabecera') }}
+  <div class="portada-kicker">Propuesta comercial<br>Asunción · Paraguay</div>
+  {{ foto(c.portada.imagen, 0, 200, 1080, c.portada.alto) }}
+  <div class="portada-info" style="top:{{ 200 + c.portada.alto + 43 }}px">
+    <div class="portada-titulo"><h1>{{ c.nombre }}</h1><span class="sup">{{ c.superficie }} m²</span></div>
+    <p class="portada-bajada">Hormigón armado. {{ c.plazo_titulo }}</p>
+    <div class="datos">
+      {%- for k, v in c.datos %}<div><span>{{ k }}</span><span>{{ v }}</span></div>{% endfor -%}
+    </div>
+    <a class="boton" href="{{ wa }}"><span>Armemos tu Crudo</span>{{ flecha() }}</a>
+  </div>
+</section>
+
+{# 2 · Así se vive por dentro #}
+<section class="pagina oscura">
+  {{ rotulo('02', 'Así se vive por dentro') }}
+  {{ foto(c.dentro.imagenes[0], 0, 150, 1080, 520) }}
+  {{ foto(c.dentro.imagenes[1], 0, 686, 652, 700) }}
+  {{ foto(c.dentro.imagenes[2], 668, 686, 412, 700) }}
+  <div class="dentro-texto">
+    <h2 class="titular">{{ c.dentro.titulo }}</h2>
+    {%- if c.dentro.nota %}<p class="nota">{{ c.dentro.nota }}</p>{% endif %}
+  </div>
+  {{ logo('logo-pie') }}
+</section>
+
+{# 3 · Más de tu Crudo #}
+<section class="pagina oscura">
+  {{ rotulo('03', 'Más de tu ' ~ c.nombre) }}
+  {%- set im = c.mas.imagenes %}
+  {%- if c.mas.disposicion == 'cuatro' %}
+  {{ foto(im[0], 0, 140, 1080, 560) }}
+  {{ foto(im[1], 0, 716, 532, 520) }}
+  {{ foto(im[2], 548, 716, 532, 520) }}
+  {{ foto(im[3], 0, 1252, 1080, 520) }}
+  {%- else %}
+  {{ foto(im[0], 0, 140, 1080, 820) }}
+  {{ foto(im[1], 0, 976, 532, 780) }}
+  {{ foto(im[2], 548, 976, 532, 780) }}
+  {%- endif %}
+  {{ logo('logo-pie') }}
+</section>
+
+{# 4 · El plano #}
+<section class="pagina clara">
+  {{ rotulo('04', 'El plano') }}
+  {%- set p = c.plano %}
+  {{ foto(p.imagen, p.caja[0], p.caja[1], p.caja[2], p.caja[3]) }}
+  {%- for n, x, y in p.marcas %}<div class="marca" style="left:{{ x }}px;top:{{ y }}px">{{ n }}</div>{% endfor %}
+  <div class="leyenda" style="left:{{ p.leyenda[0] }}px;width:{{ p.leyenda[1] }}px">
+    <div class="espaciado">Superficie</div>
+    <div class="sup">{{ c.superficie }} m²</div>
+    <ol>
+      {%- for a in p.ambientes %}<li><span class="n">{{ '%02d' % loop.index }}</span><span>{{ a }}</span></li>{% endfor -%}
+    </ol>
+  </div>
+  {{ logo('logo-pie') }}
+</section>
+
+{# 5 · Qué incluye #}
+<section class="pagina oscura">
+  {{ rotulo('05', 'Qué incluye') }}
+  <div class="bloque" style="top:149px">
+    <h2 class="bloque-titulo">Todo esto va en el precio.</h2>
+    {%- if c.incluido %}
+    <div class="incluido">
+      <div class="espaciado">{{ c.incluido.titulo }}</div>
+      {%- for t in c.incluido.lineas %}<p>{{ t }}</p>{% endfor %}
+    </div>
+    {%- endif %}
+    <div class="specs">
+      {%- for et, vals in c.incluye %}
+      <div class="fila"><div class="et">{{ et }}</div><div class="val">{% for v in vals %}<p>{{ v }}</p>{% endfor %}</div></div>
+      {%- endfor %}
+    </div>
+    <p class="pie-specs">Todo lo que no está acá es adicional, y lo cotizamos antes de ejecutarlo.</p>
+  </div>
+  {{ logo('logo-pie') }}
+</section>
+
+{# 6 · Por qué hormigón #}
+<section class="pagina clara">
+  {{ foto('taller.jpg', 0, 0, 1080, 600) }}
+  <div class="porque">
+    <div class="rot2"><span class="n">06</span><span class="raya"></span><span class="t">{{ comun.por_que.kicker }}</span></div>
+    <h2>{{ comun.por_que.titulo }}</h2>
+    <ol class="pasos">
+      {%- for t, d in comun.por_que.pasos %}<li><span class="n">{{ '%02d' % loop.index }}</span><h3>{{ t }}</h3><p>{{ d }}</p></li>{% endfor -%}
+    </ol>
+  </div>
+  <div class="oficina">
+    <div class="espaciado">Pasá a conocernos en la oficina</div>
+    <p>Te esperamos sobre Sucre, en Asunción, para que conozcas nuestro sistema y la solidez de nuestros productos: placas, revestimientos, cobogós, bachas y más.</p>
+    <a class="ir" href="{{ comun.mapa_url }}"><span>Cómo llegar: {{ comun.oficina }}</span>{{ flecha() }}</a>
+  </div>
+  {{ logo('logo-pie') }}
+</section>
+
+{# 7 · Precio #}
+<section class="pagina oscura">
+  {{ rotulo('07', 'Tu ' ~ c.nombre ~ ', cerrado') }}
+  <div class="bloque" style="top:114px">
+    <p class="precio">{{ precio }}</p>
+    <p class="precio-iva"><b>IVA incluido.</b> <span>Lo que ves es lo que pagás.</span></p>
+    <div class="espaciado sub-rotulo">Cómo lo pagás</div>
+    <ol class="pagos">
+      {%- for pct, t, d in comun.pagos %}<li><span class="pct">{{ pct }}</span><div><h4>{{ t }}</h4><p>{{ d }}</p></div></li>{% endfor -%}
+    </ol>
+    <p class="condicion">Precio válido por 15 días.</p>
+    <div class="espaciado sub-rotulo">Financiación</div>
+    <p class="financia">{{ comun.financiacion }}</p>
+    <div class="espaciado sub-rotulo">No incluye</div>
+    <ul class="lista">{% for t in comun.no_incluye %}<li>{{ t }}</li>{% endfor %}</ul>
+    {%- if c.sumale %}
+    <div class="espaciado sub-rotulo">Sumale a tu Crudo</div>
+    <ul class="sumale">{% for t, v in c.sumale %}<li><span>{{ t }}</span><b>{{ v }}</b></li>{% endfor %}</ul>
+    {%- endif %}
+    <p class="nota-tenue" style="margin-top:{{ 18 if c.sumale else 21 }}px">Y si querés algo que no está acá, lo armamos juntos.</p>
+  </div>
+  {{ logo('logo-pie') }}
+</section>
+
+{# 8 · Cómo seguimos #}
+<section class="pagina clara">
+  {{ rotulo('08', 'Cómo seguimos') }}
+  <div class="bloque" style="top:149px">
+    <h2 class="bloque-titulo">Armemos tu Crudo.</h2>
+    <ol class="pasos" style="margin-top:35px">
+      <li><span class="n">01</span><h3>Vení a conocernos</h3><p>Te esperamos en la oficina de Sucre para mostrarte el sistema y resolver tus dudas.</p></li>
+      <li><span class="n">02</span><h3>Conocemos tu terreno</h3><p>Lo vemos con vos para ubicar tu Crudo y planificar la obra.</p></li>
+      <li><span class="n">03</span><h3>Definimos el diseño de tu Crudo</h3><p>Ajustamos juntos el diseño y los adicionales que quieras sumar, con precio cerrado.</p></li>
+      <li><span class="n">04</span><h3>Firmamos y arrancamos</h3><p>Con la firma y la entrega inicial del 40 % arrancamos, y tu casa queda lista en {{ c.plazo }} contados desde la palada inicial.</p></li>
+    </ol>
+    <div class="espaciado sub-rotulo" style="margin-top:61px">Tu garantía</div>
+    <ul class="garantia">{% for t in comun.garantia %}<li>{{ t }}</li>{% endfor %}</ul>
+  </div>
+  <div class="cierre">
+    <a class="boton" href="{{ wa }}"><span>Armemos tu Crudo</span>{{ flecha() }}</a>
+    <div class="contacto">
+      <p><b>Oficina:</b> <a href="{{ comun.mapa_url }}"><u>{{ comun.oficina }}</u></a>.</p>
+      <p><b>Horario:</b> {{ comun.horario }}</p>
+      <p class="redes"><a href="{{ comun.instagram_url }}">{{ comun.instagram }}</a><i>·</i><a href="{{ comun.web_url }}">{{ comun.web }}</a><i>·</i><a href="{{ wa }}">{{ comun.telefono }}</a></p>
+    </div>
+  </div>
+  {{ logo('logo-pie') }}
+</section>
+</body>
+</html>

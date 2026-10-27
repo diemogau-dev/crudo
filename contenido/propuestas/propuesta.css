@@ -1,0 +1,201 @@
+/* Propuesta comercial CRUDO: 8 páginas de 1080 × 1920 px CSS, que Chromium
+   exporta a 810 × 1440 pt. Medidas tomadas de las propuestas aprobadas del
+   21/10/2026. */
+
+/* Archivo en instancias estáticas (de la variable de plantillas/fuentes):
+   así Chromium incrusta TrueType y no Type 3. */
+@font-face { font-family: "Archivo"; src: url("fuentes/Archivo-400.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Archivo"; src: url("fuentes/Archivo-500.ttf") format("truetype"); font-weight: 500; }
+@font-face { font-family: "Archivo"; src: url("fuentes/Archivo-600.ttf") format("truetype"); font-weight: 600; }
+@font-face { font-family: "Archivo"; src: url("fuentes/Archivo-800.ttf") format("truetype"); font-weight: 800; }
+@font-face { font-family: "Archivo"; src: url("fuentes/Archivo-900.ttf") format("truetype"); font-weight: 900; }
+
+@page { size: 1080px 1920px; margin: 0; }
+
+:root {
+  --iron: #1a1a1a;
+  --alabaster: #f5f5f3;
+  --cement: #d2d1cd;
+  --m: 72px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--iron); }
+body { font-family: "Archivo", sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+
+.pagina {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  break-after: page;
+}
+.pagina:last-child { break-after: auto; }
+.oscura { background: var(--iron); color: var(--alabaster); --tenue: 0.66; }
+.clara { background: var(--alabaster); color: var(--iron); --tenue: 0.62; }
+
+.foto { position: absolute; display: block; object-fit: cover; }
+
+.logo { position: absolute; display: block; }
+.logo svg { display: block; width: 100%; height: 100%; }
+.logo-pie { left: var(--m); top: 1835px; width: 112px; height: 33.5px; }
+
+/* Rótulo de sección: número, raya y título espaciado. */
+.rotulo {
+  position: absolute;
+  left: var(--m);
+  top: 74px;
+  height: 30px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 30px;
+  white-space: nowrap;
+}
+.rotulo .n { position: absolute; left: 0; letter-spacing: 0.1em; opacity: var(--tenue); }
+.rotulo .raya { position: absolute; left: 48px; top: 15px; width: 44px; height: 1px; background: currentColor; opacity: var(--tenue); }
+.rotulo .t { position: absolute; left: 112.4px; letter-spacing: 0.28em; text-transform: uppercase; }
+
+.espaciado { font-size: 21px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; line-height: 30px; }
+
+.flecha { display: block; width: 30px; height: 17px; }
+
+/* 1 · Portada */
+.portada-cabecera { position: absolute; left: var(--m); top: 72px; width: 210px; height: 62.8px; }
+.portada-kicker {
+  position: absolute;
+  right: 72px;
+  top: 71.6px;
+  text-align: right;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.28em;
+  opacity: 0.62;
+  text-transform: uppercase;
+}
+.portada-info { position: absolute; left: var(--m); right: var(--m); }
+.portada-titulo { display: flex; justify-content: space-between; align-items: baseline; height: 104px; }
+.portada-titulo h1 { font-size: 104px; font-weight: 900; line-height: 104px; letter-spacing: -0.03em; }
+.portada-titulo .sup { font-size: 52px; font-weight: 500; line-height: 104px; }
+.portada-bajada { font-size: 36px; font-weight: 800; line-height: 40px; text-transform: uppercase; letter-spacing: -0.02em; margin-top: 24.7px; }
+.datos { margin-top: 33px; }
+.datos div {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  line-height: 74px;
+  border-top: 1px solid var(--cement);
+  font-size: 28px;
+}
+.datos span + span { font-weight: 500; }
+.datos div:last-child { border-bottom: 1px solid var(--cement); height: 76px; }
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--iron);
+  color: var(--alabaster);
+  height: 99px;
+  padding: 0 36px 0 32px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.portada-info .boton { margin-top: 31px; }
+
+/* 2 · Así se vive por dentro */
+.dentro-texto { position: absolute; left: var(--m); right: var(--m); top: 1449px; }
+.titular { max-width: 864px; font-size: 52px; font-weight: 900; line-height: 51px; letter-spacing: -0.03em; text-transform: uppercase; }
+.dentro-texto .nota { margin-top: 26px; font-size: 24px; line-height: 34px; opacity: var(--tenue); }
+
+/* 4 · El plano */
+.marca {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background: var(--iron);
+  color: var(--alabaster);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 46px;
+  text-align: center;
+}
+.leyenda { position: absolute; top: 148px; }
+.leyenda .sup { font-size: 56px; font-weight: 500; line-height: 64px; margin-top: 8px; }
+.leyenda ol { list-style: none; margin-top: 35px; border-bottom: 1px solid var(--cement); }
+.leyenda li {
+  display: flex;
+  align-items: baseline;
+  border-top: 1px solid var(--cement);
+  padding: 13px 0 15px;
+  font-size: 28px;
+  line-height: 39px;
+}
+.leyenda li .n { flex: none; width: 44.5px; font-size: 21px; font-weight: 600; letter-spacing: 0.1em; opacity: var(--tenue); }
+
+/* 5 · Qué incluye */
+.bloque { position: absolute; left: var(--m); right: var(--m); }
+.bloque-titulo { font-size: 56px; font-weight: 900; line-height: 56px; letter-spacing: -0.03em; text-transform: uppercase; }
+.incluido { background: var(--alabaster); color: var(--iron); padding: 31px 30px 26px; margin-top: 38px; }
+.incluido p { font-size: 28px; font-weight: 500; line-height: 38px; }
+.incluido p + p { margin-top: 9px; }
+.incluido .espaciado { margin-bottom: 4px; }
+.specs { margin-top: 30px; border-bottom: 1px solid var(--cement); }
+.incluido + .specs { margin-top: 28px; }
+.specs .fila { display: flex; border-top: 1px solid var(--cement); padding: 14px 0 15px; }
+.specs .et { flex: none; width: 210px; margin-right: 24px; padding-top: 5px; font-size: 19px; font-weight: 600; letter-spacing: 0.2em; line-height: 25px; text-transform: uppercase; }
+.specs .val p { font-size: 28px; line-height: 40.4px; text-wrap: pretty; }
+.pie-specs { margin-top: 30px; font-size: 28px; font-weight: 500; line-height: 40px; }
+
+/* 6 · Por qué hormigón */
+.porque { position: absolute; left: var(--m); right: var(--m); top: 660px; }
+.porque .rot2 { position: relative; height: 54px; font-size: 21px; font-weight: 600; line-height: 27px; }
+.porque .rot2 .n { position: absolute; left: 0; top: 14px; letter-spacing: 0.1em; opacity: var(--tenue); }
+.porque .rot2 .raya { position: absolute; left: 48px; top: 31px; width: 36px; height: 1px; background: currentColor; opacity: var(--tenue); }
+.porque .rot2 .t { position: absolute; left: 103.7px; right: 0; letter-spacing: 0.28em; text-transform: uppercase; }
+.porque h2 { margin-top: 32px; font-size: 48px; font-weight: 900; line-height: 47px; letter-spacing: -0.03em; text-transform: uppercase; }
+.pasos { margin-top: 28px; list-style: none; }
+.pasos li { position: relative; border-top: 1px solid var(--cement); padding: 21px 0 17px 52.5px; }
+.pasos li:last-child { padding-bottom: 0; }
+.pasos .n { position: absolute; left: 0; top: 25px; font-size: 21px; font-weight: 600; letter-spacing: 0.1em; line-height: 30px; opacity: var(--tenue); }
+.pasos h3 { font-size: 30px; font-weight: 600; line-height: 34px; }
+.pasos p { margin-top: 7px; font-size: 28px; line-height: 40.5px; }
+.oficina { position: absolute; left: var(--m); right: var(--m); top: 1508px; height: 270px; background: var(--iron); color: var(--alabaster); padding: 24px 30px 0; }
+.oficina p { font-size: 28px; font-weight: 500; line-height: 40.5px; margin-top: 10px; }
+.oficina .ir { display: flex; align-items: center; gap: 13px; margin-top: 20px; font-size: 26px; font-weight: 600; line-height: 36px; }
+.oficina .ir span { border-bottom: 2px solid currentColor; line-height: 32px; }
+
+/* 7 · Precio */
+.precio { font-size: 88px; font-weight: 900; line-height: 96px; letter-spacing: -0.03em; margin-top: 32px; }
+.precio-iva { margin-top: 18px; font-size: 30px; line-height: 40px; }
+.precio-iva b { font-weight: 600; }
+.precio-iva span { opacity: 0.85; }
+.sub-rotulo { margin-top: 46px; }
+.pagos { margin-top: 13px; list-style: none; border-bottom: 1px solid var(--cement); }
+.pagos li { display: flex; border-top: 1px solid var(--cement); height: 110px; padding-top: 14px; }
+.pagos .pct { flex: none; width: 140px; font-size: 44px; font-weight: 500; line-height: 52px; }
+.pagos h4 { font-size: 28px; font-weight: 600; line-height: 34px; margin-top: 4px; }
+.pagos p { font-size: 26px; line-height: 34px; margin-top: 4px; opacity: var(--tenue); }
+.condicion { margin-top: 23px; font-size: 28px; font-weight: 600; line-height: 40px; }
+.financia { margin-top: 10px; font-size: 28px; line-height: 40px; text-wrap: pretty; }
+.lista { list-style: none; margin-top: 10px; }
+.lista li { font-size: 28px; line-height: 42px; }
+.lista li::before { content: "— "; }
+.nota-tenue { font-size: 26px; line-height: 36px; opacity: var(--tenue); }
+.sumale { list-style: none; margin-top: 8px; border-bottom: 1px solid var(--cement); }
+.sumale li { display: flex; justify-content: space-between; border-top: 1px solid var(--cement); height: 61px; line-height: 60px; font-size: 28px; }
+.sumale li b { font-weight: 500; }
+
+/* 8 · Cómo seguimos */
+.garantia { list-style: none; margin-top: 10px; }
+.garantia li { font-size: 28px; font-weight: 500; line-height: 41px; margin-bottom: 6px; }
+.garantia li::before { content: "— "; }
+.cierre { position: absolute; left: var(--m); right: var(--m); top: 1504px; }
+.cierre .boton { height: 110px; padding-left: 36px; font-size: 26px; }
+.contacto { margin-top: 32px; font-size: 28px; line-height: 42px; }
+.contacto b { font-weight: 600; }
+.contacto u { text-decoration: none; border-bottom: 2px solid currentColor; }
+.contacto .redes { margin-top: 8px; opacity: var(--tenue); }
+.contacto .redes i { font-style: normal; margin: 0 14px; }

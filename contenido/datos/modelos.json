@@ -67,7 +67,7 @@
       "render": "crudo-04/crudo-4-a.jpg",
       "encuadre": "50% 60%",
       "kicker": "{m.nombre} · {m.superficie}",
-      "copy": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica, acero y vidrio. {m.nombre} es la casa de verano completa. Pedí la propuesta por WhatsApp."
+      "copy": "Dos dormitorios, cocina con desayunador, quincho con parrilla y deck. Hormigón armado de nuestra fábrica, acero y vidrio. {m.nombre} es la casa de verano completa. Pedí la propuesta por WhatsApp."
     },
     {
       "id": "O4_cuatro-crudo",
@@ -114,7 +114,7 @@
       "titular": "TU CASA DE VERANO, CON PRECIO CERRADO.",
       "dato": "{m.incluidos} · {m.precio} IVA incl.",
       "anuncio": {
-        "texto_principal": "Dos dormitorios, cocina con isla, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en {m.plazo} desde la palada inicial.",
+        "texto_principal": "Dos dormitorios, cocina con desayunador, quincho con parrilla y deck. Hormigón armado de nuestra fábrica. Precio cerrado, IVA incluido, y lista en {m.plazo} desde la palada inicial.",
         "titulo": "{m.nombre_titulo} · Precio cerrado",
         "cta": "Enviar mensaje (WhatsApp)"
       },
