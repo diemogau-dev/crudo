@@ -34,6 +34,10 @@ Leé `context/` — es la fuente de verdad del proyecto y se mantiene actualizad
 - Contenido estructurado (tipologías, FAQ, proceso) vive en `lib/content.ts`.
 - Sin sombras, gradientes ni bordes redondeados: composición editorial, hairlines y grid.
 
+## Propuestas comerciales (PDF)
+
+Se generan desde `contenido/propuestas/` (plantilla aprobada, datos en `datos.json`, `python exportar.py`). Ver `contenido/propuestas/README.md` y la skill `.claude/skills/propuesta-crudo`. Precios iguales a la web.
+
 ## Comandos
 
 ```bash

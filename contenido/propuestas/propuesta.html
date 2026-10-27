@@ -22,7 +22,7 @@
 {# 1 · Portada #}
 <section class="pagina clara">
   {{ logo('portada-cabecera') }}
-  <div class="portada-kicker">Propuesta comercial<br>Asunción · Paraguay</div>
+  <div class="portada-kicker">{% if cliente %}Propuesta para {{ cliente.nombre }}<br>{{ cliente.emision }} · Asunción{% else %}Propuesta comercial<br>Asunción · Paraguay{% endif %}</div>
   {{ foto(c.portada.imagen, 0, 200, 1080, c.portada.alto) }}
   <div class="portada-info" style="top:{{ 200 + c.portada.alto + 43 }}px">
     <div class="portada-titulo"><h1>{{ c.nombre }}</h1><span class="sup">{{ c.superficie }} m²</span></div>
@@ -129,7 +129,7 @@
     <ol class="pagos">
       {%- for pct, t, d in comun.pagos %}<li><span class="pct">{{ pct }}</span><div><h4>{{ t }}</h4><p>{{ d }}</p></div></li>{% endfor -%}
     </ol>
-    <p class="condicion">Precio válido por 15 días.</p>
+    <p class="condicion">Precio válido por 15 días{% if cliente %}, hasta el {{ cliente.vence }}{% endif %}.</p>
     <div class="espaciado sub-rotulo">Financiación</div>
     <p class="financia">{{ comun.financiacion }}</p>
     <div class="espaciado sub-rotulo">No incluye</div>
