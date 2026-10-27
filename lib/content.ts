@@ -1,7 +1,7 @@
 import type { WhatsappTopic } from "./whatsapp";
 
-// Precios cerrados con IVA incluido. Salen de las propuestas comerciales
-// "Crudo 0X - Propuesta" (21/10/2026); web y propuestas tienen que coincidir.
+// Precios cerrados con IVA incluido. Salen de las planillas de presupuesto
+// (27/10/2026); web y propuestas tienen que coincidir.
 // No incluyen flete, pozo ciego y cámara séptica, conexión a ANDE ni muebles
 // y decoración de las imágenes. Cualquier cambio de precio se hace acá.
 export const SHOW_PRICES = true;
@@ -11,12 +11,14 @@ export function formatGs(value: number) {
 }
 
 const PRICES_GS = {
-  crudo01: 152_500_000,
-  crudo02: 148_800_000,
-  crudo03: 308_800_000,
-  // Planilla corregida del 23/10 (fundaciones y cobogós con cantidades de
-  // CRUDO 04): Gs. 364.896.155, redondeado.
-  crudo04: 364_900_000,
+  // Planillas "Presupuesto CRUDO 0X.xlsx" (27/10): costo de la vivienda con los
+  // coeficientes de la planilla (×1,35 materiales y mano de obra, ×1,25
+  // subcontratos), redondeado hacia arriba a los 100.000 Gs. más cercanos.
+  // Exteriores y adicionales quedan fuera.
+  crudo01: 152_300_000, // 152.236.673
+  crudo02: 149_100_000, // 149.020.393
+  crudo03: 318_800_000, // 318.718.715
+  crudo04: 354_500_000, // 354.438.200
 } as const;
 
 const closedPrice = (value: number) => `${formatGs(value)} IVA incluido`;
@@ -78,15 +80,15 @@ const structureSpecs = (roof: string): SpecGroup[] => [
   {
     label: "Estructura",
     items: [
-      "Platea de hormigón armado de 10 cm sobre zapatas y encadenado de hormigón armado.",
+      "Platea de hormigón armado sobre zapatas y encadenado de hormigón armado.",
       "Columnas y vigas de perfil estructural de acero.",
-      "Cerramiento de placas de hormigón armado reforzado, vistas: máxima solidez.",
+      "Cerramiento de placas de hormigón armado reforzado.",
     ],
   },
   {
     label: "Techo",
     items: [
-      `Panel termoacústico de 40 mm sobre vigas y clavaderas metálicas${roof}.`,
+      `Panel termoacústico sobre vigas y clavaderas metálicas${roof}.`,
       "Canaleta y bajada pluvial.",
     ],
   },
@@ -120,7 +122,7 @@ const plumbingSpecs = (extra: string): SpecGroup => ({
   label: "Instalación sanitaria",
   items: [
     `Cañerías de termofusión para agua y PVC para desagües del baño${extra}.`,
-    "Registros cloacales y pluviales con cañería de 100 mm.",
+    "Registros cloacales y pluviales con cañería de PVC.",
   ],
 });
 
@@ -160,8 +162,8 @@ export const models: Model[] = [
       {
         label: "Vidrios",
         items: [
-          "Frente de vidrio de 8 mm con puerta corrediza de 3,50 × 2,10 m y cerradura con llave.",
-          "Paño superior inclinado y paneles fijos de vidrio de 8 mm.",
+          "Frente de vidrio templado con puerta corrediza y cerradura con llave.",
+          "Paño superior inclinado y paneles fijos de vidrio templado.",
         ],
       },
       exteriorSpecs,
@@ -308,8 +310,8 @@ export const models: Model[] = [
       {
         label: "Vidrios",
         items: [
-          "Frente de vidrio de 8 mm con puerta corrediza de 3,50 × 2,10 m y cerradura con llave.",
-          "Paño superior inclinado y paneles fijos de vidrio de 8 mm.",
+          "Frente de vidrio templado con puerta corrediza y cerradura con llave.",
+          "Paño superior inclinado y paneles fijos de vidrio templado.",
         ],
       },
       exteriorSpecs,
@@ -446,7 +448,7 @@ export const models: Model[] = [
       {
         label: "Vidrios",
         items: [
-          "Puertas corredizas de vidrio de 8 mm hacia el exterior, con cerradura.",
+          "Puertas corredizas de vidrio templado hacia el exterior, con cerradura.",
           "Ventanal fijo en el estar y paño superior inclinado.",
           "Ventanas de dormitorios y ventiluz de baño en vidrio templado con perfil negro.",
         ],
@@ -626,7 +628,7 @@ export const models: Model[] = [
       {
         label: "Estructura",
         items: [
-          "Platea de hormigón armado de 10 cm sobre dados y vigas de fundación de hormigón armado.",
+          "Platea de hormigón armado sobre dados y vigas de fundación de hormigón armado.",
           "Vigas y pilares de estructura metálica.",
           "Muros de placas de hormigón armado, con revestimiento interior de placas de concreto o durlock.",
         ],
@@ -634,14 +636,14 @@ export const models: Model[] = [
       {
         label: "Techo",
         items: [
-          "Panel termoacústico de 40 mm sobre estructura metálica.",
+          "Panel termoacústico sobre estructura metálica.",
           "Canaleta y bajada pluvial.",
         ],
       },
       {
         label: "Vidrios",
         items: [
-          "Dos accesos de vidrio templado de 8 mm con perfilería negra, de 4 hojas (2 fijas y 2 corredizas).",
+          "Dos accesos de vidrio templado con perfilería negra, de 4 hojas (2 fijas y 2 corredizas).",
           "Paño fijo superior sobre el acceso.",
           "Ventanas batientes en dormitorios y ventiluz corredizo en el baño, en vidrio templado con perfil negro.",
         ],
@@ -695,8 +697,8 @@ export const models: Model[] = [
         items: [
           "Módulo de parrilla: mesada de hormigón, parrilla de acero inoxidable y campana.",
           "Pérgola metálica, integrada a la estructura del techo.",
-          "Deck símil madera de 7 × 4 m sobre platea de 10 cm.",
-          "Pared de cobogós de 12 m², de nuestra fábrica.",
+          "Deck símil madera sobre platea de hormigón.",
+          "Pared de cobogós, de nuestra fábrica.",
         ],
       },
       {

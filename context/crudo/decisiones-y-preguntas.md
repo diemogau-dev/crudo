@@ -2,6 +2,15 @@
 
 > Registro vivo. Agregar entradas nuevas arriba, con fecha. No borrar historial.
 
+## 2026-10-27 — Precios finales desde las 4 planillas y especificaciones sin medidas (pedido de Diego)
+
+1. **Precios cerrados IVA incluido, redondeados hacia arriba a 100.000 Gs.:** CRUDO 01 **Gs. 152.300.000** · CRUDO 02 **Gs. 149.100.000** · CRUDO 03 **Gs. 318.800.000** · CRUDO 04 **Gs. 354.500.000**. Reemplazan los de las propuestas del 21/10 y el de CRUDO 04 del 23/10.
+2. **Cálculo:** las celdas de precio final de las planillas siguen dando error al leerlas desde Drive, así que se recalculó línea por línea con los coeficientes de la planilla (×1,35 materiales y mano de obra, ×1,25 subcontratos) sobre el costo de la vivienda (los totales de costo coinciden con la planilla: 118.772.802 · 116.445.513 · 248.795.233 · 277.399.278). Venta sin redondear: 152.236.673 · 149.020.393 · 318.718.715 · 354.438.200. Los trabajos exteriores (ANDE, pozo ciego, cámaras, flete, piscina) y los adicionales quedan fuera del precio. CRUDO 04 incluye el quincho, que está dentro del costo de la vivienda en su planilla.
+3. **CRUDO 04 baja** respecto del 23/10 (364.900.000 → 354.500.000) porque ese cálculo se hizo sumando al precio anterior, que usaba un coeficiente plano ×1,35. Ahora los cuatro usan el mismo criterio. **Calde debe confirmar** los números contra las celdas de precio final.
+4. **Pendiente:** regenerar las propuestas comerciales y el manifiesto de piezas (`contenido/salidas/manifiesto.json` todavía dice 339.200.000 para CRUDO 04) con los precios nuevos.
+5. **Especificaciones sin medidas, solo materiales:** se sacan "vistas: máxima solidez" del cerramiento y todas las medidas de la sección de especificaciones (8 mm, 40 mm, 10 cm, 100 mm, puerta de 3,50 × 2,10 m, deck de 7 × 4 m, cobogós de 12 m²). Se mantienen capacidades (BTU, litros, llaves del tablero) y las medidas de los adicionales con precio de CRUDO 03, que definen qué se cotiza.
+6. **Detectado en las planillas, a revisar:** la planilla de CRUDO 01 todavía tiene "Monocomando para bidet" (Gs. 750.000) aunque la web dice sin bidet; la de CRUDO 03 tiene termocalefón de 80 L y sin bidet, mientras la web dice 120 L y bidet.
+
 ## 2026-10-23 (tarde) — Nuevo precio de CRUDO 04
 
 1. **CRUDO 04 = Gs. 364.900.000 IVA incluido** (antes 339.200.000). La planilla "Presupuesto CRUDO 04.xlsx" corregida por Calde (23/10) cuantifica fundaciones, platea, cobogós (12 m²) y lámparas con las cantidades reales de CRUDO 04: el costo pasa de Gs. 251.739.163 a 270.799.278 (+19.060.115). Aplicando los coeficientes de la planilla a esas líneas (×1,35 materiales y mano de obra, ×1,25 subcontratos) la venta sube Gs. 25.696.155 → 364.896.155, redondeado a 364.900.000. Las celdas de precio final de la planilla siguen dando error al leerlas desde Drive: **Calde debe confirmar el número**.
